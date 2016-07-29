@@ -1,20 +1,11 @@
-.bxms-palette .list-group .list-group-item a {
-  width: 100px;
-}
-.bxms-palette .list-group .list-group-item a .fa,
-.bxms-palette .list-group .list-group-item a .pficon {
-  font-size: 24px;
-}
-.bxms-palette .list-group .list-group-item .list-group-item-value {
+.nav-bxms-palette-flyout.nav-pf-vertical > .list-group > .list-group-item.persistent-secondary > a:after {
   display: none;
 }
-.nav-pf-vertical {
-  width: auto;
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .fa,
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .glyphicon,
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .pficon {
+  line-height: 20px;
 }
-.nav-pf-vertical .list-group .list-group-item.active a,
-.nav-pf-vertical .list-group .list-group-item:hover a {
-  width: 100px;
-}
-.nav-pf-vertical .list-group .list-group-item.persistent-secondary.active:hover a {
-  width: 100px;
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item.active .list-group-item-value {
+  background-attachment: inherit;
 }
