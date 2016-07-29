@@ -6,6 +6,3 @@
 .nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .pficon {
   line-height: 20px;
 }
-.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item.active .list-group-item-value {
-  background-attachment: inherit;
-}
