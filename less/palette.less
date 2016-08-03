@@ -2,8 +2,10 @@
 //  Flyout Palette based on Vertical navigation
 // --------------------------------------------------
 
+@nav-pf-vertical-width: @nav-pf-vertical-collapsed-width;
 
 .nav-bxms-palette-flyout {
+  width: @nav-pf-vertical-width;
 
   // hide the right caret
   &.nav-pf-vertical>.list-group>.list-group-item.persistent-secondary>a:after {
@@ -18,4 +20,6 @@
   }
 }
 
-
+.layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical {
+  margin-left: @nav-pf-vertical-width;
+}
