@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flyout palette from highly modified vertical nav</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/styles.css" rel="stylesheet" media="screen, print">
+
+</head>
+<body>
+
+
+<!-- Left navigation -->
+<div>
+
+<div class="layout-pf layout-pf-fixed">
+
+  <!--<script src="node_modules/mponents/c3/c3.min.js"></script>-->
+  <!--<script src="node_modules/d3/d3.min.js"></script>-->
+  <!--<script src="node_modules/matchHeight/jquery.matchHeight-min.js"></script>-->
+
+  <!--<div  class="bxms-palette nav-pf-vertical-with-secondary-nav" >-->
+    <div class="palette-bxms collapsed palette-bxms-with-flyout ">
+    <ul class="list-group">
+
+      <li class="list-group-item persistent-secondary active" data-target="#secondary-menu-events">
+        <a href="#">
+          <span class="fa fa-circle"></span>
+          <span class="list-group-item-value">Events</span>
+        </a>
+        <div class="palette-bxms-flyout" id="#secondary-menu-events">
+          <h3 class="palette-bxms-flyout-header">
+            <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+            <span>Events</span>
+          </h3>
+          <h5>Start</h5>
+          <h5>Intermediate</h5>
+          <h5>End</h5>
+        </div>
+      </li>
+
+      <li class="list-group-item persistent-secondary" data-target="#secondary-menu-activities">
+        <a href="#">
+          <span class="fa fa-square"></span>
+          <span class="list-group-item-value">Activities</span>
+        </a>
+        <div class="palette-bxms-flyout" id="#secondary-menu-activities">
+          <h3 class="palette-bxms-flyout-header">
+            <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+            <span>Activities</span>
+          </h3>
+          <h5>Tasks</h5>
+          <h5>Advanced</h5>
+        </div>
+      </li>
+
+      <li class="list-group-item persistent-secondary" data-target="#secondary-menu-gateways">
+        <a href="#">
+          <span class="fa fa-diamond"></span>
+          <span class="list-group-item-value">Gateways</span>
+        </a>
+        <div class="palette-bxms-flyout" id="#secondary-menu-gateways">
+          <h3 class="palette-bxms-flyout-header">
+            <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+            <span>Gateways</span>
+          </h3>
+          <h5>Common</h5>
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <a href="#">
+                <span class="list-group-item-value">Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Bricks</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">3</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Logical Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Advanced</h5>
+        </div>
+      </li>
+
+      <li class="list-group-item persistent-secondary" data-target="#secondary-menu-containers">
+        <a href="#">
+          <span class="fa fa-square-o"></span>
+          <span class="list-group-item-value">Containers</span>
+        </a>
+        <div class="palette-bxms-flyout" id="#secondary-menu-containers">
+          <div class="palette-bxms-flyout-header">
+            <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
+            <span>Containers</span>
+          </div>
+          <h5>Containers</h5>
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <a href="#">
+                <span class="list-group-item-value">Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Bricks</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">3</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Logical Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Common</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Pools</span>
+                <div class="badge-container-pf">
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">OSDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Advanced</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">RBDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>2</span>
+                  </div>
+                  <span class="badge">14</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">0</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Snapshots</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">9</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Storage Profiles</span>
+                <div class="badge-container-pf">
+                  <span class="badge">7</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="list-group-item persistent-secondary" data-target="#secondary-menu-connectors">
+        <a href="#">
+          <span class="fa fa-long-arrow-right"></span>
+          <span class="list-group-item-value">Connectors</span>
+        </a>
+        <div class="palette-bxms-flyout" id="secondary-menu-connectors">
+          <div class="palette-bxms-flyout-header">
+            <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
+            <span>Connectors</span>
+          </div>
+          <h5>Connectors</h5>
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <a href="#">
+                <span class="list-group-item-value">Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Bricks</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">3</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Logical Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Flow</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Pools</span>
+                <div class="badge-container-pf">
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">OSDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Association</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">RBDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>2</span>
+                  </div>
+                  <span class="badge">14</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">0</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Snapshots</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">9</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Storage Profiles</span>
+                <div class="badge-container-pf">
+                  <span class="badge">7</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="list-group-item persistent-secondary" data-target="#secondary-menu-library">
+        <a href="#">
+          <span class="pficon pficon-repository"></span>
+          <span class="list-group-item-value">Library</span>
+        </a>
+        <div class="palette-bxms-flyout" id="secondary-menu-library">
+          <div class="palette-bxms-flyout-header">
+            <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
+            <span>Library</span>
+          </div>
+          <h5>Processes</h5>
+          <ul class="list-group">
+            <li class="list-group-item active">
+              <a href="#">
+                <span class="list-group-item-value">Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Bricks</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">12</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">3</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Logical Volumes</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Process Clips</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Pools</span>
+                <div class="badge-container-pf">
+                  <span class="badge">10</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">OSDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-error-circle-o"></span>
+                    <span>1</span>
+                  </div>
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <h5>Services</h5>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">RBDs</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>2</span>
+                  </div>
+                  <span class="badge">14</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Quotas</span>
+                <div class="badge-container-pf">
+                  <span class="badge">0</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Snapshots</span>
+                <div class="badge-container-pf">
+                  <div class="badge">
+                    <span class="pficon pficon-warning-triangle-o"></span>
+                    <span>3</span>
+                  </div>
+                  <span class="badge">9</span>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <span class="list-group-item-value">Storage Profiles</span>
+                <div class="badge-container-pf">
+                  <span class="badge">7</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+
+
+    </ul>
+  </div>
+
+
+  </div>
+
+</div>
+
+</body>
+</html>

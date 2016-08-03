@@ -1,0 +1,8 @@
+.nav-bxms-palette-flyout.nav-pf-vertical > .list-group > .list-group-item.persistent-secondary > a:after {
+  display: none;
+}
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .fa,
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .glyphicon,
+.nav-bxms-palette-flyout .nav-pf-persistent-secondary > .list-group > .list-group-item .pficon {
+  line-height: 20px;
+}
