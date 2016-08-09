@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Flyout designer palette</title>
 
-  <link href="node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
   <link href="css/styles.css" rel="stylesheet" media="screen, print">
 
   <!-- copied from example -->
@@ -16,7 +16,7 @@
 <body>
 
 <div class="layout-pf layout-pf-fixed">
-...
+
 <nav class="navbar navbar-pf-vertical">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle">
@@ -1109,21 +1109,6 @@
   </div><!-- /row -->
 
 </div>
-<script>
-  $(document).ready(function() {
-    // matchHeight the contents of each .card-pf and then the .card-pf itself
-    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
-    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
-
-    // initialize tooltips
-    $('[data-toggle="tooltip"]').tooltip();
-
-    // Initialize the vertical navigation
-    $().setupVerticalNavigation(true);
-  });
-</script>
 
 </div>
 

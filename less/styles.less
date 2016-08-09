@@ -1,10 +1,102 @@
-@import "../node_modules/patternfly/less/patternfly.less";
+@import "../node_modules/patternfly/less/patternfly-additions.less";
+@import "../node_modules/patternfly/less/variables.less";
+@import "../node_modules/patternfly/less/color-variables.less";
 
-@fa-font-path:      "../node_modules/patternfly/node_modules/font-awesome/fonts/";
-@font-path:         "../node_modules/patternfly/dist/fonts";
-@icon-font-path:    "../node_modules/patternfly/node_modules/bootstrap/fonts/";
+@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
+@font-path: "../node_modules/patternfly/dist/fonts";
+@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
 
 
-////@font-size-base: 16px;
+//Palette implemented using vertical navigation pattern
+@nav-pf-vertical-width: @nav-pf-vertical-collapsed-width;
 
-@import "palette.less";
+.nav-bxms-palette-flyout {
+  width: @nav-pf-vertical-width;
+  position: relative;
+  // hide the right caret
+  &.nav-pf-vertical > .list-group > .list-group-item.persistent-secondary > a:after {
+    display: none;
+  }
+
+  //adjust the icon line height to match .nav-pf-persistent-secondary>.list-group>.list-group-item .list-group-item-value
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .fa,
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .glyphicon,
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .pficon {
+    line-height: 20px;
+  }
+}
+
+.layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical {
+  margin-left: @nav-pf-vertical-width;
+}
+
+// Top fixed area
+.top-fixed-area-bxms {
+  position:fixed;
+  width: 100%;
+  top: @navbar-pf-vertical-height;
+  left: 0;
+}
+
+////Breadcrumb row
+.breadcrumb-bxms {
+}
+
+//// Toolbars
+.row-toolbar-bxms {
+  padding: .25em;
+  border-collapse: collapse;
+  border-top: 1px solid @color-pf-black-200;
+  border-bottom: 1px solid @color-pf-black-200;
+  //position:fixed;
+  //display:inline;
+}
+
+.toolbar-right-bxms {
+  float:right;
+}
+
+.toolbar-element-bxms {
+  display: inline-block;
+}
+
+//// Canvas
+.dotted {
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+.canvas-bxms {
+  background-color: @color-pf-black-100;
+  .dotted;
+  height: 100vh;
+}
+
+//// icon menu (like in footer)
+.footer-pf {
+  text-align: center;
+}
+.footer-menu-bxms {
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+  }
+.icon-menu-bxms {
+  list-style: none;
+  li {
+    display:inline-block;
+  }
+}
+.icon-menu-item-bxms {
+  display:inline-block;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+// put a border between items only
+.icon-menu-item-bxms + .icon-menu-item-bxms {
+  border-left: 1px solid;
+}
