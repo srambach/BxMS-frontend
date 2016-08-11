@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic layout for BxMS Editor screen</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/styles.css" rel="stylesheet" media="screen, print">
+
+  <!-- copied from example -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+  <script src="components/c3/c3.min.js"></script>
+  <script src="components/d3/d3.min.js"></script>
+  <script src="components/matchHeight/jquery.matchHeight-min.js"></script>
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="layout-pf layout-pf-fixed-with-footer"><!-- layout-pf layout-pf-fixed -->
+
+  <!-- pasted from vertical nav... -->
+
+  <nav class="navbar navbar-pf-vertical navbar-fixed-top">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <h4>BPM Suite | Design</h4>
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse">
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li><a href="#" target="_blank" class="nav-item-iconic nav-item-iconic-new-window"><span title="Launch" class="fa fa-external-link"></span></a></li>-->
+      <!--</ul>-->
+      <ul class="nav navbar-nav navbar-right navbar-iconic">
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span title="Notifications" class="fa pficon-flag"></span>
+            <span class="badge">2</span>
+          </a>
+          <div class="dropdown-menu infotip bottom-right">
+            <div class="arrow"></div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+              </li>
+              <li class="list-group-item">
+                <span class="i pficon pficon-info"></span> Error: System Failure
+              </li>
+            </ul>
+            <div class="footer">
+              <a>Clear Messages</a>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span title="Help" class="fa pficon-help"></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span title="Username" class="fa pficon-user"></span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#">Preferences</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </nav> <!--/.navbar-->
+
+  <!-- END pasted from vertical nav -->
+
+
+  <div class="container-fluid ">
+
+    <div class="top-fixed-area-bxms ">
+      <!-- breadcrumb -->
+      <div class="row row-breadcrumb-bxms">
+        <div class="col-xs-12">
+          <ol class="breadcrumb breadcrumb-bxms">
+            <li>
+              <a href="#">Library</a>
+            </li>
+            <li>
+              <a href="#">Mortgage Project</a>
+            </li>
+
+            <li class="active"> <strong>Fourth Level:</strong>
+              Process 1
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- toolbars -->
+      <div class="row row-toolbar-bxms">
+        <div class="col-sm-12">
+          <!-- label -->
+          Process 1
+          <!-- dropdown -->
+          <div class="dropdown toolbar-element-bxms">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Version 1
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <!-- right hand side of toolbar -->
+          <div class="toolbar-right-bxms">
+            <button class="btn btn-default" type="button">Cancel</button>
+            <button class="btn btn-primary" type="button">Save</button>
+            <button class="btn btn-default disabled" type="button">Commit</button>
+
+            <!-- kebab menu -->
+            <div class="dropdown dropdown-kebab-pf toolbar-element-bxms">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+                <li><a href="#">Rename</a></li>
+                <li><a href="#">Copy</a></li>
+                <li><a href="#">Delete</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">View Details</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row row-toolbar-bxms">
+        <div class="col-sm-12">
+          <!-- dropdown -->
+          <div class="dropdown toolbar-element-bxms">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownActions1" data-toggle="dropdown">
+              Actions
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownActions1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>        <!-- dropdown -->
+          <div class="dropdown toolbar-element-bxms">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownActions2" data-toggle="dropdown">
+              Actions
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownActions2">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>        <!-- dropdown -->
+          <div class="dropdown toolbar-element-bxms">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownActions3" data-toggle="dropdown">
+              Actions
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownActions3">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- canvas for drawing -->
+    <div class="row row-canvas-bxms">
+      <!-- ADD THE PALETTE -->
+      <div class="nav-bxms-palette-flyout nav-pf-vertical nav-pf-vertical-with-secondary-nav ">
+        <ul class="list-group collapsed"><!-- if .collapsed is on ul, the primary menu is wide
+  and you can see that the secondary menu displays but overflows -->
+
+          <li class="list-group-item persistent-secondary" data-target="#events-flyout">
+            <a href="#">
+              <span class="fa fa-circle"></span>
+            </a>
+            <div id="events-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Events</span>
+              </div>
+              <h5>Start</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-circle-o"></span>
+                    <span class="list-group-item-value">Start</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-envelope-o"></span>
+                    <span class="list-group-item-value">Start from Message</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-flash"></span>
+                    <span class="list-group-item-value">Start from Signal</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="list-group-item-value">more...</span>
+                  </a>
+                </li>
+              </ul>
+              <h5>Intermediate</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-clock-o"></span>
+                    <span class="list-group-item-value">Wait</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-envelope"></span>
+                    <span class="list-group-item-value">Send Message</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-circle-o-notch"></span>
+                    <span class="list-group-item-value">None</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="list-group-item-value">more...</span>
+                  </a>
+                </li>
+              </ul>
+
+              <h5>End</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-circle"></span>
+                    <span class="list-group-item-value">End</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-envelope"></span>
+                    <span class="list-group-item-value">End with Message</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-times-circle-o"></span>
+                    <span class="list-group-item-value">End with Error</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="list-group-item-value">more...</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="list-group-item persistent-secondary" data-target="#activities-flyout">
+            <a href="#">
+              <span class="fa fa-square"></span>
+              <!--<span class="list-group-item-value">Activities</span>-->
+            </a>
+            <div id="activities-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Activities</span>
+              </div>
+              <h5>Tasks</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Generic</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-user"></span>
+                    <span class="list-group-item-value">User</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="pf pficon-service"></span>
+                    <span class="list-group-item-value">Service</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-envelope"></span>
+                    <span class="list-group-item-value">Send</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-envelope-o"></span>
+                    <span class="list-group-item-value">Receive</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-code"></span>
+                    <span class="list-group-item-value">Script</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-bank"></span>
+                    <span class="list-group-item-value">Business Rule</span>
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Advanced</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Sub-Process</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Transaction</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="list-group-item persistent-secondary" data-target="#gateways-flyout">
+            <a href="#">
+              <span class="fa fa-diamond"></span>
+              <!--<span class="list-group-item-value">Gateways</span>-->
+            </a>
+            <div id="gateways-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Gateways</span>
+              </div>
+              <h5>Common</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-times"></span>
+                    <span class="list-group-item-value">Exclusive</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-plus"></span>
+                    <span class="list-group-item-value">Parallel</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-circle-o"></span>
+              <span class="list-group-item-value">Inclusive/span>
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Advanced</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Event</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-plus-circle"></span>
+                    <span class="list-group-item-value">Parallel Event</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Complex</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="list-group-item persistent-secondary" data-target="#containers-flyout">
+            <a href="#">
+              <span class="fa fa-square-o"></span>
+              <!--<span class="list-group-item-value">Containers</span>-->
+            </a>
+            <div id="containers-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Containers</span>
+              </div>
+              <h5>Common</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Pool</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Lane</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Participant</span>
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Advanced</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Multi-Pool</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Multi-Lane</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Multi-Participant</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+
+          <li class="list-group-item persistent-secondary" data-target="#connectors-flyout">
+            <a href="#">
+              <span class="fa fa-long-arrow-right"></span>
+              <!--<span class="list-group-item-value">Connectors</span>-->
+            </a>
+            <div id="connectors-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Connectors</span>
+              </div>
+              <h5>Flow</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-long-arrow-right"></span>
+                    <span class="list-group-item-value">Sequence</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Conditional Flow</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Message</span>
+                  </a>
+                </li>
+              </ul>
+
+              <h5>Advanced</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Association</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Directional</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Bi-Directional</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+
+          <li class="list-group-item persistent-secondary" data-target="#library-flyout">
+            <a href="#">
+              <span class="pficon pficon-repository"></span>
+              <!--<span class="list-group-item-value">Library</span>-->
+            </a>
+            <div id="library-flyout" class="nav-pf-persistent-secondary">
+              <div class="persistent-secondary-header">
+                <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+                <span>Library</span>
+              </div>
+              <h5>Processes</h5>
+              <ul class="list-group">
+                <li class="list-group-item ">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Mortgage Process</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Refinance Process</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Inspection</span>
+                  </a>
+                </li>
+              </ul>
+              <h5>Process Clips</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-object-group"></span>
+                    <span class="list-group-item-value">Standard Error Check</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-object-group"></span>
+                    <span class="list-group-item-value">Outgoing Message</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="list-group-item-value">more...</span>
+                  </a>
+                </li>
+              </ul>
+              <h5>Services</h5>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">JIRA</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Salesforce</span>
+                  </a>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <span class="fa fa-smile-o"></span>
+                    <span class="list-group-item-value">Google Maps</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+      <!-- end of the PALETTE -->
+
+      <div class="col-sm-12 canvas-bxms">
+
+      </div>
+    </div>
+
+
+  </div>
+
+<footer class="footer-pf">
+    <div class="footer-menu-bxms">
+      <ul class="icon-menu-bxms">
+        <li class="icon-menu-item-bxms">
+          <span title="edit" class="fa fa-edit"></span>
+        </li>
+        <li class="icon-menu-item-bxms">
+          <span title="edit" class="fa fa-pie-chart">
+        </li>
+        <li class="icon-menu-item-bxms">
+          <span title="edit" class="fa fa-comments">
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // initialize tooltips
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // Initialize the vertical navigation
+      $().setupVerticalNavigation(true);
+    });
+  </script>
+
+</div>
+
+</body>
+</html>

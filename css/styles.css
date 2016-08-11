@@ -6048,6 +6048,15 @@ a.disabled {
   top: 60px;
   left: 0;
 }
+.breadcrumb > li:first-child a:before {
+  color: #9c9c9c;
+  content: "\f105";
+  font-size: 11px;
+  padding: 0 9px 0 7px;
+}
+.breadcrumb > li + li:before {
+  content: "\f105";
+}
 .row-toolbar-bxms {
   padding: .25em;
   border-collapse: collapse;
@@ -6079,6 +6088,9 @@ a.disabled {
   -moz-background-size: 20px 20px;
   background-size: 20px 20px;
   height: 100vh;
+}
+.canvas-bxms .row-canvas-bxms .nav-bxms-palette-flyout {
+  top: 100px;
 }
 .footer-pf {
   text-align: center;

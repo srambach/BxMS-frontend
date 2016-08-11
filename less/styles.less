@@ -2,6 +2,11 @@
 @import "../node_modules/patternfly/less/variables.less";
 @import "../node_modules/patternfly/less/color-variables.less";
 
+
+//where are the fa-var- icons??
+//@import "../node_modules/patternfly/less/icons.less";
+//  actually, it looks like the variable is being filled in with \f100 but the font must be missing?
+
 @fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
@@ -30,7 +35,8 @@
   margin-left: @nav-pf-vertical-width;
 }
 
-// Top fixed area
+//// Top fixed area
+// TODO: Probably need to separate toolbars and set heights so that the palette can be positioned properly
 .top-fixed-area-bxms {
   position:fixed;
   width: 100%;
@@ -39,8 +45,19 @@
 }
 
 ////Breadcrumb row
-.breadcrumb-bxms {
-}
+// TODO: double-angle-left is not showing properly - \f105 shows in inspector, but
+// the icon shows as a box (unknown character)
+// changing it to \f101 that is in use just below also shows the box
+// If it didn't get the variable, then it wouldn't have the \f105 there, so no idea why the icon isn't there
+  .breadcrumb>li:first-child a:before {
+    color: @gray-light;
+    content: @fa-var-angle-right;
+    font-size: (@font-size-base - 1);
+    padding: 0 9px 0 7px;
+  }
+.breadcrumb>li+li:before {
+    content:@fa-var-angle-right;
+  }
 
 //// Toolbars
 .row-toolbar-bxms {
@@ -74,6 +91,11 @@
   background-color: @color-pf-black-100;
   .dotted;
   height: 100vh;
+
+  // for now, if the palette is inside the canvas
+  .row-canvas-bxms .nav-bxms-palette-flyout {
+    top: 100px;
+  }
 }
 
 //// icon menu (like in footer)
