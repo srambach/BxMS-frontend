@@ -6050,7 +6050,8 @@ a.disabled {
 }
 .breadcrumb > li:first-child a:before {
   color: #9c9c9c;
-  content: "\f105";
+  content: "\f100";
+  font-family: FontAwesome;
   font-size: 11px;
   padding: 0 9px 0 7px;
 }
