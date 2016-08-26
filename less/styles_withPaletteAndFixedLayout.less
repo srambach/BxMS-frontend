@@ -1,0 +1,195 @@
+@import "../node_modules/patternfly/less/patternfly-additions.less";
+@import "../node_modules/patternfly/less/variables.less";
+@import "../node_modules/patternfly/less/color-variables.less";
+
+@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
+@font-path: "../node_modules/patternfly/dist/fonts";
+@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
+
+
+// Palette implemented using vertical navigation pattern
+@nav-pf-vertical-width: @nav-pf-vertical-collapsed-width;
+
+.nav-bxms-palette-flyout {
+  width: @nav-pf-vertical-width;
+  position: relative;
+  // hide the right caret
+  &.nav-pf-vertical > .list-group > .list-group-item.persistent-secondary > a:after {
+    display: none;
+  }
+
+  //adjust the icon line height to match .nav-pf-persistent-secondary>.list-group>.list-group-item .list-group-item-value
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .fa,
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .glyphicon,
+  .nav-pf-persistent-secondary > .list-group > .list-group-item .pficon {
+    line-height: 20px;
+  }
+}
+
+.layout-pf.layout-pf-fixed .container-pf-nav-pf-vertical {
+  margin-left: @nav-pf-vertical-width;
+}
+
+//// Top fixed area
+// TODO: Probably need to separate toolbars and set heights so that the palette can be positioned properly
+.top-fixed-area-bxms {
+  position:fixed;
+  width: 100%;
+  top: @navbar-pf-vertical-height;
+  left: 0;
+}
+
+////Breadcrumb row
+// TODO: double-angle-left is not showing properly - \f105 shows in inspector, but
+// the icon shows as a box (unknown character)
+// changing it to \f101 that is in use just below also shows the box
+// If it didn't get the variable, then it wouldn't have the \f105 there, so no idea why the icon isn't there
+  .breadcrumb>li:first-child a:before {
+    color: @gray-light;
+    content: @fa-var-angle-double-left;
+    font-family: FontAwesome;
+    font-size: (@font-size-base - 1);
+    padding: 0 9px 0 7px;
+
+  }
+.breadcrumb>li+li:before {
+  content:@fa-var-angle-right;
+  }
+
+//// Toolbars
+.row-toolbar-bxms {
+  padding: .25em;
+  border-collapse: collapse;
+  //border-top: 1px solid @color-pf-black-200; //layout-editor wanted borders but project-empty does not...
+  //border-bottom: 1px solid @color-pf-black-200;
+  //position:fixed;
+  //display:inline;
+}
+
+.toolbar-title-bxms {
+  //TODO: what size?
+  font-size: 2em;
+}
+.toolbar-right-bxms {
+  float:right;
+}
+.toolbar-element-bxms {
+  display: inline-block;
+}
+
+// Page Content
+.page-content-bxms {
+  background-color: @color-pf-black-100;
+  height: 100vh;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+// Blank slate
+.blank-slate-pf {
+  background-color: @color-pf-white;
+}
+
+////// TODO: Design Canvas
+.dotted {
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 20px 20px;
+  -moz-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+.canvas-bxms {
+  background-color: @color-pf-black-100;
+  .dotted;
+  height: 100vh;
+
+  // for now, if the palette is inside the canvas
+  .row-canvas-bxms .nav-bxms-palette-flyout {
+    top: 100px;
+  }
+}
+////// end Design Canvas
+
+// Icon menu (like in footer)
+.footer-pf {
+  text-align: center;
+}
+.footer-menu-bxms {
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+  }
+.icon-menu-bxms {
+  list-style: none;
+  li {
+    display:inline-block;
+  }
+}
+.icon-menu-item-bxms {
+  display:inline-block;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+// put a border between items only
+.icon-menu-item-bxms + .icon-menu-item-bxms {
+  border-left: 1px solid;
+}
+
+// Makes a big card-looking button
+.button-card-bxms {
+  padding: 1em;
+  margin: 1em;
+  background-color: inherit;
+  box-shadow: none;
+  &:hover {
+    box-shadow: 0 2px 3px rgba(3,3,3,.1);
+  }
+}
+
+// Put a circle around an icon
+.circle-icon-bxms {
+  border: 2px solid @color-pf-blue;
+  font-size: 1.4em;
+  height: 2em;
+  line-height: 2em;
+  margin: 0.5em;
+  width: 2em;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+
+// Add this to the .fa-code-fork icon to make the process-flow icon
+.fa-process-flow-bxms {
+  transform: rotate(90deg);
+}
+
+// A link to the right side of a card's title
+.card-title-link-bxms {
+  float:right;
+}
+
+//Change default dl to have a left justified dd
+.name-list-bxms dt {
+  text-align: left;
+}
+
+// Adds a checkbox icon before
+// Used for indicating status rather than clickable checkboxes
+.checked-bxms {
+  &:before {
+    content: "\f046";
+    font-family: FontAwesome;
+    margin-right: .25em;
+  }
+}
+.unchecked-bxms {
+  &:before {
+    content: "\f096";
+    font-family: FontAwesome;
+    margin-right: .25em;
+  }
+}
+
