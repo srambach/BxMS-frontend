@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Project</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/styles.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Navbar pasted from vertical nav... -->
+<nav class="navbar navbar-pf-vertical ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <h4>BPM Suite | Design</h4>
+    </a>
+  </div>
+  <nav class="collapse navbar-collapse">
+    <!--<ul class="nav navbar-nav">-->
+    <!--<li><a href="#" target="_blank" class="nav-item-iconic nav-item-iconic-new-window"><span title="Launch" class="fa fa-external-link"></span></a></li>-->
+    <!--</ul>-->
+    <ul class="nav navbar-nav navbar-right navbar-iconic">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Notifications" class="fa pficon-flag"></span>
+          <span class="badge">2</span>
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Help" class="fa pficon-help"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Preferences</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</nav> <!--/.navbar-->
+
+<div class="container-fluid">
+
+  <!-- breadcrumb -->
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class="breadcrumb breadcrumb-bxms">
+        <li>
+          <a href="#">All Projects</a>
+        </li>
+        <li class="active"> New Project1
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Page title -->
+  <div class="row bxms-dashboard-title-panel row-toolbar-bxms">
+    <div class="col-md-12">
+      <span class="toolbar-title-bxms">New Project1</span>
+
+      <span class="btn-group toolbar-right-bxms" style="float:right;">
+        <button type="button" class="btn btn-default">Settings</button>
+        <button type="button" class="btn btn-default">Publish</button>
+        <button type="button" class="btn btn-default">Export</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="row page-content-bxms">
+    <div class="col-md-8 col-lg-9">
+
+      <!-- data toolbar -->
+    <div class="toolbar-pf-actions" style="border:1px solid crimson;">
+      <span class="toolbar-title-bxms">Assets</span>
+      <span class="btn-group toolbar-right-bxms" style="float:right;">
+        <button type="button" class="btn btn-default">Create New</button>
+        <button type="button" class="btn btn-default">Add Shared Assets</button>
+        <button type="button" class="btn btn-default">Import...</button>
+      </span>
+
+    </div>
+    <!-- blank state content -->
+    <div class="blank-slate-pf">
+      <h1>
+        Let's get started.
+      </h1>
+      <p>
+        There is currently nothing in this project.
+      </p>
+      <p>
+        What do you want to make?
+      </p>
+      <div class="blank-slate-pf-secondary-action">
+        <button class="btn button-card-bxms">
+          <div class="fa fa-code-fork fa-process-flow-bxms circle-icon-bxms"></div>
+          <div>Process Flow</div>
+        </button>
+        <button class="btn button-card-bxms">
+          <div class="fa fa-table circle-icon-bxms"></div>
+          <div>Decision Table</div>
+        </button>
+        <button class="btn button-card-bxms">
+          <div class="fa fa-bars circle-icon-bxms"></div>
+          <div>Rule Set</div>
+        </button>
+      </div>
+      <p>
+        <a href="">browse more types...</a>
+      </p>
+      <hr />
+      <p>
+        You can also start by <a href="">adding Shared Assets</a> to this project, or by <a href="">importing</a> a file.
+      </p>
+    </div>
+  </div>
+    <div class="col-md-4 col-lg-3">
+      <div class="card-pf">
+        <div class="card-pf-heading">
+          <a class="card-title-link-bxms">
+            <span class="">Add</span>
+            <span class="fa fa-pencil"></span>
+          </a>
+          <h2 class="card-pf-title">
+            Description
+          </h2>
+        </div>
+      </div><!-- card-pf -->
+
+      <!-- Project Members card -->
+      <div class="card-pf">
+        <div class="card-pf-heading">
+          <a class="card-title-link-bxms">
+            <span class="">Edit</span>
+            <span class="fa fa-pencil"></span>
+          </a>
+          <h2 class="card-pf-title">
+            Project Members
+          </h2>
+        </div>
+        <div class="card-pf-body">
+          <dl class="dl-horizontal name-list-bxms">
+              <dt>Aimee Smith</dt><dd>(Project Owner)</dd>
+          </dl>
+        </div><!-- card-pf-body -->
+      </div><!-- card-pf -->
+
+      <!-- Project Checklist card -->
+      <div class="card-pf">
+        <div class="card-pf-heading">
+          <h2 class="card-pf-title">
+            Project Checklist
+          </h2>
+        </div>
+        <div class="card-pf-body">
+          <ul class="list-unstyled">
+            <li class="checked-bxms">
+              Create at least one Asset
+            </li>
+            <li class="unchecked-bxms">
+              Add Data Models
+            </li>
+            <li class="unchecked-bxms">
+              Add Services
+            </li>
+            <li class="unchecked-bxms">
+              Validate
+            </li>
+            <li class="unchecked-bxms">
+              Publish
+            </li>
+          </ul>
+        </div><!-- card-pf-body -->
+      </div><!-- card-pf -->
+
+      <!-- Activity card -->
+      <div class="card-pf">
+        <div class="card-pf-heading">
+          <h2 class="card-pf-title">
+            Activity
+          </h2>
+        </div>
+        <div class="card-pf-body">
+          <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio. Etiam porta sem alesuda magna mollis euismod. A description list is perfrct for defining terms.
+          <div>
+            <a href="" class="more-link-bxms">Read more <span class="fa fa-long-arrow-right"></span></a>
+        </div>
+        </div><!-- card-pf-body -->
+      </div><!-- card-pf -->
+
+    </div>
+  </div><!-- row -->
+
+</div><!-- container-fluid-->
+
+</body>
+</html>
