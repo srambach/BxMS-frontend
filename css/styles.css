@@ -6028,7 +6028,7 @@ a.disabled {
   margin-right: 25px;
 }
 .breadcrumb > li:first-child a:before {
-  color: #9c9c9c;
+  color: #d1d1d1;
   content: "\f100";
   font-family: FontAwesome;
   font-size: 11px;
@@ -6041,6 +6041,13 @@ a.disabled {
   padding: .25em;
   border-collapse: collapse;
 }
+.toolbar-pf {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.toolbar-pf .form-group:last-of-type {
+  border-right: none;
+}
 .toolbar-title-bxms {
   font-size: 2em;
 }
@@ -6050,20 +6057,29 @@ a.disabled {
 .toolbar-element-bxms {
   display: inline-block;
 }
+.toolbar-data-title-bxms {
+  display: table-cell;
+  float: left;
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+.dropdown-kebab-pf {
+  margin-left: 1em !important;
+}
 .page-content-bxms {
   background-color: #fafafa;
   height: 100vh;
-  padding-top: 1em;
   padding-bottom: 1em;
+  padding-top: 1em;
 }
 .blank-slate-pf {
   background-color: #fff;
 }
 .button-card-bxms {
-  padding: 1em;
-  margin: 1em;
   background-color: inherit;
   box-shadow: none;
+  margin: 1em;
+  padding: 1em;
 }
 .button-card-bxms:hover {
   box-shadow: 0 2px 3px rgba(3, 3, 3, 0.1);

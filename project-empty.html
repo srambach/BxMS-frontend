@@ -101,7 +101,7 @@
     <div class="col-md-12">
       <span class="toolbar-title-bxms">New Project1</span>
 
-      <span class="btn-group toolbar-right-bxms" style="float:right;">
+      <span class="btn-group toolbar-right-bxms">
         <button type="button" class="btn btn-default">Settings</button>
         <button type="button" class="btn btn-default">Publish</button>
         <button type="button" class="btn btn-default">Export</button>
@@ -113,16 +113,34 @@
   <div class="row page-content-bxms">
     <div class="col-md-8 col-lg-9">
 
-      <!-- data toolbar -->
-    <div class="toolbar-pf-actions" style="border:1px solid crimson;">
-      <span class="toolbar-title-bxms">Assets</span>
-      <span class="btn-group toolbar-right-bxms" style="float:right;">
-        <button type="button" class="btn btn-default">Create New</button>
-        <button type="button" class="btn btn-default">Add Shared Assets</button>
-        <button type="button" class="btn btn-default">Import...</button>
-      </span>
+      <!-- data toolbar on top of content -->
+      <div class="toolbar-pf">
+        <form class="toolbar-pf-actions">
+          <!-- title -->
+          <div class="toolbar-data-title-bxms">Assets</div>
 
-    </div>
+          <!-- create new button and kebab -->
+           <span class="btn-group toolbar-right-bxms">
+                <button type="button" class="btn btn-default">Create New</button>
+
+             <!-- kebab menu -->
+                <div class="dropdown btn-group  dropdown-kebab-pf">
+                  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                    <span class="fa fa-ellipsis-v"></span>
+                  </button>
+                  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+           </span>
+        </form>
+      </div>
+
     <!-- blank state content -->
     <div class="blank-slate-pf">
       <h1>
@@ -156,7 +174,8 @@
         You can also start by <a href="">adding Shared Assets</a> to this project, or by <a href="">importing</a> a file.
       </p>
     </div>
-  </div>
+  </div><!-- left content column -->
+
     <div class="col-md-4 col-lg-3">
       <div class="card-pf">
         <div class="card-pf-heading">
