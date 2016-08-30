@@ -6027,6 +6027,9 @@ a.disabled {
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
+.status-ok-bxms {
+  color: #92d400;
+}
 .breadcrumb > li:first-child a:before {
   color: #d1d1d1;
   content: "\f100";
@@ -6050,12 +6053,20 @@ a.disabled {
 }
 .toolbar-title-bxms {
   font-size: 2em;
+  margin-right: 1em;
 }
 .toolbar-right-bxms {
   float: right;
 }
 .toolbar-element-bxms {
   display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.dropdown-minimal-bxms {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 .toolbar-data-title-bxms {
   display: table-cell;
@@ -6068,7 +6079,6 @@ a.disabled {
 }
 .page-content-bxms {
   background-color: #fafafa;
-  height: 100vh;
   padding-bottom: 1em;
   padding-top: 1em;
 }

@@ -7,6 +7,11 @@
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
 
 
+// Status colors
+.status-ok-bxms {
+  color: @color-pf-light-green;
+}
+
 //Breadcrumb row
   .breadcrumb>li:first-child a:before {
     color: @color-pf-black-300;
@@ -36,6 +41,7 @@
 //BxMS toolbar has a title
 .toolbar-title-bxms {
   font-size: 2em;
+  margin-right: 1em;
 }
 //BxMS toolbar has other items on the right
 .toolbar-right-bxms {
@@ -43,8 +49,15 @@
 }
 .toolbar-element-bxms {
   display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
+.dropdown-minimal-bxms {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
 
 // Title for toolbar inside content section
 .toolbar-data-title-bxms {
@@ -62,7 +75,6 @@
 // Page Content
 .page-content-bxms {
   background-color: @color-pf-black-100;
-  height: 100vh;
   padding-bottom: 1em;
   padding-top: 1em;
 }
