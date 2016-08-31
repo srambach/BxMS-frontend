@@ -75,11 +75,11 @@
 .button-card-bxms {
   background-color: inherit;
   box-shadow: none;
-  margin: 1em;
-  min-width: 10em;
+1  min-width: 10em;
   padding: 1em;
   &:hover .circle-icon-bxms {
-    border: 2px solid @color-pf-blue;
+    background-color: @color-pf-black-600;
+    color: @color-pf-white;
   }
 }
 
@@ -87,18 +87,14 @@
 // If it's inside a .button-card-bxms it gets a border on :hover
 .circle-icon-bxms {
   background-color: @alert-info-bg;
-  font-size: 1.4em;
-  height: 2em;
-  line-height: 2em;
-  margin: 0.5em;
-  width: 2em;
+  font-size: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: .5em;
+  width: 2.5em;
   -webkit-border-radius:50%;
   -moz-border-radius:50%;
   border-radius:50%;
-  &:hover {
-    border: 2px solid @color-pf-blue;
-
-  }
 }
 
 // Add this to the .fa-code-fork icon to make the process-flow icon

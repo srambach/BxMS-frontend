@@ -6078,26 +6078,23 @@ a.disabled {
 .button-card-bxms {
   background-color: inherit;
   box-shadow: none;
-  margin: 1em;
-  min-width: 10em;
+  1min-width: 10em;
   padding: 1em;
 }
 .button-card-bxms:hover .circle-icon-bxms {
-  border: 2px solid #0088ce;
+  background-color: #72767b;
+  color: #fff;
 }
 .circle-icon-bxms {
   background-color: #f5f5f5;
-  font-size: 1.4em;
-  height: 2em;
-  line-height: 2em;
-  margin: 0.5em;
-  width: 2em;
+  font-size: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: .5em;
+  width: 2.5em;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-.circle-icon-bxms:hover {
-  border: 2px solid #0088ce;
 }
 .fa-process-flow-bxms {
   transform: rotate(90deg);
