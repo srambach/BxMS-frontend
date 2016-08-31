@@ -6042,8 +6042,7 @@ a.disabled {
   border-collapse: collapse;
 }
 .toolbar-pf {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: .5em 1em;
 }
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
@@ -6074,6 +6073,7 @@ a.disabled {
 }
 .blank-slate-pf {
   background-color: #fff;
+  border: 0px;
 }
 .button-card-bxms {
   background-color: inherit;
