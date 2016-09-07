@@ -6027,6 +6027,9 @@ a.disabled {
 .wizard-pf-footer .btn-cancel {
   margin-right: 25px;
 }
+html {
+  background-color: #f5f5f5;
+}
 .breadcrumb > li:first-child a:before {
   color: #d1d1d1;
   content: "\f100";
@@ -6037,8 +6040,12 @@ a.disabled {
 .breadcrumb > li + li:before {
   content: "\f105";
 }
+.breadcrumb-bxms {
+  background-color: #fff;
+}
 .row-toolbar-bxms {
   padding: .25em;
+  background-color: #fff;
   border-collapse: collapse;
 }
 .toolbar-pf {
@@ -6052,6 +6059,10 @@ a.disabled {
 }
 .toolbar-element-bxms {
   display: inline-block;
+}
+.toolbar-btn-group-bxms {
+  float: right;
+  margin-top: .5em;
 }
 .toolbar-data-title-bxms {
   display: table-cell;
@@ -6078,7 +6089,7 @@ a.disabled {
 .button-card-bxms {
   background-color: inherit;
   box-shadow: none;
-  1min-width: 10em;
+  min-width: 10em;
   padding: 1em;
 }
 .button-card-bxms:hover .circle-icon-bxms {
@@ -6087,7 +6098,8 @@ a.disabled {
 }
 .circle-icon-bxms {
   background-color: #f5f5f5;
-  font-size: 2em;
+  font-size: 15px;
+  font-weight: 400;
   height: 2.5em;
   line-height: 2.5em;
   margin: .5em;
