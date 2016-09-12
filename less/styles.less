@@ -1,17 +1,136 @@
+////from patternfly.less
+///* PatternFly */
+//
+//// OpenSans
+//@import "../node_modules/patternfly/less/fonts.less";
+//// Bootstrap
+//@import "../node_modules/patternfly/less/lib/bootstrap/bootstrap.less";
+//// Font Awesome
+//@import "../node_modules/patternfly/less/lib/font-awesome/font-awesome.less";
+//
+//// Bootstrap overrides
+//@import "../node_modules/patternfly/less/variables.less";
+//@import "../node_modules/patternfly/less/mixins.less";
+//@import "../node_modules/patternfly/less/alerts.less";
+//@import "../node_modules/patternfly/less/badges.less";
+//@import "../node_modules/patternfly/less/breadcrumbs.less";
+//@import "../node_modules/patternfly/less/buttons.less";
+//@import "../node_modules/patternfly/less/dropdowns.less";
+//@import "../node_modules/patternfly/less/forms.less";
+//@import "../node_modules/patternfly/less/labels.less";
+//@import "../node_modules/patternfly/less/list-group.less";
+//@import "../node_modules/patternfly/less/modals.less";
+//@import "../node_modules/patternfly/less/pager.less";
+//@import "../node_modules/patternfly/less/pagination.less";
+//@import "../node_modules/patternfly/less/panels.less";
+//@import "../node_modules/patternfly/less/popovers.less";
+//@import "../node_modules/patternfly/less/progress-bars.less";
+//@import "../node_modules/patternfly/less/tables.less";
+//@import "../node_modules/patternfly/less/tabs.less";
+//@import "../node_modules/patternfly/less/tooltip.less";
+//@import "../node_modules/patternfly/less/type.less";
+//
+////from additions
+///* PatternFly additions to Bootstrap */
+//
+////////////// ******* Looks like importing these a second time causes the bootstrap style leaks
+//// Bootstrap variables and mixins
+////@import "../node_modules/patternfly/less/lib/bootstrap/variables.less";
+////@import "../node_modules/patternfly/less/lib/bootstrap/mixins.less";
+//// Font Awesome variables
+////@import "../node_modules/patternfly/less/lib/font-awesome/variables.less";
+//
+//// Bootstrap-Combobox
+//@import "../node_modules/patternfly/less/lib/bootstrap-combobox/combobox.less";
+//// Bootstrap-Datepicker
+//@import "../node_modules/patternfly/less/lib/bootstrap-datepicker/datepicker3.less";
+//// Bootstrap-Select
+//@import "../node_modules/patternfly/less/lib/bootstrap-select/bootstrap-select.less";
+//// Bootstrap Switch
+//@import "../node_modules/patternfly/less/lib/bootstrap-switch/bootstrap-switch.less";
+//// Bootstrap Touchspin
+//@import (less) "../node_modules/patternfly/less/lib/bootstrap-touchspin/jquery.bootstrap-touchspin.css";
+//// C3 charts
+//@import (less) "../node_modules/patternfly/less/lib/c3/c3.css";
+//// Bootstrap-DateTimePicker
+//@import "../node_modules/patternfly/less/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker-build.less";
+//
+//@import "../node_modules/patternfly/less/variables.less";
+//@import "../node_modules/patternfly/less/mixins.less";
+//@import "../node_modules/patternfly/less/about-modal.less";
+//@import "../node_modules/patternfly/less/blank-slate.less";
+//@import "../node_modules/patternfly/less/bootstrap-combobox.less";
+//@import "../node_modules/patternfly/less/bootstrap-datepicker.less";
+//@import "../node_modules/patternfly/less/bootstrap-select.less";
+//@import "../node_modules/patternfly/less/bootstrap-switch.less";
+//@import "../node_modules/patternfly/less/bootstrap-touchspin.less";
+//@import "../node_modules/patternfly/less/bootstrap-treeview.less";
+//@import "../node_modules/patternfly/less/cards.less";
+//@import "../node_modules/patternfly/less/charts.less";
+//@import "../node_modules/patternfly/less/close.less";
+//@import "../node_modules/patternfly/less/datatables.less";
+//@import "../node_modules/patternfly/less/footer.less";
+//@import "../node_modules/patternfly/less/icons.less";
+//@import "../node_modules/patternfly/less/infotip.less";
+//@import "../node_modules/patternfly/less/layouts.less";
+//@import "../node_modules/patternfly/less/links.less";
+//@import "../node_modules/patternfly/less/list-view.less";
+//@import "../node_modules/patternfly/less/login.less";
+//@import "../node_modules/patternfly/less/navbar.less";
+//@import "../node_modules/patternfly/less/navbar-alt.less";
+//@import "../node_modules/patternfly/less/navbar-vertical.less";
+//@import "../node_modules/patternfly/less/nav-vertical-alt.less";
+//@import "../node_modules/patternfly/less/notifications-drawer.less";
+//@import "../node_modules/patternfly/less/search.less";
+//@import "../node_modules/patternfly/less/sidebar.less";
+//@import "../node_modules/patternfly/less/spinner.less";
+//@import "../node_modules/patternfly/less/syntax-highlighting.less";
+//@import "../node_modules/patternfly/less/time-picker.less";
+//@import "../node_modules/patternfly/less/toast.less";
+//@import "../node_modules/patternfly/less/toolbar.less";
+//@import "../node_modules/patternfly/less/vertical-nav.less";
+//@import "../node_modules/patternfly/less/wizard.less";
+//////////////////////////////////////////////////////////////
+
+
+@import "../node_modules/patternfly/less/patternfly.less";
 @import "../node_modules/patternfly/less/patternfly-additions.less";
+//must re-import variables because they've been overwritten by the bootstrap extras in pf-additions
 @import "../node_modules/patternfly/less/variables.less";
-@import "../node_modules/patternfly/less/color-variables.less";
+//@import "../node_modules/patternfly/less/color-variables.less";
 
 @fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
-
 
 // Status colors
 .status-ok-bxms {
   color: @color-pf-light-green;
 }
 
+//Circle Icons
+// Includes :hover
+.circle-icon-bxms {
+  background-color: @alert-info-bg;
+  font-size: 15px;
+  font-weight: 400;
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: .5em;
+  width: 2.5em;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  &:hover {
+    background-color: @color-pf-black-600;
+    color: @color-pf-white;
+  }
+}
+
+//Page level
+html {
+  background-color: @color-pf-black-150;
+}
 //Breadcrumb row
   .breadcrumb>li:first-child a:before {
     color: @color-pf-black-300;
@@ -24,16 +143,19 @@
 .breadcrumb>li+li:before {
   content:@fa-var-angle-right;
   }
+.breadcrumb-bxms {
+  background-color: @color-pf-white;
+}
 
 // Toolbars
 .row-toolbar-bxms {
   padding: .25em;
+  background-color: @color-pf-white;
   border-collapse: collapse;
 }
 
 .toolbar-pf {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: .5em 1em;
 }
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
@@ -44,9 +166,9 @@
   margin-right: 1em;
 }
 //BxMS toolbar has other items on the right
-.toolbar-right-bxms {
-  float:right;
-}
+//.toolbar-right-bxms {
+//  float:right;
+//}
 .toolbar-element-bxms {
   display: inline-block;
   margin-top: auto;
@@ -57,6 +179,10 @@
   background: none;
   border: none;
   box-shadow: none;
+}
+.toolbar-btn-group-bxms {
+  float:right;
+  margin-top: .5em;
 }
 
 // Title for toolbar inside content section
@@ -74,39 +200,33 @@
 
 // Page Content
 .page-content-bxms {
-  background-color: @color-pf-black-100;
+  background-color: @well-bg;
   padding-bottom: 1em;
   padding-top: 1em;
 }
 
+.main-content-bxms {
+  .box-shadow(0 1px 1px fade(@color-pf-black, 17.5%));
+}
 // Blank slate
 .blank-slate-pf {
   background-color: @color-pf-white;
+  border: 0px;
 }
 
 // Makes a big card-looking button
 .button-card-bxms {
   background-color: inherit;
   box-shadow: none;
-  margin: 1em;
+  min-width: 10em;
   padding: 1em;
-  &:hover {
-    box-shadow: 0 2px 3px rgba(3,3,3,.1);
+  &:hover .circle-icon-bxms {
+    background-color: @color-pf-black-600;
+    color: @color-pf-white;
   }
+
 }
 
-// Put a circle around an icon
-.circle-icon-bxms {
-  border: 2px solid @color-pf-blue;
-  font-size: 1.4em;
-  height: 2em;
-  line-height: 2em;
-  margin: 0.5em;
-  width: 2em;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border-radius:50%;
-}
 
 // Add this to the .fa-code-fork icon to make the process-flow icon
 .fa-process-flow-bxms {

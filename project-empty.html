@@ -6,7 +6,7 @@
 
   <title>Project</title>
 
-  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <!--<link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">-->
   <link href="css/styles.css" rel="stylesheet" media="screen, print">
 
   <!-- jQuery -->
@@ -97,14 +97,14 @@
   </div>
 
   <!-- Page title -->
-  <div class="row bxms-dashboard-title-panel row-toolbar-bxms">
-    <div class="col-md-12">
+  <div class="row row-toolbar-bxms">
+    <div class="col-xs-12">
       <span class="toolbar-title-bxms">New Project1</span>
 
-      <span class="btn-group toolbar-right-bxms">
+      <span class="btn-group toolbar-btn-group-bxms">
         <button type="button" class="btn btn-default">Settings</button>
-        <button type="button" class="btn btn-default disabled">Publish</button>
         <button type="button" class="btn btn-default disabled">Export</button>
+        <button type="button" class="btn btn-default disabled">Publish</button>
       </span>
     </div>
   </div>
@@ -112,24 +112,24 @@
   <!-- Page content -->
   <div class="row page-content-bxms">
     <div class="col-md-8 col-lg-9">
+      <div class="main-content-bxms">
+        <!-- data toolbar on top of content -->
+        <div class="toolbar-pf">
+          <form class="toolbar-pf-actions">
+            <!-- title -->
+            <div class="toolbar-data-title-bxms">Assets</div>
 
-      <!-- data toolbar on top of content -->
-      <div class="toolbar-pf">
-        <form class="toolbar-pf-actions">
-          <!-- title -->
-          <div class="toolbar-data-title-bxms">Assets</div>
+            <!-- create new button and kebab -->
+            <span class="btn-group pull-right">
+                <button type="button" class="btn btn-primary">Create New</button>
 
-          <!-- create new button and kebab -->
-           <span class="btn-group toolbar-right-bxms">
-                <button type="button" class="btn btn-default">Create New</button>
-
-             <!-- kebab menu -->
+              <!-- kebab menu -->
                 <div class="dropdown btn-group  dropdown-kebab-pf">
                   <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="true">
                     <span class="fa fa-ellipsis-v"></span>
                   </button>
-                  <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
@@ -138,43 +138,42 @@
                   </ul>
                 </div>
            </span>
-        </form>
-      </div>
+          </form>
+        </div>
 
-    <!-- blank state content -->
-    <div class="blank-slate-pf">
-      <h1>
-        Let's get started.
-      </h1>
-      <p>
-        There is currently nothing in this project.
-      </p>
-      <p>
-        What do you want to make?
-      </p>
-      <div class="blank-slate-pf-secondary-action">
-        <button class="btn button-card-bxms">
-          <div class="fa fa-code-fork fa-process-flow-bxms circle-icon-bxms"></div>
-          <div>Process Flow</div>
-        </button>
-        <button class="btn button-card-bxms">
-          <div class="fa fa-table circle-icon-bxms"></div>
-          <div>Decision Table</div>
-        </button>
-        <button class="btn button-card-bxms">
-          <div class="fa fa-bars circle-icon-bxms"></div>
-          <div>Rule Set</div>
-        </button>
-      </div>
-      <p>
-        <a href="">browse more types...</a>
-      </p>
-      <hr />
-      <p>
-        You can also start by <a href="">adding Shared Assets</a> to this project, or by <a href="">importing</a> a file.
-      </p>
-    </div>
-  </div><!-- left content column -->
+        <!-- blank state content -->
+        <div class="blank-slate-pf">
+          <h1>
+            Let's get started.
+          </h1>
+          <p>
+            There is currently nothing in this project.<br/>
+            What do you want to make?
+          </p>
+          <div class="blank-slate-pf-secondary-action">
+            <button class="btn button-card-bxms">
+              <div class="fa fa-code-fork fa-process-flow-bxms circle-icon-bxms"></div>
+              <div>Process Flow</div>
+            </button>
+            <button class="btn button-card-bxms">
+              <div class="fa fa-table circle-icon-bxms"></div>
+              <div>Decision Table</div>
+            </button>
+            <button class="btn button-card-bxms">
+              <div class="fa fa-bars circle-icon-bxms"></div>
+              <div>Rule Set</div>
+            </button>
+          </div>
+          <p>
+            <a href="">browse more types...</a>
+          </p>
+          <hr/>
+          <p>
+            You can also start by <a href="">importing items</a> to this project.
+          </p>
+        </div>
+      </div><!-- .main-content-bxms -->
+    </div><!-- left content column -->
 
     <div class="col-md-4 col-lg-3">
       <div class="card-pf">
