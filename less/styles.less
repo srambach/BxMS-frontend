@@ -260,3 +260,23 @@ html {
   }
 }
 
+@media (min-width: @screen-md-min) {
+  .list-view-pf-description {
+    width: 90%;
+  }
+  .list-view-pf-additional-info {
+    flex: 0 0 auto; // it covers whats left from summary
+    float: left; // IE9 fallback
+    width: 10%; // IE9 fallback
+  }
+  .list-view-pf .list-group-item-heading {
+    -ms-flex: 1 0 calc(~'70% - 20px'); // IE10 fallback
+    flex:     1 0 calc(~'70% - 20px');
+    width: calc(~'70% - 20px'); // IE9 fallback
+  }
+  .list-view-pf .list-group-item-text {
+    -ms-flex: 0 0 calc(~'30% - 20px'); // IE10 fallback
+    flex:     0 0 calc(~'30% - 20px');
+    width: calc(~'30% - 20px'); // IE9 fallback
+  }
+}

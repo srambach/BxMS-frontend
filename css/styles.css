@@ -16314,3 +16314,23 @@ html {
   font-family: FontAwesome;
   margin-right: .25em;
 }
+@media (min-width: 992px) {
+  .list-view-pf-description {
+    width: 90%;
+  }
+  .list-view-pf-additional-info {
+    flex: 0 0 auto;
+    float: left;
+    width: 10%;
+  }
+  .list-view-pf .list-group-item-heading {
+    -ms-flex: 1 0 calc(70% - 20px);
+    flex: 1 0 calc(70% - 20px);
+    width: calc(70% - 20px);
+  }
+  .list-view-pf .list-group-item-text {
+    -ms-flex: 0 0 calc(30% - 20px);
+    flex: 0 0 calc(30% - 20px);
+    width: calc(30% - 20px);
+  }
+}
