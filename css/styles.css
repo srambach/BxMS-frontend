@@ -16233,6 +16233,7 @@ html {
 }
 .breadcrumb-bxms {
   background-color: #fff;
+  margin-bottom: 0;
 }
 .row-toolbar-bxms {
   padding: .25em;
@@ -16248,6 +16249,9 @@ html {
 .toolbar-title-bxms {
   font-size: 2em;
   margin-right: 1em;
+}
+.toolbar-right-bxms {
+  float: right;
 }
 .toolbar-element-bxms {
   display: inline-block;
@@ -16298,11 +16302,24 @@ html {
 .fa-process-flow-bxms {
   transform: rotate(90deg);
 }
+.fa-imported-bxms {
+  transform: rotate(180deg);
+}
 .card-title-link-bxms {
-  float: right;
+  margin-left: .5em;
+}
+.card-pf-heading-link-bxms {
+  padding: 20px 0;
+}
+.card-pf-body {
+  margin: auto;
+}
+.card-pf-footer {
+  padding-bottom: 20px;
 }
 .name-list-bxms dt {
   text-align: left;
+  font-weight: normal;
 }
 .checked-bxms:before {
   content: "\f046";
@@ -16333,4 +16350,9 @@ html {
     flex: 0 0 calc(30% - 20px);
     width: calc(30% - 20px);
   }
+}
+.list-view-pf-left .fa.list-view-pf-icon-sm {
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
 }

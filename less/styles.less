@@ -145,6 +145,7 @@ html {
   }
 .breadcrumb-bxms {
   background-color: @color-pf-white;
+  margin-bottom: 0;
 }
 
 // Toolbars
@@ -166,9 +167,9 @@ html {
   margin-right: 1em;
 }
 //BxMS toolbar has other items on the right
-//.toolbar-right-bxms {
-//  float:right;
-//}
+.toolbar-right-bxms {
+  float:right;
+}
 .toolbar-element-bxms {
   display: inline-block;
   margin-top: auto;
@@ -232,15 +233,29 @@ html {
 .fa-process-flow-bxms {
   transform: rotate(90deg);
 }
+// Add this to the .fa-external-link-suqare icon to make the process-flow icon
+.fa-imported-bxms {
+  transform: rotate(180deg);
+}
 
 // A link to the right side of a card's title
 .card-title-link-bxms {
-  float:right;
+  margin-left: .5em;
+}
+.card-pf-heading-link-bxms {
+  padding: 20px 0;
+}
+.card-pf-body {
+  margin: auto;
+}
+.card-pf-footer {
+  padding-bottom: 20px;
 }
 
 //Change default dl to have a left justified dd
 .name-list-bxms dt {
   text-align: left;
+  font-weight:normal;
 }
 
 // Adds a checkbox icon before
@@ -260,6 +275,7 @@ html {
   }
 }
 
+// Adjust width of list-view items to make more space for the description and heading
 @media (min-width: @screen-md-min) {
   .list-view-pf-description {
     width: 90%;
@@ -279,4 +295,11 @@ html {
     flex:     0 0 calc(~'30% - 20px');
     width: calc(~'30% - 20px'); // IE9 fallback
   }
+}
+//selector length needed to override specificity
+// Adjust size of the circle so that the icon fits nicely
+.list-view-pf-left .fa.list-view-pf-icon-sm {
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
 }
