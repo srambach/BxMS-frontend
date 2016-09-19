@@ -16243,6 +16243,14 @@ html {
 .toolbar-pf {
   padding: .5em 1em;
 }
+.toolbar-bxms {
+  display: flex;
+}
+.toolbar-pf .form-group,
+.toolbar-pf .btn-group {
+  margin-bottom: 0;
+  display: flex;
+}
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
 }
@@ -16267,6 +16275,12 @@ html {
   float: right;
   margin-top: .5em;
 }
+.btn-group-bxms-right {
+  float: right;
+}
+.toolbar-pf-filter {
+  min-width: 18em;
+}
 .toolbar-data-title-bxms {
   display: table-cell;
   float: left;
@@ -16275,6 +16289,22 @@ html {
 }
 .dropdown-kebab-pf {
   margin-left: 1em !important;
+}
+.input-group-bxms {
+  margin-bottom: .5em;
+}
+@media (min-width: 768px) {
+  .toolbar-pf-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .btn-group-bxms-right {
+    margin-left: auto;
+  }
+  .input-group-bxms {
+    margin-bottom: auto;
+  }
 }
 .page-content-bxms {
   background-color: #f5f5f5;
@@ -16333,12 +16363,12 @@ html {
 }
 @media (min-width: 992px) {
   .list-view-pf-description {
-    width: 90%;
+    width: 85%;
   }
   .list-view-pf-additional-info {
     flex: 0 0 auto;
     float: left;
-    width: 10%;
+    width: 15%;
   }
   .list-view-pf .list-group-item-heading {
     -ms-flex: 1 0 calc(70% - 20px);
@@ -16355,4 +16385,7 @@ html {
   height: 2em;
   line-height: 2em;
   width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

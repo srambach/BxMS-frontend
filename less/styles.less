@@ -1,96 +1,4 @@
-////from patternfly.less
-///* PatternFly */
-//
-//// OpenSans
-//@import "../node_modules/patternfly/less/fonts.less";
-//// Bootstrap
-//@import "../node_modules/patternfly/less/lib/bootstrap/bootstrap.less";
-//// Font Awesome
-//@import "../node_modules/patternfly/less/lib/font-awesome/font-awesome.less";
-//
-//// Bootstrap overrides
-//@import "../node_modules/patternfly/less/variables.less";
-//@import "../node_modules/patternfly/less/mixins.less";
-//@import "../node_modules/patternfly/less/alerts.less";
-//@import "../node_modules/patternfly/less/badges.less";
-//@import "../node_modules/patternfly/less/breadcrumbs.less";
-//@import "../node_modules/patternfly/less/buttons.less";
-//@import "../node_modules/patternfly/less/dropdowns.less";
-//@import "../node_modules/patternfly/less/forms.less";
-//@import "../node_modules/patternfly/less/labels.less";
-//@import "../node_modules/patternfly/less/list-group.less";
-//@import "../node_modules/patternfly/less/modals.less";
-//@import "../node_modules/patternfly/less/pager.less";
-//@import "../node_modules/patternfly/less/pagination.less";
-//@import "../node_modules/patternfly/less/panels.less";
-//@import "../node_modules/patternfly/less/popovers.less";
-//@import "../node_modules/patternfly/less/progress-bars.less";
-//@import "../node_modules/patternfly/less/tables.less";
-//@import "../node_modules/patternfly/less/tabs.less";
-//@import "../node_modules/patternfly/less/tooltip.less";
-//@import "../node_modules/patternfly/less/type.less";
-//
-////from additions
-///* PatternFly additions to Bootstrap */
-//
-////////////// ******* Looks like importing these a second time causes the bootstrap style leaks
-//// Bootstrap variables and mixins
-////@import "../node_modules/patternfly/less/lib/bootstrap/variables.less";
-////@import "../node_modules/patternfly/less/lib/bootstrap/mixins.less";
-//// Font Awesome variables
-////@import "../node_modules/patternfly/less/lib/font-awesome/variables.less";
-//
-//// Bootstrap-Combobox
-//@import "../node_modules/patternfly/less/lib/bootstrap-combobox/combobox.less";
-//// Bootstrap-Datepicker
-//@import "../node_modules/patternfly/less/lib/bootstrap-datepicker/datepicker3.less";
-//// Bootstrap-Select
-//@import "../node_modules/patternfly/less/lib/bootstrap-select/bootstrap-select.less";
-//// Bootstrap Switch
-//@import "../node_modules/patternfly/less/lib/bootstrap-switch/bootstrap-switch.less";
-//// Bootstrap Touchspin
-//@import (less) "../node_modules/patternfly/less/lib/bootstrap-touchspin/jquery.bootstrap-touchspin.css";
-//// C3 charts
-//@import (less) "../node_modules/patternfly/less/lib/c3/c3.css";
-//// Bootstrap-DateTimePicker
-//@import "../node_modules/patternfly/less/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker-build.less";
-//
-//@import "../node_modules/patternfly/less/variables.less";
-//@import "../node_modules/patternfly/less/mixins.less";
-//@import "../node_modules/patternfly/less/about-modal.less";
-//@import "../node_modules/patternfly/less/blank-slate.less";
-//@import "../node_modules/patternfly/less/bootstrap-combobox.less";
-//@import "../node_modules/patternfly/less/bootstrap-datepicker.less";
-//@import "../node_modules/patternfly/less/bootstrap-select.less";
-//@import "../node_modules/patternfly/less/bootstrap-switch.less";
-//@import "../node_modules/patternfly/less/bootstrap-touchspin.less";
-//@import "../node_modules/patternfly/less/bootstrap-treeview.less";
-//@import "../node_modules/patternfly/less/cards.less";
-//@import "../node_modules/patternfly/less/charts.less";
-//@import "../node_modules/patternfly/less/close.less";
-//@import "../node_modules/patternfly/less/datatables.less";
-//@import "../node_modules/patternfly/less/footer.less";
-//@import "../node_modules/patternfly/less/icons.less";
-//@import "../node_modules/patternfly/less/infotip.less";
-//@import "../node_modules/patternfly/less/layouts.less";
-//@import "../node_modules/patternfly/less/links.less";
-//@import "../node_modules/patternfly/less/list-view.less";
-//@import "../node_modules/patternfly/less/login.less";
-//@import "../node_modules/patternfly/less/navbar.less";
-//@import "../node_modules/patternfly/less/navbar-alt.less";
-//@import "../node_modules/patternfly/less/navbar-vertical.less";
-//@import "../node_modules/patternfly/less/nav-vertical-alt.less";
-//@import "../node_modules/patternfly/less/notifications-drawer.less";
-//@import "../node_modules/patternfly/less/search.less";
-//@import "../node_modules/patternfly/less/sidebar.less";
-//@import "../node_modules/patternfly/less/spinner.less";
-//@import "../node_modules/patternfly/less/syntax-highlighting.less";
-//@import "../node_modules/patternfly/less/time-picker.less";
-//@import "../node_modules/patternfly/less/toast.less";
-//@import "../node_modules/patternfly/less/toolbar.less";
-//@import "../node_modules/patternfly/less/vertical-nav.less";
-//@import "../node_modules/patternfly/less/wizard.less";
-//////////////////////////////////////////////////////////////
+// Project Less file
 
 
 @import "../node_modules/patternfly/less/patternfly.less";
@@ -158,6 +66,15 @@ html {
 .toolbar-pf {
   padding: .5em 1em;
 }
+.toolbar-bxms {
+  display:flex;
+}
+
+.toolbar-pf .form-group,
+.toolbar-pf .btn-group {
+  margin-bottom: 0;
+  display: flex;
+}
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
 }
@@ -185,7 +102,16 @@ html {
   float:right;
   margin-top: .5em;
 }
-
+///////////
+//TOOLBAR
+// move the button group to the right on narrower screens
+.btn-group-bxms-right {
+  float:right;
+}
+//so the placeholder text doesn't get cut off
+.toolbar-pf-filter {
+  min-width: 18em;
+}
 // Title for toolbar inside content section
 .toolbar-data-title-bxms {
   display:table-cell;
@@ -198,6 +124,28 @@ html {
 .dropdown-kebab-pf {
   margin-left: 1em !important;
 }
+// add some vertical space if toolbar pieces are stacked
+.input-group-bxms {
+  margin-bottom: .5em;
+}
+// switch to flex display for toolbar
+@media (min-width: @screen-sm-min) {
+  // Use flex to vertically center toolbar items
+  .toolbar-pf-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+   // Push the button group to the right when flexed
+  .btn-group-bxms-right {
+    margin-left: auto;
+  }
+  //remove the margin needed when items were stacked
+  .input-group-bxms {
+    margin-bottom: auto;
+  }
+}
+
 
 // Page Content
 .page-content-bxms {
@@ -278,12 +226,12 @@ html {
 // Adjust width of list-view items to make more space for the description and heading
 @media (min-width: @screen-md-min) {
   .list-view-pf-description {
-    width: 90%;
+    width: 85%;
   }
   .list-view-pf-additional-info {
     flex: 0 0 auto; // it covers whats left from summary
     float: left; // IE9 fallback
-    width: 10%; // IE9 fallback
+    width: 15%; // IE9 fallback
   }
   .list-view-pf .list-group-item-heading {
     -ms-flex: 1 0 calc(~'70% - 20px'); // IE10 fallback
@@ -302,4 +250,7 @@ html {
   height: 2em;
   line-height: 2em;
   width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
