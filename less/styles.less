@@ -35,10 +35,6 @@
   }
 }
 
-//Page level
-html {
-  background-color: @color-pf-black-150;
-}
 //Breadcrumb row
   .breadcrumb>li:first-child a:before {
     color: @color-pf-black-300;
@@ -58,7 +54,7 @@ html {
 
 // Toolbars
 .row-toolbar-bxms {
-  padding: .25em;
+  padding: .25em 0;
   background-color: @color-pf-white;
   border-collapse: collapse;
 }
@@ -223,11 +219,18 @@ html {
   }
 }
 
+// List-view
+.list-view-bxms-kebab {
+  margin-left: auto !important;
+  align-self: flex-end;
+}
+
+.list-view-pf-body {
+  display:flex;
+}
+
 // Adjust width of list-view items to make more space for the description and heading
 @media (min-width: @screen-md-min) {
-  .list-view-pf-description {
-    width: 85%;
-  }
   .list-view-pf-additional-info {
     flex: 0 0 auto; // it covers whats left from summary
     float: left; // IE9 fallback
@@ -243,6 +246,7 @@ html {
     flex:     0 0 calc(~'30% - 20px');
     width: calc(~'30% - 20px'); // IE9 fallback
   }
+
 }
 //selector length needed to override specificity
 // Adjust size of the circle so that the icon fits nicely
