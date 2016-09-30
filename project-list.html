@@ -14,6 +14,7 @@
 
   <!-- Bootstrap JS -->
   <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
 
 </head>
@@ -85,26 +86,33 @@
 <!--everything under the nav bar-->
 <div class="container-fluid">
 
-  <!-- breadcrumb -->
-  <div class="row">
-    <div class="col-xs-12">
-      <ol class="breadcrumb breadcrumb-bxms">
-        <li>
-          <a href="#">Finance</a>
-        </li>
-        <li class="active">Projects
-        </li>
-      </ol>
-    </div>
-  </div>
+  <!-- tabs -->
+  <div class="row bxms-row__nav-tabs">
 
-  <!-- Page title -->
-  <div class="row row-toolbar-bxms">
-    <div class="col-md-12">
-      <span class="toolbar-title-bxms">Projects</span>
-    </div>
-  </div>
+    <!-- dropdown selector for Team -->
+    <div class="pull-right">
+      <label for="teamDropdown">Team:
+      </label>
+      <select id="teamDropdown" class="selectpicker">
+        <option>Finance</option>
+        <option>Human Resources</option>
+        <option>Customer Support</option>
+        <option disabled>Nothing</option>
+      </select>
 
+      <script>
+        // Initialize Boostrap-select
+        $('.selectpicker').selectpicker();
+      </script>
+    </div>
+
+    <!-- navigation tabs -->
+    <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Projects</a></li>
+    <li><a href="#">Assets</a></li>
+  </ul>
+  </div>
+  
   <!-- Page content -->
   <div class="row ">
 
@@ -152,7 +160,7 @@
       <!-- create new button and kebab -->
       <div class="form-group">
           <span class="btn-group ">
-                <button type="button" class="btn btn-default">New Project</button>
+                <button type="button" class="btn btn-primary">New Project</button>
 
         <!-- kebab menu -->
                 <div class="dropdown btn-group  dropdown-kebab-pf">
