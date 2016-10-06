@@ -43,21 +43,12 @@
   white-space: normal;
 }
 
-//Breadcrumb row
-  .breadcrumb>li:first-child a:before {
-    color: @color-pf-black-300;
-    content: @fa-var-angle-double-left;
-    font-family: FontAwesome;
-    font-size: (@font-size-base - 1);
-    padding: 0 9px 0 7px;
 
-  }
-.breadcrumb>li+li:before {
-  content:@fa-var-angle-right;
-  }
-.breadcrumb-bxms {
-  background-color: @color-pf-white;
-  margin-bottom: 0;
+// Row with tabs
+.bxms-row__nav-tabs {
+  padding-left: .5em;
+  padding-right: .5em;
+  margin-top: .5em;
 }
 
 // Toolbars
@@ -235,6 +226,10 @@
 
 .list-view-pf-body {
   display:flex;
+}
+
+.list-view-pf-additional-info-item {
+  width: 7em; // set the width so they wrap at the same time regardless of contents
 }
 
 // Adjust width of list-view items to make more space for the description and heading

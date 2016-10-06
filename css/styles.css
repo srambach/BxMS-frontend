@@ -16373,6 +16373,9 @@ a.disabled {
 .list-view-pf-body {
   display: flex;
 }
+.list-view-pf-additional-info-item {
+  width: 7em;
+}
 @media (min-width: 992px) {
   .list-view-pf-additional-info {
     flex: 0 0 auto;
