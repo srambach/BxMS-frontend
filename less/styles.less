@@ -65,11 +65,10 @@
   border-collapse: collapse;
 }
 
-.toolbar-pf {
-  padding: .5em 1em;
-}
+// * in use on project-list
 .toolbar-bxms {
   display:flex;
+  padding: .5em 1em;
 }
 
 .toolbar-pf .form-group,
@@ -148,6 +147,34 @@
   }
 }
 
+
+
+// results toolbar (case list!)
+.toolbar-pf-results {
+  padding: 10px;
+}
+
+.bxms-toolbar-pf-results__block {
+  border-right: 1px solid @sidebar-pf-border-color;
+  display: inline-flex;
+  float: left;
+  margin-bottom: 0;
+  padding-left: (@grid-gutter-width/2);
+  padding-right: (@grid-gutter-width/2);
+  &:first-child {
+    padding-left: inherit;
+  }
+  &:last-child {
+    border-right: none;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .toolbar-pf-results h5, .toolbar-pf-results p, .toolbar-pf-results ul {
+    line-height: inherit;
+  }
+}
 // About modal
 .about-modal-pf {
   background-color: #083452;
@@ -236,12 +263,22 @@
   align-self: flex-end;
 }
 
+.list-view-bxms-status {
+  margin-right: 2em;
+  border: 1px solid red;
+}
+
 .list-view-pf-body {
   display:flex;
 }
 
 .list-view-pf-additional-info-item {
   width: 7em; // set the width so they wrap at the same time regardless of contents
+}
+
+.list-view-pf-actions {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 // Adjust width of list-view items to make more space for the description and heading
@@ -262,6 +299,32 @@
     width: calc(~'30% - 20px'); // IE9 fallback
   }
 
+  .list-view-pf .bxms-list-view-pf-description---case {
+    -ms-flex: 1 0 calc(~'80%'); // IE10 fallback
+    flex:     1 0 calc(~'80%');
+    width: calc(~'80%'); // IE9 fallback
+  }
+  .list-view-pf .bxms-list-group-item-heading--case {
+    -ms-flex: 1 0 20em; // IE10 fallback
+    flex:     1 0 20em;
+    width: 20em; // IE9 fallback
+  }
+  .list-view-pf .bxms-list-view-bxms-status--case {
+    -ms-flex: 1 0 10em; // IE10 fallback
+    flex:     1 0 10em;
+    width: 10em; // IE9 fallback
+  }
+  .list-view-pf .bxms-list-group-item-text--case {
+    -ms-flex: 1 0 auto; // IE10 fallback
+    flex:     1 0 auto;
+    width: calc(100% - 20em - 10em); // IE9 fallback
+  }
+  .list-view-pf .bxms-list-view-pf-actions--case {
+    -ms-flex: 1 0 20em; // IE10 fallback
+    flex:     1 0 20em;
+    width: 20em; // IE9 fallback
+    text-align: right;
+  }
 }
 //selector length needed to override specificity
 // Adjust size of the circle so that the icon fits nicely

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case List Building block</title>
+
+  <!--<link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">-->
+  <link href="css/styles.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+
+</head>
+<body>
+
+<!--<div style="background-color: red; width: 100%;">FOO!</div>-->
+
+<!--everything under the nav bar-->
+<div class="container-fluid">
+
+<!-- refresh button -->
+
+<!-- Title -->
+  <div class="row bxms-dashboard-title-panel row-toolbar-bxms">
+    <div class="col-md-11">
+      <h3 class="toolbar-title-bxms">Case List</h3>
+    </div>
+    <div class="col-md-1">
+      <div class="fa fa-refresh pull-right"></div>
+    </div>
+  </div>
+
+
+  <!---------------------------->
+    <div class="row toolbar-pf row-toolbar-bxms">
+      <div class="col-sm-12">
+        <form class="toolbar-pf-actions">
+          <div class="form-group toolbar-pf-filter">
+            <label class="sr-only" for="filter">Name</label>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li class="selected"><a href="#">Name</a></li>
+                  <li><a href="#">Type</a></li>
+                  <li><a href="#">Color</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
+            </div><!-- /input-group -->
+          </div>
+          <div class="form-group">
+            <div class="dropdown btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li class="selected"><a href="#">Name</a></li>
+                <li><a href="#">Type</a></li>
+                <li><a href="#">Last Modified</a></li>
+              </ul>
+            </div>
+            <button class="btn btn-link" type="button">
+              <span class="fa fa-sort-alpha-asc"></span>
+            </button>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" type="button">Create Case</button>
+          </div>
+        </form>
+        <div class="row toolbar-pf-results">
+          <!--<div class="col-sm-12">-->
+          <div  class="bxms-toolbar-pf-results__block">
+            <p>Applied filters:</p>
+            <ul class="list-inline">
+              <li>
+                      <span class="label label-info">
+                        Label: MyList
+                        <a href="#"><span class="pficon pficon-close"></span></a>
+                      </span>
+              </li>
+              <li>
+                      <span class="label label-info">
+                        State: Active
+                        <a href="#"><span class="pficon pficon-close"></span></a>
+                      </span>
+              </li>
+            </ul>
+            <p><a href="#">Clear All</a></p>
+          </div>
+          <div  class="bxms-toolbar-pf-results__block">
+            <p><a href=""><span class="fa fa-plus-circle"></span> Custom Filter</a></p>
+          </div>
+          <!--</div>&lt;!&ndash; /col &ndash;&gt;-->
+        </div><!-- /row -->
+      </div><!-- /col -->
+    </div><!-- /row -->
+
+  <!---------------------------->
+
+  <!-- Page content -->
+  <div class="row ">
+
+
+    <!-- *** case list content *** -->
+  <div class="list-group list-view-pf list-view-pf-view" id="caseList">
+
+    <div class="list-group-item" id="caseListItem1">
+          <div class="list-view-pf-main-info">
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description bxms-list-view-pf-description---case">
+                <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
+                  CN20349587345
+                </div>
+                <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+                  <span class="label label-success">Active</span>
+                </div>
+
+                <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
+                  The following snippet of text is <a href="">rendered as link text</a>.
+                </div>
+              </div>
+
+              <!-- kebab menu -->
+              <div class="list-view-pf-actions bxms-list-view-pf-actions--case">
+                <button class="btn btn-default" id="caseListItemComplete">Complete</button>
+                <div class="dropdown btn-group  dropdown-kebab-pf">
+                  <button class="btn btn-link dropdown-toggle" type="button" id="caseListItemKebab1" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                    <span class="fa fa-ellipsis-v"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="caseListItemKebab1" id="caseListItemKebabMenu1">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="list-group-item" id="caseListItem2">
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description bxms-list-view-pf-description---case">
+            <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
+              CN20349587345
+            </div>
+            <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+              <span class="label label-success">Active</span>
+            </div>
+
+            <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
+              The following snippet of text is <a href="">rendered as link text</a>.
+            </div>
+          </div>
+
+          <!-- kebab menu -->
+          <div class="list-view-pf-actions bxms-list-view-pf-actions--case">
+            <button class="btn btn-default" id="caseListItemComplete">Complete</button>
+            <div class="dropdown btn-group  dropdown-kebab-pf">
+              <button class="btn btn-link dropdown-toggle" type="button" id="caseListItemKebab2" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="caseListItemKebab2" id="caseListItemKebabMenu2">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-group-item" id="caseListItem3">
+      <div class="list-view-pf-main-info">
+        <div class="list-view-pf-body">
+          <div class="list-view-pf-description bxms-list-view-pf-description---case">
+            <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
+              CN20349587345
+            </div>
+            <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+              <span class="label label-success">Active</span>
+            </div>
+
+            <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
+              The following snippet of text is <a href="">rendered as link text</a>.
+            </div>
+          </div>
+
+          <!-- kebab menu -->
+          <div class="list-view-pf-actions bxms-list-view-pf-actions--case">
+            <button class="btn btn-default" id="caseListItemComplete">Complete</button>
+            <div class="dropdown btn-group  dropdown-kebab-pf">
+              <button class="btn btn-link dropdown-toggle" type="button" id="caseListItemKebab3" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="caseListItemKebab3" id="caseListItemKebabMenu3">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- list group for asset list -->
+
+
+  </div><!-- row -->
+
+</div><!-- container-fluid-->
+
+</body>
+</html>
