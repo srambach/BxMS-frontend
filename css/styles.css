@@ -16299,6 +16299,21 @@ a.disabled {
     margin-bottom: auto;
   }
 }
+.has-button,
+.has-clear {
+  display: inline-block;
+}
+.bxms-popover__button {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.popover-content {
+  max-width: 100%;
+}
+.bxms-popover__input {
+  padding-right: 0 !important;
+}
 .toolbar-pf-results {
   padding: 10px;
 }

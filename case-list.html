@@ -16,6 +16,8 @@
   <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
+  <!-- patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
 
 </head>
 <body>
@@ -23,7 +25,7 @@
 <!--<div style="background-color: red; width: 100%;">FOO!</div>-->
 
 <!--everything under the nav bar-->
-<div class="container-fluid">
+<div class="container-fluid bxms-container-fluid--case-list">
 
 <!-- refresh button -->
 
@@ -32,8 +34,9 @@
     <div class="col-md-11">
       <h3 class="toolbar-title-bxms">Case List</h3>
     </div>
+    <!-- refresh button -->
     <div class="col-md-1">
-      <div class="fa fa-refresh pull-right"></div>
+      <h5 class="fa fa-refresh pull-right" id="refreshCaseList"></h5>
     </div>
   </div>
 
@@ -93,19 +96,92 @@
             </ul>
             <p><a href="#">Clear All</a></p>
           </div>
-          <div  class="bxms-toolbar-pf-results__block">
-            <p><a href=""><span class="fa fa-plus-circle"></span> Custom Filter</a></p>
-          </div>
-          <!--</div>&lt;!&ndash; /col &ndash;&gt;-->
-        </div><!-- /row -->
-      </div><!-- /col -->
-    </div><!-- /row -->
 
-  <!---------------------------->
+          <div class="bxms-toolbar-pf-results__block">
+            <div>
+              <a href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
+                 data-content='
+                    <form role="form" class="search-pf has-button">
+                      <div>Save query as custom filter</div>
+                      <div class="bxms-has-clear has-clear">
+                        <div class="search-pf-input-group">
+                          <label for="search1" class="sr-only">Search</label>
+                          <input id="search1" type="search" class="form-control bxms-popover__input" placeholder="MyStuff">
+                          <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
+                        </div>
+                      </div>
+                      <div class="bxms-popover__button">
+                        <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                      </div>
+                    </form>
+              '>
+                  <span class="fa fa-plus-circle"></span> Custom Filter
+                  </a>
+
+              <script>
+                (function($) {
+                  $(document).ready(function() {
+                    // Hide the clear button if the search input is empty
+                    $(".search-pf .has-clear .clear").each(function() {
+                      if (!$(this).prev('.form-control').val()) {
+                        $(this).hide();
+                      }
+                    });
+                    // Show the clear button upon entering text in the search input
+                    $(".search-pf .has-clear .form-control").keyup(function () {
+                      var t = $(this);
+                      t.next('button').toggle(Boolean(t.val()));
+                    });
+                    // Upon clicking the clear button, empty the entered text and hide the clear button
+                    $(".search-pf .has-clear .clear").click(function () {
+                      $(this).prev('.form-control').val('').focus();
+                      $(this).hide();
+                    });
+                  });
+                })(jQuery);
+              </script>
+              <!-- end of popover content -->
+
+            </div>
+
+            <!-- bootstrap popover initialization -->
+            <script>
+              // Initialize Popovers
+              $(document).ready(function() {
+                $('[data-toggle=popover]').popovers()
+              });
+            </script>
+
+            <!-- pasted in from search widget reference code -->
+            <script>
+              (function($) {
+                $(document).ready(function() {
+                  // Hide the clear button if the search input is empty
+                  $(".search-pf .has-clear .clear").each(function() {
+                    if (!$(this).prev('.form-control').val()) {
+                      $(this).hide();
+                    }
+                  });
+                  // Show the clear button upon entering text in the search input
+                  $(".search-pf .has-clear .form-control").keyup(function () {
+                    var t = $(this);
+                    t.next('button').toggle(Boolean(t.val()));
+                  });
+                  // Upon clicking the clear button, empty the entered text and hide the clear button
+                  $(".search-pf .has-clear .clear").click(function () {
+                    $(this).prev('.form-control').val('').focus();
+                    $(this).hide();
+                  });
+                });
+              })(jQuery);
+            </script>
+          </div><!-- bxms-toolbar-pf-results__block -->
+      </div><!-- /row -->
+    </div><!-- /col -->
+</div><!-- row -->
 
   <!-- Page content -->
   <div class="row ">
-
 
     <!-- *** case list content *** -->
   <div class="list-group list-view-pf list-view-pf-view" id="caseList">
