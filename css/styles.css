@@ -16244,13 +16244,13 @@ a.disabled {
   display: flex;
   padding: .5em 1em;
 }
-.toolbar-pf .form-group,
-.toolbar-pf .btn-group {
-  margin-bottom: 0;
+.toolbar-pf .form-group {
+  margin-bottom: .5em;
   display: flex;
 }
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
+  margin-bottom: .5em;
 }
 .toolbar-title-bxms {
   font-size: 2em;
@@ -16285,8 +16285,9 @@ a.disabled {
   font-size: 1.5em;
   margin-right: 1em;
 }
-.dropdown-kebab-pf {
-  margin-left: 1em !important;
+.dropdown-kebab-pf .btn-link {
+  padding-left: .5em;
+  padding-right: .5em;
 }
 .input-group-bxms {
   margin-bottom: .5em;

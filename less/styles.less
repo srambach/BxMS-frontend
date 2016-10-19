@@ -79,13 +79,14 @@
   padding: .5em 1em;
 }
 
-.toolbar-pf .form-group,
-.toolbar-pf .btn-group {
-  margin-bottom: 0;
+.toolbar-pf .form-group
+{
+  margin-bottom: .5em;
   display: flex;
 }
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
+  margin-bottom: .5em;
 }
 //BxMS toolbar has a title
 .toolbar-title-bxms {
@@ -130,9 +131,11 @@
 }
 
 // Add space to left of kebab; have to override specificity
-.dropdown-kebab-pf {
-  margin-left: 1em !important;
+.dropdown-kebab-pf .btn-link {
+  padding-left: .5em;
+  padding-right: .5em;
 }
+
 // add some vertical space if toolbar pieces are stacked
 .input-group-bxms {
   margin-bottom: .5em;
@@ -145,7 +148,7 @@
     justify-content: flex-start;
     align-items: center;
   }
-   // Push the button group to the right when flexed
+  // Push the button group to the right when flexed
   .btn-group-bxms-right {
     margin-left: auto;
   }

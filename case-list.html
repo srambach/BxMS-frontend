@@ -19,6 +19,9 @@
   <!-- patternfly JS -->
   <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
 
+  <!-- BxMS JS -->
+  <script src="js/bxms.js"></script>
+
 </head>
 <body>
 
@@ -33,7 +36,7 @@
   <div class="row bxms-dashboard-title-panel row-toolbar-bxms">
     <!-- refresh button -->
     <div class="col-xs-1 pull-right">
-      <h5 class="fa fa-refresh fa-pull-right" id="refreshCaseList"></h5>
+      <h5 class="fa fa-refresh fa-pull-right" id="refreshCaseList" data-toggle="tooltip" data-placement="left" title="refresh"></h5>
     </div>
     <div class="col-xs-11">
       <h5 class="toolbar-title-bxms">Case List</h5>
@@ -44,27 +47,31 @@
     <div class="row toolbar-pf row-toolbar-bxms">
       <div class="col-sm-12">
         <form class="toolbar-pf-actions">
+          <!-- filter options -->
           <div class="form-group toolbar-pf-filter">
-            <label class="sr-only" for="filter">Name</label>
+            <label class="sr-only" for="filter">Filter options</label>
             <div class="input-group">
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li class="selected"><a href="#">Name</a></li>
-                  <li><a href="#">Type</a></li>
-                  <li><a href="#">Color</a></li>
+                  <li class="selected"><a href="#">All</a></li>
+                  <li><a href="#">Case Name</a></li>
+                  <li><a href="#">State</a></li>
+                  <li><a href="#">Status</a></li>
                 </ul>
               </div><!-- /btn-group -->
               <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
             </div><!-- /input-group -->
           </div>
+
+          <!-- sort options -->
           <div class="form-group">
             <div class="dropdown btn-group">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <li class="selected"><a href="#">Name</a></li>
-                <li><a href="#">Type</a></li>
-                <li><a href="#">Last Modified</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">State</a></li>
               </ul>
             </div>
             <button class="btn btn-link" type="button">
@@ -98,9 +105,10 @@
 
           <div class="bxms-toolbar-pf-results__block">
             <div>
-              <a href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
+              <!-- popover for the Save Query as a Custom Filter button -->
+              <a id="popoverTrigger" href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
                  data-content='
-                    <form role="form" class="search-pf has-button">
+                    <form id="popoverForm" role="form" class="search-pf has-button has-clear">
                       <div>Save query as custom filter</div>
                       <div class="bxms-has-clear has-clear">
                         <div class="search-pf-input-group">
@@ -116,64 +124,25 @@
               '>
                   <span class="fa fa-plus-circle"></span> Custom Filter
                   </a>
-
-              <script>
-                (function($) {
-                  $(document).ready(function() {
-                    // Hide the clear button if the search input is empty
-                    $(".search-pf .has-clear .clear").each(function() {
-                      if (!$(this).prev('.form-control').val()) {
-                        $(this).hide();
-                      }
-                    });
-                    // Show the clear button upon entering text in the search input
-                    $(".search-pf .has-clear .form-control").keyup(function () {
-                      var t = $(this);
-                      t.next('button').toggle(Boolean(t.val()));
-                    });
-                    // Upon clicking the clear button, empty the entered text and hide the clear button
-                    $(".search-pf .has-clear .clear").click(function () {
-                      $(this).prev('.form-control').val('').focus();
-                      $(this).hide();
-                    });
-                  });
-                })(jQuery);
-              </script>
               <!-- end of popover content -->
 
             </div>
 
-            <!-- bootstrap popover initialization -->
-            <script>
-              // Initialize Popovers
-              $(document).ready(function() {
-                $('[data-toggle=popover]').popovers()
-              });
-            </script>
+            <!-- search box example works here inline -->
+            <!--<form role="form" class="search-pf has-button">-->
+              <!--<div class="form-group has-clear">-->
+                <!--<div class="search-pf-input-group">-->
+                  <!--<label for="search1" class="sr-only">Search</label>-->
+                  <!--<input id="search1" type="search" class="form-control" placeholder="Search">-->
+                  <!--<button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>-->
+              <!--</div>-->
+            <!--</form>-->
+            <!-- end of search box example -->
 
-            <!-- pasted in from search widget reference code -->
-            <script>
-              (function($) {
-                $(document).ready(function() {
-                  // Hide the clear button if the search input is empty
-                  $(".search-pf .has-clear .clear").each(function() {
-                    if (!$(this).prev('.form-control').val()) {
-                      $(this).hide();
-                    }
-                  });
-                  // Show the clear button upon entering text in the search input
-                  $(".search-pf .has-clear .form-control").keyup(function () {
-                    var t = $(this);
-                    t.next('button').toggle(Boolean(t.val()));
-                  });
-                  // Upon clicking the clear button, empty the entered text and hide the clear button
-                  $(".search-pf .has-clear .clear").click(function () {
-                    $(this).prev('.form-control').val('').focus();
-                    $(this).hide();
-                  });
-                });
-              })(jQuery);
-            </script>
           </div><!-- bxms-toolbar-pf-results__block -->
       </div><!-- /row -->
     </div><!-- /col -->
@@ -193,7 +162,7 @@
                   CN20349587345
                 </div>
                 <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
-                  <span class="label label-success">Active</span>
+                  <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
                 </div>
 
                 <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
@@ -205,7 +174,7 @@
               <div class="list-view-pf-actions bxms-list-view-pf-actions--case">
                 <button class="btn btn-default" id="caseListItemComplete">Complete</button>
                 <div class="dropdown btn-group  dropdown-kebab-pf">
-                  <button class="btn btn-link dropdown-toggle" type="button" id="caseListItemKebab1" data-toggle="dropdown"
+                  <button class="btn btn-link dropdown-toggle bxms-btn-link--kebab" type="button" id="caseListItemKebab1" data-toggle="dropdown"
                           aria-haspopup="true" aria-expanded="true">
                     <span class="fa fa-ellipsis-v"></span>
                   </button>
@@ -230,7 +199,7 @@
               CN20349587345
             </div>
             <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
-              <span class="label label-success">Active</span>
+              <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
             </div>
 
             <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
@@ -267,7 +236,7 @@
               CN20349587345
             </div>
             <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
-              <span class="label label-success">Active</span>
+              <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
             </div>
 
             <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
