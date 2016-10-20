@@ -25,26 +25,22 @@
 </head>
 <body>
 
-<!--<div style="background-color: red; width: 100%;">FOO!</div>-->
-
 <!--everything under the nav bar-->
 <div class="container-fluid bxms-container-fluid--case-list">
 
-<!-- refresh button -->
-
 <!-- Title -->
-  <div class="row bxms-dashboard-title-panel row-toolbar-bxms">
+  <div class="row bxms-row--toolbar">
     <!-- refresh button -->
     <div class="col-xs-1 pull-right">
       <h5 class="fa fa-refresh fa-pull-right" id="refreshCaseList" data-toggle="tooltip" data-placement="left" title="refresh"></h5>
     </div>
     <div class="col-xs-11">
-      <h5 class="toolbar-title-bxms">Case List</h5>
+      <h5 class="bxms-toolbar__title">Case List</h5>
     </div>
   </div>
 
 <!-- toolbar -->
-    <div class="row toolbar-pf row-toolbar-bxms">
+    <div class="row toolbar-pf bxms-row--toolbar">
       <div class="col-sm-12">
         <form class="toolbar-pf-actions">
           <!-- filter options -->
@@ -52,69 +48,69 @@
             <label class="sr-only" for="filter">Filter options</label>
             <div class="input-group">
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
-                <ul class="dropdown-menu">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="filterButton">All <span class="caret"></span></button>
+                <ul class="dropdown-menu" id="filterMenu">
                   <li class="selected"><a href="#">All</a></li>
                   <li><a href="#">Case Name</a></li>
                   <li><a href="#">State</a></li>
                   <li><a href="#">Status</a></li>
                 </ul>
               </div><!-- /btn-group -->
-              <input type="text" class="form-control" id="filter" placeholder="Filter By Name...">
+              <input type="text" class="form-control" id="filterText" placeholder="Filter By Name...">
             </div><!-- /input-group -->
           </div>
 
           <!-- sort options -->
           <div class="form-group">
             <div class="dropdown btn-group">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Name <span class="caret"></span></button>
-              <ul class="dropdown-menu">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="sortButton">Name <span class="caret"></span></button>
+              <ul class="dropdown-menu" id="sortMenu">
                 <li class="selected"><a href="#">Name</a></li>
                 <li><a href="#">Status</a></li>
                 <li><a href="#">State</a></li>
               </ul>
             </div>
-            <button class="btn btn-link" type="button">
+            <button class="btn btn-link" type="button" id="sortReverseButton">
               <span class="fa fa-sort-alpha-asc"></span>
             </button>
           </div>
           <div class="form-group">
-            <button class="btn btn-primary" type="button">Create Case</button>
+            <button class="btn btn-primary" type="button" id="createCaseButton">Create Case</button>
           </div>
         </form>
         <div class="row toolbar-pf-results">
           <!--<div class="col-sm-12">-->
-          <div  class="bxms-toolbar-pf-results__block">
+          <div class="bxms-toolbar-pf-results__block">
             <p>Applied filters:</p>
-            <ul class="list-inline">
+            <ul class="list-inline" id="appliedFilters">
               <li>
                       <span class="label label-info">
                         Label: MyList
-                        <a href="#"><span class="pficon pficon-close"></span></a>
+                        <a href="#" id="closeFilter1"><span class="pficon pficon-close"></span></a>
                       </span>
               </li>
               <li>
                       <span class="label label-info">
                         State: Active
-                        <a href="#"><span class="pficon pficon-close"></span></a>
+                        <a href="#" id="closeFilter2"><span class="pficon pficon-close"></span></a>
                       </span>
               </li>
             </ul>
-            <p><a href="#">Clear All</a></p>
+            <p><a href="#" id="clearAllFilters">Clear All</a></p>
           </div>
 
           <div class="bxms-toolbar-pf-results__block">
             <div>
               <!-- popover for the Save Query as a Custom Filter button -->
-              <a id="popoverTrigger" href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
+              <a id="filterPopoverTrigger" href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
                  data-content='
-                    <form id="popoverForm" role="form" class="search-pf has-button has-clear">
+                    <form id="filterPopoverForm" role="form" class="search-pf has-button has-clear">
                       <div>Save query as custom filter</div>
                       <div class="bxms-has-clear has-clear">
                         <div class="search-pf-input-group">
-                          <label for="search1" class="sr-only">Custom Filter</label>
-                          <input id="search1" type="search" class="form-control bxms-popover__input" placeholder="MyStuff">
-                          <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
+                          <label for="filterPopoverInput" class="sr-only">Custom Filter</label>
+                          <input id="filterPopoverInput" type="search" class="form-control bxms-popover__input" placeholder="MyStuff">
+                          <button id="filterPopoverCloseButton" type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
                         </div>
                       </div>
                       <div class="bxms-popover__button">
@@ -157,11 +153,11 @@
     <div class="list-group-item" id="caseListItem1">
           <div class="list-view-pf-main-info">
             <div class="list-view-pf-body">
-              <div class="list-view-pf-description bxms-list-view-pf-description---case">
+              <div class="list-view-pf-description bxms-list-view-pf-description--case">
                 <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
                   CN20349587345
                 </div>
-                <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+                <div class="bxms-list-view__status bxms-list-view__status--case">
                   <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
                 </div>
 
@@ -194,11 +190,11 @@
     <div class="list-group-item" id="caseListItem2">
       <div class="list-view-pf-main-info">
         <div class="list-view-pf-body">
-          <div class="list-view-pf-description bxms-list-view-pf-description---case">
+          <div class="list-view-pf-description bxms-list-view-pf-description--case">
             <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
               CN20349587345
             </div>
-            <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+            <div class="bxms-list-view__status bxms-list-view__status--case">
               <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
             </div>
 
@@ -231,11 +227,11 @@
     <div class="list-group-item" id="caseListItem3">
       <div class="list-view-pf-main-info">
         <div class="list-view-pf-body">
-          <div class="list-view-pf-description bxms-list-view-pf-description---case">
+          <div class="list-view-pf-description bxms-list-view-pf-description--case">
             <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
               CN20349587345
             </div>
-            <div class="list-view-bxms-status bxms-list-view-bxms-status--case">
+            <div class="bxms-list-view__status bxms-list-view__status--case">
               <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
             </div>
 

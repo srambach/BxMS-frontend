@@ -16235,7 +16235,7 @@ a.disabled {
   padding-right: .5em;
   margin-top: .5em;
 }
-.row-toolbar-bxms {
+.bxms-row--toolbar {
   padding: .25em 0;
   background-color: #fff;
   border-collapse: collapse;
@@ -16252,7 +16252,7 @@ a.disabled {
   border-right: none;
   margin-bottom: .5em;
 }
-.toolbar-title-bxms {
+.bxms-toolbar__title {
   font-size: 2em;
   margin-right: 1em;
 }
@@ -16408,7 +16408,7 @@ a.disabled {
   margin-left: auto !important;
   align-self: flex-end;
 }
-.list-view-bxms-status {
+.bxms-list-view__status {
   margin-right: 2em;
 }
 .list-view-pf-body {
@@ -16440,7 +16440,7 @@ a.disabled {
     flex: 0 0 calc(30% - 20px);
     width: calc(30% - 20px);
   }
-  .list-view-pf .bxms-list-view-pf-description---case {
+  .list-view-pf .bxms-list-view-pf-description--case {
     -ms-flex: 1 0 calc(80%);
     flex: 1 0 calc(80%);
     width: calc(80%);
@@ -16450,7 +16450,7 @@ a.disabled {
     flex: 1 0 20em;
     width: 20em;
   }
-  .list-view-pf .bxms-list-view-bxms-status--case {
+  .list-view-pf .bxms-list-view__status--case {
     -ms-flex: 1 0 10em;
     flex: 1 0 10em;
     width: 10em;

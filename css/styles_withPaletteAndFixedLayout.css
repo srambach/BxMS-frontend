@@ -6058,11 +6058,11 @@ a.disabled {
 .breadcrumb > li + li:before {
   content: "\f105";
 }
-.row-toolbar-bxms {
+.bxms-row--toolbar {
   padding: .25em;
   border-collapse: collapse;
 }
-.toolbar-title-bxms {
+.bxms-toolbar__title {
   font-size: 2em;
 }
 .toolbar-right-bxms {
