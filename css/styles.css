@@ -16256,6 +16256,10 @@ a.disabled {
   font-size: 2em;
   margin-right: 1em;
 }
+.bxms-block__title {
+  font-size: 1.5em;
+  margin-right: 1em;
+}
 .toolbar-right-bxms {
   float: right;
 }
@@ -16288,6 +16292,9 @@ a.disabled {
 .dropdown-kebab-pf .btn-link {
   padding-left: .5em;
   padding-right: .5em;
+}
+.dropdown-kebab-pf .dropdown-menu.dropdown-menu-right {
+  right: -0.5em;
 }
 .input-group-bxms {
   margin-bottom: .5em;
@@ -16441,16 +16448,22 @@ a.disabled {
     width: calc(30% - 20px);
   }
   .list-view-pf .bxms-list-view-pf-description--case {
-    -ms-flex: 1 0 calc(80%);
-    flex: 1 0 calc(80%);
-    width: calc(80%);
+    -ms-flex: 1 0 calc(80% - 20em);
+    flex: 1 0 calc(80% - 20em);
+    width: calc(80% - 20em);
+  }
+  .list-view-pf .bxms-list-view-pf-actions--case {
+    -ms-flex: 1 0 20em;
+    flex: 1 0 20em;
+    width: 20em;
+    text-align: right;
   }
   .list-view-pf .bxms-list-group-item-heading--case {
     -ms-flex: 1 0 20em;
     flex: 1 0 20em;
     width: 20em;
   }
-  .list-view-pf .bxms-list-view__status--case {
+  .list-view-pf .bxms-list-group-item-text--status {
     -ms-flex: 1 0 10em;
     flex: 1 0 10em;
     width: 10em;
@@ -16459,12 +16472,6 @@ a.disabled {
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     width: calc(70%);
-  }
-  .list-view-pf .bxms-list-view-pf-actions--case {
-    -ms-flex: 1 0 20em;
-    flex: 1 0 20em;
-    width: 20em;
-    text-align: right;
   }
 }
 .list-view-pf-left .fa.list-view-pf-icon-sm {

@@ -28,14 +28,14 @@
 <!--everything under the nav bar-->
 <div class="container-fluid bxms-container-fluid--case-list">
 
-<!-- Title -->
+<!-- Title bar -->
   <div class="row bxms-row--toolbar">
     <!-- refresh button -->
     <div class="col-xs-1 pull-right">
       <h5 class="fa fa-refresh fa-pull-right" id="refreshCaseList" data-toggle="tooltip" data-placement="left" title="refresh"></h5>
     </div>
     <div class="col-xs-11">
-      <h5 class="bxms-toolbar__title">Case List</h5>
+      <h5 class="bxms-block__title">Case List</h5>
     </div>
   </div>
 
@@ -45,7 +45,7 @@
         <form class="toolbar-pf-actions">
           <!-- filter options -->
           <div class="form-group toolbar-pf-filter">
-            <label class="sr-only" for="filter">Filter options</label>
+            <label class="sr-only" for="filterButton">Filter options</label>
             <div class="input-group">
               <div class="input-group-btn">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="filterButton">All <span class="caret"></span></button>
@@ -71,15 +71,15 @@
               </ul>
             </div>
             <button class="btn btn-link" type="button" id="sortReverseButton">
-              <span class="fa fa-sort-alpha-asc"></span>
+              <span class="fa fa-sort-amount-asc"></span>
             </button>
           </div>
           <div class="form-group">
             <button class="btn btn-primary" type="button" id="createCaseButton">Create Case</button>
           </div>
         </form>
+        <!-- Applied filters -->
         <div class="row toolbar-pf-results">
-          <!--<div class="col-sm-12">-->
           <div class="bxms-toolbar-pf-results__block">
             <p>Applied filters:</p>
             <ul class="list-inline" id="appliedFilters">
@@ -99,10 +99,11 @@
             <p><a href="#" id="clearAllFilters">Clear All</a></p>
           </div>
 
+          <!-- Custom Filter button and popover -->
           <div class="bxms-toolbar-pf-results__block">
             <div>
               <!-- popover for the Save Query as a Custom Filter button -->
-              <a id="filterPopoverTrigger" href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
+              <p><a id="filterPopoverTrigger" href="#" class="" data-toggle="popover" data-html="true" title="" data-placement="bottom"
                  data-content='
                     <form id="filterPopoverForm" role="form" class="search-pf has-button has-clear">
                       <div>Save query as custom filter</div>
@@ -121,33 +122,17 @@
                   <span class="fa fa-plus-circle"></span> Custom Filter
                   </a>
               <!-- end of popover content -->
-
+              </p>
             </div>
-
-            <!-- search box example works here inline -->
-            <!--<form role="form" class="search-pf has-button">-->
-              <!--<div class="form-group has-clear">-->
-                <!--<div class="search-pf-input-group">-->
-                  <!--<label for="search1" class="sr-only">Search</label>-->
-                  <!--<input id="search1" type="search" class="form-control" placeholder="Search">-->
-                  <!--<button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="form-group">-->
-                <!--<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>-->
-              <!--</div>-->
-            <!--</form>-->
-            <!-- end of search box example -->
 
           </div><!-- bxms-toolbar-pf-results__block -->
       </div><!-- /row -->
     </div><!-- /col -->
 </div><!-- row -->
 
-  <!-- Page content -->
+  <!-- Case list content -->
   <div class="row ">
 
-    <!-- *** case list content *** -->
   <div class="list-group list-view-pf list-view-pf-view bxms-list-group--case" id="caseList">
 
     <div class="list-group-item" id="caseListItem1">
@@ -157,8 +142,10 @@
                 <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
                   CN20349587345
                 </div>
-                <div class="bxms-list-view__status bxms-list-view__status--case">
-                  <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+                <div class="list-group-item-text bxms-list-group-item-text--status">
+                  <div class="bxms-list-view__status">
+                    <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+                  </div>
                 </div>
 
                 <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
@@ -194,8 +181,10 @@
             <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
               CN20349587345
             </div>
-            <div class="bxms-list-view__status bxms-list-view__status--case">
-              <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+            <div class="list-group-item-text bxms-list-group-item-text--status">
+              <div class="bxms-list-view__status">
+                <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+              </div>
             </div>
 
             <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
@@ -231,12 +220,14 @@
             <div class="list-group-item-heading bxms-list-group-item-heading--case" id="caseListItemHeading1">
               CN20349587345
             </div>
-            <div class="bxms-list-view__status bxms-list-view__status--case">
-              <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+            <div class="list-group-item-text bxms-list-group-item-text--status">
+              <div class="bxms-list-view__status">
+                <span class="label label-success" data-toggle="tooltip" title="Status: Active">Active</span>
+              </div>
             </div>
 
             <div class="list-group-item-text bxms-list-group-item-text--case" id="caseListItemText1">
-              The following snippet of text is <a href="">rendered as link text</a>.
+              The following snippet of text is <a href="">rendered as link text The following snippet of text is <a href="">rendered as link text The following snippet of text is <a href="">rendered as link text</a>.
             </div>
           </div>
 

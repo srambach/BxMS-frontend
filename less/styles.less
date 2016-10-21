@@ -93,6 +93,11 @@
   font-size: 2em;
   margin-right: 1em;
 }
+//BxMS toolbar has a title
+.bxms-block__title {
+  font-size: 1.5em;
+  margin-right: 1em;
+}
 //BxMS toolbar has other items on the right
 .toolbar-right-bxms {
   float:right;
@@ -130,10 +135,14 @@
   margin-right: 1em;
 }
 
-// Add space to left of kebab; have to override specificity
+// Add space around the kebab; have to override specificity
 .dropdown-kebab-pf .btn-link {
   padding-left: .5em;
   padding-right: .5em;
+}
+// with padding on the kebab, need to adjust the position of the dropdown
+.dropdown-kebab-pf .dropdown-menu.dropdown-menu-right {
+  right: -.5em;
 }
 
 // add some vertical space if toolbar pieces are stacked
@@ -328,17 +337,25 @@
     width: calc(~'30% - 20px'); // IE9 fallback
   }
 
+  // case listing view items have description and actions
   .list-view-pf .bxms-list-view-pf-description--case {
-    -ms-flex: 1 0 calc(~'80%'); // IE10 fallback
-    flex:     1 0 calc(~'80%');
-    width: calc(~'80%'); // IE9 fallback
+    -ms-flex: 1 0 calc(~'80% - 20em'); // IE10 fallback
+    flex:     1 0 calc(~'80% - 20em');
+    width: calc(~'80% - 20em'); // IE9 fallback
   }
+  .list-view-pf .bxms-list-view-pf-actions--case {
+    -ms-flex: 1 0 20em; // IE10 fallback
+    flex:     1 0 20em;
+    width: 20em; // IE9 fallback
+    text-align: right;
+  }
+  //inside description is heading, status, and text
   .list-view-pf .bxms-list-group-item-heading--case {
     -ms-flex: 1 0 20em; // IE10 fallback
     flex:     1 0 20em;
     width: 20em; // IE9 fallback
   }
-  .list-view-pf .bxms-list-view__status--case {
+  .list-view-pf .bxms-list-group-item-text--status {
     -ms-flex: 1 0 10em; // IE10 fallback
     flex:     1 0 10em;
     width: 10em; // IE9 fallback
@@ -348,12 +365,11 @@
     flex:     1 0 auto;
     width: calc(100% - 20em - 10em); // IE9 fallback
   }
-  .list-view-pf .bxms-list-view-pf-actions--case {
-    -ms-flex: 1 0 20em; // IE10 fallback
-    flex:     1 0 20em;
-    width: 20em; // IE9 fallback
-    text-align: right;
-  }
+  //.bxms-list-group-item-text--case-status {
+  //  -ms-flex: 1 0 auto; // IE10 fallback
+  //  flex:     1 0 auto;
+  //  width: calc(100% - 20em - 10em); // IE9 fallback
+  //}
 }
 //selector length needed to override specificity
 // Adjust size of the circle so that the icon fits nicely
