@@ -45,11 +45,19 @@
 .circle-icon-bxms-large {
   font-size: 2.5em;
 }
+
+
 .button-card-text-bxms {
   max-width: 10em;
   white-space: normal;
 }
 
+// Building block holder
+.bxms-container-fluid--case-list {
+  border-color: @color-pf-black-300;
+  border-style: solid;
+  border-width: 1px;
+}
 
 // Row with tabs
 .bxms-row__nav-tabs {
@@ -59,30 +67,35 @@
 }
 
 // Toolbars
-.row-toolbar-bxms {
+.bxms-row--toolbar {
   padding: .25em 0;
   background-color: @color-pf-white;
   border-collapse: collapse;
 }
 
-.toolbar-pf {
-  padding: .5em 1em;
-}
+// * in use on project-list
 .toolbar-bxms {
   display:flex;
+  padding: .5em 1em;
 }
 
-.toolbar-pf .form-group,
-.toolbar-pf .btn-group {
-  margin-bottom: 0;
+.toolbar-pf .form-group
+{
+  margin-bottom: .5em;
   display: flex;
 }
 .toolbar-pf .form-group:last-of-type {
   border-right: none;
+  margin-bottom: .5em;
 }
 //BxMS toolbar has a title
-.toolbar-title-bxms {
+.bxms-toolbar__title {
   font-size: 2em;
+  margin-right: 1em;
+}
+//BxMS toolbar has a title
+.bxms-block__title {
+  font-size: 1.5em;
   margin-right: 1em;
 }
 //BxMS toolbar has other items on the right
@@ -122,10 +135,16 @@
   margin-right: 1em;
 }
 
-// Add space to left of kebab; have to override specificity
-.dropdown-kebab-pf {
-  margin-left: 1em !important;
+// Add space around the kebab; have to override specificity
+.dropdown-kebab-pf .btn-link {
+  padding-left: .5em;
+  padding-right: .5em;
 }
+// with padding on the kebab, need to adjust the position of the dropdown
+.dropdown-kebab-pf .dropdown-menu.dropdown-menu-right {
+  right: -.5em;
+}
+
 // add some vertical space if toolbar pieces are stacked
 .input-group-bxms {
   margin-bottom: .5em;
@@ -138,7 +157,7 @@
     justify-content: flex-start;
     align-items: center;
   }
-   // Push the button group to the right when flexed
+  // Push the button group to the right when flexed
   .btn-group-bxms-right {
     margin-left: auto;
   }
@@ -148,6 +167,49 @@
   }
 }
 
+
+//popover
+.has-button, .has-clear {
+  display: inline-block;
+}
+.bxms-popover__button {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.popover-content {
+  max-width: 100%;
+}
+.bxms-popover__input {
+  padding-right: 0 !important;
+}
+
+// results toolbar (case list!)
+.toolbar-pf-results {
+  padding: 10px;
+}
+
+.bxms-toolbar-pf-results__block {
+  border-right: 1px solid @sidebar-pf-border-color;
+  display: inline-flex;
+  float: left;
+  margin-bottom: 0;
+  padding-left: (@grid-gutter-width/2);
+  padding-right: (@grid-gutter-width/2);
+  &:first-child {
+    padding-left: inherit;
+  }
+  &:last-child {
+    border-right: none;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .toolbar-pf-results h5, .toolbar-pf-results p, .toolbar-pf-results ul {
+    line-height: inherit;
+  }
+}
 // About modal
 .about-modal-pf {
   background-color: #083452;
@@ -236,6 +298,10 @@
   align-self: flex-end;
 }
 
+.bxms-list-view__status {
+  margin-right: 2em;
+}
+
 .list-view-pf-body {
   display:flex;
 }
@@ -244,6 +310,15 @@
   width: 7em; // set the width so they wrap at the same time regardless of contents
 }
 
+.list-view-pf-actions {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+// Remove spacing under list group
+.bxms-list-group--case {
+  margin-bottom: 0;
+}
 // Adjust width of list-view items to make more space for the description and heading
 @media (min-width: @screen-md-min) {
   .list-view-pf-additional-info {
@@ -262,6 +337,39 @@
     width: calc(~'30% - 20px'); // IE9 fallback
   }
 
+  // case listing view items have description and actions
+  .list-view-pf .bxms-list-view-pf-description--case {
+    -ms-flex: 1 0 calc(~'80% - 20em'); // IE10 fallback
+    flex:     1 0 calc(~'80% - 20em');
+    width: calc(~'80% - 20em'); // IE9 fallback
+  }
+  .list-view-pf .bxms-list-view-pf-actions--case {
+    -ms-flex: 1 0 20em; // IE10 fallback
+    flex:     1 0 20em;
+    width: 20em; // IE9 fallback
+    text-align: right;
+  }
+  //inside description is heading, status, and text
+  .list-view-pf .bxms-list-group-item-heading--case {
+    -ms-flex: 1 0 20em; // IE10 fallback
+    flex:     1 0 20em;
+    width: 20em; // IE9 fallback
+  }
+  .list-view-pf .bxms-list-group-item-text--status {
+    -ms-flex: 1 0 10em; // IE10 fallback
+    flex:     1 0 10em;
+    width: 10em; // IE9 fallback
+  }
+  .list-view-pf .bxms-list-group-item-text--case {
+    -ms-flex: 1 0 auto; // IE10 fallback
+    flex:     1 0 auto;
+    width: calc(100% - 20em - 10em); // IE9 fallback
+  }
+  //.bxms-list-group-item-text--case-status {
+  //  -ms-flex: 1 0 auto; // IE10 fallback
+  //  flex:     1 0 auto;
+  //  width: calc(100% - 20em - 10em); // IE9 fallback
+  //}
 }
 //selector length needed to override specificity
 // Adjust size of the circle so that the icon fits nicely
