@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     plumber = require('gulp-plumber'),
     browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    path = require('path');
 
 // Uglyfies js on to /js/minjs
 gulp.task('scripts', function(){
@@ -17,7 +18,9 @@ gulp.task('scripts', function(){
 gulp.task('less', function () {
     gulp.src('less/**/*.less')
         .pipe(plumber())
-        .pipe(less())
+        .pipe(less({
+            paths: [ path.join('node_modules') ]
+        }))
         .pipe(gulp.dest('css'))
         .pipe(reload({stream:true}));
 });
