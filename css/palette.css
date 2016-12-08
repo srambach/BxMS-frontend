@@ -16113,7 +16113,7 @@ table.dataTable th:active {
 }
 .nav-pf-vertical .list-group-item.active > a,
 .nav-pf-vertical .list-group-item:hover > a {
-  background-color: #fff;
+  background-color: #393f44;
   color: #030303;
   font-weight: 600;
 }
@@ -16504,7 +16504,7 @@ table.dataTable th:active {
   right: 11px;
 }
 .nav-pf-secondary-nav {
-  background: #fff;
+  background: #393f44;
   border: 1px solid #292e34;
   border-bottom: none;
   border-top: none;
@@ -16547,7 +16547,7 @@ table.dataTable th:active {
   width: 200px;
 }
 .nav-pf-secondary-nav .list-group-item > a {
-  background-color: #fff;
+  background-color: #393f44;
   color: #030303;
   font-size: 12px;
   font-weight: inherit;
@@ -17212,6 +17212,7 @@ table.dataTable th:active {
 }
 .kie-palette .list-group {
   position: relative;
+  border-top: none;
 }
 .kie-palette .list-group-item {
   border-color: #030303;
@@ -17221,9 +17222,9 @@ table.dataTable th:active {
   position: unset;
 }
 .kie-palette .list-group-item > a {
-  color: #d1d1d1;
+  color: #030303;
   cursor: pointer;
-  font-size: 36px;
+  font-size: 12px;
   font-weight: 400;
   height: 63px;
   padding: 0;
@@ -17249,7 +17250,7 @@ table.dataTable th:active {
 }
 .kie-palette .list-group-item.active > a,
 .kie-palette .list-group-item:hover > a {
-  background-color: #fff;
+  background-color: inherit;
   color: #030303;
   font-weight: 600;
 }
@@ -17260,6 +17261,9 @@ table.dataTable th:active {
 .kie-palette .list-group-item.active > a .pficon,
 .kie-palette .list-group-item:hover > a .pficon {
   color: #39a5dc;
+}
+.kie-palette .list-group-item.active {
+  background-color: #fff;
 }
 .kie-palette .list-group-item.active > a:before {
   background: #39a5dc;
@@ -17286,9 +17290,13 @@ table.dataTable th:active {
     padding-right: 15px;
   }
 }
-.kie-palette .list-group-item-separator {
-  border-top-color: #030303;
-  border-top-width: 2px;
+.kie-palette .list-group-item .kie-list-group-item-value-more {
+  color: #0088ce;
+}
+.kie-palette-flyout-header {
+  color: #030303;
+  font-size: calc(15.6px);
+  margin: 1.5em 1.5em 0.75em 1.5em;
 }
 .kie-palette-flyout {
   background-color: #fff;
@@ -17299,20 +17307,32 @@ table.dataTable th:active {
   max-height: calc(100vh - 100px);
   overflow-x: visible;
   overflow-y: scroll;
+  border-color: #030303;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .kie-palette-flyout h5 {
-  color: #d1d1d1;
+  color: #030303;
   cursor: default;
-  font-size: 36px;
+  font-size: 12px;
   font-weight: 600;
+  padding-left: 1em;
+  margin-top: 1em;
+  margin-bottom: .5em;
 }
 .kie-palette-flyout .list-group-item {
   float: none;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .kie-palette-flyout .list-group-item > a {
-  font-size: calc(14.4px);
+  font-size: 12px;
   font-weight: 400;
   height: auto;
   padding: 0;
@@ -17321,11 +17341,15 @@ table.dataTable th:active {
 .kie-palette-flyout .list-group-item > a .fa,
 .kie-palette-flyout .list-group-item > a .glyphicon,
 .kie-palette-flyout .list-group-item > a .pficon {
-  font-size: calc(18px);
+  font-size: 12px;
+  padding-right: 1em;
 }
-.kie-palette-flyout .list-group-item.active > a,
-.kie-palette-flyout .list-group-item:hover > a {
+.kie-palette-flyout .list-group-item.active,
+.kie-palette-flyout .list-group-item:hover {
   background-color: #def3ff;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #39a5dc;
 }
 .nav-pf-vertical-tooltip.tooltip {
   margin-left: 15px;
@@ -17465,7 +17489,7 @@ table.dataTable th:active {
   right: 11px;
 }
 .nav-pf-secondary-nav {
-  background: #fff;
+  background: #393f44;
   border: 1px solid #292e34;
   border-bottom: none;
   border-top: none;
@@ -17497,7 +17521,7 @@ table.dataTable th:active {
   width: 200px;
 }
 .nav-pf-secondary-nav .list-group-item > a {
-  background-color: #fff;
+  background-color: #393f44;
   color: #030303;
   font-size: 12px;
   font-weight: inherit;

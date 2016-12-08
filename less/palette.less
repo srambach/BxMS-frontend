@@ -25,7 +25,7 @@
   //@nav-pf-menu-transition-period:                                     100ms;
   @nav-pf-vertical-active-color:                                      @color-pf-black;//@color-pf-white;
   @kie-palette-active-before-color:                                   @color-pf-blue-300;
-  @nav-pf-vertical-active-bg-color:                                   @color-pf-white; //@color-pf-black-800;
+  @kie-palette-active-bg-color:                                       @color-pf-white; //@color-pf-black-800;
   @nav-pf-vertical-active-border-color:                               red;//@color-pf-black-900;
   //@nav-pf-vertical-active-font-weight:                                600;
   //@nav-pf-vertical-active-icon-color:                                 @color-pf-blue-300;
@@ -35,7 +35,7 @@
   @kie-palette-bg-color-hover:                                        @color-pf-blue-50;
   @kie-palette-border-color:                                          @color-pf-black-900; /////vertical lines on sides of menu
   @nav-pf-vertical-collapsed-width:                                   1em;//75px;
-  @kie-palette-color:                                                 @color-pf-black-300; /////no idea
+  @kie-palette-color:                                                 @color-pf-black;
   @kie-palette-font-weight:                                           400;
   @kie-palette-icon-color:                                            @color-pf-black; ///// icons in their normal state
   @nav-pf-vertical-icon-width:                                        48px; //24px;
@@ -49,7 +49,7 @@
   //@nav-pf-vertical-secondary-badge-bg-color:                          @color-pf-black-900;
   //@nav-pf-vertical-secondary-border-color:                            @color-pf-blue-300;
   @nav-pf-vertical-secondary-color:                                   @color-pf-black; //@color-pf-white; NOT WORKING
-  //@nav-pf-vertical-secondary-header-margin:                           18px 20px 10px 20px;
+  @kie-palette-flyout-header-margin:                           1.5em 1.5em .75em 1.5em;
   //@nav-pf-vertical-secondary-indicator-color:                         @color-pf-black-600;
   //@nav-pf-vertical-secondary-indicator-padding:                       14px 0;
   @nav-pf-vertical-secondary-item-color:                              @color-pf-black;
@@ -73,8 +73,14 @@
   //@nav-pf-vertical-width:                                             90px; //@nav-pf-vertical-icon-width*2; //200px; IS THE SAME FOR ALL LEVELS
   @nav-pf-vertical-secondary-width:                                      200px; //@nav-pf-vertical-icon-width*2; //200px; IS THE SAME FOR ALL LEVELS
 @kie-palette-width: 90px;
-@kie-palette-font-size: (@font-size-base * 3);
+@kie-palette-font-size: (@font-size-base);
 @kie-palette-icon-size: (@font-size-base * 3);
+@kie-palette-flyout-icon-size: (@font-size-base);
+@kie-palette-flyout-header-size: calc(@font-size-base * 1.3);
+@kie-palette-flyout-item-border-color: @kie-palette-bg-color;
+@kie-palette-flyout-item-border-color-hover: @color-pf-blue-300;
+@kie-list-group-item-value-more-color: @link-color;
+@kie-palette-flyout-border-color: @color-pf-black;
   // Alternate navigation layout - Kept for backwards compatibility
   // --------------------------------------------------------------
   //@nav-pf-vertical-alt-active-color:                                  @color-pf-blue-300;
@@ -95,14 +101,14 @@
   background: @kie-palette-bg-color;
   // probably want the border on the items not this     border-right: 1px solid @kie-palette-border-color;
   overflow: visible; //hidden;
-  //position: fixed;
   width: @kie-palette-width;
   z-index: @zindex-navbar-fixed;
   .list-group {
     margin-bottom: 0;
   }
   .list-group {
-    position: relative;
+    position: relative; // important to include so that the flyout positions to the list group
+    border-top: none;
   }
   .list-group-item {
     border-color: @kie-palette-item-border-color;
@@ -135,9 +141,6 @@
         font-size: @kie-palette-icon-size;
         margin: auto;
       }
-      //&:hover {
-      //  text-decoration: none;
-      //}
     }
 
     // show the flyout
@@ -150,7 +153,7 @@
     &.active,
     &:hover {
       > a {
-        background-color: @nav-pf-vertical-active-bg-color;
+        background-color: inherit; //@kie-palette-active-bg-color;
         color: @nav-pf-vertical-active-color;
         font-weight: @nav-pf-vertical-active-font-weight;
         .fa,
@@ -161,6 +164,7 @@
       }
     }
     &.active {
+      background-color: @kie-palette-bg-color;
       > a:before {
         background: @kie-palette-active-before-color;
         content: " ";
@@ -187,11 +191,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .kie-list-group-item-value-more {
+      color: @kie-list-group-item-value-more-color;
+    }
   }
-  .list-group-item-separator {
-    border-top-color: @nav-pf-vertical-item-border-color;
-    border-top-width: 2px;
-  }
+  //.list-group-item-separator {
+  //  border-top-color: @nav-pf-vertical-item-border-color;
+  //  border-top-width: 2px;
+  //}
   //h5 {
   //  color: @nav-pf-vertical-secondary-color;
   //  cursor: default;
@@ -249,6 +256,12 @@
   //}
 }
 
+.kie-palette-flyout-header {
+  color: @kie-palette-color;
+  font-size: @kie-palette-flyout-header-size;
+  margin: @kie-palette-flyout-header-margin;
+}
+
 .kie-palette-flyout {
   background-color: @kie-palette-bg-color;
   display:none;
@@ -258,12 +271,19 @@
   max-height: calc(100vh ~"-" 100px); // TODO: can we find the top so that we can subtract it off?
   overflow-x: visible;
   overflow-y: scroll;
+  border-color: @kie-palette-flyout-border-color;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 
   h5 {
     color: @kie-palette-color;
     cursor: default;
     font-size: (@kie-palette-font-size);
     font-weight: 600;
+    padding-left: 1em;
+    margin-top: 1em;
+    margin-bottom: .5em;
     //margin: @nav-pf-vertical-secondary-list-header-margin;
   }
 
@@ -271,12 +291,16 @@
     //border-color: @kie-palette-item-border-color;
     float:none;
     //outline: 0;
-    //padding: 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: @kie-palette-flyout-item-border-color;
+    padding-left: 1em;
+    margin-bottom: 0;
     > a {
       //color: @kie-palette-color;
       //cursor: pointer;
       //display: block;
-      font-size: calc(.4 * @kie-palette-font-size);
+      font-size: @kie-palette-font-size;
       font-weight: @kie-palette-font-weight;
       height: auto; //@kie-palette-link-height;
       //outline: 0;
@@ -293,15 +317,19 @@
       .glyphicon,
       .pficon {
         //color: @kie-palette-icon-color;
-        font-size: calc(.5 * @kie-palette-icon-size);
+        font-size: @kie-palette-flyout-icon-size;
+        padding-right: 1em;
         //margin: auto;
       }
     }
 
     &.active,
     &:hover {
+      background-color: @kie-palette-bg-color-hover;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      border-color: @kie-palette-flyout-item-border-color-hover;
       > a {
-        background-color: @kie-palette-bg-color-hover;
         //?????????border-color: @color-pf-blue-300;
       }
     }
