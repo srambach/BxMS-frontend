@@ -22,21 +22,23 @@
 @kie-palette-font-size:                                             @font-size-base;
 @kie-palette-font-weight:                                           400;
 @kie-palette-icon-color:                                            @color-pf-black;
-@kie-palette-icon-size:                                             calc(@font-size-base * 3);
+@kie-palette-icon-color-active:                                     @color-pf-blue-300;
+@kie-palette-icon-size:                                             calc(2.3 * @font-size-base);
 @kie-palette-item-border-color:                                     @color-pf-black;
 @kie-palette-link-height:                                           5.83rem;
 @kie-palette-link-padding:                                          0;
 @kie-palette-width:                                                 7.5rem;
 
-@kie-palette-flyout-header-margin:                                  1rem 1.5rem .75rem 1rem;
+@kie-palette-flyout-header-margin:                                  1rem 1.5rem 1.5rem 1rem;
 @kie-palette-flyout-border-color:                                   @color-pf-black;
 @kie-palette-flyout-header-size:                                    calc(@font-size-base * 1.3);
-@kie-palette-flyout-icon-size:                                      @font-size-base;
+@kie-palette-flyout-icon-size:                                      calc(1.16 * @font-size-base);
 @kie-palette-flyout-item-border-color:                              @kie-palette-bg-color;
 @kie-palette-flyout-item-border-color-hover:                        @color-pf-blue-300;
 @kie-palette-flyout-item-color:                                     @color-pf-black;
-@kie-palette-flyout-max-height:                                     calc(100vh ~"-" 100px); // TODO: can we find the top so that we can subtract it off?
-@kie-palette-flyout-width:                                          calc(2 * @kie-palette-width);
+@kie-palette-flyout-max-height:                                     100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" 100px);
+@kie-palette-flyout-min-height:                                     100%;
+@kie-palette-flyout-width:                                          auto;
 
 @kie-palette-list-group-item-value-more-color:                              @link-color;
 
@@ -79,7 +81,7 @@
         color: @kie-palette-icon-color;
         font-size: @kie-palette-icon-size;
         margin: auto;
-        min-width: 2.5rem;
+        //min-width: 2.5rem;
       }
     }
 
@@ -94,12 +96,12 @@
     &:hover {
       > a {
         background-color: inherit;
-        color: @nav-pf-vertical-active-color;
-        font-weight: @nav-pf-vertical-active-font-weight;
+        //color: @nav-pf-vertical-active-color;
+        //font-weight: @nav-pf-vertical-active-font-weight;
         .fa,
         .glyphicon,
         .pficon {
-          color: @nav-pf-vertical-active-icon-color;
+          color: @kie-palette-icon-color-active;
         }
       }
     }
@@ -147,12 +149,13 @@
 .kie-palette-flyout {
   background-color: @kie-palette-bg-color;
   border-color: @kie-palette-flyout-border-color;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+  border-left: 1px solid @kie-palette-flyout-border-color;
+  border-right: 1px solid @kie-palette-flyout-border-color;
+  border-bottom: 1px solid @kie-palette-flyout-border-color;
   display:none;
   left: @kie-palette-width;
   max-height: @kie-palette-flyout-max-height;
+  min-height: @kie-palette-flyout-min-height;
   overflow-x: visible;
   overflow-y: scroll;
   position:absolute;
@@ -162,8 +165,8 @@
     color: @kie-palette-color;
     cursor: default;
     font-size: (@kie-palette-font-size);
-    font-weight: 600;
-    margin-top: 1rem;
+    font-weight: 700;
+    margin-top: 2rem;
     margin-bottom: .5rem;
     padding-left: 1rem;
   }
@@ -171,11 +174,10 @@
   .list-group-item {
     float:none;
     border-color: @kie-palette-flyout-item-border-color;
-    padding-left: 1em;
+    padding-left: 1rem;
     margin-bottom: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-
     > a {
       font-size: @kie-palette-font-size;
       font-weight: @kie-palette-font-weight;
@@ -189,14 +191,30 @@
         padding-right: 1em;
       }
     }
+    &:first-child {
+      border-top: 1px solid @kie-palette-bg-color; // override default list group
+    }
 
     &.active,
     &:hover {
       background-color: @kie-palette-bg-color-hover;
       border-color: @kie-palette-flyout-item-border-color-hover;
+      &:first-child {
+        border-top: 1px solid @kie-palette-flyout-item-border-color-hover; // override default list group
+      }
       > a {
         color: @kie-palette-flyout-item-color;
+
+        //background-color: inherit;
+        color: @kie-palette-color;
+        font-weight: @kie-palette-font-weight;
+        .fa,
+        .glyphicon,
+        .pficon {
+          color: @kie-palette-icon-color;
+        }
       }
+
     }
     }
   }

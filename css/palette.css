@@ -17242,9 +17242,8 @@ table.dataTable th:active {
 .kie-palette .list-group-item > a .glyphicon,
 .kie-palette .list-group-item > a .pficon {
   color: #030303;
-  font-size: calc(36px);
+  font-size: calc(27.6px);
   margin: auto;
-  min-width: 2.5rem;
 }
 .kie-palette .list-group-item:hover > .kie-palette-flyout {
   display: block;
@@ -17252,8 +17251,6 @@ table.dataTable th:active {
 .kie-palette .list-group-item.active > a,
 .kie-palette .list-group-item:hover > a {
   background-color: inherit;
-  color: #fff;
-  font-weight: 600;
 }
 .kie-palette .list-group-item.active > a .fa,
 .kie-palette .list-group-item:hover > a .fa,
@@ -17297,17 +17294,18 @@ table.dataTable th:active {
 .kie-palette-flyout-header {
   color: #030303;
   font-size: calc(15.6px);
-  margin: 1rem 1.5rem 0.75rem 1rem;
+  margin: 1rem 1.5rem 1.5rem 1rem;
 }
 .kie-palette-flyout {
   background-color: #fff;
   border-color: #030303;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+  border-left: 1px solid #030303;
+  border-right: 1px solid #030303;
+  border-bottom: 1px solid #030303;
   display: none;
   left: 7.5rem;
-  max-height: calc(100vh - 100px);
+  max-height: 100vh;
+  min-height: 100%;
   overflow-x: visible;
   overflow-y: scroll;
   position: absolute;
@@ -17317,15 +17315,15 @@ table.dataTable th:active {
   color: #030303;
   cursor: default;
   font-size: 12px;
-  font-weight: 600;
-  margin-top: 1rem;
+  font-weight: 700;
+  margin-top: 2rem;
   margin-bottom: .5rem;
   padding-left: 1rem;
 }
 .kie-palette-flyout .list-group-item {
   float: none;
   border-color: #fff;
-  padding-left: 1em;
+  padding-left: 1rem;
   margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -17335,20 +17333,36 @@ table.dataTable th:active {
   font-weight: 400;
   height: auto;
   padding: 0;
-  width: calc(15rem);
+  width: auto;
 }
 .kie-palette-flyout .list-group-item > a .fa,
 .kie-palette-flyout .list-group-item > a .glyphicon,
 .kie-palette-flyout .list-group-item > a .pficon {
-  font-size: 12px;
+  font-size: calc(13.92px);
   padding-right: 1em;
+}
+.kie-palette-flyout .list-group-item:first-child {
+  border-top: 1px solid #fff;
 }
 .kie-palette-flyout .list-group-item.active,
 .kie-palette-flyout .list-group-item:hover {
   background-color: #def3ff;
   border-color: #39a5dc;
 }
+.kie-palette-flyout .list-group-item.active:first-child,
+.kie-palette-flyout .list-group-item:hover:first-child {
+  border-top: 1px solid #39a5dc;
+}
 .kie-palette-flyout .list-group-item.active > a,
 .kie-palette-flyout .list-group-item:hover > a {
+  color: #030303;
+  font-weight: 400;
+}
+.kie-palette-flyout .list-group-item.active > a .fa,
+.kie-palette-flyout .list-group-item:hover > a .fa,
+.kie-palette-flyout .list-group-item.active > a .glyphicon,
+.kie-palette-flyout .list-group-item:hover > a .glyphicon,
+.kie-palette-flyout .list-group-item.active > a .pficon,
+.kie-palette-flyout .list-group-item:hover > a .pficon {
   color: #030303;
 }
