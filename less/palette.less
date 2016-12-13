@@ -17,30 +17,30 @@
 @kie-palette-active-bg-color:                                       @color-pf-white;
 @kie-palette-bg-color:                                              @color-pf-white;
 @kie-palette-bg-color-hover:                                        @color-pf-blue-50;
-@kie-palette-border-color:                                          @color-pf-black-900;
+//@kie-palette-border-color:                                          @color-pf-black-600;
 @kie-palette-color:                                                 @color-pf-black;
 @kie-palette-font-size:                                             @font-size-base;
 @kie-palette-font-weight:                                           400;
 @kie-palette-icon-color:                                            @color-pf-black;
 @kie-palette-icon-color-active:                                     @color-pf-blue-300;
-@kie-palette-icon-size:                                             calc(2.3 * @font-size-base);
-@kie-palette-item-border-color:                                     @color-pf-black;
-@kie-palette-link-height:                                           5.83rem;
+@kie-palette-icon-size:                                             calc(2.333333 * @font-size-base);
+@kie-palette-item-border-color:                                     @color-pf-black-300;
+@kie-palette-link-height:                                           calc(5.583333 * @font-size-base);
 @kie-palette-link-padding:                                          0;
-@kie-palette-width:                                                 7.5rem;
+@kie-palette-width:                                                 calc(7.5 * @font-size-base);
 
-@kie-palette-flyout-header-margin:                                  1rem 1.5rem 1.5rem 1rem;
 @kie-palette-flyout-border-color:                                   @color-pf-black;
-@kie-palette-flyout-header-size:                                    calc(@font-size-base * 1.3);
-@kie-palette-flyout-icon-size:                                      calc(1.16 * @font-size-base);
+@kie-palette-flyout-header-size:                                    calc(1.333333 * @font-size-base);
+@kie-palette-flyout-icon-size:                                      calc(1.166666 * @font-size-base);
 @kie-palette-flyout-item-border-color:                              @kie-palette-bg-color;
 @kie-palette-flyout-item-border-color-hover:                        @color-pf-blue-300;
 @kie-palette-flyout-item-color:                                     @color-pf-black;
 @kie-palette-flyout-max-height:                                     100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" 100px);
 @kie-palette-flyout-min-height:                                     100%;
+@kie-palette-left-padding:                                          calc(2 * @font-size-base);
 @kie-palette-flyout-width:                                          auto;
 
-@kie-palette-list-group-item-value-more-color:                              @link-color;
+@kie-palette-list-group-item-value-more-color:                      @link-color;
 
 .kie-palette {
   background: @kie-palette-bg-color;
@@ -81,7 +81,7 @@
         color: @kie-palette-icon-color;
         font-size: @kie-palette-icon-size;
         margin: auto;
-        //min-width: 2.5rem;
+        min-width: calc(2.333333 * @font-size-base);
       }
     }
 
@@ -96,8 +96,6 @@
     &:hover {
       > a {
         background-color: inherit;
-        //color: @nav-pf-vertical-active-color;
-        //font-weight: @nav-pf-vertical-active-font-weight;
         .fa,
         .glyphicon,
         .pficon {
@@ -122,13 +120,13 @@
     }
     .list-group-item-value {
       display: block;
-      line-height: 25px;
-      max-width: 120px;
+      line-height: 2em;
+      max-width: 10em;
       // If flexbox is supported, do not set max-width, take all space with just some right padding
       @supports (display: flex) {
         flex: 1;
         max-width: none;
-        padding-right: 15px;
+        padding-right: 1em;
       }
       overflow: hidden;
       text-overflow: ellipsis;
@@ -143,7 +141,9 @@
 .kie-palette-flyout-header {
   color: @kie-palette-color;
   font-size: @kie-palette-flyout-header-size;
-  margin: @kie-palette-flyout-header-margin;
+  margin-top: calc(1.5 * @font-size-base);
+  margin-bottom: calc(1.5 * @font-size-base);
+  padding-left: @kie-palette-left-padding;
 }
 
 .kie-palette-flyout {
@@ -166,15 +166,16 @@
     cursor: default;
     font-size: (@kie-palette-font-size);
     font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
-    padding-left: 1rem;
+    padding-left: @kie-palette-left-padding;
   }
 
+  .list-group {
+    margin-bottom: calc(2 * @font-size-base);
+  }
   .list-group-item {
     float:none;
     border-color: @kie-palette-flyout-item-border-color;
-    padding-left: 1rem;
+    padding-left: @kie-palette-left-padding;
     margin-bottom: 0;
     overflow: hidden;
     text-overflow: ellipsis;

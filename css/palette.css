@@ -17204,7 +17204,7 @@ table.dataTable th:active {
 .kie-palette {
   background: #fff;
   overflow: visible;
-  width: 7.5rem;
+  width: calc(90px);
   z-index: 1030;
 }
 .kie-palette .list-group {
@@ -17215,7 +17215,7 @@ table.dataTable th:active {
   border-top: none;
 }
 .kie-palette .list-group-item {
-  border-color: #030303;
+  border-color: #d1d1d1;
   float: none;
   outline: 0;
   padding: 0;
@@ -17226,11 +17226,11 @@ table.dataTable th:active {
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  height: 5.83rem;
+  height: calc(66.999996px);
   padding: 0;
   text-decoration: none;
   white-space: nowrap;
-  width: 7.5rem;
+  width: calc(90px);
 }
 @supports (display: flex) {
   .kie-palette .list-group-item > a {
@@ -17242,8 +17242,9 @@ table.dataTable th:active {
 .kie-palette .list-group-item > a .glyphicon,
 .kie-palette .list-group-item > a .pficon {
   color: #030303;
-  font-size: calc(27.6px);
+  font-size: calc(27.999996px);
   margin: auto;
+  min-width: calc(27.999996px);
 }
 .kie-palette .list-group-item:hover > .kie-palette-flyout {
   display: block;
@@ -17276,8 +17277,8 @@ table.dataTable th:active {
 }
 .kie-palette .list-group-item .list-group-item-value {
   display: block;
-  line-height: 25px;
-  max-width: 120px;
+  line-height: 2em;
+  max-width: 10em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -17285,7 +17286,7 @@ table.dataTable th:active {
   .kie-palette .list-group-item .list-group-item-value {
     flex: 1;
     max-width: none;
-    padding-right: 15px;
+    padding-right: 1em;
   }
 }
 .kie-list-group-item-value-more {
@@ -17293,8 +17294,10 @@ table.dataTable th:active {
 }
 .kie-palette-flyout-header {
   color: #030303;
-  font-size: calc(15.6px);
-  margin: 1rem 1.5rem 1.5rem 1rem;
+  font-size: calc(15.999996px);
+  margin-top: calc(18px);
+  margin-bottom: calc(18px);
+  padding-left: calc(24px);
 }
 .kie-palette-flyout {
   background-color: #fff;
@@ -17303,7 +17306,7 @@ table.dataTable th:active {
   border-right: 1px solid #030303;
   border-bottom: 1px solid #030303;
   display: none;
-  left: 7.5rem;
+  left: calc(90px);
   max-height: 100vh;
   min-height: 100%;
   overflow-x: visible;
@@ -17316,14 +17319,15 @@ table.dataTable th:active {
   cursor: default;
   font-size: 12px;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: .5rem;
-  padding-left: 1rem;
+  padding-left: calc(24px);
+}
+.kie-palette-flyout .list-group {
+  margin-bottom: calc(24px);
 }
 .kie-palette-flyout .list-group-item {
   float: none;
   border-color: #fff;
-  padding-left: 1rem;
+  padding-left: calc(24px);
   margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -17338,7 +17342,7 @@ table.dataTable th:active {
 .kie-palette-flyout .list-group-item > a .fa,
 .kie-palette-flyout .list-group-item > a .glyphicon,
 .kie-palette-flyout .list-group-item > a .pficon {
-  font-size: calc(13.92px);
+  font-size: calc(13.999992px);
   padding-right: 1em;
 }
 .kie-palette-flyout .list-group-item:first-child {
