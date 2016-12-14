@@ -1,6 +1,5 @@
 @import "patternfly/dist/less/patternfly.less";
 @import "patternfly/dist/less/patternfly-additions.less";
-
 @import "patternfly/dist/less/variables.less";
 @import "patternfly/dist/less/color-variables.less";
 
@@ -12,40 +11,38 @@
 // path to images
 @img-path: '../images';
 
+@kie-palette-hover-before-color: @color-pf-blue-300;
+@kie-palette-flyout-hover-indicator-width: 5px;
+@kie-palette-bg-color: @color-pf-white;
+@kie-palette-bg-color-hover: @color-pf-blue-50;
+@kie-palette-border-color: @color-pf-black-400;
+@kie-palette-color: @color-pf-black;
+@kie-palette-font-size: @font-size-base;
+@kie-palette-font-weight: 400;
+@kie-palette-icon-color: @color-pf-black-900;
+@kie-palette-icon-color-hover: @color-pf-blue-300;
+@kie-palette-icon-size: calc(2.333333 * @font-size-base);
+@kie-palette-item-border-color: @color-pf-black-300;
+@kie-palette-link-height: calc(5.583333 * @font-size-base);
+@kie-palette-link-padding: 0;
+@kie-palette-width: calc(7.5 * @font-size-base);
 
-@kie-palette-active-before-color:                                   @color-pf-blue-300;
-@kie-palette-active-bg-color:                                       @color-pf-white;
-@kie-palette-flyout-active-indicator-width:                          5px;
-@kie-palette-bg-color:                                              @color-pf-white;
-@kie-palette-bg-color-hover:                                        @color-pf-blue-50;
-@kie-palette-border-color:                                          @color-pf-black-400;
-@kie-palette-color:                                                 @color-pf-black;
-@kie-palette-font-size:                                             @font-size-base;
-@kie-palette-font-weight:                                           400;
-@kie-palette-icon-color:                                            @color-pf-black-900;
-@kie-palette-icon-color-active:                                     @color-pf-blue-300;
-@kie-palette-icon-size:                                             calc(2.333333 * @font-size-base);
-@kie-palette-item-border-color:                                     @color-pf-black-300;
-@kie-palette-link-height:                                           calc(5.583333 * @font-size-base);
-@kie-palette-link-padding:                                          0;
-@kie-palette-width:                                                 calc(7.5 * @font-size-base);
+@kie-palette-flyout-border-color: @color-pf-black-400;
+@kie-palette-flyout-header-size: calc(1.333333 * @font-size-base);
+@kie-palette-flyout-icon-size: calc(1.166666 * @font-size-base);
+@kie-palette-flyout-item-border-color: @kie-palette-bg-color;
+@kie-palette-flyout-item-border-color-hover: @color-pf-blue-300;
+@kie-palette-flyout-item-color: @color-pf-black;
+@kie-palette-flyout-max-height: 100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" @top);
+@kie-palette-flyout-min-height: 100%;
+@kie-palette-left-padding: calc(2 * @font-size-base);
+@kie-palette-flyout-width: auto;
 
-@kie-palette-flyout-border-color:                                   @color-pf-black-400;
-@kie-palette-flyout-header-size:                                    calc(1.333333 * @font-size-base);
-@kie-palette-flyout-icon-size:                                      calc(1.166666 * @font-size-base);
-@kie-palette-flyout-item-border-color:                              @kie-palette-bg-color;
-@kie-palette-flyout-item-border-color-hover:                        @color-pf-blue-300;
-@kie-palette-flyout-item-color:                                     @color-pf-black;
-@kie-palette-flyout-max-height:                                     100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" @top);
-@kie-palette-flyout-min-height:                                     100%;
-@kie-palette-left-padding:                                          calc(2 * @font-size-base);
-@kie-palette-flyout-width:                                          auto;
-
-@kie-palette-list-group-item-value-more-color:                      @link-color;
+@kie-palette-list-group-item-value-more-color: @link-color;
 
 .kie-palette {
   background: @kie-palette-bg-color;
-  border-bottom: 1px solid @kie-palette-border-color;
+  //border-bottom: 1px solid @kie-palette-border-color;
   border-collapse: collapse;
   overflow: visible;
   width: @kie-palette-width;
@@ -58,15 +55,16 @@
     border-top: none;
   }
   .list-group-item {
+    background-color: @kie-palette-bg-color; //probably not really necessary
     border-color: @kie-palette-item-border-color;
-    float:none;
+    float: none;
     outline: 0;
     padding: 0;
     position: unset; // this allows the flyout to be relative to the list-group
 
-    // extend the overlay hiding the flyout border by 1 px to allow for the bottom border being removed
-      &:last-child {
-      border-bottom: 1px solid @kie-palette-bg-color;
+    // extend the overlay hiding the flyout border by 1px to allow for the bottom border being removed
+    &:last-child {
+      border-bottom: 1px solid @kie-palette-border-color;
       &:hover > a:after {
         height: calc(100% + 1px);
       }
@@ -81,10 +79,10 @@
       text-decoration: none;
       white-space: nowrap;
       width: @kie-palette-width;
-       //When flexbox is supported nav item names take up all available space
+      //When flexbox is supported nav item names take up all available space
       @supports (display: flex) {
         display: flex;
-        padding-right: 0;
+        //padding-right: 0;
       }
       .fa,
       .glyphicon,
@@ -96,12 +94,35 @@
       }
     }
 
-    // show the flyout
+    // when hover, show the flyout, and...
     &:hover {
+      background-color: @kie-palette-bg-color;
+
       > .kie-palette-flyout {
         display: block;
       }
-      // overlay the border on the flyout to make it look connected
+      // ...highlight the icon
+      > a {
+        background-color: inherit;
+        .fa,
+        .glyphicon,
+        .pficon {
+          color: @kie-palette-icon-color-hover;
+        }
+      }
+
+      // ... show the indicator
+      > a:before {
+        background: @kie-palette-hover-before-color;
+        content: " ";
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: @kie-palette-flyout-hover-indicator-width;
+        float:left;
+      }
+
+      // ...overlay the border on the flyout to make it look connected
       > a:after {
         background: @kie-palette-bg-color;
         content: " ";
@@ -113,32 +134,6 @@
       }
     }
 
-    &.active,
-    &:hover {
-      > a {
-        background-color: inherit;
-        .fa,
-        .glyphicon,
-        .pficon {
-          color: @kie-palette-icon-color-active;
-        }
-      }
-    }
-    &.active {
-      background-color: @kie-palette-bg-color;
-      > a:before {
-        background: @kie-palette-active-before-color;
-        content: " ";
-        height: 100%;
-        left: 0;
-        top: 0;
-        width: @kie-palette-flyout-active-indicator-width;
-      }
-      &:hover {
-        // to override default list group setting
-        background-color: transparent;
-      }
-    }
     .list-group-item-value {
       display: block;
       line-height: 2em;
@@ -173,13 +168,13 @@
   border-left: 1px solid @kie-palette-flyout-border-color;
   border-right: 1px solid @kie-palette-flyout-border-color;
   border-bottom: 1px solid @kie-palette-flyout-border-color;
-  display:none;
+  display: none;
   left: @kie-palette-width;
   max-height: @kie-palette-flyout-max-height;
   min-height: @kie-palette-flyout-min-height;
   overflow-x: visible;
   overflow-y: scroll;
-  position:absolute;
+  position: absolute;
   top: 0;
 
   h5 {
@@ -194,7 +189,7 @@
     margin-bottom: calc(2 * @font-size-base);
   }
   .list-group-item {
-    float:none;
+    float: none;
     border-color: @kie-palette-flyout-item-border-color;
     padding-left: @kie-palette-left-padding;
     margin-bottom: 0;
@@ -216,8 +211,10 @@
     &:first-child {
       border-top: 1px solid @kie-palette-bg-color; // override default list group
     }
-
-    &.active,
+    //override the higher level palette list-group-item
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
     &:hover {
       background-color: @kie-palette-bg-color-hover;
       border-color: @kie-palette-flyout-item-border-color-hover;
@@ -238,8 +235,8 @@
       }
 
     }
-    }
   }
+}
 
 
 

@@ -17203,7 +17203,6 @@ table.dataTable th:active {
 }
 .kie-palette {
   background: #fff;
-  border-bottom: 1px solid #bbb;
   border-collapse: collapse;
   overflow: visible;
   width: calc(90px);
@@ -17217,6 +17216,7 @@ table.dataTable th:active {
   border-top: none;
 }
 .kie-palette .list-group-item {
+  background-color: #fff;
   border-color: #d1d1d1;
   float: none;
   outline: 0;
@@ -17224,7 +17224,7 @@ table.dataTable th:active {
   position: unset;
 }
 .kie-palette .list-group-item:last-child {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #bbb;
 }
 .kie-palette .list-group-item:last-child:hover > a:after {
   height: calc(101%);
@@ -17243,7 +17243,6 @@ table.dataTable th:active {
 @supports (display: flex) {
   .kie-palette .list-group-item > a {
     display: flex;
-    padding-right: 0;
   }
 }
 .kie-palette .list-group-item > a .fa,
@@ -17254,8 +17253,28 @@ table.dataTable th:active {
   margin: auto;
   min-width: calc(27.999996px);
 }
+.kie-palette .list-group-item:hover {
+  background-color: #fff;
+}
 .kie-palette .list-group-item:hover > .kie-palette-flyout {
   display: block;
+}
+.kie-palette .list-group-item:hover > a {
+  background-color: inherit;
+}
+.kie-palette .list-group-item:hover > a .fa,
+.kie-palette .list-group-item:hover > a .glyphicon,
+.kie-palette .list-group-item:hover > a .pficon {
+  color: #39a5dc;
+}
+.kie-palette .list-group-item:hover > a:before {
+  background: #39a5dc;
+  content: " ";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 5px;
+  float: left;
 }
 .kie-palette .list-group-item:hover > a:after {
   background: #fff;
@@ -17265,32 +17284,6 @@ table.dataTable th:active {
   top: 0;
   width: 1px;
   z-index: 10000;
-}
-.kie-palette .list-group-item.active > a,
-.kie-palette .list-group-item:hover > a {
-  background-color: inherit;
-}
-.kie-palette .list-group-item.active > a .fa,
-.kie-palette .list-group-item:hover > a .fa,
-.kie-palette .list-group-item.active > a .glyphicon,
-.kie-palette .list-group-item:hover > a .glyphicon,
-.kie-palette .list-group-item.active > a .pficon,
-.kie-palette .list-group-item:hover > a .pficon {
-  color: #39a5dc;
-}
-.kie-palette .list-group-item.active {
-  background-color: #fff;
-}
-.kie-palette .list-group-item.active > a:before {
-  background: #39a5dc;
-  content: " ";
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 5px;
-}
-.kie-palette .list-group-item.active:hover {
-  background-color: transparent;
 }
 .kie-palette .list-group-item .list-group-item-value {
   display: block;
@@ -17365,25 +17358,22 @@ table.dataTable th:active {
 .kie-palette-flyout .list-group-item:first-child {
   border-top: 1px solid #fff;
 }
-.kie-palette-flyout .list-group-item.active,
+.kie-palette-flyout .list-group-item:last-child {
+  border-bottom: 1px solid transparent;
+}
 .kie-palette-flyout .list-group-item:hover {
   background-color: #def3ff;
   border-color: #39a5dc;
 }
-.kie-palette-flyout .list-group-item.active:first-child,
 .kie-palette-flyout .list-group-item:hover:first-child {
   border-top: 1px solid #39a5dc;
 }
-.kie-palette-flyout .list-group-item.active > a,
 .kie-palette-flyout .list-group-item:hover > a {
   color: #030303;
   font-weight: 400;
 }
-.kie-palette-flyout .list-group-item.active > a .fa,
 .kie-palette-flyout .list-group-item:hover > a .fa,
-.kie-palette-flyout .list-group-item.active > a .glyphicon,
 .kie-palette-flyout .list-group-item:hover > a .glyphicon,
-.kie-palette-flyout .list-group-item.active > a .pficon,
 .kie-palette-flyout .list-group-item:hover > a .pficon {
   color: #292e34;
 }
