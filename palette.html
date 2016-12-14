@@ -4,39 +4,21 @@
   <meta charset="UTF-8">
   <title>Just the palette for BxMS Editor screen</title>
 
-  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
-  <link href="css/styles_palette.css" rel="stylesheet" media="screen, print">
-
-  <!-- copied from example -->
-  <!-- jQuery -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-
-  <!-- Bootstrap JS -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <!-- Patternfly JS -->
-  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
-
-  <script src="node_modules/c3/c3.min.js"></script>
-  <script src="node_modules/d3/d3.min.js"></script>
-  <script src="node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
-
+  <link href="css/palette.css" rel="stylesheet" media="screen, print">
 
 </head>
-<body>
+<body style="background-color: lightblue;">
 
-<div class="kie-nav--palette">
-<div class="kie-nav--palette nav-pf-vertical nav-pf-persistent-secondary nav-pf-vertical-collapsible-menus">
+<div class="kie-palette">
 
-  <ul class="list-group">
-  <!-- copied from below -->
-    <li class="list-group-item secondary-nav-item-pf active" data-target="#events-flyout">
+  <ul class="list-group ">
+
+    <li class="list-group-item">
       <a href="#">
         <span class="fa fa-circle"></span>
       </a>
-      <div id="events-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>
+      <div id="events-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Events</span>
         </div>
         <h5>Start</h5>
@@ -61,7 +43,7 @@
           </li>
           <li class="list-group-item">
             <a href="#">
-              <span class="list-group-item-value">more...</span>
+              <span class="list-group-item-value kie-list-group-item-value-more">More</span>
             </a>
           </li>
         </ul>
@@ -87,7 +69,7 @@
           </li>
           <li class="list-group-item">
             <a href="#">
-              <span class="list-group-item-value">more...</span>
+              <span class="list-group-item-value kie-list-group-item-value-more">More</span>
             </a>
           </li>
         </ul>
@@ -113,20 +95,18 @@
           </li>
           <li class="list-group-item">
             <a href="#">
-              <span class="list-group-item-value">more...</span>
+              <span class="list-group-item-value kie-list-group-item-value-more">More</span>
             </a>
           </li>
         </ul>
       </div>
     </li>
-    <li class="list-group-item secondary-nav-item-pf" data-target="#activities-flyout">
+    <li class="list-group-item">
       <a href="#">
         <span class="fa fa-square"></span>
-        <!--<span class="list-group-item-value">Activities</span>-->
       </a>
-      <div id="activities-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+      <div id="activities-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Activities</span>
         </div>
         <h5>Tasks</h5>
@@ -145,7 +125,7 @@
           </li>
           <li class="list-group-item">
             <a href="#">
-              <span class="pf pficon-service"></span>
+              <span class="pficon pficon-service"></span>
               <span class="list-group-item-value">Service</span>
             </a>
           </li>
@@ -193,14 +173,12 @@
       </div>
     </li>
 
-    <li class="list-group-item secondary-nav-item-pf" data-target="#gateways-flyout">
+    <li class="list-group-item">
       <a href="#">
         <span class="fa fa-diamond"></span>
-        <!--<span class="list-group-item-value">Gateways</span>-->
       </a>
-      <div id="gateways-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+      <div id="gateways-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Gateways</span>
         </div>
         <h5>Common</h5>
@@ -220,7 +198,7 @@
           <li class="list-group-item">
             <a href="#">
               <span class="fa fa-circle-o"></span>
-              <span class="list-group-item-value">Inclusive/span>
+              <span class="list-group-item-value">Inclusive</span>
             </a>
           </li>
         </ul>
@@ -249,14 +227,12 @@
       </div>
     </li>
 
-    <li class="list-group-item secondary-nav-item-pf" data-target="#containers-flyout">
+    <li class="list-group-item">
       <a href="#">
         <span class="fa fa-square-o"></span>
-        <!--<span class="list-group-item-value">Containers</span>-->
       </a>
-      <div id="containers-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+      <div id="containers-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Containers</span>
         </div>
         <h5>Common</h5>
@@ -306,14 +282,12 @@
 
     </li>
 
-    <li class="list-group-item secondary-nav-item-pf" data-target="#connectors-flyout">
+    <li class="list-group-item">
       <a href="#">
         <span class="fa fa-long-arrow-right"></span>
-        <!--<span class="list-group-item-value">Connectors</span>-->
       </a>
-      <div id="connectors-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+      <div id="connectors-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Connectors</span>
         </div>
         <h5>Flow</h5>
@@ -363,14 +337,12 @@
 
     </li>
 
-    <li class="list-group-item secondary-nav-item-pf" data-target="#library-flyout">
+    <li class="list-group-item">
       <a href="#">
         <span class="pficon pficon-repository"></span>
-        <!--<span class="list-group-item-value">Library</span>-->
       </a>
-      <div id="library-flyout" class="nav-pf-secondary-nav">
-        <div class="nav-item-pf-header">
-          <!--<a class="secondary-collapse-toggle-pf" href="#" data-toggle="collapse-secondary-nav"></a>-->
+      <div id="library-flyout" class="kie-palette-flyout">
+        <div class="kie-palette-flyout-header">
           <span>Library</span>
         </div>
         <h5>Processes</h5>
@@ -410,7 +382,7 @@
           </li>
           <li class="list-group-item">
             <a href="#">
-              <span class="list-group-item-value">more...</span>
+              <span class="list-group-item-value kie-list-group-item-value-more">More</span>
             </a>
           </li>
         </ul>
@@ -443,18 +415,7 @@
 
 </div>
 
-</div>
 
-
-  <script>
-    $(document).ready(function() {
-      // initialize tooltips
-      $('[data-toggle="tooltip"]').tooltip();
-
-      // Initialize the vertical navigation
-      $().setupVerticalNavigation(true);
-    });
-  </script>
 
 
 </body>
