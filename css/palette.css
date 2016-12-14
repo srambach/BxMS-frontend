@@ -17203,6 +17203,8 @@ table.dataTable th:active {
 }
 .kie-palette {
   background: #fff;
+  border-bottom: 1px solid #bbb;
+  border-collapse: collapse;
   overflow: visible;
   width: calc(90px);
   z-index: 1030;
@@ -17220,6 +17222,12 @@ table.dataTable th:active {
   outline: 0;
   padding: 0;
   position: unset;
+}
+.kie-palette .list-group-item:last-child {
+  border-bottom: 1px solid #fff;
+}
+.kie-palette .list-group-item:last-child:hover > a:after {
+  height: calc(101%);
 }
 .kie-palette .list-group-item > a {
   color: #030303;
@@ -17241,13 +17249,22 @@ table.dataTable th:active {
 .kie-palette .list-group-item > a .fa,
 .kie-palette .list-group-item > a .glyphicon,
 .kie-palette .list-group-item > a .pficon {
-  color: #030303;
+  color: #292e34;
   font-size: calc(27.999996px);
   margin: auto;
   min-width: calc(27.999996px);
 }
 .kie-palette .list-group-item:hover > .kie-palette-flyout {
   display: block;
+}
+.kie-palette .list-group-item:hover > a:after {
+  background: #fff;
+  content: " ";
+  height: 100%;
+  margin-right: -1px;
+  top: 0;
+  width: 1px;
+  z-index: 10000;
 }
 .kie-palette .list-group-item.active > a,
 .kie-palette .list-group-item:hover > a {
@@ -17270,7 +17287,7 @@ table.dataTable th:active {
   height: 100%;
   left: 0;
   top: 0;
-  width: 3px;
+  width: 5px;
 }
 .kie-palette .list-group-item.active:hover {
   background-color: transparent;
@@ -17301,10 +17318,10 @@ table.dataTable th:active {
 }
 .kie-palette-flyout {
   background-color: #fff;
-  border-color: #030303;
-  border-left: 1px solid #030303;
-  border-right: 1px solid #030303;
-  border-bottom: 1px solid #030303;
+  border-color: #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   display: none;
   left: calc(90px);
   max-height: 100vh;
@@ -17368,5 +17385,5 @@ table.dataTable th:active {
 .kie-palette-flyout .list-group-item:hover > a .glyphicon,
 .kie-palette-flyout .list-group-item.active > a .pficon,
 .kie-palette-flyout .list-group-item:hover > a .pficon {
-  color: #030303;
+  color: #292e34;
 }
