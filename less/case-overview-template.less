@@ -1,0 +1,54 @@
+@import "patternfly/dist/less/patternfly.less";
+@import "patternfly/dist/less/patternfly-additions.less";
+
+@import "patternfly/dist/less/variables.less";
+@import "patternfly/dist/less/color-variables.less";
+
+@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
+@font-path: "../node_modules/patternfly/dist/fonts";
+@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
+
+.kie-container--page {
+  margin-top: 2rem;
+}
+
+.breadcrumb {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.kie-toolbar {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.kie-toolbar__title {
+  font-size: @font-size-h2;
+}
+
+.kie-toolbar__subtitle {
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+// align the first item
+.toolbar-pf .form-group:first-of-type {
+  padding-left: 0;
+}
+
+//fix the link color in PF nav-item-iconic due to a PF bug
+.nav-item-iconic {
+  color: @color-pf-black-300;
+  &:hover {
+    color: @color-pf-white;
+  }
+}
+
+// container for the main content on a dashboard or overview
+.kie-dashboard-container {
+  background-color: @color-pf-black-150;
+  width: calc(~"100%" - @grid-gutter-width);
+  margin-left: calc(@grid-gutter-width / 2);
+  margin-right: calc(@grid-gutter-width / 2);
+  margin-top: 1rem;
+}
