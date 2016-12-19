@@ -12,16 +12,32 @@
   margin-top: 2rem;
 }
 
+// override parts of patternfly horizontal nav and utility nav
+@navbar-pf-navbar-primary-bg-color-stop:                            @navbar-pf-bg-color; // #383F43
+@navbar-pf-navbar-utility-border-color:                             @navbar-pf-bg-color;
+@navbar-pf-navbar-utility-color:                                    @color-pf-white;
+@navbar-pf-navbar-utility-hover-bg-color:                           @navbar-pf-bg-color;
+
+.navbar-toggle,
+.navbar-pf .navbar-utility {
+  top: 13px; //adjust top to vertically center the smaller item in the large masthead
+  .open > a,
+  .open > a:hover {background-color: @navbar-pf-bg-color;}
+}
+
+// remove default space above and below breakcrumb
 .breadcrumb {
   padding-bottom: 0;
   padding-top: 0;
 }
 
+//remove default border and shadow from toolbar
 .kie-toolbar {
   border-bottom: none;
   box-shadow: none;
 }
 
+// title and subtitle in a toolbar
 .kie-toolbar__title {
   font-size: @font-size-h2;
 }
@@ -34,14 +50,6 @@
 // align the first item
 .toolbar-pf .form-group:first-of-type {
   padding-left: 0;
-}
-
-//fix the link color in PF nav-item-iconic due to a PF bug
-.nav-item-iconic {
-  color: @color-pf-black-300;
-  &:hover {
-    color: @color-pf-white;
-  }
 }
 
 // container for the main content on a dashboard or overview
