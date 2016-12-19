@@ -14660,20 +14660,20 @@ a.disabled {
   .navbar-pf .navbar-utility > .open > a,
   .navbar-pf .navbar-utility > .open > a:hover,
   .navbar-pf .navbar-utility > .open > a:focus {
-    background: #363636;
-    color: #d1d1d1;
+    background: #161616;
+    color: #fff;
   }
   .navbar-pf .navbar-utility > li > a {
-    border-left: 1px solid #2b2b2b;
-    color: #d1d1d1 !important;
+    border-left: 1px solid #030303;
+    color: #fff !important;
     padding: 7px 10px;
   }
   .navbar-pf .navbar-utility > li > a:hover {
-    background: #232323;
-    border-left-color: #373737;
+    background: #030303;
+    border-left-color: #101010;
   }
   .navbar-pf .navbar-utility > li.open > a {
-    border-left-color: #444444;
+    border-left-color: #1d1d1d;
     color: #f5f5f5 !important;
   }
   .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
@@ -15219,13 +15219,13 @@ a.disabled {
   top: 58px;
 }
 .navbar-pf-vertical .nav .drawer-pf-trigger .drawer-pf-trigger-icon {
-  border-left: 1px solid #2b2b2b;
-  border-right: 1px solid #2b2b2b;
+  border-left: 1px solid #030303;
+  border-right: 1px solid #030303;
   padding-left: 15px;
   padding-right: 15px;
 }
 .navbar-pf-vertical .nav .drawer-pf-trigger.open .drawer-pf-trigger-icon {
-  background-color: #232323;
+  background-color: #030303;
 }
 /* Exclusive styles to work with Horizontal Navigation */
 .navbar-pf .drawer-pf {
@@ -17204,6 +17204,16 @@ table.dataTable th:active {
 .kie-container--page {
   margin-top: 2rem;
 }
+.navbar-toggle,
+.navbar-pf .navbar-utility {
+  top: 13px;
+}
+.navbar-toggle .open > a,
+.navbar-pf .navbar-utility .open > a,
+.navbar-toggle .open > a:hover,
+.navbar-pf .navbar-utility .open > a:hover {
+  background-color: #030303;
+}
 .breadcrumb {
   padding-bottom: 0;
   padding-top: 0;
@@ -17221,12 +17231,6 @@ table.dataTable th:active {
 }
 .toolbar-pf .form-group:first-of-type {
   padding-left: 0;
-}
-.nav-item-iconic {
-  color: #d1d1d1;
-}
-.nav-item-iconic:hover {
-  color: #fff;
 }
 .kie-dashboard-container {
   background-color: #f5f5f5;
