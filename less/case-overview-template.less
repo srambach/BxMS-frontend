@@ -1,0 +1,68 @@
+@import "patternfly/dist/less/patternfly.less";
+@import "patternfly/dist/less/patternfly-additions.less";
+
+@import "patternfly/dist/less/variables.less";
+@import "patternfly/dist/less/color-variables.less";
+
+@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
+@font-path: "../node_modules/patternfly/dist/fonts";
+@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
+
+.kie-container--page {
+  margin-top: 2rem;
+}
+
+// override parts of patternfly horizontal nav and utility nav
+@navbar-pf-navbar-primary-bg-color-stop:                            @navbar-pf-bg-color; // #383F43
+@navbar-pf-navbar-utility-border-color:                             @navbar-pf-bg-color;
+@navbar-pf-navbar-utility-color:                                    @color-pf-white;
+@navbar-pf-navbar-utility-hover-bg-color:                           @navbar-pf-bg-color;
+
+.navbar-toggle,
+.navbar-pf .navbar-utility {
+  top: 13px; //adjust top to vertically center the smaller item in the large masthead
+  .open > a,
+  .open > a:hover {background-color: @navbar-pf-bg-color;}
+}
+
+// page title for the case list template
+.kie-page__title {
+  font-size: @font-size-h1;
+  margin-bottom: 1.5rem;
+}
+
+// remove default space above and below breadcrumb
+.breadcrumb {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+//remove default border and shadow from toolbar
+.kie-toolbar {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+// title and subtitle in a toolbar
+.kie-toolbar__title {
+  font-size: @font-size-h2;
+}
+
+.kie-toolbar__subtitle {
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+// align the first item
+.toolbar-pf .form-group:first-of-type {
+  padding-left: 0;
+}
+
+// container for the main content on a dashboard or overview
+.kie-dashboard-container {
+  background-color: @color-pf-black-150;
+  width: calc(~"100%" - @grid-gutter-width);
+  margin-left: calc(@grid-gutter-width / 2);
+  margin-right: calc(@grid-gutter-width / 2);
+  margin-top: 1rem;
+}
