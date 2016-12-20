@@ -17216,6 +17216,7 @@ table.dataTable th:active {
 }
 .kie-page__title {
   font-size: 24px;
+  margin-bottom: 1.5rem;
 }
 .breadcrumb {
   padding-bottom: 0;
