@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case View</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/case-overview-template.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+  <script src="node_modules/c3/c3.min.js"></script>
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
+
+
+</head>
+<body>
+
+
+<!-- Masthead -->
+<nav class="navbar navbar-default navbar-pf ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <h4>APPLICATION NAME</h4>
+    </a>
+  </div>
+  <nav class="collapse navbar-collapse navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-utility">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Username" class="pficon pficon-user"></span>
+          Administrator
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</nav>
+
+<!--everything under the masthead -->
+<div class="container-fluid kie-container--page">
+
+  <div class="row">
+    <!-- breadcrumb -->
+    <div class="col-xs-10">
+      <ol class="breadcrumb">
+        <li>
+          <a href="#">Back to Case List</a>
+        </li>
+        <li class="active">
+          <strong>Case0200b</strong>
+        </li>
+      </ol>
+    </div>
+    <!-- refresh button -->
+    <div class="col-xs-2 text-right">
+      <span class="fa fa-refresh " id="refreshCaseList" data-toggle="tooltip" data-placement="left"
+            title="refresh"></span>
+      <a href="">Refresh</a>
+    </div>
+  </div>
+
+
+  <!-- toolbar -->
+  <div class="row toolbar-pf kie-toolbar">
+    <div class="col-sm-12">
+      <form class="toolbar-pf-actions">
+
+        <!-- Title  -->
+        <div class="form-group">
+          <span class="kie-toolbar__title">Case0020b </span><span class="kie-toolbar__subtitle">(Robert Frost)</span>
+        </div>
+
+        <!-- button and kebab -->
+        <div class="toolbar-pf-action-right ">
+          <div class="form-group">
+            [stages here]
+          </div>
+          <div class="form-group">
+          <span class="btn-group ">
+            <button type="button" class="btn btn-primary" id="newProjectButton">Complete</button>
+
+            <!-- kebab menu -->
+            <div class="dropdown btn-group  dropdown-kebab-pf">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownProjectKebab"
+                      data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab"
+                  id="dropdownProjectKebabMenu">
+                <li><a href="#">Close</a></li>
+              </ul>
+            </div>
+         </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- tabs -->
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- navigation tabs -->
+      <ul class=" nav nav-tabs" id="navTabs">
+        <li class="active"><a href="#">Overview</a></li>
+        <li><a href="#">Activity</a></li>
+        <li><a href="#">Documents</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="row ">
+    <div class="col-sm-12">
+
+      <div class="cards-pf">
+        <div class="container-cards-pf">
+          <div class="row row-cards-pf">
+
+            <!-- case details card -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="dropdown kie-card__toolbar">
+                    <button type="button" class="btn btn-default">
+                      Close
+                    </button>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Case Details
+                  </h2>
+                </div>
+                <div class="card-pf-body">
+                  <p>[card contents]</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- task actions card -->
+            <div class="col-xs-12 col-sm-6 col-md-9 ">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class=" kie-card__toolbar">
+                    <div class="kie-toolbar__group">
+                  <span>
+                    <a href="" class="">View All Tasks <span class="fa fa-external-link-square"></span></a>
+                  </span>
+                    </div>
+                    <div class="kie-toolbar__group">
+                      <button type="button" class="btn btn-default">
+                        Edit
+                      </button>
+                      <div class="dropdown dropdown-kebab-pf pull-right">
+                        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <span class="fa fa-ellipsis-v"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Task Actions
+                  </h2>
+                </div>
+                <div class="card-pf-body row">
+                  <div class="col-xs-12 col-md-4">[card contents]</div>
+                  <div class="col-xs-12 col-md-4">[card contents]</div>
+                  <div class="col-xs-12 col-md-4">[card contents]</div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /row -->
+          <div class="row row-cards-pf">
+
+            <!-- activities card -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="dropdown kie-card__toolbar">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Milestones <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                      <li class="selected"><a href="#">Last 30 Days</a></li>
+                      <li><a href="#">Last 60 Days</a></li>
+                      <li><a href="#">Last 90 Days</a></li>
+                    </ul>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Activities
+                  </h2>
+                </div>
+                <div class="card-pf-body">
+                  <p>[card contents]</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- files card -->
+            <div class="col-xs-12 col-sm-6">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="dropdown kie-card__toolbar">
+                    <button type="button" class="btn btn-default">
+                      Actions
+                    </button>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Files
+                  </h2>
+                </div>
+                <div class="card-pf-body">
+                  <p>[card contents]</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- case members card -->
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="dropdown kie-card__toolbar">
+                    <button type="button" class="btn btn-default ">
+                      Actions
+                    </button>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Case Members
+                  </h2>
+                </div>
+                <div class="card-pf-body">
+                  <p>[card contents]</p>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /row -->
+        </div><!-- /container -->
+      </div>
+
+    </div><!-- container-fluid-->
+
+</body>
+</html>
