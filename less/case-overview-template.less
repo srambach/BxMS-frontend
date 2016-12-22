@@ -8,8 +8,10 @@
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
 
+@import "kie-variables.less";
+
 .kie-container--page {
-  margin-top: 2rem;
+  margin-top: @pf-spacer-xxl;
 }
 
 // override parts of patternfly horizontal nav and utility nav
@@ -28,7 +30,7 @@
 // page title for the case list template
 .kie-page__title {
   font-size: @font-size-h1;
-  margin-bottom: 1.5rem;
+  margin-bottom: @pf-spacer-lg;
 }
 
 // remove default space above and below breadcrumb
@@ -64,5 +66,5 @@
   width: calc(~"100%" - @grid-gutter-width);
   margin-left: calc(@grid-gutter-width / 2);
   margin-right: calc(@grid-gutter-width / 2);
-  margin-top: 1rem;
+  margin-top: @pf-spacer-sm;
 }

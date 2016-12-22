@@ -1209,7 +1209,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -1289,23 +1289,23 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 24px;
+  font-size: 2rem;
 }
 h2,
 .h2 {
-  font-size: 22px;
+  font-size: 1.8333rem;
 }
 h3,
 .h3 {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 h4,
 .h4 {
-  font-size: 15px;
+  font-size: 1.2rem;
 }
 h5,
 .h5 {
-  font-size: 13px;
+  font-size: 1.0833rem;
 }
 h6,
 .h6 {
@@ -12235,8 +12235,8 @@ select.selectpicker {
 }
 .blank-slate-pf .blank-slate-pf-icon {
   color: #9c9c9c;
-  font-size: 57.6px;
-  line-height: 57.6px;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
 }
 .blank-slate-pf .blank-slate-pf-main-action {
   margin-top: 20px;
@@ -12774,7 +12774,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   font-size: 10px;
 }
 .card-pf-subtitle {
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -12787,7 +12787,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   }
 }
 .card-pf-title {
-  font-size: 16px;
+  font-size: 1.3333rem;
   font-weight: 400;
   margin: 20px 0;
   padding: 0;
@@ -12799,11 +12799,11 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .card-pf-aggregate-status .card-pf-title .fa,
 .card-pf-aggregate-status .card-pf-title .pficon {
   color: #292e34;
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-right: 7px;
 }
 .card-pf-title .card-pf-aggregate-status-count {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .card-pf-aggregate-status-mini .card-pf-title .card-pf-aggregate-status-count {
   display: block;
@@ -12892,7 +12892,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .card-pf-view .card-pf-item {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.3333rem;
   padding: 0 13px 0 15px;
 }
 .card-pf-view .card-pf-item:first-child {
@@ -12926,7 +12926,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin-right: 2px;
 }
 .col-lg-2 .card-pf-view .card-pf-title {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .card-pf-view .card-pf-top-element .card-pf-icon-circle {
   border: 2px solid #39a5dc;
@@ -13785,7 +13785,7 @@ a.disabled {
   }
 }
 .list-view-pf .list-group-item-heading {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .list-view-pf .list-group-item-heading small {
   display: block;
@@ -13859,16 +13859,16 @@ a.disabled {
   flex-direction: column;
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked strong {
-  font-size: 13px;
+  font-size: 1.0833rem;
   line-height: 1em;
 }
 .list-view-pf-additional-info-item .pficon,
 .list-view-pf-additional-info-item .fa {
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-right: 10px;
 }
 .list-view-pf-additional-info-item strong {
-  font-size: 16px;
+  font-size: 1.3333rem;
   font-weight: 600;
   margin-right: 5px;
 }
@@ -13930,7 +13930,7 @@ a.disabled {
 }
 .list-view-pf-left .list-view-pf-calendar strong {
   display: block;
-  font-size: 44px;
+  font-size: 3.6666rem;
   font-weight: 300;
   line-height: 1em;
 }
@@ -14003,7 +14003,7 @@ a.disabled {
 }
 .list-view-pf-stacked .list-group-item-heading {
   float: none;
-  font-size: 16px;
+  font-size: 1.3333rem;
   line-height: 1.2em;
   margin-bottom: 5px;
   margin-right: 40px;
@@ -17201,6 +17201,10 @@ table.dataTable th:active {
     width: 18em;
   }
 }
+@font-family-sans-serif : “Overpass”, Overpass, “Open Sans”, Helvetica, sans-serif;
+html {
+  font-size: 12px;
+}
 .kie-container--page {
   margin-top: 2rem;
 }
@@ -17215,7 +17219,7 @@ table.dataTable th:active {
   background-color: #030303;
 }
 .kie-page__title {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 .breadcrumb {
@@ -17227,7 +17231,7 @@ table.dataTable th:active {
   box-shadow: none;
 }
 .kie-toolbar__title {
-  font-size: 22px;
+  font-size: 1.8333rem;
 }
 .kie-toolbar__subtitle {
   font-size: 12px;
