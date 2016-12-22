@@ -17245,6 +17245,7 @@ table.dataTable th:active {
 }
 .kie-card__toolbar {
   float: right;
+  margin-top: -0.5em;
 }
 .kie-toolbar__group {
   display: inline-block;
