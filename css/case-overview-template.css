@@ -17247,3 +17247,20 @@ html {
   margin-right: calc(20px);
   margin-top: 1rem;
 }
+.kie-card__toolbar {
+  float: right;
+  margin-top: -0.5em;
+}
+.kie-toolbar__group {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-right: 1px solid #d1d1d1;
+}
+.kie-toolbar__group:last-of-type {
+  border-color: transparent;
+  padding-right: 0;
+}
+.dropdown-kebab-pf {
+  padding-left: 1em;
+}
