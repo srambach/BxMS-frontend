@@ -17261,6 +17261,82 @@ html {
   border-color: transparent;
   padding-right: 0;
 }
-.dropdown-kebab-pf {
-  padding-left: 1em;
+.kie-card__subtitle-icon {
+  font-size: 2rem;
+  padding-right: .5em;
 }
+.kie-card__subtitle-icon--available {
+  color: #3f9c35;
+}
+.kie-card__subtitle-icon--inprogress {
+  color: #0088ce;
+}
+.kie-card__subtitle-icon--complete {
+  color: #393f44;
+}
+.kie-list__pagination {
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.kie-list__pagination .card-pf-link-with-icon .fa,
+.kie-list__pagination .card-pf-link-with-icon .pficon {
+  font-size: 1.75rem;
+  position: relative;
+}
+.kie-scrollbox {
+  overflow-y: auto;
+  max-height: 19em;
+  background: linear-gradient(#fff, transparent), linear-gradient(transparent, #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, transparent), linear-gradient(transparent, #f5f5f5) 0 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+.kie-scrollbox .list-view-pf-view {
+  background-color: transparent;
+}
+.kie-scrollbox .list-group-item {
+  background-color: transparent;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+.kie-list-view--embedded {
+  margin-top: 0;
+}
+@media (min-width: 992px) {
+  .kie-list-view--embedded .list-view-pf-description {
+    flex-flow: wrap;
+  }
+}
+@media (min-width: 992px) {
+  .kie-list-view--embedded .list-view-pf-description .list-group-item-heading,
+  .kie-list-view--embedded .list-view-pf-description .list-group-item-text {
+    flex-basis: 100%;
+  }
+}
+.kie-list-view-left {
+  align-self: flex-start;
+}
+.kie-list-view-left--available {
+  color: #3f9c35;
+}
+.kie-list-view-left--inprogress {
+  color: #0088ce;
+}
+.kie-list-view-left--complete {
+  color: #393f44;
+}
+.kie-list-view-left .pf-icon {
+  font-size: 1.5rem;
+}
+.kie-card-heading--embedded {
+  border-bottom: 1px solid #8b8d8f;
+  padding-left: 1rem;
+}
+.dropdown-kebab-pf .btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: -1rem;
+}
+/*# sourceMappingURL=case-overview-template.css.map */

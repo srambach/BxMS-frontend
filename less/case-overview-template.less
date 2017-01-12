@@ -1,6 +1,5 @@
 @import "patternfly/dist/less/patternfly.less";
 @import "patternfly/dist/less/patternfly-additions.less";
-
 @import "patternfly/dist/less/variables.less";
 @import "patternfly/dist/less/color-variables.less";
 
@@ -15,16 +14,18 @@
 }
 
 // override parts of patternfly horizontal nav and utility nav
-@navbar-pf-navbar-primary-bg-color-stop:                            @navbar-pf-bg-color; // #383F43
-@navbar-pf-navbar-utility-border-color:                             @navbar-pf-bg-color;
-@navbar-pf-navbar-utility-color:                                    @color-pf-white;
-@navbar-pf-navbar-utility-hover-bg-color:                           @navbar-pf-bg-color;
+@navbar-pf-navbar-primary-bg-color-stop: @navbar-pf-bg-color; // #383F43
+@navbar-pf-navbar-utility-border-color: @navbar-pf-bg-color;
+@navbar-pf-navbar-utility-color: @color-pf-white;
+@navbar-pf-navbar-utility-hover-bg-color: @navbar-pf-bg-color;
 
 .navbar-toggle,
 .navbar-pf .navbar-utility {
   top: 13px; //adjust top to vertically center the smaller item in the large masthead
   .open > a,
-  .open > a:hover {background-color: @navbar-pf-bg-color;}
+  .open > a:hover {
+    background-color: @navbar-pf-bg-color;
+  }
 }
 
 // page title for the case list template
@@ -69,10 +70,12 @@
   margin-top: @pf-spacer-sm;
 }
 
+// Building blocks are cards
 .kie-card__toolbar {
   float: right;
   margin-top: -.5em; //ugly tweak to line up the toolbar
 }
+
 .kie-toolbar__group {
   display: inline-block;
   padding-left: 1em;
@@ -84,6 +87,111 @@
   }
 }
 
-.dropdown-kebab-pf {
-  padding-left: 1em;
+// subtitle icons for Actions
+.kie-card__subtitle-icon {
+  font-size: @font-size-h1;
+  padding-right: .5em;
+  &--available {
+    color: @kie-color-available;
+  }
+  &--inprogress {
+    color: @kie-color-inprogress;
+  }
+  &--complete {
+    color: @kie-color-complete;
+  }
 }
+
+// Pagination arrows for under a scrollbox
+.kie-list__pagination {
+  text-align: center;
+  padding-top: @pf-spacer-xs;
+  padding-bottom: @pf-spacer-xs;
+   //adjust size of chevron arrows
+  .card-pf-link-with-icon .fa, .card-pf-link-with-icon .pficon {
+    font-size: @icon-size-md;
+    position: relative;
+  }
+}
+
+// scrollbox adds a shadow indicating if there is more content above/below the current position
+.kie-scrollbox {
+  overflow-y: auto;
+  max-height: 19em;
+  //margin-top: @pf-spacer-lg;
+
+  background: /* Shadow covers */ linear-gradient(@color-pf-white, transparent), //top
+  linear-gradient(transparent, @color-pf-white) 0 100%, //bottom
+    /* Shadows */ linear-gradient(@color-pf-black-150, transparent),
+  linear-gradient(transparent, @color-pf-black-150) 0 100%;
+
+  background-repeat: no-repeat;
+  background-color: @color-pf-white;
+  background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+
+  .list-view-pf-view {
+    background-color: transparent;
+  }
+  .list-group-item {
+    background-color: transparent;
+    border-top: 1px solid @color-pf-black-200;
+    border-bottom: 1px solid @color-pf-black-200;
+  }
+
+  // This was a nice idea, to select the nth child, but because the class really needs to be set rather than just pulling in the styles, I've manually added the .dropup class to the nth children for now and that will have to be handled by the back end unless we have another way
+  //.dropdown-kebab-pf {
+  //  .dropdown;
+  //}
+  //.list-group-item:nth-child(3n) .dropdown-kebab-pf {
+  //  .dropup;
+  //}
+}
+
+.kie-list-view--embedded {
+  margin-top: 0;
+  // wrap the list-view as if it were a narrow screen width since it is now in an embedded card
+  .list-view-pf-description {
+    @media (min-width: @screen-md-min) {
+      flex-flow: wrap;
+    }
+    .list-group-item-heading,
+    .list-group-item-text {
+      @media (min-width: @screen-md-min) {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+// circle icons to the left of the list view
+.kie-list-view-left {
+  align-self: flex-start;
+  &--available {
+    color: @kie-color-available;
+  }
+  &--inprogress {
+    color: @kie-color-inprogress;
+  }
+  &--complete {
+    color: @kie-color-complete;
+  }
+  .pf-icon {
+    font-size: @icon-size-sm;
+  }
+
+}
+
+
+.kie-card-heading--embedded {
+  border-bottom: 1px solid @color-pf-black-500;
+  padding-left: @spacer;
+}
+
+// fix clickable area of a kebab
+.dropdown-kebab-pf .btn {
+  padding-left: @pf-spacer-sm;
+  padding-right: @pf-spacer-sm;
+  margin-right: -@pf-spacer-sm;
+}
+
