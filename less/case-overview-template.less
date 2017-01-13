@@ -116,9 +116,9 @@
 
 // scrollbox adds a shadow indicating if there is more content above/below the current position
 .kie-scrollbox {
-  overflow-y: auto;
-  max-height: 19em;
-  //margin-top: @pf-spacer-lg;
+  //IMPORTANT: can change to overflow-y: auto to see how the scroll shadows work. JS will have to manually set the scroll of the list
+  overflow-y: hidden;
+  max-height: 15em;
 
   background: /* Shadow covers */ linear-gradient(@color-pf-white, transparent), //top
   linear-gradient(transparent, @color-pf-white) 0 100%, //bottom
@@ -130,16 +130,17 @@
   background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
 
-  .list-view-pf-view {
-    background-color: transparent;
-  }
   .list-group-item {
     background-color: transparent;
     border-top: 1px solid @color-pf-black-200;
     border-bottom: 1px solid @color-pf-black-200;
   }
 
-  // This was a nice idea, to select the nth child, but because the class really needs to be set rather than just pulling in the styles, I've manually added the .dropup class to the nth children for now and that will have to be handled by the back end unless we have another way
+  .kie-list-group-item-content {
+    display:flex;
+  }
+  // IMPORTANT: .dropup needs to be manually set on the list item that will appear at the bottom of the page
+  // It was a nice idea to select the nth child, but because the class really needs to be set rather than just pulling in the styles, I've manually added the .dropup class to the nth children for now and that will have to be handled by the back end unless we have another way
   //.dropdown-kebab-pf {
   //  .dropdown;
   //}
@@ -149,7 +150,6 @@
 }
 
 .kie-list-view--embedded {
-  margin-top: 0;
   // wrap the list-view as if it were a narrow screen width since it is now in an embedded card
   .list-view-pf-description {
     @media (min-width: @screen-md-min) {
@@ -182,7 +182,6 @@
 
 }
 
-
 .kie-card-heading--embedded {
   border-bottom: 1px solid @color-pf-black-500;
   padding-left: @spacer;
@@ -195,3 +194,12 @@
   margin-right: -@pf-spacer-sm;
 }
 
+// case details uses dl
+dd:not(:last-child) {
+  margin-bottom: @pf-spacer-md;
+}
+
+.kie-card-body--embedded {
+  padding-left: @spacer;
+  padding-right: @spacer;
+}
