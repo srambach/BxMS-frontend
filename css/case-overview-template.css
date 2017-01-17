@@ -17312,21 +17312,6 @@ html {
     flex-basis: 100%;
   }
 }
-.kie-list-view-left {
-  align-self: flex-start;
-}
-.kie-list-view-left--available {
-  color: #3f9c35;
-}
-.kie-list-view-left--inprogress {
-  color: #0088ce;
-}
-.kie-list-view-left--complete {
-  color: #393f44;
-}
-.kie-list-view-left .pf-icon {
-  font-size: 1.5rem;
-}
 .kie-card-heading--embedded {
   border-bottom: 1px solid #8b8d8f;
   padding-left: 1rem;
