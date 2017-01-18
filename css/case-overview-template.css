@@ -17287,16 +17287,23 @@ html {
 .kie-scrollbox {
   overflow-y: hidden;
   max-height: 15em;
-  background: linear-gradient(#fff, transparent), linear-gradient(transparent, #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, transparent), linear-gradient(transparent, #f5f5f5) 0 100%;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
   background-repeat: no-repeat;
   background-color: #fff;
   background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
+  border-bottom: 1px solid #d1d1d1;
+}
+.kie-scrollbox .list-group {
+  margin-bottom: 0;
 }
 .kie-scrollbox .list-group-item {
   background-color: transparent;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+}
+.kie-scrollbox .list-group-item:last-of-type {
+  border-bottom: none;
 }
 .kie-scrollbox .kie-list-group-item-content {
   display: flex;
