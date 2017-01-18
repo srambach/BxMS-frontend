@@ -17261,6 +17261,78 @@ html {
   border-color: transparent;
   padding-right: 0;
 }
-.dropdown-kebab-pf {
-  padding-left: 1em;
+.kie-card__subtitle-icon {
+  font-size: 2rem;
+  padding-right: .5em;
 }
+.kie-card__subtitle-icon--available {
+  color: #3f9c35;
+}
+.kie-card__subtitle-icon--inprogress {
+  color: #0088ce;
+}
+.kie-card__subtitle-icon--complete {
+  color: #393f44;
+}
+.kie-list__pagination {
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.kie-list__pagination .card-pf-link-with-icon .fa,
+.kie-list__pagination .card-pf-link-with-icon .pficon {
+  font-size: 1.75rem;
+  position: relative;
+}
+.kie-scrollbox {
+  overflow-y: hidden;
+  max-height: 15em;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+  border-bottom: 1px solid #d1d1d1;
+}
+.kie-scrollbox .list-group {
+  margin-bottom: 0;
+}
+.kie-scrollbox .list-group-item {
+  background-color: transparent;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+.kie-scrollbox .list-group-item:last-of-type {
+  border-bottom: none;
+}
+.kie-scrollbox .kie-list-group-item-content {
+  display: flex;
+}
+@media (min-width: 992px) {
+  .kie-list-view--embedded .list-view-pf-description {
+    flex-flow: wrap;
+  }
+}
+@media (min-width: 992px) {
+  .kie-list-view--embedded .list-view-pf-description .list-group-item-heading,
+  .kie-list-view--embedded .list-view-pf-description .list-group-item-text {
+    flex-basis: 100%;
+  }
+}
+.kie-card-heading--embedded {
+  border-bottom: 1px solid #8b8d8f;
+  padding-left: 1rem;
+}
+.dropdown-kebab-pf .btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: -1rem;
+}
+dd:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.kie-card-body--embedded {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/*# sourceMappingURL=case-overview-template.css.map */
