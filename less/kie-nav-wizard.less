@@ -5,7 +5,7 @@
 //===============================================
 // Variables
 //===============================================
-@wizard-background: @color-pf-black-300;
+@kie-wizard-background: @color-pf-black-300;
 @kie-wizard-border-color: @color-pf-white; //around and between each element
 @kie-wizard-border-width: 2px;
 
@@ -25,7 +25,7 @@
 // Mixins
 //===============================================
 
-.li-color(@color, @background) {
+.kie-wizard-step-color(@color, @background) {
   color: @color;
   background: @background;
   &:after {
@@ -52,7 +52,7 @@
 // Class Def
 //===============================================
 
-ul.nav-wizard {
+ul.kie-nav-wizard {
   border-radius: 3px;
   display: flex;
   position: relative;
@@ -70,7 +70,7 @@ ul.nav-wizard {
     content: " ";
   }
   li {
-    background-color: @wizard-background;
+    background-color: @kie-wizard-background;
     display: flex;
     float: left;
     height: @kie-wizard-row-height;
@@ -105,7 +105,7 @@ ul.nav-wizard {
     }
     // :after is the part on top that appears connected to the step and will obscure part of the :before
     &:after {
-      .kie-chevron(@wizard-background);
+      .kie-chevron(@kie-wizard-background);
       right: -@kie-wizard-chevron-width + @kie-wizard-border-width; // makes the divider line thicker
     }
     // don't let the first, last, and current steps shrink down
@@ -120,7 +120,7 @@ ul.nav-wizard {
     }
     // don't shrink the active one
     &.active {
-      .li-color(@kie-wizard-active-color, @kie-wizard-active-background);
+      .kie-wizard-step-color(@kie-wizard-active-color, @kie-wizard-active-background);
       font-weight: @pf-font-weight-bold;
       flex-shrink: 0;
     }
@@ -128,12 +128,12 @@ ul.nav-wizard {
 
   // lis that are after the active li are incomplete
   .active ~ li {
-    .li-color(@kie-wizard-incomplete-color, @kie-wizard-incomplete-background);
-    border-top: @kie-wizard-border-width solid @wizard-background;
-    border-bottom: @kie-wizard-border-width solid @wizard-background;
+    .kie-wizard-step-color(@kie-wizard-incomplete-color, @kie-wizard-incomplete-background);
+    border-top: @kie-wizard-border-width solid @kie-wizard-background;
+    border-bottom: @kie-wizard-border-width solid @kie-wizard-background;
     // adjust the chevrons on incomplete steps because they are bordered instead of having a background
     &:before {
-      .kie-chevron(@wizard-background);
+      .kie-chevron(@kie-wizard-background);
       border-top-width: (@kie-wizard-row-height / 2);
       border-bottom-width: (@kie-wizard-row-height / 2);
       right: -@kie-wizard-chevron-width; // with :after, controls thickness of the line
@@ -148,3 +148,4 @@ ul.nav-wizard {
   }
 
 }
+
