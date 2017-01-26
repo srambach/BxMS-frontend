@@ -93,8 +93,29 @@
 
         <!-- button and kebab -->
         <div class="toolbar-pf-action-right ">
-          <div class="form-group">
-            [stages here]
+          <div class="form-group  ">
+
+            <ul class='nav kie-nav-wizard kie-toolbar__nav-wizard' data-toggle="tooltip" data-placement="bottom"
+                title="Step 1 - Completed
+                  Step 2 - Completed
+                  Step 3 - Completed and long text here
+                  Step 4 - Completed
+                  Step 5 - Active (current)
+                  Step 6 - Not Yet Reached asdf
+                  Step 7 - Not Yet Reached
+                  Step 8 - Not Yet Reached and also quite long
+                  Step 9 - Not Yet Reached">
+              <li><a>Step 1 - Completed</a></li>
+              <li><a>Step 2 - Completed</a></li>
+              <li><a>Step 3 - Completed and long text here</a></li>
+              <li><a>Step 4 - Completed</a></li>
+              <li class='active'><a>Step 5 - Active</a></li>
+              <li><a>Step 6 - Not Yet Reached</a></li>
+              <li><a>Step 7 - Not Yet Reached</a></li>
+              <li><a>Step 8 - Not Yet Reached and also quite long</a></li>
+              <li><a>Step 9 - Not Yet Reached</a></li>
+            </ul>
+
           </div>
           <div class="form-group">
           <span class="btn-group ">
@@ -631,6 +652,13 @@
       </div>
 
     </div><!-- container-fluid-->
+
+    <!-- This script is needed for the tooltips -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 </body>
 </html>

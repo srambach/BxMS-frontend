@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case Actions Building block</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/case-overview-template.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+  <script src="node_modules/c3/c3.min.js"></script>
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
+
+</head>
+<body>
+
+<ul class='nav kie-nav-wizard' data-toggle="tooltip" data-placement="bottom"
+    title="Step 1 - Completed
+            Step 2 - Completed
+            Step 3 - Completed and long text here
+            Step 4 - Completed
+            Step 5 - Active (current)
+            Step 6 - Not Yet Reached asdf
+            Step 7 - Not Yet Reached
+            Step 8 - Not Yet Reached and also quite long
+            Step 9 - Not Yet Reached">
+  <li><a>Step 1 - Completed</a></li>
+  <li><a>Step 2 - Completed</a></li>
+  <li><a>Step 3 - Completed and long text here</a></li>
+  <li><a>Step 4 - Completed</a></li>
+  <li class='active'><a>Step 5 - Active</a></li>
+  <li><a>Step 6 - Not Yet Reached</a></li>
+  <li><a>Step 7 - Not Yet Reached</a></li>
+  <li><a>Step 8 - Not Yet Reached and also quite long</a></li>
+  <li><a>Step 9 - Not Yet Reached</a></li>
+</ul>
+
+
+<!-- This script is needed for the tooltips -->
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</body>
+</html>

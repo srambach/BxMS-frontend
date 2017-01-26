@@ -2,4 +2,7 @@
 html {
   font-size: 12px;
 }
+.tooltip-inner {
+  white-space: pre-line;
+}
 /*# sourceMappingURL=kie-variables.css.map */
