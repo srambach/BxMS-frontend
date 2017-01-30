@@ -17408,10 +17408,12 @@ ul.kie-nav-wizard .active ~ li:after {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.kie-list__pagination .card-pf-link-with-icon .fa,
-.kie-list__pagination .card-pf-link-with-icon .pficon {
+.kie-list__pagination .fa,
+.kie-list__pagination .pficon {
   font-size: 1.75rem;
   position: relative;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 .kie-scrollbox {
   overflow-y: hidden;
