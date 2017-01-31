@@ -17390,6 +17390,16 @@ ul.kie-nav-wizard .active ~ li:after {
   border-color: transparent;
   padding-right: 0;
 }
+@media (max-width: 767px) {
+  .card-pf-body [class^="col"] + [class^="col"] .kie-card__subtitle {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 1199px) {
+  .card-pf-body [class^="col"] + [class^="col"] + [class^="col"] .kie-card__subtitle {
+    margin-top: 2rem;
+  }
+}
 .kie-card__subtitle-icon {
   font-size: 2rem;
   padding-right: .5em;
@@ -17403,10 +17413,13 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-card__subtitle-icon--complete {
   color: #393f44;
 }
+.kie-card-body--embedded {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .kie-list__pagination {
   text-align: center;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1.5rem;
 }
 .kie-list__pagination .fa,
 .kie-list__pagination .pficon {
@@ -17461,9 +17474,5 @@ ul.kie-nav-wizard .active ~ li:after {
 }
 dd:not(:last-child) {
   margin-bottom: 1.25rem;
-}
-.kie-card-body--embedded {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 /*# sourceMappingURL=case-overview-template.css.map */
