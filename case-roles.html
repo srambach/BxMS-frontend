@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case Actions Building block</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/case-overview-template.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+  <script src="node_modules/c3/c3.min.js"></script>
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="node_modules/jquery-match-height/jquery.matchHeight-min.js"></script>
+
+</head>
+<body>
+
+<div class="cards-pf">
+  <div class="container-cards-pf">
+    <div class="row row-cards-pf">
+
+      <!-- roles card -->
+      <div class="col-xs-12 col-sm-6 col-md-3 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class=" kie-card__toolbar">
+              <div class="kie-toolbar__group">
+                <button type="button" class="btn btn-default">
+                  Add
+                </button>
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Roles
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+            <div class="row">
+              <!-- Roles -->
+              <div class="col-xs-12">
+
+                  <div class="kie-scrollbox">
+                    <div class=" list-group kie-list-view--embedded">
+                      <div class="list-group-item">
+                        <!--<div class="">-->
+                          <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"-->
+                                    <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                              <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                              <!--<li><a href="#">Accept</a></li>-->
+                            <!--</ul>-->
+                          <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Case Owner
+                              </div>
+                              <div class="list-group-item-text">
+                                Aimee
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Compliance
+                              </div>
+                              <div class="list-group-item-text">
+                                Cami
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Reviewers
+                              </div>
+                              <div class="list-group-item-text">
+                                Cami, Paula
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- more items that are below the fold of the list -->
+                      <div class="list-group-item">
+                        <!--<div class="">-->
+                        <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                        <!--<button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"-->
+                        <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                        <!--<span class="fa fa-ellipsis-v"></span>-->
+                        <!--</button>-->
+                        <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                        <!--<li><a href="#">Accept</a></li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Case Owner
+                              </div>
+                              <div class="list-group-item-text">
+                                Aimee
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Compliance
+                              </div>
+                              <div class="list-group-item-text">
+                                Cami
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-group-item">
+                        <div class="kie-list-group-item-content">
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description">
+                              <div class="list-group-item-heading">
+                                Reviewers
+                              </div>
+                              <div class="list-group-item-text">
+                                Cami, Paula
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div><!-- scrollbox -->
+                  <div class="kie-list__pagination">
+                    <a href="" class="disabled"><span class="fa fa-chevron-circle-up"></span></a>
+                    <a href="" class=""><span class="fa fa-chevron-circle-down"></span></a>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- roles card VARIATION WITH NO DATA -->
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class=" kie-card__toolbar">
+              <!-- View All Tasks feature removed -->
+              <!--<div class="kie-toolbar__group">-->
+              <!--<span>-->
+              <!--<a href="" class="card-pf-link-with-icon">-->
+              <!--<span class="fa fa-external-link-square glyphicon-resize-full"></span>-->
+              <!--View All Tasks </a>-->
+              <!--</span>-->
+              <!--</div>-->
+              <div class="kie-toolbar__group">
+                <button type="button" class="btn btn-default">
+                  Add
+                </button>
+                <!--<div class="dropdown dropdown-kebab-pf pull-right">-->
+                <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab"-->
+                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                <!--<span class="fa fa-ellipsis-v"></span>-->
+                <!--</button>-->
+                <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">-->
+                <!--<li><a href="#">Action</a></li>-->
+                <!--<li><a href="#">Another action</a></li>-->
+                <!--<li><a href="#">Something else here</a></li>-->
+                <!--<li role="separator" class="divider"></li>-->
+                <!--<li><a href="#">Separated link</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Roles
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+            <div class="row">
+
+              <div class="col-xs-12">
+                <!--<foo class="card-pf-body kie-card-body&#45;&#45;embedded">-->
+                  <div href="" class="card-pf-link-with-icon"><span class="pficon pficon-info"></span>No roles have been added
+                  </div>
+
+                <!--</foo>-->
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- roles card VARIATION WITH LOADING DATA -->
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class=" kie-card__toolbar">
+              <div class="kie-toolbar__group">
+                <button type="button" class="btn btn-default">
+                  Add
+                </button>
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Roles
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+            <div class="row">
+
+              <div class="col-xs-12">
+                  <div class="spinner spinner-sm spinner-inline"></div>
+                  Loading data...
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

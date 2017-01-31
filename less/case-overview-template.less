@@ -88,6 +88,21 @@
   }
 }
 
+// copied from patternfly cards.less card-pf-subtitle and extended
+.kie-card__subtitle {
+  @media (max-width: @screen-xs-max) {    // At xs, all columns will stack, so increase spacing above the subtitle
+    .card-pf-body [class^="col"] + [class^="col"]  & {
+      margin-top: (@pf-spacer-xxl);
+    }
+  }
+  @media (max-width: @screen-md-max) {    // At md, the 3rd column will still be under the second, so only increase spacing above the subtitle of the third column
+    .card-pf-body [class^="col"] + [class^="col"] + [class^="col"]  & {
+      margin-top: (@pf-spacer-xxl);
+    }
+  }
+
+}
+
 // subtitle icons for Actions
 .kie-card__subtitle-icon {
   font-size: @font-size-h1;
@@ -103,15 +118,21 @@
   }
 }
 
+.kie-card-body--embedded {
+  padding-left: @spacer;
+  padding-right: @spacer;
+}
+
 // Pagination arrows for under a scrollbox
 .kie-list__pagination {
   text-align: center;
-  padding-top: @pf-spacer-xs;
-  padding-bottom: @pf-spacer-xs;
+  padding-top: @pf-spacer-lg;
    //adjust size of chevron arrows
-  .card-pf-link-with-icon .fa, .card-pf-link-with-icon .pficon {
+  .fa, .pficon {
     font-size: @icon-size-md;
     position: relative;
+    padding-left: @pf-spacer-xs;
+    padding-right: @pf-spacer-xs;
   }
 }
 
@@ -191,7 +212,3 @@ dd:not(:last-child) {
   margin-bottom: @pf-spacer-md;
 }
 
-.kie-card-body--embedded {
-  padding-left: @spacer;
-  padding-right: @spacer;
-}
