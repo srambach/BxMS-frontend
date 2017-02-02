@@ -194,6 +194,27 @@
   }
 }
 
+.kie-milestones__list-group-item {
+  padding-left: @pf-spacer-xs;
+}
+.kie-milestones__main-info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.kie-milestones__item--completed,
+.kie-milestones__item--terminated {
+  color: @color-pf-black-500;
+}
+
+.kie-milestones__list-view-pf-left {
+  padding-right: @pf-spacer-md
+}
+
+// overcoming ugly specificity
+.list-view-pf-left .fa.kie-milestones__icon--completed,
+.list-view-pf-left .fa.kie-milestones__icon--terminated {
+  border-color: transparent;
+}
 
 .kie-card-heading--embedded {
   border-bottom: 1px solid @color-pf-black-500;
@@ -212,3 +233,9 @@ dd:not(:last-child) {
   margin-bottom: @pf-spacer-md;
 }
 
+.kie-btn-link {
+  color: @color-pf-black;
+  &:hover {
+    color: @link-hover-color;
+  }
+}
