@@ -17463,6 +17463,24 @@ ul.kie-nav-wizard .active ~ li:after {
     flex-basis: 100%;
   }
 }
+.kie-milestones__list-group-item {
+  padding-left: 0.75rem;
+}
+.kie-milestones__main-info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.kie-milestones__item--completed,
+.kie-milestones__item--terminated {
+  color: #8b8d8f;
+}
+.kie-milestones__list-view-pf-left {
+  padding-right: 1.25rem;
+}
+.list-view-pf-left .fa.kie-milestones__icon--completed,
+.list-view-pf-left .fa.kie-milestones__icon--terminated {
+  border-color: transparent;
+}
 .kie-card-heading--embedded {
   border-bottom: 1px solid #8b8d8f;
   padding-left: 1rem;
@@ -17474,5 +17492,11 @@ ul.kie-nav-wizard .active ~ li:after {
 }
 dd:not(:last-child) {
   margin-bottom: 1.25rem;
+}
+.kie-btn-link {
+  color: #030303;
+}
+.kie-btn-link:hover {
+  color: #00659c;
 }
 /*# sourceMappingURL=case-overview-template.css.map */
