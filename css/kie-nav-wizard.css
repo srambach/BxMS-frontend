@@ -25,6 +25,7 @@ ul.kie-nav-wizard:before {
 ul.kie-nav-wizard li {
   background-color: #d1d1d1;
   display: flex;
+  flex: 1 10000 0;
   float: left;
   height: 42px;
   margin: 0;
@@ -74,7 +75,7 @@ ul.kie-nav-wizard li:after {
 ul.kie-nav-wizard li:first-of-type,
 ul.kie-nav-wizard li:last-of-type,
 ul.kie-nav-wizard li:active {
-  flex-shrink: 0;
+  flex: 1 1 8em;
 }
 ul.kie-nav-wizard li:last-of-type {
   margin-right: 16px;
@@ -83,7 +84,7 @@ ul.kie-nav-wizard li.active {
   color: #fff;
   background: #39a5dc;
   font-weight: 600;
-  flex-shrink: 0;
+  flex: 1 1 8em;
 }
 ul.kie-nav-wizard li.active:after {
   border-left: 16px solid #39a5dc;

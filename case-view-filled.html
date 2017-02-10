@@ -83,19 +83,18 @@
 
   <!-- toolbar -->
   <div class="row toolbar-pf kie-toolbar">
-    <div class="col-sm-12">
-      <form class="toolbar-pf-actions">
+      <form class="col-xs-12 toolbar-pf-actions">
 
         <!-- Title  -->
-        <div class="form-group">
+        <div class="form-group  col-md-3">
           <span class="kie-toolbar__title">Case0020b </span><span class="kie-toolbar__subtitle">(Robert Frost)</span>
         </div>
 
         <!-- button and kebab -->
-        <div class="toolbar-pf-action-right ">
-          <div class="form-group  ">
-
-            <ul class='nav kie-nav-wizard kie-toolbar__nav-wizard' data-toggle="tooltip" data-placement="bottom"
+        <div class="toolbar-pf-action-right  col-sm-9">
+          <div class="row">
+          <div class="form-group  col-sm-10 ">
+            <ul class="nav kie-nav-wizard kie-toolbar__nav-wizard" data-toggle="tooltip" data-placement="bottom"
                 title="Step 1 - Completed
                   Step 2 - Completed
                   Step 3 - Completed and long text here
@@ -115,30 +114,93 @@
               <li><a>Step 8 - Not Yet Reached and also quite long</a></li>
               <li><a>Step 9 - Not Yet Reached</a></li>
             </ul>
-
           </div>
-          <div class="form-group">
-          <span class="btn-group ">
-            <button type="button" class="btn btn-primary" id="newProjectButton">Complete</button>
+          <div class="form-group col-sm-2">
+            <span class="btn-group">
+              <button type="button" class="btn btn-primary" id="newProjectButton">Complete</button>
 
-            <!-- kebab menu -->
-            <div class="dropdown btn-group  dropdown-kebab-pf">
-              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownProjectKebab"
-                      data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="true">
-                <span class="fa fa-ellipsis-v"></span>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab"
-                  id="dropdownProjectKebabMenu">
-                <li><a href="#">Close</a></li>
-              </ul>
-            </div>
-         </span>
+              <!-- kebab menu -->
+              <div class="dropdown btn-group  dropdown-kebab-pf">
+                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownProjectKebab"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                  <span class="fa fa-ellipsis-v"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab"
+                    id="dropdownProjectKebabMenu">
+                  <li><a href="#">Close</a></li>
+                </ul>
+              </div>
+           </span>
           </div>
         </div>
+        </div>
       </form>
-    </div>
   </div>
+
+
+  <!-- REVISED TOOLBAR -->
+  <!--<div class="foo-row foo-toolbar-pf kie-toolbar kie-flex-toolbar">-->
+    <!--<div class="">-->
+      <!--<form class="toolbar-pf-actions">-->
+
+        <!--&lt;!&ndash; Title  &ndash;&gt;-->
+        <!--<div class="form-group  ">-->
+          <!--<span class="kie-toolbar__title">Case0020b </span><span class="kie-toolbar__subtitle">(Robert Frost)</span>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; button and kebab &ndash;&gt;-->
+        <!--<div class="toolbar-pf-action-right   ">-->
+          <!--<div class="form-group  ">-->
+
+            <!--<ul class='nav kie-nav-wizard kie-toolbar__nav-wizard' style="flex-shrink: 1" data-toggle="tooltip"-->
+                <!--data-placement="bottom"-->
+                <!--title="Step 1 - Completed-->
+                  <!--Step 2 - Completed-->
+                  <!--Step 3 - Completed and long text here-->
+                  <!--Step 4 - Completed-->
+                  <!--Step 5 - Active (current)-->
+                  <!--Step 6 - Not Yet Reached asdf-->
+                  <!--Step 7 - Not Yet Reached-->
+                  <!--Step 8 - Not Yet Reached and also quite long-->
+                  <!--Step 9 - Not Yet Reached">-->
+              <!--<li><a>Step 1 - Completed</a></li>-->
+              <!--&lt;!&ndash;<li><a>Step 2 - Completed</a></li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li><a>Step 3 - Completed and long text here</a></li>&ndash;&gt;-->
+              <!--<li><a>Step 4 - Completed</a></li>-->
+              <!--<li class='active'><a>Step 5 - Active</a></li>-->
+              <!--<li><a>Step 6 - Not Yet Reached</a></li>-->
+              <!--&lt;!&ndash;<li><a>Step 7 - Not Yet Reached</a></li>&ndash;&gt;-->
+              <!--&lt;!&ndash;<li><a>Step 8 - Not Yet Reached and also quite long</a></li>&ndash;&gt;-->
+              <!--<li><a>Step 9 - Not Yet Reached</a></li>-->
+            <!--</ul>-->
+
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<span class="btn-group ">-->
+              <!--<button type="button" class="btn btn-primary" id="newProjectButton">Complete</button>-->
+
+              <!--&lt;!&ndash; kebab menu &ndash;&gt;-->
+              <!--<div class="dropdown btn-group  dropdown-kebab-pf">-->
+                <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownProjectKebab"-->
+                        <!--data-toggle="dropdown"-->
+                        <!--aria-haspopup="true" aria-expanded="true">-->
+                  <!--<span class="fa fa-ellipsis-v"></span>-->
+                <!--</button>-->
+                <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab"-->
+                    <!--id="dropdownProjectKebabMenu">-->
+                  <!--<li><a href="#">Close</a></li>-->
+                <!--</ul>-->
+              <!--</div>-->
+           <!--</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</form>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+
 
   <!-- tabs -->
   <div class="row">
