@@ -8,6 +8,7 @@ html {
 ul.kie-nav-wizard {
   border-radius: 3px;
   display: flex;
+  padding-left: 0;
   position: relative;
 }
 ul.kie-nav-wizard:before {
