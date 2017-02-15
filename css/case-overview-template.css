@@ -17211,6 +17211,7 @@ html {
 ul.kie-nav-wizard {
   border-radius: 3px;
   display: flex;
+  padding-left: 0;
   position: relative;
 }
 ul.kie-nav-wizard:before {
@@ -17228,6 +17229,7 @@ ul.kie-nav-wizard:before {
 ul.kie-nav-wizard li {
   background-color: #d1d1d1;
   display: flex;
+  flex: 1 10000 0;
   float: left;
   height: 42px;
   margin: 0;
@@ -17277,7 +17279,7 @@ ul.kie-nav-wizard li:after {
 ul.kie-nav-wizard li:first-of-type,
 ul.kie-nav-wizard li:last-of-type,
 ul.kie-nav-wizard li:active {
-  flex-shrink: 0;
+  flex: 1 1 8em;
 }
 ul.kie-nav-wizard li:last-of-type {
   margin-right: 16px;
@@ -17286,7 +17288,7 @@ ul.kie-nav-wizard li.active {
   color: #fff;
   background: #39a5dc;
   font-weight: 600;
-  flex-shrink: 0;
+  flex: 1 1 8em;
 }
 ul.kie-nav-wizard li.active:after {
   border-left: 16px solid #39a5dc;
@@ -17359,10 +17361,10 @@ ul.kie-nav-wizard .active ~ li:after {
   border-bottom: none;
   box-shadow: none;
 }
-.kie-toolbar__title {
+.kie-case-view-header__title {
   font-size: 1.8333rem;
 }
-.kie-toolbar__subtitle {
+.kie-case-view-header__subtitle {
   font-size: 12px;
   font-weight: 600;
 }
@@ -17389,6 +17391,48 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-toolbar__group:last-of-type {
   border-color: transparent;
   padding-right: 0;
+}
+.kie-vertical-align {
+  display: flex;
+  align-items: center;
+}
+.kie-case-view-header {
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+  .kie-case-view-header {
+    display: flex;
+    align-items: center;
+  }
+}
+.kie-case-view-header__lhs {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .kie-case-view-header__lhs {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .kie-case-view-header__rhs {
+    display: flex;
+    align-items: center;
+  }
+}
+.kie-case-view-header__stages {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .kie-case-view-header__stages {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .kie-case-view-header__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 @media (max-width: 767px) {
   .card-pf-body [class^="col"] + [class^="col"] .kie-card__subtitle {

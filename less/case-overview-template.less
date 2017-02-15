@@ -1,3 +1,4 @@
+@import "bootstrap/less/variables.less";
 @import "patternfly/dist/less/patternfly.less";
 @import "patternfly/dist/less/patternfly-additions.less";
 @import "patternfly/dist/less/variables.less";
@@ -48,11 +49,11 @@
 }
 
 // title and subtitle in a toolbar
-.kie-toolbar__title {
+.kie-case-view-header__title {
   font-size: @font-size-h2;
 }
 
-.kie-toolbar__subtitle {
+.kie-case-view-header__subtitle {
   font-size: @font-size-base;
   font-weight: 600;
 }
@@ -88,15 +89,58 @@
   }
 }
 
+// help the header align things vertically
+.kie-vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+// header on case view
+.kie-case-view-header {
+  margin-bottom: @pf-spacer-md;
+  @media (min-width: @screen-sm) {
+    .kie-vertical-align;
+  }
+}
+
+.kie-case-view-header__lhs {
+  margin-bottom: @pf-spacer-sm;
+  @media (min-width: @screen-sm) {
+    margin-bottom: 0;
+  }
+}
+
+.kie-case-view-header__rhs {
+  @media (min-width: @screen-sm) {
+    .kie-vertical-align;
+  }
+}
+
+.kie-case-view-header__stages {
+  margin-bottom: @pf-spacer-sm;
+  @media (min-width: @screen-sm) {
+    margin-bottom: 0;
+  }
+}
+
+.kie-case-view-header__actions {
+  @media (min-width: @screen-sm) {
+    .kie-vertical-align;
+    justify-content: flex-end;
+  }
+}
+
 // copied from patternfly cards.less card-pf-subtitle and extended
 .kie-card__subtitle {
-  @media (max-width: @screen-xs-max) {    // At xs, all columns will stack, so increase spacing above the subtitle
-    .card-pf-body [class^="col"] + [class^="col"]  & {
+  @media (max-width: @screen-xs-max) {
+    // At xs, all columns will stack, so increase spacing above the subtitle
+    .card-pf-body [class^="col"] + [class^="col"] & {
       margin-top: (@pf-spacer-xxl);
     }
   }
-  @media (max-width: @screen-md-max) {    // At md, the 3rd column will still be under the second, so only increase spacing above the subtitle of the third column
-    .card-pf-body [class^="col"] + [class^="col"] + [class^="col"]  & {
+  @media (max-width: @screen-md-max) {
+    // At md, the 3rd column will still be under the second, so only increase spacing above the subtitle of the third column
+    .card-pf-body [class^="col"] + [class^="col"] + [class^="col"] & {
       margin-top: (@pf-spacer-xxl);
     }
   }
@@ -127,7 +171,7 @@
 .kie-list__pagination {
   text-align: center;
   padding-top: @pf-spacer-lg;
-   //adjust size of chevron arrows
+  //adjust size of chevron arrows
   .fa, .pficon {
     font-size: @icon-size-md;
     position: relative;
@@ -141,13 +185,10 @@
   //IMPORTANT: can change to overflow-y: auto to see how the scroll shadows work. JS will have to manually set the scroll of the list
   overflow-y: hidden;
   max-height: 15em;
-  background:
-    /* Shadow covers */
-      linear-gradient(@color-pf-white, rgba(255,255,255,0)), //top
-      linear-gradient(rgba(255,255,255,0), @color-pf-white) 0 100%, //bottom
-    /* Shadows */
-      linear-gradient(@color-pf-black-150, rgba(255,255,255,0)),
-      linear-gradient(rgba(255,255,255,0), @color-pf-black-150) 0 100%;
+  background: /* Shadow covers */ linear-gradient(@color-pf-white, rgba(255, 255, 255, 0)), //top
+  linear-gradient(rgba(255, 255, 255, 0), @color-pf-white) 0 100%, //bottom
+    /* Shadows */ linear-gradient(@color-pf-black-150, rgba(255, 255, 255, 0)),
+  linear-gradient(rgba(255, 255, 255, 0), @color-pf-black-150) 0 100%;
   background-repeat: no-repeat;
   background-color: @color-pf-white;
   background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
@@ -167,7 +208,7 @@
   }
 
   .kie-list-group-item-content {
-    display:flex;
+    display: flex;
   }
   // IMPORTANT: .dropup needs to be manually set on the list item that will appear at the bottom of the page
   // It was a nice idea to select the nth child, but because the class really needs to be set rather than just pulling in the styles, I've manually added the .dropup class to the nth children for now and that will have to be handled by the back end unless we have another way
@@ -197,10 +238,12 @@
 .kie-milestones__list-group-item {
   padding-left: @pf-spacer-xs;
 }
+
 .kie-milestones__main-info {
   padding-top: 0;
   padding-bottom: 0;
 }
+
 .kie-milestones__item--completed,
 .kie-milestones__item--terminated {
   color: @color-pf-black-500;
