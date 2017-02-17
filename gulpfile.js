@@ -19,7 +19,7 @@ gulp.task('less', function () {
     gulp.src('less/**/*.less')
         .pipe(plumber())
         .pipe(less({
-            paths: [ path.join('node_modules') ],
+            paths: [ path.join('node_modules'), path.join('node_modules/patternfly/node_modules') ],
             sourceMap: {
                 //sourceMapRootpath: '../less' // This one for KIE files (Optional absolute or relative path to your LESS files)
                 sourceMapRootpath: '/' // This one for PF files (Optional absolute or relative path to your LESS files)
