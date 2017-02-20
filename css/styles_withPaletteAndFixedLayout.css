@@ -2580,7 +2580,6 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   border: 2px solid transparent;
 }
 .card-pf-view .card-pf-heading-kebab .dropdown-kebab-pf {
-  margin-left: 10px;
   margin-top: -3px;
 }
 .card-pf-view .card-pf-heading-kebab + .progress-pf-legend p {
@@ -2776,6 +2775,8 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .close {
   text-shadow: none;
+  z-index: 1;
+  position: relative;
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
@@ -3023,6 +3024,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .pficon-cpu:before {
   content: "\e905";
 }
+.pficon-degraded:before {
+  content: "\e91b";
+}
 .pficon-delete:before {
   content: "\e611";
 }
@@ -3091,6 +3095,9 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .pficon-project:before {
   content: "\e622";
+}
+.pficon-rebalance:before {
+  content: "\e91c";
 }
 .pficon-refresh:before,
 .pficon-restart:before {
@@ -3523,7 +3530,8 @@ a.disabled {
   order: 2;
 }
 .list-view-pf-actions button,
-.list-view-pf-actions > a {
+.list-view-pf-actions > a,
+.list-view-pf-actions .dropdown-kebab-pf {
   margin-left: 10px;
 }
 .list-view-pf-top-align .list-view-pf-actions {
@@ -3608,6 +3616,7 @@ a.disabled {
 }
 .list-view-pf-stacked .list-view-pf-description {
   display: block;
+  flex: none;
 }
 @media (min-width: 992px) {
   .list-view-pf-description {
@@ -3756,6 +3765,42 @@ a.disabled {
   padding: 10px 15px;
   position: relative;
   width: 100%;
+}
+.list-view-pf-dnd .dndDragging.drag-original {
+  display: none;
+}
+.list-view-pf-dnd .dndDragging.drag-original .list-view-pf-dnd-original-items {
+  display: block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-drag-items {
+  display: inline-block;
+}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-original-items {
+  display: none;
+}
+.list-view-pf-dnd .dndPlaceholder {
+  background-color: #ededed;
+  padding: 20px 0;
+}
+.list-view-pf-dnd .list-group-item-header {
+  margin-left: -10px;
+}
+.list-view-pf-dnd .list-group-item-header:before {
+  background-image: linear-gradient(to bottom, #0088ce 60%, #fff 0%);
+  background-position: left;
+  background-repeat: repeat-y;
+  background-size: 2px 5px;
+  border: 4px solid #0088ce;
+  border-color: #00659c;
+  content: "";
+  height: 55px;
+  left: 4px;
+  position: absolute;
+  top: 5px;
+  width: 10px;
+}
+.list-view-pf-dnd-drag-items {
+  display: none;
 }
 .login-pf {
   height: 100%;
@@ -5582,6 +5627,11 @@ table.dataTable th:active {
 .toolbar-pf .form-group .btn-link:focus,
 .toolbar-pf .form-group .btn-link:hover {
   color: #0088ce;
+}
+.toolbar-pf .form-group .dropdown-kebab-pf .btn-link {
+  padding: 4px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .toolbar-pf-actions {
   display: table;
