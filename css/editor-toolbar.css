@@ -17400,7 +17400,7 @@ html {
   display: flex;
   align-items: center;
 }
-.kie-toolbar__breadcrumb li {
+.kie-toolbar__breadcrumb > li {
   display: flex;
   align-items: center;
 }
