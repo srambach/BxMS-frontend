@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just the toolbar for BxMS Editor screen</title>
+
+  <link href="css/editor-toolbar.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.js"></script>
+
+  <!-- Bootstrap JS -->
+  <!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+
+</head>
+<body style="background-color: lightblue;">
+
+<div class="kie-editor__toolbar">
+  <div>
+    <ol class="breadcrumb kie-toolbar__breadcrumb">
+      <li class="kie-breadcrumb__item"><a href="#">Library</a></li>
+      <li class="kie-breadcrumb__item--item"><a href="#">Mortgage Project</a></li>
+      <li class="kie-breadcrumb__item"><a href="#">Third Level</a></li>
+      <li class="kie-breadcrumb__item active">
+        <span class="dropdown kie-editor__dropdown ">
+          <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <strong>Process 1</strong>
+            v4.2
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">v4.1</a></li>
+            <li><a href="#">v4.0</a></li>
+            <li><a href="#">v3.3</a></li>
+            <li><a href="#">v3.2</a></li>
+            <li><a href="#">show all...</a></li>
+          </ul>
+        </span>
+      </li>
+    </ol>
+  </div>
+
+<div>
+  <button type="button" class="btn btn-default kie-editor__btn">Cancel</button>
+
+  <button type="button" class="btn btn-primary kie-editor__btn">Save</button>
+
+  <span class="dropdown  dropdown-kebab-pf">
+    <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <span class="fa fa-ellipsis-v"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+      <li><a href="#">Show / Hide Explorer</a></li>
+      <li><a href="#">Duplicate Process</a></li>
+      <li><a href="#">Delete Process</a></li>
+    </ul>
+  </span>
+
+</div>
+</div>
+
+<div class="kie-editor__toolbar">
+
+  <!-- controls -->
+  <div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default kie-editor__btn active">
+        <span class="fa fa-pencil"></span>
+
+      </button>
+      <button type="button" class="btn btn-default kie-editor__btn">
+        <span class="fa fa-comments"></span>
+
+      </button>
+      <button type="button" class="btn btn-default kie-editor__btn">
+        <span class="fa fa-play-circle-o"></span>
+
+      </button>
+    </div>
+  </div>
+
+  <!-- actions -->
+  <div style="margin-right:auto;">
+    <span class="dropdown kie-editor__dropdown">
+          <button class="btn btn-default dropdown-toggle kie-editor__btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="fa fa-pencil"></span>
+            Edit
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-scissors"></span>
+              Cut</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-copy"></span>
+                Copy
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-paste"></span>
+                Paste
+              </a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-undo"></span>
+                Undo
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-repeat"></span>
+                Redo
+              </a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-close"></span>
+                Delete
+              </a>
+            </li>
+          </ul>
+        </span>
+
+    <span class="dropdown kie-editor__dropdown">
+          <button class="btn btn-default dropdown-toggle kie-editor__btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="fa fa-object-group"></span>
+            Group
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-rotate-90 fa-code-fork"></span>
+              Convert to Subprocess</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-link"></span>
+                Convert to Pattern
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-chain-broken"></span>
+                Ungroup Items
+              </a>
+            </li>
+          </ul>
+        </span>
+
+    <span class="dropdown kie-editor__dropdown">
+          <button class="btn btn-default dropdown-toggle kie-editor__btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="fa fa-database"></span>
+            Data
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-database"></span>
+              Hide Process Data</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-file-text-o"></span>
+                User Forms...
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-file-text-o"></span>
+                View Source...
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-fw fa-database"></span>
+                View Process Vars.
+              </a>
+            </li>
+          </ul>
+        </span>
+
+  </div>
+
+  <!-- view controls -->
+  <div>
+
+    <button type="button" class="btn btn-link kie-editor__btn-link">
+      <span class="fa fa-search-plus"></span>
+    </button>
+    <button type="button" class="btn btn-link kie-editor__btn-link">
+      <span class="fa fa-search-minus"></span>
+    </button>
+    <button type="button" class="btn btn-link kie-editor__btn-link">
+      <span class="fa fa-arrows-h"></span>
+    </button>
+    <button type="button" class="btn btn-link kie-editor__btn-link">
+      <span class="fa fa-desktop"></span>
+    </button>
+
+
+  </div>
+</div>
+
+
+</body>
+</html>
