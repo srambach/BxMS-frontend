@@ -4,6 +4,8 @@
 @import "patternfly/dist/less/variables.less";
 @import "patternfly/dist/less/color-variables.less";
 
+//////////@import "bootstrap-milestones/bootstrap-milestones.less";
+
 @fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
@@ -281,4 +283,46 @@ dd:not(:last-child) {
   &:hover {
     color: @link-hover-color;
   }
+}
+
+// Activities
+.kie-activities {
+  border-top: 0;
+  margin-bottom: 0;
+  max-height: 22em;
+  overflow: scroll;
+}
+.kie-activities__list-group-item {
+  background-color: transparent;
+  border-top: 0;
+  border-bottom: 0;
+  .list-group-item-heading,
+  .list-group-item-text {
+    font-size: @font-size-relative-base;
+    margin-right: 0;
+  }
+}
+.kie-activities__list-view-pf-left {
+  .list-view-pf-icon-sm {
+    background-color: @color-pf-white;
+  }
+}
+.kie-activities__list-view-pf-left .pficon.kie-no-highlight,
+.kie-activities__list-view-pf-left .fa.kie-no-highlight {
+  background-color: @color-pf-black-200;
+  border-color: transparent;
+}
+.kie-activities__main-info {
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+.kie-activities__list-view-pf-description {
+  width: 100%;
+}
+.kie-activities--dotted-line {
+  background-image: linear-gradient(to bottom, @color-pf-black-300, @color-pf-black-300 3px, @color-pf-white 3px, @color-pf-white);
+  background-repeat: repeat-y;
+  background-size: 1px 5px;
+  background-position: 30px 1px;
 }
