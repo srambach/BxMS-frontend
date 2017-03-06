@@ -17743,4 +17743,34 @@ dd:not(:last-child) {
   background-size: 1px 5px;
   background-position: 30px 1px;
 }
+.kie-scrollbox--comments {
+  overflow: auto;
+}
+.kie-list-group-item--header {
+  border-bottom: 2px solid #d1d1d1;
+  border-top: 0;
+}
+.kie-comments__add-button {
+  font-size: 1.75rem;
+  color: #0088ce;
+}
+.kie-comments__pf-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.kie-comments__main-info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.kie-item-heading__role {
+  font-weight: 400;
+}
+.kie-comments__list-view-pf-description {
+  width: 100%;
+}
+.kie-comments__list-view-pf-left .pficon.kie-no-highlight,
+.kie-comments__list-view-pf-left .fa.kie-no-highlight {
+  background-color: #ededed;
+  border-color: transparent;
+}
 /*# sourceMappingURL=case-overview-template.css.map */
