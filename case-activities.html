@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case Milestones Building block</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="css/case-overview-template.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+</head>
+<body>
+
+<div class="cards-pf">
+  <div class="container-cards-pf">
+    <div class="row row-cards-pf">
+
+      <!-- Activities card -->
+      <div class="col-xs-12 col-sm-6 col-md-3 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class="kie-card__toolbar">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  All Activities
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Milestones</a></li>
+                  <li><a href="#">Comments</a></li>
+                  <li><a href="#">Documents</a></li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Activities
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+            <!-- Activities -->
+            <div class="list-group kie-activities kie-activities--dotted-line">
+
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon1">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm " data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        4 seconds ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Milestone1 reached
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon2">
+                        <span class="fa fa-paperclip list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Document activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        1 minute ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        admin added a document
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon3">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        5 days ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Milestone1 ready
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon4">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        10 minutes ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Aimee added a comment
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        9 days ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Aimee added a comment
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        9 days ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Aimee added a comment
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                <div class="list-view-pf-main-info kie-activities__main-info">
+                  <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                  </div>
+                  <div class="list-view-pf-body">
+                    <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                      <div class="list-group-item-text">
+                        10 days ago
+                      </div>
+                      <div class="list-group-item-heading">
+                        Case started by Cami (owner)
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Activities card VARIATION WITH NO DATA -->
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class="kie-card__toolbar">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  All Activities
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Milestones</a></li>
+                  <li><a href="#">Comments</a></li>
+                  <li><a href="#">Documents</a></li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Activities
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+            <div href="" class="card-pf-link-with-icon"><span class="pficon pficon-info"></span>No Activities have
+              been added
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Activities card VARIATION WITH LOADING DATA -->
+      <div class="col-xs-12 col-sm-6 col-md-4 ">
+        <div class="card-pf">
+          <div class="card-pf-heading">
+            <div class="kie-card__toolbar">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  All Activities
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Milestones</a></li>
+                  <li><a href="#">Comments</a></li>
+                  <li><a href="#">Documents</a></li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="card-pf-title">
+              Activities
+            </h2>
+          </div>
+          <div class="card-pf-body ">
+
+            <div class="spinner spinner-sm spinner-inline"></div>
+            Loading data...
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- This script is needed for the tooltips -->
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+</body>
+</html>
