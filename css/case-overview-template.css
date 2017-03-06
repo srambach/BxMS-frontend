@@ -17709,7 +17709,7 @@ dd:not(:last-child) {
   border-top: 0;
   margin-bottom: 0;
   max-height: 22em;
-  overflow: scroll;
+  overflow: auto;
 }
 .kie-activities__list-group-item {
   background-color: transparent;
