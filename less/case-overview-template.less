@@ -286,11 +286,20 @@ dd:not(:last-child) {
 }
 
 // Activities
+.kie-scrollbox--activities {
+  max-height: 20em;
+  overflow-y: auto;
+  border-bottom: none;
+  .list-group-item {
+    border-top: none;
+    border-bottom: none;
+  }
+
+}
+
 .kie-activities {
   border-top: 0;
   margin-bottom: 0;
-  max-height: 22em;
-  overflow: auto;
 }
 .kie-activities__list-group-item {
   background-color: transparent;
@@ -326,3 +335,40 @@ dd:not(:last-child) {
   background-size: 1px 5px;
   background-position: 30px 1px;
 }
+
+// Comments
+.kie-scrollbox--comments{
+  overflow: auto;
+}
+
+.kie-list-group-item--header {
+  border-bottom: 2px solid @color-pf-black-300;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+}
+.kie-comments__add-button {
+  font-size: @icon-size-md;
+}
+
+.kie-comments__pf-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.kie-comments__main-info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.kie-item-heading__role {
+   font-weight: @pf-font-weight-normal;
+ }
+.kie-comments__list-view-pf-description {
+  width: 100%;
+}
+.kie-comments__list-view-pf-left .pficon.kie-no-highlight,
+.kie-comments__list-view-pf-left .fa.kie-no-highlight {
+  background-color: @color-pf-black-200;
+  border-color: transparent;
+}
+
