@@ -17655,7 +17655,16 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-scrollbox .list-group-item:last-of-type {
   border-bottom: none;
 }
-.kie-scrollbox .kie-list-group-item-content {
+.kie-scrollbox--activities {
+  max-height: 20em;
+  overflow-y: auto;
+  border-bottom: none;
+}
+.kie-scrollbox--activities .list-group-item {
+  border-top: none;
+  border-bottom: none;
+}
+.kie-scrollbox--activities .kie-list-group-item-content {
   display: flex;
 }
 @media (min-width: 992px) {
@@ -17708,8 +17717,6 @@ dd:not(:last-child) {
 .kie-activities {
   border-top: 0;
   margin-bottom: 0;
-  max-height: 22em;
-  overflow: auto;
 }
 .kie-activities__list-group-item {
   background-color: transparent;
