@@ -209,6 +209,9 @@
     }
   }
 
+  .kie-list-group-item-content {
+    display: flex;
+  }
   // IMPORTANT: .dropup needs to be manually set on the list item that will appear at the bottom of the page
   // It was a nice idea to select the nth child, but because the class really needs to be set rather than just pulling in the styles, I've manually added the .dropup class to the nth children for now and that will have to be handled by the back end unless we have another way
   //.dropdown-kebab-pf {
@@ -217,18 +220,6 @@
   //.list-group-item:nth-child(3n) .dropdown-kebab-pf {
   //  .dropup;
   //}
-}
-.kie-scrollbox--activities {
-  max-height: 20em;
-  overflow-y: auto;
-  border-bottom: none;
-  .list-group-item {
-    border-top: none;
-    border-bottom: none;
-  }
-  .kie-list-group-item-content {
-    display: flex;
-  }
 }
 
 .kie-list-view--embedded {
@@ -295,11 +286,20 @@ dd:not(:last-child) {
 }
 
 // Activities
+.kie-scrollbox--activities {
+  max-height: 20em;
+  overflow-y: auto;
+  border-bottom: none;
+  .list-group-item {
+    border-top: none;
+    border-bottom: none;
+  }
+
+}
+
 .kie-activities {
   border-top: 0;
   margin-bottom: 0;
-  //max-height: 22em;
-  //overflow: auto;
 }
 .kie-activities__list-group-item {
   background-color: transparent;

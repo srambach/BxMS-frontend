@@ -17655,16 +17655,7 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-scrollbox .list-group-item:last-of-type {
   border-bottom: none;
 }
-.kie-scrollbox--activities {
-  max-height: 20em;
-  overflow-y: auto;
-  border-bottom: none;
-}
-.kie-scrollbox--activities .list-group-item {
-  border-top: none;
-  border-bottom: none;
-}
-.kie-scrollbox--activities .kie-list-group-item-content {
+.kie-scrollbox .kie-list-group-item-content {
   display: flex;
 }
 @media (min-width: 992px) {
@@ -17713,6 +17704,15 @@ dd:not(:last-child) {
 }
 .kie-btn-link:hover {
   color: #00659c;
+}
+.kie-scrollbox--activities {
+  max-height: 20em;
+  overflow-y: auto;
+  border-bottom: none;
+}
+.kie-scrollbox--activities .list-group-item {
+  border-top: none;
+  border-bottom: none;
 }
 .kie-activities {
   border-top: 0;
