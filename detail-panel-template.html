@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>BxMS Editor screen Details Panel Template</title>
 
-  <link href="css/classbxr.css" rel="stylesheet" media="screen, print">
   <link href="css/kie-editor.css" rel="stylesheet" media="screen, print">
 
   <!-- jQuery -->
@@ -212,7 +211,13 @@
       <span class="fa fa-desktop"></span>
     </button>
 
+  </div>
 
+  <!-- temporary divider and button for activating the details panel -->
+  <div class="kie-divider-left">
+    <button type="button" class="btn btn-link kie-editor__btn-link">
+      <span class="fa fa-minus-square"></span>
+    </button>
   </div>
 </div>
 
@@ -278,7 +283,7 @@
         </div>
         <div class="list-pf-content">
           <div class="list-pf-title">Section Title
-            <span class="badge">1</span>
+            <span class="badge" data-toggle="tooltip" data-placement="right" title="1 badge tooltip">1</span>
           </div>
         </div>
       </div> <!-- /list-pf-container -->
@@ -300,7 +305,7 @@
         </div>
         <div class="list-pf-content">
           <div class="list-pf-title">Section Title
-            <span class="badge">1</span>
+            <span class="badge" data-toggle="tooltip" data-placement="right" title="1 badge tooltip">1</span>
           </div>
         </div>
       </div> <!-- /list-pf-container -->
@@ -343,7 +348,7 @@
         </div>
         <div class="list-pf-content">
           <div class="list-pf-title">Section Title
-            <span class="badge">3</span>
+            <span class="badge" data-toggle="tooltip" data-placement="right" title="3 badge tooltip">3</span>
           </div>
         </div>
       </div> <!-- /list-pf-container -->
@@ -387,6 +392,10 @@
     $(document).ready(function() {
         $('.list-pf').pfList();
     });
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 </script>
 
 </html>
