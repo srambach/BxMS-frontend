@@ -17529,6 +17529,9 @@ html {
 .kie-editor__dropdown {
   display: inline-block;
 }
+.kie-divider-left {
+  border-left: 1px solid #72767b;
+}
 .kie-canvas {
   background-color: lightgreen;
   position: absolute;
@@ -17553,6 +17556,7 @@ html {
 }
 .kie-list-pf--details {
   margin-left: 1em;
+  border-bottom-color: transparent;
 }
 .kie-list-pf--details .list-pf-item.active {
   border-top-color: #d1d1d1;

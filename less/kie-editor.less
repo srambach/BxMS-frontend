@@ -58,6 +58,11 @@
   display: inline-block;
 }
 
+// possibly temporary divided for the toolbar
+.kie-divider-left {
+  border-left: 1px solid @color-pf-black-600;
+}
+
 ////////////// detail panel /////////////
 @list-pf-border-color:                                              @color-pf-black-300; //@color-pf-black-200;
 @list-pf-active-border-color:                                       transparent;//@color-pf-black-400;
@@ -92,9 +97,11 @@
 
 .kie-list-pf--details {
   margin-left: 1em;
+  border-bottom-color: transparent;
   .list-pf-item.active {
     border-top-color: @list-pf-border-color;
   }
+
   .list-pf-chevron {
     position: absolute;
     left: 1em;
