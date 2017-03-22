@@ -16,15 +16,13 @@ ul.kie-nav-wizard:before {
   position: absolute;
   left: 0;
   right: 0;
-  top: -2px;
-  height: 46px;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  top: 2px;
+  height: 42px;
   z-index: 11;
   content: " ";
 }
 ul.kie-nav-wizard li {
-  background-color: #d1d1d1;
+  background-color: hotpink;
   display: flex;
   flex: 1 10000 0;
   float: left;
@@ -32,6 +30,7 @@ ul.kie-nav-wizard li {
   margin: 0;
   position: relative;
   min-width: 18px;
+  border-right: 2.82842712px solid blue;
 }
 ul.kie-nav-wizard li:first-of-type a {
   padding-left: 0.75rem;
@@ -54,24 +53,24 @@ ul.kie-nav-wizard li a:hover {
 ul.kie-nav-wizard li:before {
   position: absolute;
   display: block;
-  border: 23px solid transparent;
+  border: 21px solid transparent;
   border-left: 16px solid #fff;
   border-right: 0;
-  top: -2px;
+  top: 0;
   z-index: 10;
   content: '';
-  right: -16px;
+  right: -18.82842712px;
 }
 ul.kie-nav-wizard li:after {
   position: absolute;
   display: block;
-  border: 23px solid transparent;
-  border-left: 16px solid #d1d1d1;
+  border: 21px solid transparent;
+  border-left: 16px solid orange;
   border-right: 0;
-  top: -2px;
+  top: 0;
   z-index: 10;
   content: '';
-  right: -14px;
+  right: -16px;
 }
 ul.kie-nav-wizard li:first-of-type,
 ul.kie-nav-wizard li:last-of-type,
@@ -99,37 +98,38 @@ ul.kie-nav-wizard li.active a:focus {
 }
 ul.kie-nav-wizard .active ~ li {
   color: #292e34;
-  background: #fff;
-  border-top: 2px solid #d1d1d1;
-  border-bottom: 2px solid #d1d1d1;
+  background: antiquewhite;
+  border-top: 2px solid pink;
+  border-bottom: 2px solid pink;
+  border-right: 1.41421356px solid red;
 }
 ul.kie-nav-wizard .active ~ li:after {
-  border-left: 16px solid #fff;
+  border-left: 16px solid antiquewhite;
 }
 ul.kie-nav-wizard .active ~ li a,
 ul.kie-nav-wizard .active ~ li a:active,
 ul.kie-nav-wizard .active ~ li a:visited,
 ul.kie-nav-wizard .active ~ li a:focus {
   color: #292e34;
-  background: #fff;
+  background: antiquewhite;
 }
 ul.kie-nav-wizard .active ~ li:before {
   position: absolute;
   display: block;
-  border: 23px solid transparent;
-  border-left: 16px solid #d1d1d1;
+  border: 21px solid transparent;
+  border-left: 16px solid lightblue;
   border-right: 0;
-  top: -2px;
+  top: 0;
   z-index: 10;
   content: '';
-  border-top-width: 21px;
-  border-bottom-width: 21px;
-  right: -16px;
+  right: -16.82842712px;
+  top: -2px;
 }
 ul.kie-nav-wizard .active ~ li:after {
+  border-left-color: green;
   border-top-width: 19px;
   border-bottom-width: 19px;
-  right: -13.17157288px;
+  right: -14px;
   top: 0;
   border-left-width: 14.47619048px;
 }
