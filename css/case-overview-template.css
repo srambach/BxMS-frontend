@@ -17498,16 +17498,6 @@ ul.kie-nav-wizard {
   padding-left: 0;
   position: relative;
 }
-ul.kie-nav-wizard:before {
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 2px;
-  height: 42px;
-  z-index: 11;
-  content: " ";
-}
 ul.kie-nav-wizard li {
   background-color: hotpink;
   display: flex;
@@ -17516,7 +17506,7 @@ ul.kie-nav-wizard li {
   height: 42px;
   margin: 0;
   position: relative;
-  min-width: 18px;
+  min-width: 18.82842712px;
   border-right: 2.82842712px solid blue;
 }
 ul.kie-nav-wizard li:first-of-type a {
@@ -17589,6 +17579,7 @@ ul.kie-nav-wizard .active ~ li {
   border-top: 2px solid pink;
   border-bottom: 2px solid pink;
   border-right: 1.41421356px solid red;
+  min-width: 17.41421356px;
 }
 ul.kie-nav-wizard .active ~ li:after {
   border-left: 16px solid antiquewhite;
@@ -17613,12 +17604,15 @@ ul.kie-nav-wizard .active ~ li:before {
   top: -2px;
 }
 ul.kie-nav-wizard .active ~ li:after {
-  border-left-color: green;
-  border-top-width: 19px;
-  border-bottom-width: 19px;
-  right: -14px;
+  position: absolute;
+  display: block;
+  border: 19px solid transparent;
+  border-left: 14.47619048px solid green;
+  border-right: 0;
   top: 0;
-  border-left-width: 14.47619048px;
+  z-index: 10;
+  content: '';
+  right: -14px;
 }
 .kie-container--page {
   margin-top: 2rem;
