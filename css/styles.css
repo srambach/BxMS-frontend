@@ -17677,9 +17677,6 @@ table.dataTable th:active {
 .card-pf-heading-link-bxms {
   padding: 20px 0;
 }
-.card-pf-body {
-  margin: auto;
-}
 .card-pf-footer {
   padding-bottom: 20px;
 }
@@ -17767,5 +17764,24 @@ table.dataTable th:active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.kie-background--settings {
+  background-color: #f5f5f5;
+}
+.kie-badge--circle {
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  font-size: large;
+  color: #292e34;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-pf-view .card-pf-top-element .kie-card-pf-icon-circle--disabled {
+  background: #f5f5f5;
+  color: #fff;
+  border-color: transparent;
 }
 /*# sourceMappingURL=styles.css.map */
