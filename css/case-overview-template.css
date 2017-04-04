@@ -17904,4 +17904,25 @@ dd:not(:last-child) {
   background-color: #ededed;
   border-color: transparent;
 }
+.kie-scrollbox--files {
+  max-height: 20em;
+  overflow-y: auto;
+}
+.kie-files__notification {
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+.kie-notification__icon {
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  color: #72767b;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+}
+.kie-notification__icon--on {
+  border-color: inherit;
+  color: inherit;
+}
 /*# sourceMappingURL=case-overview-template.css.map */

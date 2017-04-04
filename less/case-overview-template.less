@@ -372,3 +372,26 @@ dd:not(:last-child) {
   border-color: transparent;
 }
 
+// Files
+.kie-scrollbox--files {
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+.kie-files__notification {
+  margin-top: @pf-spacer-xs;
+  font-weight: @pf-font-weight-bold;
+}
+.kie-notification__icon {
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: @pf-spacer-xxxs;
+  color: @color-pf-black-600;
+  margin-right: @pf-spacer-xxs;
+  padding: @pf-spacer-xxxs;
+}
+.kie-notification__icon--on {
+  border-color: inherit;
+  color: inherit;
+}
