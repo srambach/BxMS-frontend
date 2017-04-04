@@ -383,15 +383,19 @@ dd:not(:last-child) {
   font-weight: @pf-font-weight-bold;
 }
 .kie-notification__icon {
-  border-color: transparent;
+  border-color: inherit;
   border-width: 1px;
   border-style: solid;
   border-radius: @pf-spacer-xxxs;
-  color: @color-pf-black-600;
+  color: @color-pf-black-500;
   margin-right: @pf-spacer-xxs;
   padding: @pf-spacer-xxxs;
+  &:hover {
+    border-color: @color-pf-blue;
+    color: @color-pf-blue;
+  }
 }
 .kie-notification__icon--on {
-  border-color: inherit;
+  border-color: transparent;
   color: inherit;
 }

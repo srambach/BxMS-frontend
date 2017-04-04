@@ -17913,16 +17913,20 @@ dd:not(:last-child) {
   font-weight: 600;
 }
 .kie-notification__icon {
-  border-color: transparent;
+  border-color: inherit;
   border-width: 1px;
   border-style: solid;
   border-radius: 0.25rem;
-  color: #72767b;
+  color: #8b8d8f;
   margin-right: 0.5rem;
   padding: 0.25rem;
 }
+.kie-notification__icon:hover {
+  border-color: #0088ce;
+  color: #0088ce;
+}
 .kie-notification__icon--on {
-  border-color: inherit;
+  border-color: transparent;
   color: inherit;
 }
 /*# sourceMappingURL=case-overview-template.css.map */
