@@ -17908,4 +17908,8 @@ dd:not(:last-child) {
   max-height: 20em;
   overflow-y: auto;
 }
+.kie-files__notification {
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
 /*# sourceMappingURL=case-overview-template.css.map */
