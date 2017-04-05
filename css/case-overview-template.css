@@ -17759,10 +17759,10 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-scrollbox {
   overflow-y: hidden;
   max-height: 15em;
-  background: linear-gradient(#fff, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0)) 0 100%, linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
   background-repeat: no-repeat;
   background-color: #fff;
-  background-size: 100% 40px, 100% 40px, 100% 10px, 100% 14px;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
   border-bottom: 1px solid #d1d1d1;
 }
@@ -17907,26 +17907,5 @@ dd:not(:last-child) {
 .kie-scrollbox--files {
   max-height: 20em;
   overflow-y: auto;
-}
-.kie-files__notification {
-  margin-top: 0.75rem;
-  font-weight: 600;
-}
-.kie-notification__icon {
-  border-color: inherit;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  color: #8b8d8f;
-  margin-right: 0.5rem;
-  padding: 0.25rem;
-}
-.kie-notification__icon:hover {
-  border-color: #0088ce;
-  color: #0088ce;
-}
-.kie-notification__icon--on {
-  border-color: transparent;
-  color: inherit;
 }
 /*# sourceMappingURL=case-overview-template.css.map */
