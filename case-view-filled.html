@@ -12,6 +12,9 @@
   <!-- jQuery -->
   <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.js"></script>
 
+  <!-- matchHeight for cards -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+
   <!-- Bootstrap JS -->
   <!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
   <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
@@ -1159,6 +1162,206 @@
 
             </div>
 
+            <div class="col-xs-12 col-sm-6 col-md-3 ">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class=" kie-card__toolbar">
+                    <div class="kie-toolbar__group">
+                      <button type="button" class="btn btn-default">
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Documents
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+                    <!-- Documents -->
+                    <div class="col-xs-12">
+
+                      <div class="kie-scrollbox kie-scrollbox--files">
+                        <div class=" list-group kie-list-view--embedded">
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Warranty_2017</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Updated product warranty.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Pricing-sheet_2017_06</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Updated prices for 2017, they might be lower or they could be higher, it's really anyone's guess.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div><!-- scrollbox -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
 
           </div><!-- /row -->
 
@@ -1171,6 +1374,18 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+    </script>
+
+    <script>
+        $(function() {
+            // matchHeight the contents of each .card-pf and then the .card-pf itself
+            $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+            // initialize tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
 
 </body>
