@@ -17912,4 +17912,7 @@ dd:not(:last-child) {
   margin-top: 0.75rem;
   font-weight: 600;
 }
+.kie-notification__icon {
+  margin-right: 0.5rem;
+}
 /*# sourceMappingURL=case-overview-template.css.map */
