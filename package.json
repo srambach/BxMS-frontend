@@ -9,7 +9,7 @@
   "author": "Sarah Rambacher",
   "license": "ISC",
   "dependencies": {
-    "patternfly": "^3.7.0"
+    "patternfly": "^3.23.1"
   },
   "devDependencies": {
     "browser-sync": "^2.13.0",
