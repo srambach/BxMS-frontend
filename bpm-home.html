@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BPM Suite</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <!--<link href="css/styles.css" rel="stylesheet" media="screen, print">-->
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Masthead -->
+<nav class="navbar navbar-default navbar-pf ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img src="/images/BPMSuite.svg" alt="JBoss BPM Suite" />
+    </a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-collapse-2">
+
+    <ul class="nav navbar-nav "><!-- navbar-iconic -->
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Home
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Processes &amp; Tasks</a></li>
+          <li><a href="#">Runtime</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right"><!-- navbar-iconic -->
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Notifications" class="fa pficon-warning-triangle-o"></span>
+          Messages: 0
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          Brian Johnson
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Preferences</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+
+  </div>
+
+</nav>
+
+<!-- blank state content -->
+<div class="blank-slate-pf">
+  <nav>
+    <ul class="nav navbar navbar-right">
+      <li><a href=""><span class="fa fa-gear"></span> Settings</a></li>
+    </ul>
+  </nav>
+  <h1 id="welcome">
+    Welcome to BPM Suite
+  </h1>
+  <p>
+    Business Process Management (BPM) Suite offers a set of flexible, process management tools that support the way you need to work. Select a BPM tool below to get started.
+  </p>
+  <div class="blank-slate-pf-secondary-action">
+    <div class="kie-hero-card" id="demo1">
+      <div class="fa fa-pencil circle-icon-bxms circle-icon-bxms-large"></div>
+      <div class="kie-hero-card__text">
+        <h4>Design</h4>
+        <div>Model build, and publish.</div>
+        <button class="btn btn-primary btn-lg" id="newProjectButton">Design</button>
+      </div>
+    </div>
+    <div class="kie-hero-card" id="demo2">
+      <div class="fa fa-check-square-o circle-icon-bxms circle-icon-bxms-large"></div>
+      <div class="kie-hero-card__text"><h4>Processes &amp; Tasks</h4>
+        <div>Run, assign, and keep track of your busincess processes..</div>
+        <button class="btn btn-primary btn-lg" id="newProjectButton">Run &amp; Assign</button>
+
+      </div>
+    </div>
+    <div class="kie-hero-card" id="demo3">
+      <div class="fa fa-code-fork fa-process-flow-bxms circle-icon-bxms circle-icon-bxms-large"></div>
+      <div class="kie-hero-card__text">
+        <h4>Runtime</h4>
+        <div>Monitor and manage servers and active instances.</div>
+        <button class="btn btn-primary btn-lg" id="newProjectButton">Monitor &amp; Manage</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
