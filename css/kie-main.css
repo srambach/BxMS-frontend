@@ -17996,6 +17996,9 @@ table.dataTable th:active {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.blank-slate-pf-secondary-action > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 @media (min-width: 768px) {
   .blank-slate-pf-secondary-action {
     flex-direction: row;
@@ -18003,6 +18006,9 @@ table.dataTable th:active {
     justify-content: center;
     align-items: stretch;
     flex-wrap: nowrap;
+  }
+  .blank-slate-pf-secondary-action > *:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 .kie-hero-card {
