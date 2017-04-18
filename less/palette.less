@@ -19,30 +19,33 @@
 @kie-palette-color: @color-pf-black;
 @kie-palette-font-size: @font-size-base;
 @kie-palette-font-weight: 400;
-@kie-palette-icon-color: @color-pf-black-900;
+@kie-palette-icon-color: @color-pf-black-800;
 @kie-palette-icon-color-hover: @color-pf-blue-300;
-@kie-palette-icon-size: calc(2.333333 * @font-size-base);
-@kie-palette-item-border-color: @color-pf-black-300;
-@kie-palette-link-height: calc(5.583333 * @font-size-base);
+@kie-palette-icon-size: calc(1.75 * @font-size-base);
+@kie-palette-item-border-color: @color-pf-black-400;
+@kie-palette-link-height: calc(4.5 * @font-size-base);//calc(5.583333 * @font-size-base);
 @kie-palette-link-padding: 0;
-@kie-palette-width: calc(7.5 * @font-size-base);
+@kie-palette-width: calc(4 * @font-size-base);
+@kie-palette-item-bg-color: @color-pf-black-200;
 
 @kie-palette-flyout-border-color: @color-pf-black-400;
 @kie-palette-flyout-header-size: calc(1.333333 * @font-size-base);
+@kie-palette-flyout-header-weight: 700;
 @kie-palette-flyout-icon-size: calc(1.166666 * @font-size-base);
 @kie-palette-flyout-item-border-color: @kie-palette-bg-color;
 @kie-palette-flyout-item-border-color-hover: @color-pf-blue-300;
 @kie-palette-flyout-item-color: @color-pf-black;
+@kie-palette-flyout-item-margin-adjust: 1em; //adjusts left/right margin in and out to indent the divider line
 @kie-palette-flyout-max-height: 100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" @top);
 @kie-palette-flyout-min-height: 100%;
-@kie-palette-left-padding: calc(2 * @font-size-base);
+@kie-palette-left-padding: calc(1.5 * @font-size-base);
 @kie-palette-flyout-width: auto;
+@kie-palette-flyout-subheader-color: @color-pf-black-600;
 
 @kie-palette-list-group-item-value-more-color: @link-color;
 
 .kie-palette {
   background: @kie-palette-bg-color;
-  //border-bottom: 1px solid @kie-palette-border-color;
   border-collapse: collapse;
   overflow: visible;
   width: @kie-palette-width;
@@ -55,7 +58,7 @@
     border-top: none;
   }
   .list-group-item {
-    background-color: @kie-palette-bg-color; //probably not really necessary
+    background-color: @kie-palette-item-bg-color;//@kie-palette-bg-color; //probably not really necessary
     border-color: @kie-palette-item-border-color;
     float: none;
     outline: 0;
@@ -91,6 +94,7 @@
         font-size: @kie-palette-icon-size;
         margin: auto;
         min-width: calc(2.333333 * @font-size-base);
+        text-align: center;
       }
     }
 
@@ -157,8 +161,9 @@
 .kie-palette-flyout-header {
   color: @kie-palette-color;
   font-size: @kie-palette-flyout-header-size;
-  margin-top: calc(1.5 * @font-size-base);
-  margin-bottom: calc(1.5 * @font-size-base);
+  font-weight: @kie-palette-flyout-header-weight;
+  margin-top: calc(1 * @font-size-base);
+  margin-bottom: calc(1 * @font-size-base);
   padding-left: @kie-palette-left-padding;
 }
 
@@ -168,6 +173,7 @@
   border-left: 1px solid @kie-palette-flyout-border-color;
   border-right: 1px solid @kie-palette-flyout-border-color;
   border-bottom: 1px solid @kie-palette-flyout-border-color;
+  .box-shadow(2px 2px 2px fade(@color-pf-black, 8%));
   display: none;
   left: @kie-palette-width;
   max-height: @kie-palette-flyout-max-height;
@@ -178,21 +184,28 @@
   top: 0;
 
   h5 {
-    color: @kie-palette-color;
+    color: @kie-palette-flyout-subheader-color;//@kie-palette-color;
     cursor: default;
-    font-size: (@kie-palette-font-size);
-    font-weight: 700;
+    font-size: @kie-palette-font-size;
     padding-left: @kie-palette-left-padding;
+    text-transform: uppercase;
   }
 
   .list-group {
-    margin-bottom: calc(2 * @font-size-base);
+    &:not(:last-of-type) {
+      border-bottom: 1px solid @kie-palette-border-color;
+    }
+    margin-left: @kie-palette-flyout-item-margin-adjust;
+    margin-right: @kie-palette-flyout-item-margin-adjust;
   }
   .list-group-item {
+    background-color: @kie-palette-bg-color;
     float: none;
     border-color: @kie-palette-flyout-item-border-color;
     padding-left: @kie-palette-left-padding;
     margin-bottom: 0;
+    margin-left: -(@kie-palette-flyout-item-margin-adjust);
+    margin-right: -(@kie-palette-flyout-item-margin-adjust);
     overflow: hidden;
     text-overflow: ellipsis;
     > a {
@@ -222,17 +235,15 @@
         border-top: 1px solid @kie-palette-flyout-item-border-color-hover; // override default list group
       }
       > a {
-        color: @kie-palette-flyout-item-color;
         &:before {
           width: 0;
         }
-        //background-color: inherit;
         color: @kie-palette-color;
         font-weight: @kie-palette-font-weight;
         .fa,
         .glyphicon,
         .pficon {
-          color: @kie-palette-icon-color;
+          color: @kie-palette-icon-color-hover;
         }
       }
 

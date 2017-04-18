@@ -17653,7 +17653,7 @@ table.dataTable th:active {
   background: #fff;
   border-collapse: collapse;
   overflow: visible;
-  width: calc(90px);
+  width: calc(48px);
   z-index: 1030;
 }
 .kie-palette .list-group {
@@ -17664,8 +17664,8 @@ table.dataTable th:active {
   border-top: none;
 }
 .kie-palette .list-group-item {
-  background-color: #fff;
-  border-color: #d1d1d1;
+  background-color: #ededed;
+  border-color: #bbb;
   float: none;
   outline: 0;
   padding: 0;
@@ -17682,11 +17682,11 @@ table.dataTable th:active {
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  height: calc(66.999996px);
+  height: calc(54px);
   padding: 0;
   text-decoration: none;
   white-space: nowrap;
-  width: calc(90px);
+  width: calc(48px);
 }
 @supports (display: flex) {
   .kie-palette .list-group-item > a {
@@ -17696,10 +17696,11 @@ table.dataTable th:active {
 .kie-palette .list-group-item > a .fa,
 .kie-palette .list-group-item > a .glyphicon,
 .kie-palette .list-group-item > a .pficon {
-  color: #292e34;
-  font-size: calc(27.999996px);
+  color: #393f44;
+  font-size: calc(21px);
   margin: auto;
   min-width: calc(27.999996px);
+  text-align: center;
 }
 .kie-palette .list-group-item:hover {
   background-color: #fff;
@@ -17753,9 +17754,10 @@ table.dataTable th:active {
 .kie-palette-flyout-header {
   color: #030303;
   font-size: calc(15.999996px);
-  margin-top: calc(18px);
-  margin-bottom: calc(18px);
-  padding-left: calc(24px);
+  font-weight: 700;
+  margin-top: calc(12px);
+  margin-bottom: calc(12px);
+  padding-left: calc(18px);
 }
 .kie-palette-flyout {
   background-color: #fff;
@@ -17763,8 +17765,10 @@ table.dataTable th:active {
   border-left: 1px solid #bbb;
   border-right: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
+  -webkit-box-shadow: 2px 2px 2px rgba(3, 3, 3, 0.08);
+  box-shadow: 2px 2px 2px rgba(3, 3, 3, 0.08);
   display: none;
-  left: calc(90px);
+  left: calc(48px);
   max-height: 100vh;
   min-height: 100%;
   overflow-x: visible;
@@ -17773,20 +17777,27 @@ table.dataTable th:active {
   top: 0;
 }
 .kie-palette-flyout h5 {
-  color: #030303;
+  color: #72767b;
   cursor: default;
   font-size: 12px;
-  font-weight: 700;
-  padding-left: calc(24px);
+  padding-left: calc(18px);
+  text-transform: uppercase;
 }
 .kie-palette-flyout .list-group {
-  margin-bottom: calc(24px);
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.kie-palette-flyout .list-group:not(:last-of-type) {
+  border-bottom: 1px solid #bbb;
 }
 .kie-palette-flyout .list-group-item {
+  background-color: #fff;
   float: none;
   border-color: #fff;
-  padding-left: calc(24px);
+  padding-left: calc(18px);
   margin-bottom: 0;
+  margin-left: -1em;
+  margin-right: -1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -17826,6 +17837,6 @@ table.dataTable th:active {
 .kie-palette-flyout .list-group-item:hover > a .fa,
 .kie-palette-flyout .list-group-item:hover > a .glyphicon,
 .kie-palette-flyout .list-group-item:hover > a .pficon {
-  color: #292e34;
+  color: #39a5dc;
 }
 /*# sourceMappingURL=palette.css.map */
