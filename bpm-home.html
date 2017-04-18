@@ -97,13 +97,10 @@
 <div class="container-fluid kie-blank-slate">
 
 <!-- blank state content -->
-<div class="blank-slate-pf">
-  <nav>
-    <ul class="nav navbar navbar-right">
-      <li><a href=""><span class="fa fa-gear"></span> Settings</a></li>
-    </ul>
-  </nav>
+<div class="blank-slate-pf row">
+  <div class="col-xs-12 col-lg-9" style="text-align:right;"><a href=""><span class="fa fa-gear"></span> Settings</a></div>
   <h1 id="welcome">
+    <!--<div style="float:right;"><a href=""><span class="fa fa-gear"></span> Settings</a></div>-->
     Welcome to <b>BPM Suite</b>
   </h1>
   <p>
@@ -149,7 +146,8 @@
 <div class="container-fluid">
   <!-- footer -->
   <footer class="row kie-footer">
-    <div class="col-xs-12 col-sm-4 kie-footer__section">
+    <!-- Column offset is to visually center the footer on very large screens. If content changes significantly, then the columns settings may need to change. -->
+    <div class="col-xs-12 col-sm-4 col-lg-2 col-lg-offset-3 kie-footer__section">
       <div class="row">
         <div class="col-xs-12 col-sm-4  kie-footer__title">
           Getting Started
@@ -164,7 +162,7 @@
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-8 kie-footer__section">
+    <div class="col-xs-12 col-sm-8 col-lg-6 kie-footer__section">
       <div class="row">
         <div class="col-xs-12 col-sm-2  kie-footer__title">
           Applications
