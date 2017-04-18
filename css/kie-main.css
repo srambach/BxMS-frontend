@@ -345,8 +345,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../node_modules/patternfly/node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.eot');
+  src: url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.woff2') format('woff2'), url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.woff') format('woff'), url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.ttf') format('truetype'), url('../node_modules/patternfly/node_modules/bootstrap/fontsglyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -1264,7 +1264,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
 }
@@ -1344,23 +1344,23 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 24px;
+  font-size: 2rem;
 }
 h2,
 .h2 {
-  font-size: 22px;
+  font-size: 1.8333rem;
 }
 h3,
 .h3 {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 h4,
 .h4 {
-  font-size: 15px;
+  font-size: 1.2rem;
 }
 h5,
 .h5 {
-  font-size: 13px;
+  font-size: 1.0833rem;
 }
 h6,
 .h6 {
@@ -6846,8 +6846,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.eot?v=4.6.3');
-  src: url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../node_modules/patternfly/node_modules/font-awesome/fonts//fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  src: url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../node_modules/patternfly/node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12363,7 +12363,7 @@ select.selectpicker {
 }
 .about-modal-pf {
   background-color: #292e34;
-  background-image: url("../images/about-background.jpg");
+  background-image: url("../img/bg-modal-about-pf.png");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 216px auto;
@@ -12421,8 +12421,8 @@ select.selectpicker {
 }
 .blank-slate-pf .blank-slate-pf-icon {
   color: #9c9c9c;
-  font-size: 57.6px;
-  line-height: 57.6px;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
 }
 .blank-slate-pf .blank-slate-pf-main-action {
   margin-top: 20px;
@@ -12960,7 +12960,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   font-size: 10px;
 }
 .card-pf-subtitle {
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -12973,7 +12973,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   }
 }
 .card-pf-title {
-  font-size: 16px;
+  font-size: 1.3333rem;
   font-weight: 400;
   margin: 20px 0;
   padding: 0;
@@ -12985,11 +12985,11 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 .card-pf-aggregate-status .card-pf-title .fa,
 .card-pf-aggregate-status .card-pf-title .pficon {
   color: #292e34;
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-right: 7px;
 }
 .card-pf-title .card-pf-aggregate-status-count {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .card-pf-aggregate-status-mini .card-pf-title .card-pf-aggregate-status-count {
   display: block;
@@ -13077,7 +13077,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
 }
 .card-pf-view .card-pf-item {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.3333rem;
   padding: 0 13px 0 15px;
 }
 .card-pf-view .card-pf-item:first-child {
@@ -13111,7 +13111,7 @@ fieldset[disabled] .combobox-container .input-group-addon.active {
   margin-right: 2px;
 }
 .col-lg-2 .card-pf-view .card-pf-title {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .card-pf-view .card-pf-top-element .card-pf-icon-circle {
   border: 2px solid #39a5dc;
@@ -14161,7 +14161,7 @@ a.disabled {
   }
 }
 .list-view-pf .list-group-item-heading {
-  font-size: 16px;
+  font-size: 1.3333rem;
 }
 .list-view-pf .list-group-item-heading small {
   display: block;
@@ -14236,16 +14236,16 @@ a.disabled {
   flex-direction: column;
 }
 .list-view-pf-additional-info-item.list-view-pf-additional-info-item-stacked strong {
-  font-size: 13px;
+  font-size: 1.0833rem;
   line-height: 1em;
 }
 .list-view-pf-additional-info-item .pficon,
 .list-view-pf-additional-info-item .fa {
-  font-size: 16px;
+  font-size: 1.3333rem;
   margin-right: 10px;
 }
 .list-view-pf-additional-info-item strong {
-  font-size: 16px;
+  font-size: 1.3333rem;
   font-weight: 600;
   margin-right: 5px;
 }
@@ -14308,7 +14308,7 @@ a.disabled {
 }
 .list-view-pf-left .list-view-pf-calendar strong {
   display: block;
-  font-size: 44px;
+  font-size: 3.6666rem;
   font-weight: 300;
   line-height: 1em;
 }
@@ -14381,7 +14381,7 @@ a.disabled {
 }
 .list-view-pf-stacked .list-group-item-heading {
   float: none;
-  font-size: 16px;
+  font-size: 1.3333rem;
   line-height: 1.2em;
   margin-bottom: 5px;
   margin-right: 40px;
@@ -14505,7 +14505,7 @@ a.disabled {
   }
 }
 .login-pf body {
-  background: #030303 url("../images/bg-login.jpg") repeat-x 50% 0;
+  background: #030303 url("../img/bg-login.jpg") repeat-x 50% 0;
   background-size: auto;
 }
 @media (min-width: 768px) {
@@ -15913,29 +15913,29 @@ a.disabled {
   border-top-color: rgba(255, 255, 255, 0.75);
 }
 .ie9 .spinner {
-  background: url("../images/spinner.gif") no-repeat;
+  background: url("../img/spinner.gif") no-repeat;
   border: 0;
 }
 .ie9 .spinner.spinner-inverse {
-  background-image: url("../images/spinner-inverse.gif");
+  background-image: url("../img/spinner-inverse.gif");
 }
 .ie9 .spinner.spinner-inverse-lg {
-  background-image: url("../images/spinner-inverse-lg.gif");
+  background-image: url("../img/spinner-inverse-lg.gif");
 }
 .ie9 .spinner.spinner-inverse-sm {
-  background-image: url("../images/spinner-inverse-sm.gif");
+  background-image: url("../img/spinner-inverse-sm.gif");
 }
 .ie9 .spinner.spinner-inverse-xs {
-  background-image: url("../images/spinner-inverse-xs.gif");
+  background-image: url("../img/spinner-inverse-xs.gif");
 }
 .ie9 .spinner.spinner-lg {
-  background-image: url("../images/spinner-lg.gif");
+  background-image: url("../img/spinner-lg.gif");
 }
 .ie9 .spinner.spinner-sm {
-  background-image: url("../images/spinner-sm.gif");
+  background-image: url("../img/spinner-sm.gif");
 }
 .ie9 .spinner.spinner-xs {
-  background-image: url("../images/spinner-xs.gif");
+  background-image: url("../img/spinner-xs.gif");
 }
 .prettyprint .atn,
 .prettyprint .com,
@@ -17991,4 +17991,211 @@ table.dataTable th:active {
   color: #fff;
   border-color: transparent;
 }
-/*# sourceMappingURL=styles.css.map */
+.blank-slate-pf-secondary-action {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.blank-slate-pf-secondary-action > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .blank-slate-pf-secondary-action {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .blank-slate-pf-secondary-action > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.kie-hero-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .kie-hero-card {
+    flex: 0 0 20em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.kie-hero-card:hover .btn {
+  background-color: #0088ce;
+  background-image: -webkit-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
+  background-image: -o-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
+  background-image: linear-gradient(to bottom, #39a5dc 0%, #0088ce 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff39a5dc', endColorstr='#ff0088ce', GradientType=0);
+  border-color: #00659c;
+  color: #fff;
+}
+.kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn.focus {
+  color: #fff;
+  background-color: #00669b;
+  border-color: #00121d;
+}
+.kie-hero-card:hover .btn:hover {
+  color: #fff;
+  background-color: #00669b;
+  border-color: #003d5f;
+}
+.kie-hero-card:hover .btn:active,
+.kie-hero-card:hover .btn.active,
+.open > .dropdown-toggle.kie-hero-card:hover .btn {
+  color: #fff;
+  background-color: #00669b;
+  border-color: #003d5f;
+}
+.kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:hover .btn.active:hover,
+.open > .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:hover .btn.active:focus,
+.open > .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:hover .btn.active.focus,
+.open > .dropdown-toggle.kie-hero-card:hover .btn.focus {
+  color: #fff;
+  background-color: #004f77;
+  border-color: #00121d;
+}
+.kie-hero-card:hover .btn:active,
+.kie-hero-card:hover .btn.active,
+.open > .dropdown-toggle.kie-hero-card:hover .btn {
+  background-image: none;
+}
+.kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:hover .btn[disabled]:hover,
+fieldset[disabled] .kie-hero-card:hover .btn:hover,
+.kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:hover .btn[disabled]:focus,
+fieldset[disabled] .kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn.disabled.focus,
+.kie-hero-card:hover .btn[disabled].focus,
+fieldset[disabled] .kie-hero-card:hover .btn.focus {
+  background-color: #0088ce;
+  border-color: #00659c;
+}
+.kie-hero-card:hover .btn .badge {
+  color: #0088ce;
+  background-color: #fff;
+}
+.kie-hero-card:hover .btn:hover,
+.kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn:active,
+.kie-hero-card:hover .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn {
+  background-color: #0088ce;
+  background-image: none;
+  border-color: #00659c;
+  color: #fff;
+}
+.kie-hero-card:hover .btn:active,
+.kie-hero-card:hover .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn {
+  background-image: none;
+}
+.kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:hover .btn.active:hover,
+.open .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:hover .btn.active:focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:hover .btn.active.focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn.focus {
+  background-color: #0077b5;
+  border-color: #004e78;
+}
+.kie-hero-card:hover .btn.disabled,
+.kie-hero-card:hover .btn[disabled],
+fieldset[disabled] .kie-hero-card:hover .btn,
+.kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:hover .btn[disabled]:hover,
+fieldset[disabled] .kie-hero-card:hover .btn:hover,
+.kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:hover .btn[disabled]:focus,
+fieldset[disabled] .kie-hero-card:hover .btn:focus,
+.kie-hero-card:hover .btn.disabled:active,
+.kie-hero-card:hover .btn[disabled]:active,
+fieldset[disabled] .kie-hero-card:hover .btn:active,
+.kie-hero-card:hover .btn.disabled.active,
+.kie-hero-card:hover .btn[disabled].active,
+fieldset[disabled] .kie-hero-card:hover .btn.active {
+  background-color: #0088ce;
+  border-color: #00659c;
+}
+.kie-hero-card:hover .kie-hero-card__icon {
+  background-color: #39a5dc;
+  color: #fff;
+}
+.kie-hero-card__icon {
+  margin-right: 1.25rem;
+  font-size: 3em;
+}
+@media (min-width: 768px) {
+  .kie-hero-card__icon {
+    margin-right: 0;
+    font-size: 4em;
+  }
+}
+.kie-hero-card__text {
+  flex: 3 0;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .kie-hero-card__text {
+    flex: 1 1 ;
+    text-align: center;
+  }
+}
+.kie-hero-card__action {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (min-width: 480px) {
+  .kie-hero-card__action {
+    flex: 1 1;
+    align-items: flex-end;
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .kie-hero-card__action {
+    margin-top: 40px;
+  }
+}
+.kie-footer {
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+.kie-footer__title {
+  font-size: 1.0833rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .kie-footer__section + .kie-footer__section {
+    border-left: 1px solid #d1d1d1;
+  }
+}
+.footer__links {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.footer__links > *:not(:last-child) {
+  margin-right: 2rem;
+}
+/*# sourceMappingURL=kie-main.css.map */

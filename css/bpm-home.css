@@ -1,0 +1,84 @@
+.blank-slate-pf-secondary-action {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .blank-slate-pf-secondary-action {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+.kie-hero-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .kie-hero-card {
+    flex: 0 0 20em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.kie-hero-card__icon {
+  flex: 0 0 2.5em;
+  height: 2.5em;
+}
+.kie-hero-card__text {
+  flex: 3 0;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .kie-hero-card__text {
+    flex: 1 1 ;
+    text-align: center;
+  }
+}
+.kie-hero-card__action {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (min-width: 480px) {
+  .kie-hero-card__action {
+    flex: 1 1;
+    align-items: flex-end;
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .kie-hero-card__action {
+    margin-top: 40px;
+  }
+}
+.kie-footer {
+  background-color: #fafafa;
+  padding: 1.5rem;
+}
+.kie-footer__title {
+  font-size: 1.0833rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .kie-footer__section + .kie-footer__section {
+    border-left: 1px solid #d1d1d1;
+  }
+}
+.footer__links {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.footer__links > *:not(:last-child) {
+  margin-right: 2rem;
+}
+/*# sourceMappingURL=bpm-home.css.map */
