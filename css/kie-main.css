@@ -17710,6 +17710,10 @@ table.dataTable th:active {
     padding-bottom: 10px;
   }
 }
+.navbar-pf .navbar-primary {
+  float: left;
+  width: 100%;
+}
 .navbar-brand img {
   height: 11px;
 }
