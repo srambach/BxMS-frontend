@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BPM Suite</title>
+
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <!--<link href="css/styles.css" rel="stylesheet" media="screen, print">-->
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Masthead -->
+<nav class="navbar navbar-default navbar-pf ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img src="images/BPMSuite.svg" alt="JBoss BPM Suite"/>
+    </a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-collapse-2">
+
+    <ul class="nav navbar-nav "><!-- navbar-iconic -->
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          Runtime
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="bpm-home.html">Home</a></li>
+          <li><a href="project-populated.html">Design</a></li>
+          <li><a href="bpm-processes.html">Processes &amp; Tasks</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Notifications" class="fa pficon-warning-triangle-o"></span>
+          Messages: 0
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          Brian Johnson
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Preferences</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-primary">
+      <li class="active">
+        <a href="#">Overview</a>
+      </li>
+      <li>
+        <a href="#">Deployments</a>
+      </li>
+      <li>
+        <a href="#">Servers</a>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+<div class="container-fluid kie-blank-slate">
+
+  <!-- blank state content -->
+  <div class="blank-slate-pf row">
+    <h1 id="welcome">
+      Runtime App Overview
+    </h1>
+  </div>
+
+</div>
+
+</body>
+</html>
