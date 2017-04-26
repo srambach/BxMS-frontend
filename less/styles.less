@@ -1,11 +1,11 @@
 // Project Less file
 
 
-@import "../node_modules/patternfly/dist/less/patternfly.less";
-@import "../node_modules/patternfly/dist/less/patternfly-additions.less";
-//must re-import variables because they've been overwritten by the bootstrap extras in pf-additions
-@import "../node_modules/patternfly/dist/less/variables.less";
-//@import "../node_modules/patternfly/less/color-variables.less";
+//@import "../node_modules/patternfly/dist/less/patternfly.less";
+//@import "../node_modules/patternfly/dist/less/patternfly-additions.less";
+////must re-import variables because they've been overwritten by the bootstrap extras in pf-additions
+@import (reference) "../node_modules/patternfly/dist/less/variables.less";
+@import (reference) "../node_modules/patternfly/dist/less/color-variables.less";
 
 @fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
 @font-path: "../node_modules/patternfly/dist/fonts";
@@ -210,6 +210,11 @@
     .toolbar-pf-actions {
       display: flex;
       justify-content: flex-start;
+      align-items: center;
+    }
+    .toolbar-pf-actions-right {
+      display: flex;
+      justify-content: flex-end;
       align-items: center;
     }
     // Push the button group to the right when flexed

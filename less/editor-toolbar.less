@@ -1,7 +1,7 @@
-@import "patternfly/dist/less/patternfly.less";
-@import "patternfly/dist/less/patternfly-additions.less";
-@import "patternfly/dist/less/variables.less";
-@import "patternfly/dist/less/color-variables.less";
+@import (reference) "patternfly/dist/less/patternfly.less";
+@import (reference) "patternfly/dist/less/patternfly-additions.less";
+@import (reference) "patternfly/dist/less/variables.less";
+@import (reference) "patternfly/dist/less/color-variables.less";
 
 @import "kie-variables.less";
 
@@ -22,10 +22,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
-  > * {
-    margin: @pf-spacer-sm @pf-spacer-lg;
+padding-top: 0;
+padding-bottom: 0;
+  > *,
+  > .form-group {
+    //margin: @pf-spacer-sm @pf-spacer-lg;
+    margin: @pf-spacer-sm 0 @pf-spacer-sm 0;
+    padding: 0 @pf-spacer-lg;
     flex-shrink:0;
+    &:last-child {
+      margin-right: @pf-spacer-lg;
+    }
   }
 }
 
