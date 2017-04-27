@@ -1,4 +1,7 @@
 // KIE Main Less file
+// Include kie-main.css in HTML files
+// No other less file should import Patternfly because this will cause customizations to be overwritten
+// Patternfly or KIE variables might need to be imported by reference so that the variables can be used
 
 @import "../node_modules/patternfly/dist/less/patternfly.less";
 @import "../node_modules/patternfly/dist/less/patternfly-additions.less";
@@ -11,6 +14,7 @@
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
 
 @import "styles.less";
+@import "palette.less";
 @import "kie-editor.less";
 @import "bpm-home.less";
 @import "bpm-library.less";

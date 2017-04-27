@@ -1,9 +1,9 @@
-@import "patternfly/dist/less/patternfly.less";
-@import "patternfly/dist/less/patternfly-additions.less";
-@import "patternfly/dist/less/variables.less";
-@import "patternfly/dist/less/color-variables.less";
+@import (reference) "patternfly/dist/less/patternfly.less";
+@import (reference) "patternfly/dist/less/patternfly-additions.less";
+@import (reference) "patternfly/dist/less/variables.less";
+@import (reference) "patternfly/dist/less/color-variables.less";
 
-@import "kie-variables.less";
+@import (reference) "kie-variables.less";
 
 //was
 @fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts";
@@ -22,7 +22,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
+padding-bottom: 0;
+padding-top: 0;
   > * {
     margin: @pf-spacer-sm @pf-spacer-lg;
     flex-shrink:0;
@@ -64,11 +65,6 @@
 }
 
 ////////////// detail panel /////////////
-@list-pf-border-color:                                              @color-pf-black-300; //@color-pf-black-200;
-@list-pf-active-border-color:                                       transparent;//@color-pf-black-400;
-@list-pf-header-background-color:                                   inherit;//@color-pf-black-200;
-@list-pf-hover-background-color:                                    inherit; //@color-pf-black-100;
-@list-pf-padding:                                                   @pf-spacer-xs; //20px;
 
 .kie-canvas {
   background-color: lightgreen;
@@ -96,12 +92,29 @@
 }
 
 .kie-list-pf--details {
+  @list-pf-border-color:                                              @color-pf-black-300; //@color-pf-black-200;
+  @list-pf-active-border-color:                                       transparent;//@color-pf-black-400;
+  @list-pf-header-background-color:                                   inherit;//@color-pf-black-200;
+  @list-pf-hover-background-color:                                    inherit; //@color-pf-black-100;
+  @list-pf-padding:                                                   @pf-spacer-xs; //20px;
+
   margin-left: 1em;
   border-bottom-color: transparent;
+
+  .list-pf-item {
+      border-color: @list-pf-border-color @list-pf-active-border-color;
+      &.active {
+      background-color: @list-pf-header-background-color;
+      border-color: @list-pf-active-border-color;
+    }
+    &:hover {
+      background-color: @list-pf-hover-background-color;
+    }
+
+  }
   .list-pf-item.active {
     border-top-color: @list-pf-border-color;
   }
-
   .list-pf-chevron {
     position: absolute;
     left: 1em;
@@ -116,11 +129,14 @@
   }
   .list-pf-container {
     padding-left: 0;
+    padding-bottom: @list-pf-padding; //have to define top and bottom padding here to use the local variable
+    padding-top: @list-pf-padding;
     &:focus {
       outline: none; // This hides it for now but we don't really want that for accessibility
     }
   }
   .list-pf-expansion .list-pf-container {
+    border-top: 1px solid @list-pf-active-border-color;
     padding-top: 0;
   }
 }
