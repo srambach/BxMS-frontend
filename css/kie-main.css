@@ -18218,6 +18218,83 @@ html {
     margin-bottom: auto;
   }
 }
+.kie-toolbar {
+  background-color: #fff;
+  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.kie-toolbar > * {
+  margin: 1rem 0;
+  flex-shrink: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.kie-toolbar > *:first-child {
+  padding-left: 20px;
+  margin-left: 0;
+}
+.kie-toolbar > *:last-child {
+  padding-right: 20px;
+}
+.kie-toolbar .form-group {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .kie-toolbar .form-group {
+    border-right: 1px solid #d1d1d1;
+    float: left;
+  }
+}
+.kie-toolbar .form-group:first-child {
+  padding-left: none;
+  color: blue;
+}
+.kie-toolbar .form-group:last-child {
+  border-right: 0;
+}
+.kie-toolbar .form-group .btn + .btn,
+.kie-toolbar .form-group .btn-group + .btn,
+.kie-toolbar .form-group .btn + .btn-group,
+.kie-toolbar .form-group .btn-group + .btn-group {
+  margin-left: 5px;
+}
+.kie-toolbar .form-group .btn + .btn-link,
+.kie-toolbar .form-group .btn-group + .btn-link,
+.kie-toolbar .form-group .btn + .dropdown,
+.kie-toolbar .form-group .btn-group + .dropdown {
+  margin-left: 10px;
+}
+.kie-toolbar .form-group .btn-link {
+  color: #252525;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 0;
+}
+.kie-toolbar .form-group .btn-link:active,
+.kie-toolbar .form-group .btn-link:focus,
+.kie-toolbar .form-group .btn-link:hover {
+  color: #0088ce;
+}
+.kie-toolbar .form-group .dropdown-kebab-pf .btn-link {
+  padding: 4px 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.kie-toolbar__breadcrumb {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.kie-toolbar__breadcrumb > li {
+  display: flex;
+  align-items: center;
+}
 .has-button,
 .has-clear {
   display: inline-block;
@@ -18625,32 +18702,29 @@ html {
   margin: 1rem 1.5rem;
   flex-shrink: 0;
 }
-.dropdown-kebab-pf .btn-link {
+.kie-editor__toolbar > *:first-child {
+  padding-left: 20px;
   margin-left: 0;
 }
-.kie-editor__btn-link {
+.kie-editor__toolbar > *:last-child {
+  padding-right: 20px;
+}
+.kie-editor__toolbar .dropdown-kebab-pf .btn-link {
+  margin-left: 0;
+}
+.kie-editor__toolbar .kie-editor__btn-link {
   color: #363636;
   font-size: 1.25em;
   line-height: 1;
 }
-.kie-editor__btn {
+.kie-editor__toolbar .kie-editor__btn {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.kie-toolbar__breadcrumb {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-.kie-toolbar__breadcrumb > li {
-  display: flex;
-  align-items: center;
-}
-.kie-editor__dropdown {
+.kie-editor__toolbar .kie-editor__dropdown {
   display: inline-block;
 }
-.kie-divider-left {
+.kie-editor__toolbar .kie-divider-left {
   border-left: 1px solid #72767b;
 }
 .kie-canvas {

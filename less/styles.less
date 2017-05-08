@@ -226,7 +226,84 @@ html {
   }
 
 
-  //popover
+// generic KIE toolbar for use on pages and elsewhere
+.kie-toolbar {
+  background-color: @color-pf-white;
+  border-bottom: 1px solid @color-pf-black-300;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  padding-top: 0;
+  > * {
+    margin: @pf-spacer-sm 0;
+    flex-shrink:0;
+    padding-left: (@grid-gutter-width/2);
+    padding-right: (@grid-gutter-width/2);
+
+    &:first-child {
+      padding-left: (@grid-gutter-width / 2);
+      margin-left: 0;
+    }
+    &:last-child {
+      padding-right: (@grid-gutter-width / 2);
+    }
+  }
+
+  // based on toolbar-pf styles
+  .form-group {
+    margin-bottom: (@grid-gutter-width/4);
+    @media (min-width: @grid-float-breakpoint) {
+      border-right: 1px solid @sidebar-pf-border-color;
+      float: left;
+    }
+    &:first-child {
+      padding-left:none;
+      color: blue;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    .btn,
+    .btn-group {
+      + .btn,
+      + .btn-group { margin-left: 5px; }
+      + .btn-link,
+      + .dropdown { margin-left: 10px; }
+    }
+    .btn-link {
+      color: @gray-darker;
+      font-size: (@font-size-base + 4);
+      line-height: 1;
+      padding: 4px 0;
+      &:active,
+      &:focus,
+      &:hover { color: @link-color; }
+    }
+    .dropdown-kebab-pf .btn-link {
+      padding: 4px (@grid-gutter-width/4);
+      margin-left: (@grid-gutter-width/(-4));
+      margin-right: (@grid-gutter-width/(-4));
+    }
+  }
+}
+// end kie-toolbar
+
+// KIE breadcrumb contained in a toolbar
+.kie-toolbar__breadcrumb {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  & > li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+//popover
   .has-button, .has-clear {
     display: inline-block;
   }
