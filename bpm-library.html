@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Project List</title>
+
+  <!--<link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">-->
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+
+</head>
+<body>
+
+
+<!-- Masthead -->
+<nav class="navbar navbar-default navbar-pf ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <img src="images/BPMSuite.svg" alt="JBoss BPM Suite"/>
+    </a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-collapse-2">
+
+    <ul class="nav navbar-nav "><!-- navbar-iconic -->
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          Design
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="bpm-home.html">Home</a></li>
+          <li><a href="bpm-processes.html">Processes &amp; Tasks</a></li>
+          <li><a href="bpm-runtime.html">Runtime</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Notifications" class="fa pficon-warning-triangle-o"></span>
+          Messages: 0
+        </a>
+        <div class="dropdown-menu infotip bottom-right">
+          <div class="arrow"></div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
+            </li>
+            <li class="list-group-item">
+              <span class="i pficon pficon-info"></span> Error: System Failure
+            </li>
+          </ul>
+          <div class="footer">
+            <a>Clear Messages</a>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Username" class="fa pficon-user"></span>
+          Brian Johnson
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Preferences</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<!--everything under the nav bar-->
+<div class="container-fluid">
+
+  <!-- breadcrumb -->
+  <div class="row">
+    <div class="kie-toolbar">
+    <div class="">
+      <ol class="breadcrumb kie-toolbar__breadcrumb"><!--breadcrumb-bxms-->
+        <li>
+          <a href="#">Design Library</a>
+        </li>
+        <li class="active"> Mortgages
+        </li>
+      </ol>
+    </div>
+  </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="row ">
+
+    <div class="kie-toolbar">
+
+      <!-- filter dropdown -->
+      <div class="form-group kie-toolbar-pf__filter toolbar-pf-filter">
+        <label class="sr-only" for="filterText">Name</label>
+          <div class="input-group ">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false" id="filterButton">Name <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" id="filterMenu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control" id="filterText" placeholder="Filter By Name...">
+          </div><!-- /input-group -->
+      </div>
+
+      <!-- sort by dropdown -->
+      <div class="form-group"> <!-- form-group -->
+        <div class="dropdown btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" id="sortButton">Name <span class="caret"></span></button>
+          <ul class="dropdown-menu" id="sortMenu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-link kie-editor__btn-link" type="button" id="azSort">
+          <span class="fa fa-sort-alpha-asc"></span>
+        </button>
+      </div>
+
+      <!-- create new button and kebab -->
+      <div style="margin-right: auto;" class="form-group">
+          <span class="btn-group ">
+                <button type="button" class="btn btn-default btn-primary" id="newProjectButton">Create Project</button>
+                <button type="button" class="btn btn-default" id="newProjectButton">Import</button>
+
+            <!-- kebab menu -->
+                <div class="dropdown btn-group  dropdown-kebab-pf">
+                  <button class="btn btn-link kie-editor__btn-link dropdown-toggle" type="button" id="dropdownProjectKebab" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="true">
+                    <span class="fa fa-ellipsis-v"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab" id="dropdownProjectKebabMenu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+             </span>
+
+      </div>
+
+
+      <!-- view controls -->
+      <div class="form-group">
+        <button class="btn btn-link kie-editor__btn-link"><i class="fa fa-search" id="searchButton"></i></button>
+      </div>
+      <div class="form-group toolbar-pf-view-selector">
+        <button class="btn btn-link kie-editor__btn-link"><i class="fa fa-th" id="viewByList"></i></button>
+        <button class="btn btn-link kie-editor__btn-link active" id="viewByCard"><i class="fa fa-th-large"></i></button>
+        <button class="btn btn-link kie-editor__btn-link"><i class="fa fa-th-list" id="viewByList"></i></button>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+  <!-- project list content -->
+    <div class="list-pf">
+
+      <div class="list-pf-item ">
+        <div class="list-pf-container">
+          <div class="list-pf-select">
+            <input type="checkbox">
+          </div>
+          <div class="list-pf-content">
+            <div class="list-pf-left">
+              <span class="fa fa-code-fork fa-process-flow-bxms list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+            </div>
+            <div class="list-pf-content-wrapper">
+              <div class="list-pf-main-content ">
+
+                <div class="list-pf-title">Mortgage Project</div>
+                <div class="list-pf-description">This is the Mortgage Application process for all standard mortgages. For Refinances, please refer to <a href="">Refinance Project</a>.</div>
+              </div>
+              <div class="list-pf-additional-content kie-list-pf-additional-content__created">
+                Created on: 11/27/17
+              </div>
+              <div class="list-pf-additional-content kie-list-pf-additional-content__attributes">
+                <div class="" id="">
+                  <span class="pficon pficon-users"></span>
+                  2 Contributors
+                </div>
+                <div class="" id="">
+                  <span class="pficon pficon-image"></span>
+                  4 Assets
+                </div>
+              </div>
+            </div>
+            <div class="list-pf-actions">
+              <!-- kebab menu -->
+              <div class="dropdown btn-group  dropdown-kebab-pf">
+                <button class="btn btn-link dropdown-toggle" type="button" id="projectListItemKebab1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                  <span class="fa fa-ellipsis-v"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="projectListItemKebab1" id="projectListItemKebabMenu1">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-pf-item ">
+        <div class="list-pf-container">
+          <div class="list-pf-select">
+            <input type="checkbox">
+          </div>
+          <div class="list-pf-content">
+            <div class="list-pf-left">
+              <span class="fa fa-code-fork fa-process-flow-bxms list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+            </div>
+            <div class="list-pf-content-wrapper">
+              <div class="list-pf-main-content ">
+
+                <div class="list-pf-title">Pricing Lookup</div>
+                <div class="list-pf-description">Pricing table for all loans. Updated monthly.</div>
+              </div>
+              <div class="list-pf-additional-content kie-list-pf-additional-content__created">
+                Created on: 11/12/17
+              </div>
+              <div class="list-pf-additional-content kie-list-pf-additional-content__attributes">
+                <div class="" id="">
+                  <span class="pficon pficon-users"></span>
+                  4 Contributors
+                </div>
+                <div class="" id="">
+                  <span class="pficon pficon-image fa-"></span>
+                  2 Assets
+                </div>
+              </div>
+            </div>
+            <div class="list-pf-actions">
+              <!-- kebab menu -->
+              <div class="dropdown btn-group  dropdown-kebab-pf">
+                <button class="btn btn-link dropdown-toggle" type="button" id="projectListItemKebab1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                  <span class="fa fa-ellipsis-v"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="projectListItemKebab1" id="projectListItemKebabMenu1">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list-pf-item ">
+        <div class="list-pf-container">
+          <div class="list-pf-select">
+            <input type="checkbox">
+          </div>
+          <div class="list-pf-content">
+            <div class="list-pf-left">
+              <span class="fa fa-code-fork fa-process-flow-bxms list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>
+            </div>
+            <div class="list-pf-content-wrapper">
+              <div class="list-pf-main-content ">
+
+                <div class="list-pf-title">Refinance</div>
+                <div class="list-pf-description">Refinance process for all US refinance mortgages.</div>
+              </div>
+              <div class="list-pf-additional-content kie-list-pf-additional-content__created">
+                Created on: 9/7/17
+              </div>
+              <div class="list-pf-additional-content  kie-list-pf-additional-content__attributes">
+                <div class="" id="">
+                  <span class="pficon pficon-users"></span>
+                  1 Contributor
+                </div>
+                <div class="" id="">
+                  <span class="pficon pficon-image"></span>
+                  5 Assets
+                </div>
+              </div>
+            </div>
+            <div class="list-pf-actions">
+              <!-- kebab menu -->
+              <div class="dropdown btn-group  dropdown-kebab-pf">
+                <button class="btn btn-link dropdown-toggle" type="button" id="projectListItemKebab1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                  <span class="fa fa-ellipsis-v"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="projectListItemKebab1" id="projectListItemKebabMenu1">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- list-pf -->
+
+  </div><!-- row -->
+
+</div><!-- container-fluid-->
+
+</body>
+</html>

@@ -16,7 +16,7 @@ gulp.task('scripts', function(){
 
 // Compiles less on to /css
 gulp.task('less', function () {
-    gulp.src('less/**/*.less')
+    gulp.src('less/**/kie-main.less')//gulp.src('less/**/*.less')
         .pipe(plumber())
         .pipe(less({
             paths: [ path.join('node_modules'), path.join('node_modules/patternfly/node_modules') ],
