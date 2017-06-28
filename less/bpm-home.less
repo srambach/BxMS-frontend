@@ -6,6 +6,22 @@
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts";
 
+.kie-page {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  height: 100vh;
+  max-height: 100vh;
+}
+.kie-page__content {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+}
+.kie-page__masthead,
+.kie-page__footer {
+  flex: 0 0 auto;
+}
 //Secondary actions are in a column at narrow widths and are displayed across the row at wider widths
 .blank-slate-pf-secondary-action {
   display:flex;

@@ -23,8 +23,9 @@
 </head>
 <body>
 
+<div class="kie-page">
 <!-- Masthead -->
-<nav class="navbar navbar-default navbar-pf ">
+<nav class="kie-page__masthead navbar navbar-default navbar-pf ">
   <div class="navbar-header ">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
       <span class="sr-only">Toggle navigation</span>
@@ -97,7 +98,7 @@
 
 </nav>
 
-<div class="container-fluid kie-blank-slate">
+<div class="kie-page__content container-fluid kie-blank-slate">
 
   <!-- blank state content -->
   <div class="blank-slate-pf row">
@@ -149,9 +150,9 @@
 
 </div>
 
-<div class="container-fluid">
   <!-- footer -->
-  <footer class="row kie-footer">
+  <footer class="row kie-footer kie-page__footer">
+    <div class="container-fluid">
     <!-- Column offset is to visually center the footer on very large screens. If content changes significantly, then the columns settings may need to change. -->
     <div class="col-xs-12 col-sm-4 col-lg-2 col-lg-offset-3 kie-footer__section">
       <div class="row">
@@ -192,8 +193,10 @@
         </div>
       </div>
     </div>
+    </div>
   </footer>
-</div>
 
+
+</div><!-- kie-page -->
 </body>
 </html>
