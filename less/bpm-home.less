@@ -6,6 +6,7 @@
 @font-path: "../node_modules/patternfly/dist/fonts";
 @icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts";
 
+// layout of the page - flex column so that masthead and footer stick to top/bottom
 .kie-page {
   align-items: stretch;
   display: flex;
@@ -22,6 +23,19 @@
 .kie-page__footer {
   flex: 0 0 auto;
 }
+.kie-content--bg-image {
+  background-image: url(/images/background--red.jpg);
+  background-size: cover;
+  .blank-slate-pf {
+    background-color: transparent;
+    color: @color-pf-white;
+  }
+  .kie-circle-icon {
+    background-color: transparent;
+  }
+}
+
+
 //Secondary actions are in a column at narrow widths and are displayed across the row at wider widths
 .blank-slate-pf-secondary-action {
   display:flex;
@@ -99,6 +113,7 @@
   }
 }
 
+// Styles for footer
 .kie-footer {
   background-color: @color-pf-black-100;
   padding: @pf-spacer-lg;

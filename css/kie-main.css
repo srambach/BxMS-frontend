@@ -18806,6 +18806,17 @@ html {
 .kie-page__footer {
   flex: 0 0 auto;
 }
+.kie-content--bg-image {
+  background-image: url(/images/background--red.jpg);
+  background-size: cover;
+}
+.kie-content--bg-image .blank-slate-pf {
+  background-color: transparent;
+  color: #fff;
+}
+.kie-content--bg-image .kie-circle-icon {
+  background-color: transparent;
+}
 .blank-slate-pf-secondary-action {
   display: flex;
   flex-direction: column;
