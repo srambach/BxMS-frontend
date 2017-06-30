@@ -9,6 +9,11 @@
 // path to images
 @img-path: '../images';
 
+// Changes masthead border to RedHat product color
+.navbar-pf {
+  border-top-color: @color-pf-red;
+}
+
 // about modal background image
 @modal-about-pf-bg-img: 'about-background.jpg';
 
@@ -93,6 +98,23 @@ html {
     }
   }
 }
+
+// ridiculously specific fix to override an assumption about the dropdown menu
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon,
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .fa {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+  padding-left: 20px;
+}
+@media (min-width: @grid-float-breakpoint) {
+  .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+    padding-left: 10px;
+  }
+}
+
 .navbar-pf .navbar-primary {
   float:left;
   width: 100%;

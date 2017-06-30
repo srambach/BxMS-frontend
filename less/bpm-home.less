@@ -18,13 +18,14 @@
 .kie-page__content {
   flex: 1 1 auto;
   overflow-y: scroll;
+  //margin: 0;
 }
 .kie-page__masthead,
 .kie-page__footer {
   flex: 0 0 auto;
 }
 .kie-content--bg-image {
-  background-image: url(/images/background--red.jpg);
+  background-image: url(/images/background--gray1.png);
   background-size: cover;
   .blank-slate-pf {
     background-color: transparent;
@@ -34,7 +35,12 @@
     background-color: transparent;
   }
 }
-
+.kie-blank-slate {
+  display: flex;
+  @media (min-width: @screen-md-min) {
+    align-items: center;
+  }
+}
 
 //Secondary actions are in a column at narrow widths and are displayed across the row at wider widths
 .blank-slate-pf-secondary-action {
@@ -44,7 +50,7 @@
   > *:not(:last-child) {
     margin-bottom: @pf-spacer-lg;
   }
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-md-min) {
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
@@ -52,6 +58,9 @@
     flex-wrap: nowrap;
     > *:not(:last-child) {
       margin-bottom: 0;
+      border-right: 1px solid @color-pf-white;
+      padding-left: @pf-spacer-lg;
+      padding-right: @pf-spacer-lg;
     }
   }
 }
@@ -62,12 +71,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @media (min-width: @screen-sm-min) {
+  & + .kie-hero-card {
+    border-left: 0;
+  }
+  @media (min-width: @screen-md-min) {
     flex: 0 0 20em;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+
   }
   &:hover .btn {
     .btn-primary;
@@ -76,12 +89,15 @@
     background-color: @brand-primary;
     color: @color-pf-white;
   }
+  //+ .kie-hero-card {
+  //  border-left: 2px solid @color-pf-black-100;
+  //}
 }
 
 .kie-hero-card__icon {
   margin-right: @pf-spacer-md;
   .kie-circle-icon--md;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-md-min) {
     margin-right: 0;
     .kie-circle-icon--lg;
   }
@@ -90,7 +106,7 @@
 .kie-hero-card__text {
   flex: 3 0;
   text-align: left;
-  @media (min-width: @screen-sm-min) {
+  @media (min-width: @screen-md-min) {
     flex: 1 1 ;
     text-align: center;
   }

@@ -18050,6 +18050,9 @@ table.dataTable th:active {
     width: 18em;
   }
 }
+.navbar-pf {
+  border-top-color: #cc0000;
+}
 html {
   font-size: 12px;
 }
@@ -18112,6 +18115,20 @@ html {
   .navbar-pf .navbar-brand {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon,
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .fa {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+    padding-left: 10px;
   }
 }
 .navbar-pf .navbar-primary {
@@ -18807,7 +18824,7 @@ html {
   flex: 0 0 auto;
 }
 .kie-content--bg-image {
-  background-image: url(/images/background--red.jpg);
+  background-image: url(/images/background--gray1.png);
   background-size: cover;
 }
 .kie-content--bg-image .blank-slate-pf {
@@ -18817,6 +18834,14 @@ html {
 .kie-content--bg-image .kie-circle-icon {
   background-color: transparent;
 }
+.kie-blank-slate {
+  display: flex;
+}
+@media (min-width: 992px) {
+  .kie-blank-slate {
+    align-items: center;
+  }
+}
 .blank-slate-pf-secondary-action {
   display: flex;
   flex-direction: column;
@@ -18825,7 +18850,7 @@ html {
 .blank-slate-pf-secondary-action > *:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .blank-slate-pf-secondary-action {
     flex-direction: row;
     flex-grow: 1;
@@ -18835,6 +18860,9 @@ html {
   }
   .blank-slate-pf-secondary-action > *:not(:last-child) {
     margin-bottom: 0;
+    border-right: 1px solid #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 .kie-hero-card {
@@ -18844,7 +18872,10 @@ html {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 768px) {
+.kie-hero-card + .kie-hero-card {
+  border-left: 0;
+}
+@media (min-width: 992px) {
   .kie-hero-card {
     flex: 0 0 20em;
     flex-direction: column;
@@ -19103,7 +19134,7 @@ fieldset[disabled] .kie-hero-card:hover .btn.active {
   margin-right: 1.25rem;
   font-size: 3em;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .kie-hero-card__icon {
     margin-right: 0;
     font-size: 4em;
@@ -19113,7 +19144,7 @@ fieldset[disabled] .kie-hero-card:hover .btn.active {
   flex: 3 0;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .kie-hero-card__text {
     flex: 1 1 ;
     text-align: center;

@@ -24,179 +24,229 @@
 <body>
 
 <div class="kie-page">
-<!-- Masthead -->
-<nav class="kie-page__masthead navbar navbar-default navbar-pf ">
-  <div class="navbar-header ">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="/" class="navbar-brand">
-      <img src="images/BPMSuite.svg" alt="JBoss BPM Suite"/>
-    </a>
-  </div>
 
-  <div class="collapse navbar-collapse navbar-collapse-2">
+  <!-- Masthead -->
+  <nav class="kie-page__masthead navbar navbar-default navbar-pf ">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="images/BPMSuite.svg" alt="JBoss BPM Suite"/>
+      </a>
+    </div>
 
-    <ul class="nav navbar-nav "><!-- navbar-iconic -->
-      <li class="dropdown">
-        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-           aria-expanded="true">
-          Home
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <li><a href="project-populated.html">Design</a></li>
-          <li><a href="bpm-processes.html">Processes &amp; Tasks</a></li>
-          <li><a href="bpm-runtime.html">Runtime</a></li>
-          <li><a href="settings.html">Settings</a></li>
-        </ul>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse navbar-collapse-2">
 
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true"
-           aria-expanded="true">
-          <span title="Notifications" class="fa pficon-warning-triangle-o"></span>
-          Messages: 0
-        </a>
-        <div class="dropdown-menu infotip bottom-right">
-          <div class="arrow"></div>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <span class="i pficon pficon-info"></span> Modified Datasources ExampleDS
-            </li>
-            <li class="list-group-item">
-              <span class="i pficon pficon-info"></span> Error: System Failure
-            </li>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true">
+            Home
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="project-populated.html">Design</a></li>
+            <li><a href="bpm-processes.html">Processes &amp; Tasks</a></li>
+            <li><a href="bpm-runtime.html">Runtime</a></li>
+            <li><a href="settings.html">Settings</a></li>
           </ul>
-          <div class="footer">
-            <a>Clear Messages</a>
-          </div>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-           aria-expanded="true">
-          <span title="Username" class="fa pficon-user"></span>
-          Brian Johnson
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <li><a href="#">Preferences</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </li>
+        </li>
+      </ul>
 
-    </ul>
+      <ul class="nav navbar-nav navbar-right navbar-utility">
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+            <span title="Applications" class="fa fa-th"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="">Application 1</a></li>
+            <li><a href="">Application 2</a></li>
+            <li><a href="">Application 3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="#help" data-toggle="modal"><i class="fa fa-question"></i></a>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="settings.html"><i class="fa fa-cog"></i></a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true">
+            <span title="Username" class="pficon pficon-user"></span>
+            Brian Johnson
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a href="#about" data-toggle="modal">About</a></li>
+            <li><a href="#preferences" data-toggle="modal">Preferences</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
 
-
-  </div>
-
-</nav>
-
-<div class="kie-page__content kie-content--bg-image container-fluid kie-blank-slate">
-
-  <!-- blank state content -->
-  <div class="blank-slate-pf row">
-    <div class="col-xs-12 col-lg-9" style="text-align:right;"><a href="settings.html"><span class="fa fa-gear"></span>
-      Settings</a></div>
-    <h1 id="welcome">
-      Welcome to <b>BPM Suite</b>
-    </h1>
-    <p>
-      Business Process Management (BPM) Suite offers a set of flexible, process management tools that support the way
-      you need to work. Select a BPM tool below to get started.
-    </p>
-    <div class="blank-slate-pf-secondary-action">
-      <div class="kie-hero-card" id="demo1">
-        <div class="fa fa-pencil kie-hero-card__icon kie-circle-icon"></div>
-        <div class="kie-hero-card__text">
-          <h2>Design</h2>
-          <div>Model build, and publish.</div>
-        </div>
-        <div class="kie-hero-card__action ">
-          <a href="project-populated.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Design</a>
-        </div>
-      </div>
-      <div class="kie-hero-card" id="demo2">
-        <div class="fa fa-check-square-o kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
-        <div class="kie-hero-card__text">
-          <h2>Processes &amp; Tasks</h2>
-          <div>Run, assign, and keep track of your business processes.</div>
-        </div>
-        <div class="kie-hero-card__action ">
-          <a href="bpm-processes.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Run &amp;
-            Assign</a>
-        </div>
-      </div>
-      <div class="kie-hero-card" id="demo3">
-        <div class="fa fa-code-fork fa-process-flow-bxms kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
-        <div class="kie-hero-card__text">
-          <h2>Runtime</h2>
-          <div>Monitor and manage servers and active instances.</div>
-        </div>
-        <div class="kie-hero-card__action ">
-          <a href="bpm-runtime.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Monitor &amp;
-            Manage</a>
-        </div>
-
-      </div>
     </div>
-  </div>
+  </nav>
 
-</div>
 
-  <!-- footer -->
-  <footer class="row kie-footer kie-page__footer">
+  <div class="kie-page__content kie-content--bg-image kie-blank-slate">
     <div class="container-fluid">
-    <!-- Column offset is to visually center the footer on very large screens. If content changes significantly, then the columns settings may need to change. -->
-    <div class="col-xs-12 col-sm-4 col-lg-2 col-lg-offset-3 kie-footer__section">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4  kie-footer__title">
-          Getting Started
-        </div>
-        <div class="col-xs-12 col-sm-8">
-          <dl class="footer__links ">
-            <div>
-              <dt><a href="">Some link</a></dt>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </div>
+      <!-- blank state content -->
+      <div class="blank-slate-pf row">
 
-    <div class="col-xs-12 col-sm-8 col-lg-6 kie-footer__section">
-      <div class="row">
-        <div class="col-xs-12 col-sm-2  kie-footer__title">
-          Applications
-        </div>
-        <div class="col-xs-12 col-sm-10 ">
-          <dl class="footer__links ">
-            <div>
-              <dt><a href="">ABC Loans</a></dt>
-              <dd>Loan Management tool</dd>
+        <h1 id="welcome">
+          Welcome to <b>BPM Suite</b>
+        </h1>
+        <p>
+          Business Process Management (BPM) Suite offers a set of flexible, process management tools that support the way
+          you need to work. Select a BPM tool below to get started.
+        </p>
+        <div class="blank-slate-pf-secondary-action">
+          <div class="kie-hero-card" id="demo1">
+            <div class="pficon pficon-blueprint kie-hero-card__icon kie-circle-icon"></div>
+            <div class="kie-hero-card__text">
+              <h2>Design</h2>
+              <div>Model build, and publish.</div>
             </div>
-            <div>
-              <dt><a href="">Home mortgage</a></dt>
-              <dd>Loan Management tool</dd>
+            <!--<div class="kie-hero-card__action ">-->
+              <!--<a href="project-populated.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Design</a>-->
+            <!--</div>-->
+          </div>
+          <div class="kie-hero-card" id="demo2">
+            <div class="pficon pficon-build kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
+            <div class="kie-hero-card__text">
+              <h2>Deploy</h2>
+              <div>Run, assign, and keep track of your business processes.</div>
             </div>
-            <div>
-              <dt><a href="">DEF Credit</a></dt>
-              <dd>Loan Management tool</dd>
+            <!--<div class="kie-hero-card__action ">-->
+              <!--<a href="bpm-processes.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Run &amp;-->
+                <!--Assign</a>-->
+            <!--</div>-->
+          </div>
+          <div class="kie-hero-card" id="demo3">
+            <div class="pficon pficon-build kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
+            <div class="kie-hero-card__text">
+              <h2>Manage</h2>
+              <div>Monitor and manage servers and active instances.</div>
             </div>
-          </dl>
-          <div><strong><a href=""><span class="fa fa-arrow-circle-right"></span> View All Apps</a></strong></div>
+            <!--<div class="kie-hero-card__action ">-->
+              <!--<a href="bpm-runtime.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Monitor &amp;-->
+                <!--Manage</a>-->
+            </div>
+          <div class="kie-hero-card" id="demo4">
+            <div class="pficon pficon-trend-up kie-hero-card__icon kie-circle-icon kie-circle-icon--lg">
+            </div>
+            <div class="kie-hero-card__text">
+              <h2>Report</h2>
+              <div>Report lorem ipsum dolor est.</div>
+            </div>
+          </div>
+
+          </div>
+
         </div>
       </div>
     </div>
-    </div>
-  </footer>
+  </div>
 
 
 </div><!-- kie-page -->
+
+<!-- modals -->
+<div class="modal fade" id="help">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Help</h4>
+      </div>
+      <div class="modal-body">
+        <div><img src="img/help.png" alt="" style="width: 568px;"/></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="about">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">About</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="control-label">Version</label>
+          <p>6.5.1.20170515-044102</p>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Roles</label>
+          <p>Role, Role, Role</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="preferences">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Preferences</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="control-label">Language</label>
+          <select class="form-control">
+            <option value="default">English</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="ja">Japanese</option>
+            <option value="pt_BR">Portuguese</option>
+            <option value="zh_CN">Chinese (Simplified)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="control-label">View Mode</label>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Basic</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Compact</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Advanced</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Layouts</label>
+          <p><a href="#">Reset Perspective Layouts</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
