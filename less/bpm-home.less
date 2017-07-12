@@ -26,7 +26,7 @@
 }
 .kie-content--bg-image {
   background-color: @color-pf-black-700;
-  background-image: url("../images/background--gray1.png");
+  background-image: url("../images/landing_page_gray_bg.png");
   background-size: cover;
   .blank-slate-pf {
     background-color: transparent;
@@ -34,6 +34,12 @@
   }
   .kie-circle-icon {
     background-color: transparent;
+  }
+}
+.kie-container-fluid--blank-slate {
+  @media (min-width: @screen-md-min) {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
   }
 }
 .kie-blank-slate {
@@ -60,8 +66,6 @@
     > *:not(:last-child) {
       margin-bottom: 0;
       border-right: 1px solid @color-pf-white;
-      padding-left: @pf-spacer-lg;
-      padding-right: @pf-spacer-lg;
     }
   }
 }
@@ -72,23 +76,30 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: @pf-spacer-md;
+
   & + .kie-hero-card {
     border-left: 0;
   }
   @media (min-width: @screen-md-min) {
-    flex: 0 0 20em;
+    flex: 0 0 24em;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-left: @pf-spacer-xxxl;
+    padding-right: @pf-spacer-xxxl;
 
   }
-  &:hover .btn {
-    .btn-primary;
-  }
-  &:hover .kie-hero-card__icon {
-    background-color: @brand-primary;
-    color: @color-pf-white;
+  &:hover {
+    color: @brand-primary;
+    .btn {
+      .btn-primary;
+    }
+    .kie-hero-card__icon {
+      background-color: @brand-primary;
+      color: @color-pf-white;
+    }
   }
   //+ .kie-hero-card {
   //  border-left: 2px solid @color-pf-black-100;
@@ -137,7 +148,7 @@
 }
 .kie-footer__title {
   font-size: @font-size-h5;
-  font-weight: @pf-font-weight-bold;
+  //font-weight: @pf-font-weight-bold;
 }
 @media (min-width: @screen-sm-min ) {
   .kie-footer__section + .kie-footer__section {
@@ -151,4 +162,118 @@
   > *:not(:last-child) {
     margin-right: @pf-spacer-xxl;
   }
+}
+
+// Styles for megamenu
+.kie-megamenu {
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+}
+
+//-----------------------------
+//  Yamm Styles
+//-----------------------------
+
+.yamm {
+
+  // reset positions
+  .nav, .collapse, .dropup, .dropdown {
+    position: static;
+  }
+
+  // propagate menu position under container for fw navbars
+  .container {
+    position: relative;
+  }
+
+  // by default aligns menu to left
+  .dropdown-menu {
+    left: auto;
+  }
+
+  // Content with padding
+  .yamm-content {
+    padding: 20px 30px;
+  }
+
+  // Fullwidth menu
+  .dropdown.yamm-fw .dropdown-menu {
+    left: 0; right: 0;
+  }
+}
+
+.kie-yamm {
+}
+.kie-yamm__dropdown-menu {
+  //background-color: @color-pf-black-900;
+  //color: @color-pf-white;
+}
+.kie-yamm__title {
+    //border-bottom: 1px solid @color-pf-black-500;
+    //padding-bottom: @pf-spacer-sm;
+    //color: @color-pf-black-300;
+  }
+.kie-yamm__dropdown-menu a {
+  //color: @color-pf-black-300;//@color-pf-blue-300;
+  &:hover {
+    //text-decoration: none;
+    //color: @color-pf-white;
+  }
+}
+  .kie-yamm__subsection {
+    //list-style: none;
+    //padding-left: 0;
+    //color: @color-pf-black-300;
+    & a {
+      //color: inherit;
+      //&:hover {
+      //  text-decoration: none;
+      //  color: @color-pf-black-150;
+      //}
+    }
+  }
+
+.kie-yamm__dropdown-menu {
+  border: none;
+  padding-top: 0;
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: @navbar-pf-navbar-nav-active-active-bg-color;//@navbar-pf-navbar-nav-active-active-open-bg-color;//////////#232323;
+    color: @color-pf-black-300;
+  }
+}
+.kie-yamm-dropdown-menu__section {
+  background-color: @navbar-pf-navbar-nav-active-active-bg-color;//////////#171717;
+  color: @navbar-pf-active-color;
+  @media (min-width: @grid-float-breakpoint) {
+    //background-color: @navbar-pf-navbar-nav-active-active-open-bg-color;////////#232323;
+    color: @color-pf-black-300;
+  }
+}
+.kie-yamm__section--top {
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: @navbar-pf-navbar-nav-active-active-open-bg-color;
+    padding-bottom: @pf-spacer-xs;
+    padding-top: @pf-spacer-xs;
+  }
+}
+.kie-yamm__title {
+  @media (min-width: @grid-float-breakpoint) {
+    border-bottom: 1px solid @color-pf-black-500;
+    padding-bottom: @pf-spacer-sm;
+  }
+}
+.kie-yamm__subsection {
+  list-style: none;
+  padding-left: 0;
+  a {
+    color: @navbar-pf-color;
+  }
+  //@media (min-width: @grid-float-breakpoint) {
+    a:hover, a:focus, a:active {
+      color: @navbar-pf-active-color;
+      text-decoration: none;
+    }
+  //}
+
 }

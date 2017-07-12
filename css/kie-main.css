@@ -1264,7 +1264,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   color: inherit;
 }
@@ -18115,6 +18115,7 @@ html {
   .navbar-pf .navbar-brand {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 1.25rem;
   }
 }
 .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon,
@@ -18824,7 +18825,8 @@ html {
   flex: 0 0 auto;
 }
 .kie-content--bg-image {
-  background-image: url("../images/background--gray1.png");
+  background-color: #4d5258;
+  background-image: url("../images/landing_page_gray_bg.png");
   background-size: cover;
 }
 .kie-content--bg-image .blank-slate-pf {
@@ -18833,6 +18835,12 @@ html {
 }
 .kie-content--bg-image .kie-circle-icon {
   background-color: transparent;
+}
+@media (min-width: 992px) {
+  .kie-container-fluid--blank-slate {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 .kie-blank-slate {
   display: flex;
@@ -18861,8 +18869,6 @@ html {
   .blank-slate-pf-secondary-action > *:not(:last-child) {
     margin-bottom: 0;
     border-right: 1px solid #fff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 }
 .kie-hero-card {
@@ -18871,18 +18877,24 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 1.25rem;
 }
 .kie-hero-card + .kie-hero-card {
   border-left: 0;
 }
 @media (min-width: 992px) {
   .kie-hero-card {
-    flex: 0 0 20em;
+    flex: 0 0 24em;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
+}
+.kie-hero-card:hover {
+  color: #39a5dc;
 }
 .kie-hero-card:hover .btn {
   background-color: #0088ce;
@@ -19175,7 +19187,6 @@ fieldset[disabled] .kie-hero-card:hover .btn.active {
 }
 .kie-footer__title {
   font-size: 1.0833rem;
-  font-weight: 600;
 }
 @media (min-width: 768px) {
   .kie-footer__section + .kie-footer__section {
@@ -19189,6 +19200,75 @@ fieldset[disabled] .kie-hero-card:hover .btn.active {
 }
 .footer__links > *:not(:last-child) {
   margin-right: 2rem;
+}
+.kie-megamenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+  position: static;
+}
+.yamm .container {
+  position: relative;
+}
+.yamm .dropdown-menu {
+  left: auto;
+}
+.yamm .yamm-content {
+  padding: 20px 30px;
+}
+.yamm .dropdown.yamm-fw .dropdown-menu {
+  left: 0;
+  right: 0;
+}
+.kie-yamm__dropdown-menu {
+  border: none;
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  .kie-yamm__dropdown-menu {
+    background-color: #171717;
+    color: #d1d1d1;
+  }
+}
+.kie-yamm-dropdown-menu__section {
+  background-color: #171717;
+  color: #f5f5f5;
+}
+@media (min-width: 768px) {
+  .kie-yamm-dropdown-menu__section {
+    color: #d1d1d1;
+  }
+}
+@media (min-width: 768px) {
+  .kie-yamm__section--top {
+    background-color: #1f1f1f;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .kie-yamm__title {
+    border-bottom: 1px solid #8b8d8f;
+    padding-bottom: 1rem;
+  }
+}
+.kie-yamm__subsection {
+  list-style: none;
+  padding-left: 0;
+}
+.kie-yamm__subsection a {
+  color: #d1d1d1;
+}
+.kie-yamm__subsection a:hover,
+.kie-yamm__subsection a:focus,
+.kie-yamm__subsection a:active {
+  color: #f5f5f5;
+  text-decoration: none;
 }
 .kie-list-pf-additional-content__attributes {
   display: flex;
