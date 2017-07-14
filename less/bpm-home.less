@@ -26,7 +26,7 @@
 }
 .kie-content--bg-image {
   background-color: @color-pf-black-700;
-  background-image: url("../images/landing_page_gray_bg.png");
+  background-image: url("../images/landing_page_gray_bg.svg");
   background-size: cover;
   .blank-slate-pf {
     background-color: transparent;
@@ -238,36 +238,50 @@
   border: none;
   padding-top: 0;
   @media (min-width: @grid-float-breakpoint) {
-    background-color: @navbar-pf-navbar-nav-active-active-bg-color;//@navbar-pf-navbar-nav-active-active-open-bg-color;//////////#232323;
+    background-color: @navbar-pf-navbar-nav-active-active-bg-color;
     color: @color-pf-black-300;
   }
 }
 .kie-yamm-dropdown-menu__section {
-  background-color: @navbar-pf-navbar-nav-active-active-bg-color;//////////#171717;
+  background-color: @navbar-pf-navbar-nav-active-active-bg-color;
   color: @navbar-pf-active-color;
+  border-top: 1px solid @navbar-pf-navbar-utility-hover-border-color;
   @media (min-width: @grid-float-breakpoint) {
-    //background-color: @navbar-pf-navbar-nav-active-active-open-bg-color;////////#232323;
     color: @color-pf-black-300;
+    border-top: none;
+
   }
 }
 .kie-yamm__section--top {
   @media (min-width: @grid-float-breakpoint) {
-    background-color: @navbar-pf-navbar-nav-active-active-open-bg-color;
+    background-color: @navbar-pf-navbar-nav-active-bg-color;
     padding-bottom: @pf-spacer-xs;
     padding-top: @pf-spacer-xs;
   }
 }
 .kie-yamm__title {
   @media (min-width: @grid-float-breakpoint) {
-    border-bottom: 1px solid @color-pf-black-500;
+    border-bottom: 1px solid @navbar-pf-navbar-utility-hover-border-color;
     padding-bottom: @pf-spacer-sm;
   }
+
 }
 .kie-yamm__subsection {
   list-style: none;
   padding-left: 0;
   a {
     color: @navbar-pf-color;
+  }
+  li {
+    padding-top:@pf-spacer-xs;
+    padding-bottom: @pf-spacer-xs;
+  }
+  li + li {
+    padding-top:0;
+    padding-bottom: @pf-spacer-xs;
+  }
+  li:last-child {
+    padding-bottom: @pf-spacer-sm;
   }
   //@media (min-width: @grid-float-breakpoint) {
     a:hover, a:focus, a:active {

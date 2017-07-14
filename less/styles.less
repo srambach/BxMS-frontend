@@ -9,7 +9,8 @@
 // path to images
 @img-path: '../images';
 
-// Changes masthead border to RedHat product color
+// Changes masthead border to Red Hat product color
+// For community version, use the default, which is @brand-primary
 .navbar-pf {
   border-top-color: @color-pf-red;
 }
@@ -83,30 +84,72 @@ html {
 
 // Masthead overrides
 @media (min-width: @grid-float-breakpoint) {
-  .navbar-pf .navbar-header {
-    float: left;
-  }
-  .navbar-pf .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .navbar-pf {
+       display: flex;
+       align-items: center;
+       flex: 1 0 100%;
+     }
+}
+// remove the line under the logo
+.navbar-pf .navbar-header {
+  border-bottom: none;
+  flex-grow: 1;
+  min-height: 58px;
+display:flex;
+  align-items: center;
+  @media (min-width: @grid-float-breakpoint) {
+    flex-grow: 0;
   }
 }
-@media (min-width: @grid-float-breakpoint) {
-  .navbar-pf {
-    .navbar-brand {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: @pf-spacer-md;
-    }
-  }
+.navbar-pf .navbar-brand {
+  padding: 0 @pf-spacer-md 0 0;
 }
 
+.navbar-pf .navbar-collapse {
+  flex: 0 1 100%;
+}
+.nav-item-iconic {
+  @media (min-width: @grid-float-breakpoint) {
+    min-height: 58px;
+  }
+  font-size: 14px;
+  display:flex;
+  align-items: center;
+  border-left: none;
+  padding-left: 12px;
+}
+.nav li a.nav-item-iconic {
+  display: flex;
+}
+.navbar-pf .navbar-nav > li > a {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+
+//@media (min-width: @grid-float-breakpoint) {
+//  .navbar-pf .navbar-header {
+//    float: left;
+//  }
+//  .navbar-pf .navbar-nav > li > a {
+//    padding-top: 10px;
+//    padding-bottom: 10px;
+//  }
+//}
+//@media (min-width: @grid-float-breakpoint) {
+//  .navbar-pf {
+//    .navbar-brand {
+//      padding-top: 10px;
+//      padding-bottom: 10px;
+//      padding-right: @pf-spacer-md;
+//    }
+//  }
+//}
+
 // ridiculously specific fix to override an assumption about the dropdown menu
-.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon,
-.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .fa {
-  position: relative;
-  left: 0;
-  top: 0;
+.navbar-pf .navbar-iconic li.dropdown > .dropdown-toggle .pficon-user {
+  padding-right: @pf-spacer-xxs;
 }
 .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
   padding-left: 20px;
@@ -117,16 +160,15 @@ html {
   }
 }
 
-.navbar-pf .navbar-primary {
-  float:left;
-  width: 100%;
-}
+//.navbar-pf .navbar-primary {
+//  float:left;
+//  width: 100%;
+//}
 .navbar-brand img {
   height: 11px;
-  @media (max-width: 360px) {
-    width: 100%;
-  }
-
+  //@media (max-width: @grid-float-breakpoint) {
+  //  width: 100%;
+  //}
 }
 
 // Building block holder
