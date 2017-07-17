@@ -6,9 +6,6 @@
 
   <title>BPM Suite</title>
 
-  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
-  <!--<link href="css/styles.css" rel="stylesheet" media="screen, print">-->
-
   <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
 
   <!-- debugging tool -->
@@ -20,14 +17,13 @@
   <!-- Bootstrap JS -->
   <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
 </head>
 <body>
 
 <div class="kie-page">
 
   <!-- Masthead -->
-  <nav class="kie-page__masthead navbar navbar-default navbar-pf "><!--  navbar-pf-vertical  -->
+  <nav class="kie-page__masthead navbar navbar-default navbar-pf ">
     <div class="navbar-header ">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
         <span class="sr-only">Toggle navigation</span>
@@ -43,16 +39,17 @@
 
     <div class="collapse navbar-collapse navbar-collapse-2">
 
-      <ul class="nav navbar-nav yamm kie-yamm">
-        <li class="dropdown yamm-fw">
+      <ul class="nav navbar-nav  kie-yamm">
+        <li class="dropdown kie-yamm--fw">
           <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="true">
             Home
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu kie-yamm__dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li class="kie-yamm-dropdown-menu__section kie-yamm__section--top col-xs-12">
-              <!--<h3 class="kie-megamenu__title">Report</h3>-->
+
+            <!-- full width menu for "home" -->
+            <li class="kie-yamm__section kie-yamm__section--top col-xs-12">
               <ul class="kie-yamm__subsection">
                 <li>
                   <a href="project-populated.html">Home</a>
@@ -60,20 +57,21 @@
               </ul>
             </li>
 
-            <li class="kie-yamm-dropdown-menu__section col-xs-12 col-md-3">
+            <!-- mega menu sections -->
+            <li class="kie-yamm__section col-xs-12 col-md-3">
               <h3 class="kie-yamm__title">Design</h3>
               <ul class="kie-yamm__subsection">
                 <li><a href="project-populated.html">Action Link</a></li>
               </ul>
             </li>
-            <li class="kie-yamm-dropdown-menu__section col-xs-12 col-md-3">
+            <li class="kie-yamm__section col-xs-12 col-md-3">
               <h3 class="kie-yamm__title">Deploy</h3>
               <ul class="kie-yamm__subsection">
                 <li><a href="bpm-processes.html">Deployments</a></li>
                 <li><a href="bpm-processes.html">Servers</a></li>
               </ul>
             </li>
-            <li class="kie-yamm-dropdown-menu__section col-xs-12 col-md-3 ">
+            <li class="kie-yamm__section col-xs-12 col-md-3 ">
               <h3 class="kie-yamm__title">Manage</h3>
               <ul class="kie-yamm__subsection">
                 <li><a href="bpm-runtime.html">Jobs</a></li>
@@ -82,7 +80,7 @@
                 <li><a href="bpm-runtime.html">Tasks</a></li>
               </ul>
             </li>
-            <li class="kie-yamm-dropdown-menu__section col-xs-12 col-md-3">
+            <li class="kie-yamm__section col-xs-12 col-md-3">
               <h3 class="kie-yamm__title">Report</h3>
               <ul class="kie-yamm__subsection">
                 <li><a href="project-populated.html">Action Link</a></li>
@@ -93,7 +91,7 @@
         </li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right navbar-iconic zzzzznavbar-utility">
+      <ul class="nav navbar-nav navbar-right navbar-iconic">
         <li class="dropdown">
           <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true">
             <span title="Applications" class="fa fa-th"></span>
@@ -149,9 +147,6 @@
               <h2>Design</h2>
               <div>Model build, and publish business processes.</div>
             </div>
-            <!--<div class="kie-hero-card__action ">-->
-              <!--<a href="project-populated.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Design</a>-->
-            <!--</div>-->
           </div>
           <div class="kie-hero-card" id="demo2">
             <div class="pficon pficon-build kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
@@ -159,10 +154,6 @@
               <h2>Deploy</h2>
               <div>Run, assign, and keep track of business processes.</div>
             </div>
-            <!--<div class="kie-hero-card__action ">-->
-              <!--<a href="bpm-processes.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Run &amp;-->
-                <!--Assign</a>-->
-            <!--</div>-->
           </div>
           <div class="kie-hero-card" id="demo3">
             <div class="fa fa-briefcase kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
@@ -170,10 +161,7 @@
               <h2>Manage</h2>
               <div>Monitor and manage servers and active instances.</div>
             </div>
-            <!--<div class="kie-hero-card__action ">-->
-              <!--<a href="bpm-runtime.html" class="btn btn-default btn-lg col-xs-12" id="newProjectButton">Monitor &amp;-->
-                <!--Manage</a>-->
-            </div>
+          </div>
           <div class="kie-hero-card" id="demo4">
             <div class="pficon pficon-trend-up kie-hero-card__icon kie-circle-icon kie-circle-icon--lg">
             </div>
@@ -182,13 +170,11 @@
               <div>Create reports for active business processes.</div>
             </div>
           </div>
-
-          </div>
-
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 </div><!-- kie-page -->

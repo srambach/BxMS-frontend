@@ -1,0 +1,72 @@
+//-----------------------------
+//  Yamm Styles
+//-----------------------------
+// based on https://github.com/geedmo/yamm3
+
+.kie-yamm {
+  // reset positions
+  .nav, .collapse, .dropup, .dropdown {
+    position: static;
+  }
+
+  // Fullwidth menu
+  .dropdown.kie-yamm--fw .dropdown-menu {
+    left: 0; right: 0;
+  }
+}
+
+.kie-yamm__dropdown-menu {
+  left: auto;
+  border: none;
+  padding-top: 0;
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: @navbar-pf-navbar-nav-active-active-bg-color;
+    color: @color-pf-black-300;
+  }
+}
+.kie-yamm__section {
+  background-color: @navbar-pf-navbar-nav-active-active-bg-color;
+  color: @navbar-pf-active-color;
+  border-top: 1px solid @navbar-pf-navbar-utility-hover-border-color;
+  @media (min-width: @grid-float-breakpoint) {
+    color: @color-pf-black-300;
+    border-top: none;
+
+  }
+}
+//styles the section to connect visually to the dropdown toggle
+.kie-yamm__section--top {
+  @media (min-width: @grid-float-breakpoint) {
+    background-color: @navbar-pf-navbar-nav-active-bg-color;
+    padding-bottom: @pf-spacer-xs;
+    padding-top: @pf-spacer-xs;
+  }
+}
+.kie-yamm__title {
+  @media (min-width: @grid-float-breakpoint) {
+    border-bottom: 1px solid @navbar-pf-navbar-utility-hover-border-color;
+    padding-bottom: @pf-spacer-sm;
+  }
+
+}
+.kie-yamm__subsection {
+  list-style: none;
+  padding-left: 0;
+  a {
+    color: @navbar-pf-color;
+  }
+  li {
+    padding-top:@pf-spacer-xs;
+    padding-bottom: @pf-spacer-xs;
+  }
+  li + li {
+    padding-top:0;
+  }
+  li:last-child {
+    padding-bottom: @pf-spacer-sm;
+  }
+  a:hover, a:focus, a:active {
+    color: @navbar-pf-active-color;
+    text-decoration: none;
+  }
+}
