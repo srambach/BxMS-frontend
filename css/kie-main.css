@@ -18056,6 +18056,10 @@ table.dataTable th:active {
 html {
   font-size: 12px;
 }
+.dropdown-toggle:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
 .status-ok-bxms {
   color: #92d400;
 }
@@ -18977,10 +18981,14 @@ html {
     padding-right: 2.5rem;
   }
 }
-.kie-hero-card:hover {
+.kie-hero-card:hover,
+.kie-hero-card:focus,
+.kie-hero-card:active {
   color: #39a5dc;
 }
-.kie-hero-card:hover .btn {
+.kie-hero-card:hover .btn,
+.kie-hero-card:focus .btn,
+.kie-hero-card:active .btn {
   background-color: #0088ce;
   background-image: -webkit-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
   background-image: -o-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
@@ -18991,238 +18999,552 @@ html {
   color: #fff;
 }
 .kie-hero-card:hover .btn:focus,
-.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn:focus,
+.kie-hero-card:active .btn:focus,
+.kie-hero-card:hover .btn.focus,
+.kie-hero-card:focus .btn.focus,
+.kie-hero-card:active .btn.focus {
   color: #fff;
   background-color: #00669b;
   border-color: #00121d;
 }
-.kie-hero-card:hover .btn:hover {
+.kie-hero-card:hover .btn:hover,
+.kie-hero-card:focus .btn:hover,
+.kie-hero-card:active .btn:hover {
   color: #fff;
   background-color: #00669b;
   border-color: #003d5f;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open > .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open > .dropdown-toggle.kie-hero-card:hover .btn,
+.open > .dropdown-toggle.kie-hero-card:focus .btn,
+.open > .dropdown-toggle.kie-hero-card:active .btn {
   color: #fff;
   background-color: #00669b;
   border-color: #003d5f;
 }
 .kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:focus .btn:active:hover,
+.kie-hero-card:active .btn:active:hover,
 .kie-hero-card:hover .btn.active:hover,
+.kie-hero-card:focus .btn.active:hover,
+.kie-hero-card:active .btn.active:hover,
 .open > .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.open > .dropdown-toggle.kie-hero-card:focus .btn:hover,
+.open > .dropdown-toggle.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:focus .btn:active:focus,
+.kie-hero-card:active .btn:active:focus,
 .kie-hero-card:hover .btn.active:focus,
+.kie-hero-card:focus .btn.active:focus,
+.kie-hero-card:active .btn.active:focus,
 .open > .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.open > .dropdown-toggle.kie-hero-card:focus .btn:focus,
+.open > .dropdown-toggle.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:focus .btn:active.focus,
+.kie-hero-card:active .btn:active.focus,
 .kie-hero-card:hover .btn.active.focus,
-.open > .dropdown-toggle.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn.active.focus,
+.kie-hero-card:active .btn.active.focus,
+.open > .dropdown-toggle.kie-hero-card:hover .btn.focus,
+.open > .dropdown-toggle.kie-hero-card:focus .btn.focus,
+.open > .dropdown-toggle.kie-hero-card:active .btn.focus {
   color: #fff;
   background-color: #004f77;
   border-color: #00121d;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open > .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open > .dropdown-toggle.kie-hero-card:hover .btn,
+.open > .dropdown-toggle.kie-hero-card:focus .btn,
+.open > .dropdown-toggle.kie-hero-card:active .btn {
   background-image: none;
 }
 .kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:focus .btn.disabled:hover,
+.kie-hero-card:active .btn.disabled:hover,
 .kie-hero-card:hover .btn[disabled]:hover,
+.kie-hero-card:focus .btn[disabled]:hover,
+.kie-hero-card:active .btn[disabled]:hover,
 fieldset[disabled] .kie-hero-card:hover .btn:hover,
+fieldset[disabled] .kie-hero-card:focus .btn:hover,
+fieldset[disabled] .kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:focus .btn.disabled:focus,
+.kie-hero-card:active .btn.disabled:focus,
 .kie-hero-card:hover .btn[disabled]:focus,
+.kie-hero-card:focus .btn[disabled]:focus,
+.kie-hero-card:active .btn[disabled]:focus,
 fieldset[disabled] .kie-hero-card:hover .btn:focus,
+fieldset[disabled] .kie-hero-card:focus .btn:focus,
+fieldset[disabled] .kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn.disabled.focus,
+.kie-hero-card:focus .btn.disabled.focus,
+.kie-hero-card:active .btn.disabled.focus,
 .kie-hero-card:hover .btn[disabled].focus,
-fieldset[disabled] .kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn[disabled].focus,
+.kie-hero-card:active .btn[disabled].focus,
+fieldset[disabled] .kie-hero-card:hover .btn.focus,
+fieldset[disabled] .kie-hero-card:focus .btn.focus,
+fieldset[disabled] .kie-hero-card:active .btn.focus {
   background-color: #0088ce;
   border-color: #00659c;
 }
-.kie-hero-card:hover .btn .badge {
+.kie-hero-card:hover .btn .badge,
+.kie-hero-card:focus .btn .badge,
+.kie-hero-card:active .btn .badge {
   color: #0088ce;
   background-color: #fff;
 }
 .kie-hero-card:hover .btn:hover,
+.kie-hero-card:focus .btn:hover,
+.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:focus,
+.kie-hero-card:focus .btn:focus,
+.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-color: #0088ce;
   background-image: none;
   border-color: #00659c;
   color: #fff;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-image: none;
 }
 .kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:focus .btn:active:hover,
+.kie-hero-card:active .btn:active:hover,
 .kie-hero-card:hover .btn.active:hover,
+.kie-hero-card:focus .btn.active:hover,
+.kie-hero-card:active .btn.active:hover,
 .open .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.open .dropdown-toggle.kie-hero-card:focus .btn:hover,
+.open .dropdown-toggle.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:focus .btn:active:focus,
+.kie-hero-card:active .btn:active:focus,
 .kie-hero-card:hover .btn.active:focus,
+.kie-hero-card:focus .btn.active:focus,
+.kie-hero-card:active .btn.active:focus,
 .open .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn:focus,
+.open .dropdown-toggle.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:focus .btn:active.focus,
+.kie-hero-card:active .btn:active.focus,
 .kie-hero-card:hover .btn.active.focus,
-.open .dropdown-toggle.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn.active.focus,
+.kie-hero-card:active .btn.active.focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn.focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn.focus,
+.open .dropdown-toggle.kie-hero-card:active .btn.focus {
   background-color: #0077b5;
   border-color: #004e78;
 }
 .kie-hero-card:hover .btn.disabled,
+.kie-hero-card:focus .btn.disabled,
+.kie-hero-card:active .btn.disabled,
 .kie-hero-card:hover .btn[disabled],
+.kie-hero-card:focus .btn[disabled],
+.kie-hero-card:active .btn[disabled],
 fieldset[disabled] .kie-hero-card:hover .btn,
+fieldset[disabled] .kie-hero-card:focus .btn,
+fieldset[disabled] .kie-hero-card:active .btn,
 .kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:focus .btn.disabled:hover,
+.kie-hero-card:active .btn.disabled:hover,
 .kie-hero-card:hover .btn[disabled]:hover,
+.kie-hero-card:focus .btn[disabled]:hover,
+.kie-hero-card:active .btn[disabled]:hover,
 fieldset[disabled] .kie-hero-card:hover .btn:hover,
+fieldset[disabled] .kie-hero-card:focus .btn:hover,
+fieldset[disabled] .kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:focus .btn.disabled:focus,
+.kie-hero-card:active .btn.disabled:focus,
 .kie-hero-card:hover .btn[disabled]:focus,
+.kie-hero-card:focus .btn[disabled]:focus,
+.kie-hero-card:active .btn[disabled]:focus,
 fieldset[disabled] .kie-hero-card:hover .btn:focus,
+fieldset[disabled] .kie-hero-card:focus .btn:focus,
+fieldset[disabled] .kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn.disabled:active,
+.kie-hero-card:focus .btn.disabled:active,
+.kie-hero-card:active .btn.disabled:active,
 .kie-hero-card:hover .btn[disabled]:active,
+.kie-hero-card:focus .btn[disabled]:active,
+.kie-hero-card:active .btn[disabled]:active,
 fieldset[disabled] .kie-hero-card:hover .btn:active,
+fieldset[disabled] .kie-hero-card:focus .btn:active,
+fieldset[disabled] .kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.disabled.active,
+.kie-hero-card:focus .btn.disabled.active,
+.kie-hero-card:active .btn.disabled.active,
 .kie-hero-card:hover .btn[disabled].active,
-fieldset[disabled] .kie-hero-card:hover .btn.active {
+.kie-hero-card:focus .btn[disabled].active,
+.kie-hero-card:active .btn[disabled].active,
+fieldset[disabled] .kie-hero-card:hover .btn.active,
+fieldset[disabled] .kie-hero-card:focus .btn.active,
+fieldset[disabled] .kie-hero-card:active .btn.active {
   background-color: #0088ce;
   border-color: #00659c;
 }
 .kie-hero-card:hover .btn:hover,
+.kie-hero-card:focus .btn:hover,
+.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:focus,
+.kie-hero-card:focus .btn:focus,
+.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-color: #0088ce;
   background-image: none;
   border-color: #00659c;
   color: #fff;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-image: none;
 }
 .kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:focus .btn:active:hover,
+.kie-hero-card:active .btn:active:hover,
 .kie-hero-card:hover .btn.active:hover,
+.kie-hero-card:focus .btn.active:hover,
+.kie-hero-card:active .btn.active:hover,
 .open .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.open .dropdown-toggle.kie-hero-card:focus .btn:hover,
+.open .dropdown-toggle.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:focus .btn:active:focus,
+.kie-hero-card:active .btn:active:focus,
 .kie-hero-card:hover .btn.active:focus,
+.kie-hero-card:focus .btn.active:focus,
+.kie-hero-card:active .btn.active:focus,
 .open .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn:focus,
+.open .dropdown-toggle.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:focus .btn:active.focus,
+.kie-hero-card:active .btn:active.focus,
 .kie-hero-card:hover .btn.active.focus,
-.open .dropdown-toggle.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn.active.focus,
+.kie-hero-card:active .btn.active.focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn.focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn.focus,
+.open .dropdown-toggle.kie-hero-card:active .btn.focus {
   background-color: #0077b5;
   border-color: #004e78;
 }
 .kie-hero-card:hover .btn.disabled,
+.kie-hero-card:focus .btn.disabled,
+.kie-hero-card:active .btn.disabled,
 .kie-hero-card:hover .btn[disabled],
+.kie-hero-card:focus .btn[disabled],
+.kie-hero-card:active .btn[disabled],
 fieldset[disabled] .kie-hero-card:hover .btn,
+fieldset[disabled] .kie-hero-card:focus .btn,
+fieldset[disabled] .kie-hero-card:active .btn,
 .kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:focus .btn.disabled:hover,
+.kie-hero-card:active .btn.disabled:hover,
 .kie-hero-card:hover .btn[disabled]:hover,
+.kie-hero-card:focus .btn[disabled]:hover,
+.kie-hero-card:active .btn[disabled]:hover,
 fieldset[disabled] .kie-hero-card:hover .btn:hover,
+fieldset[disabled] .kie-hero-card:focus .btn:hover,
+fieldset[disabled] .kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:focus .btn.disabled:focus,
+.kie-hero-card:active .btn.disabled:focus,
 .kie-hero-card:hover .btn[disabled]:focus,
+.kie-hero-card:focus .btn[disabled]:focus,
+.kie-hero-card:active .btn[disabled]:focus,
 fieldset[disabled] .kie-hero-card:hover .btn:focus,
+fieldset[disabled] .kie-hero-card:focus .btn:focus,
+fieldset[disabled] .kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn.disabled:active,
+.kie-hero-card:focus .btn.disabled:active,
+.kie-hero-card:active .btn.disabled:active,
 .kie-hero-card:hover .btn[disabled]:active,
+.kie-hero-card:focus .btn[disabled]:active,
+.kie-hero-card:active .btn[disabled]:active,
 fieldset[disabled] .kie-hero-card:hover .btn:active,
+fieldset[disabled] .kie-hero-card:focus .btn:active,
+fieldset[disabled] .kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.disabled.active,
+.kie-hero-card:focus .btn.disabled.active,
+.kie-hero-card:active .btn.disabled.active,
 .kie-hero-card:hover .btn[disabled].active,
-fieldset[disabled] .kie-hero-card:hover .btn.active {
+.kie-hero-card:focus .btn[disabled].active,
+.kie-hero-card:active .btn[disabled].active,
+fieldset[disabled] .kie-hero-card:hover .btn.active,
+fieldset[disabled] .kie-hero-card:focus .btn.active,
+fieldset[disabled] .kie-hero-card:active .btn.active {
   background-color: #0088ce;
   border-color: #00659c;
 }
 .kie-hero-card:hover .btn:hover,
+.kie-hero-card:focus .btn:hover,
+.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:focus,
+.kie-hero-card:focus .btn:focus,
+.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-color: #0088ce;
   background-image: none;
   border-color: #00659c;
   color: #fff;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-image: none;
 }
 .kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:focus .btn:active:hover,
+.kie-hero-card:active .btn:active:hover,
 .kie-hero-card:hover .btn.active:hover,
+.kie-hero-card:focus .btn.active:hover,
+.kie-hero-card:active .btn.active:hover,
 .open .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.open .dropdown-toggle.kie-hero-card:focus .btn:hover,
+.open .dropdown-toggle.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:focus .btn:active:focus,
+.kie-hero-card:active .btn:active:focus,
 .kie-hero-card:hover .btn.active:focus,
+.kie-hero-card:focus .btn.active:focus,
+.kie-hero-card:active .btn.active:focus,
 .open .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn:focus,
+.open .dropdown-toggle.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:focus .btn:active.focus,
+.kie-hero-card:active .btn:active.focus,
 .kie-hero-card:hover .btn.active.focus,
-.open .dropdown-toggle.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn.active.focus,
+.kie-hero-card:active .btn.active.focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn.focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn.focus,
+.open .dropdown-toggle.kie-hero-card:active .btn.focus {
   background-color: #0077b5;
   border-color: #004e78;
 }
 .kie-hero-card:hover .btn.disabled,
+.kie-hero-card:focus .btn.disabled,
+.kie-hero-card:active .btn.disabled,
 .kie-hero-card:hover .btn[disabled],
+.kie-hero-card:focus .btn[disabled],
+.kie-hero-card:active .btn[disabled],
 fieldset[disabled] .kie-hero-card:hover .btn,
+fieldset[disabled] .kie-hero-card:focus .btn,
+fieldset[disabled] .kie-hero-card:active .btn,
 .kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:focus .btn.disabled:hover,
+.kie-hero-card:active .btn.disabled:hover,
 .kie-hero-card:hover .btn[disabled]:hover,
+.kie-hero-card:focus .btn[disabled]:hover,
+.kie-hero-card:active .btn[disabled]:hover,
 fieldset[disabled] .kie-hero-card:hover .btn:hover,
+fieldset[disabled] .kie-hero-card:focus .btn:hover,
+fieldset[disabled] .kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:focus .btn.disabled:focus,
+.kie-hero-card:active .btn.disabled:focus,
 .kie-hero-card:hover .btn[disabled]:focus,
+.kie-hero-card:focus .btn[disabled]:focus,
+.kie-hero-card:active .btn[disabled]:focus,
 fieldset[disabled] .kie-hero-card:hover .btn:focus,
+fieldset[disabled] .kie-hero-card:focus .btn:focus,
+fieldset[disabled] .kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn.disabled:active,
+.kie-hero-card:focus .btn.disabled:active,
+.kie-hero-card:active .btn.disabled:active,
 .kie-hero-card:hover .btn[disabled]:active,
+.kie-hero-card:focus .btn[disabled]:active,
+.kie-hero-card:active .btn[disabled]:active,
 fieldset[disabled] .kie-hero-card:hover .btn:active,
+fieldset[disabled] .kie-hero-card:focus .btn:active,
+fieldset[disabled] .kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.disabled.active,
+.kie-hero-card:focus .btn.disabled.active,
+.kie-hero-card:active .btn.disabled.active,
 .kie-hero-card:hover .btn[disabled].active,
-fieldset[disabled] .kie-hero-card:hover .btn.active {
+.kie-hero-card:focus .btn[disabled].active,
+.kie-hero-card:active .btn[disabled].active,
+fieldset[disabled] .kie-hero-card:hover .btn.active,
+fieldset[disabled] .kie-hero-card:focus .btn.active,
+fieldset[disabled] .kie-hero-card:active .btn.active {
   background-color: #0088ce;
   border-color: #00659c;
 }
 .kie-hero-card:hover .btn:hover,
+.kie-hero-card:focus .btn:hover,
+.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:focus,
+.kie-hero-card:focus .btn:focus,
+.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-color: #0088ce;
   background-image: none;
   border-color: #00659c;
   color: #fff;
 }
 .kie-hero-card:hover .btn:active,
+.kie-hero-card:focus .btn:active,
+.kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.active,
-.open .dropdown-toggle.kie-hero-card:hover .btn {
+.kie-hero-card:focus .btn.active,
+.kie-hero-card:active .btn.active,
+.open .dropdown-toggle.kie-hero-card:hover .btn,
+.open .dropdown-toggle.kie-hero-card:focus .btn,
+.open .dropdown-toggle.kie-hero-card:active .btn {
   background-image: none;
 }
 .kie-hero-card:hover .btn:active:hover,
+.kie-hero-card:focus .btn:active:hover,
+.kie-hero-card:active .btn:active:hover,
 .kie-hero-card:hover .btn.active:hover,
+.kie-hero-card:focus .btn.active:hover,
+.kie-hero-card:active .btn.active:hover,
 .open .dropdown-toggle.kie-hero-card:hover .btn:hover,
+.open .dropdown-toggle.kie-hero-card:focus .btn:hover,
+.open .dropdown-toggle.kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn:active:focus,
+.kie-hero-card:focus .btn:active:focus,
+.kie-hero-card:active .btn:active:focus,
 .kie-hero-card:hover .btn.active:focus,
+.kie-hero-card:focus .btn.active:focus,
+.kie-hero-card:active .btn.active:focus,
 .open .dropdown-toggle.kie-hero-card:hover .btn:focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn:focus,
+.open .dropdown-toggle.kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn:active.focus,
+.kie-hero-card:focus .btn:active.focus,
+.kie-hero-card:active .btn:active.focus,
 .kie-hero-card:hover .btn.active.focus,
-.open .dropdown-toggle.kie-hero-card:hover .btn.focus {
+.kie-hero-card:focus .btn.active.focus,
+.kie-hero-card:active .btn.active.focus,
+.open .dropdown-toggle.kie-hero-card:hover .btn.focus,
+.open .dropdown-toggle.kie-hero-card:focus .btn.focus,
+.open .dropdown-toggle.kie-hero-card:active .btn.focus {
   background-color: #0077b5;
   border-color: #004e78;
 }
 .kie-hero-card:hover .btn.disabled,
+.kie-hero-card:focus .btn.disabled,
+.kie-hero-card:active .btn.disabled,
 .kie-hero-card:hover .btn[disabled],
+.kie-hero-card:focus .btn[disabled],
+.kie-hero-card:active .btn[disabled],
 fieldset[disabled] .kie-hero-card:hover .btn,
+fieldset[disabled] .kie-hero-card:focus .btn,
+fieldset[disabled] .kie-hero-card:active .btn,
 .kie-hero-card:hover .btn.disabled:hover,
+.kie-hero-card:focus .btn.disabled:hover,
+.kie-hero-card:active .btn.disabled:hover,
 .kie-hero-card:hover .btn[disabled]:hover,
+.kie-hero-card:focus .btn[disabled]:hover,
+.kie-hero-card:active .btn[disabled]:hover,
 fieldset[disabled] .kie-hero-card:hover .btn:hover,
+fieldset[disabled] .kie-hero-card:focus .btn:hover,
+fieldset[disabled] .kie-hero-card:active .btn:hover,
 .kie-hero-card:hover .btn.disabled:focus,
+.kie-hero-card:focus .btn.disabled:focus,
+.kie-hero-card:active .btn.disabled:focus,
 .kie-hero-card:hover .btn[disabled]:focus,
+.kie-hero-card:focus .btn[disabled]:focus,
+.kie-hero-card:active .btn[disabled]:focus,
 fieldset[disabled] .kie-hero-card:hover .btn:focus,
+fieldset[disabled] .kie-hero-card:focus .btn:focus,
+fieldset[disabled] .kie-hero-card:active .btn:focus,
 .kie-hero-card:hover .btn.disabled:active,
+.kie-hero-card:focus .btn.disabled:active,
+.kie-hero-card:active .btn.disabled:active,
 .kie-hero-card:hover .btn[disabled]:active,
+.kie-hero-card:focus .btn[disabled]:active,
+.kie-hero-card:active .btn[disabled]:active,
 fieldset[disabled] .kie-hero-card:hover .btn:active,
+fieldset[disabled] .kie-hero-card:focus .btn:active,
+fieldset[disabled] .kie-hero-card:active .btn:active,
 .kie-hero-card:hover .btn.disabled.active,
+.kie-hero-card:focus .btn.disabled.active,
+.kie-hero-card:active .btn.disabled.active,
 .kie-hero-card:hover .btn[disabled].active,
-fieldset[disabled] .kie-hero-card:hover .btn.active {
+.kie-hero-card:focus .btn[disabled].active,
+.kie-hero-card:active .btn[disabled].active,
+fieldset[disabled] .kie-hero-card:hover .btn.active,
+fieldset[disabled] .kie-hero-card:focus .btn.active,
+fieldset[disabled] .kie-hero-card:active .btn.active {
   background-color: #0088ce;
   border-color: #00659c;
 }
-.kie-hero-card:hover .kie-hero-card__icon {
+.kie-hero-card:hover .kie-hero-card__icon,
+.kie-hero-card:focus .kie-hero-card__icon,
+.kie-hero-card:active .kie-hero-card__icon {
   background-color: #39a5dc;
   color: #fff;
 }

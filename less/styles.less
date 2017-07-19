@@ -23,6 +23,11 @@ html {
   font-size: @font-size-base;
 }
 
+// Bootstrap removes the focus ring on dropdowns; this replaces it for better accessibility
+.dropdown-toggle:focus {
+  .tab-focus();
+}
+
 // Status colors
 .status-ok-bxms {
   color: @color-pf-light-green;

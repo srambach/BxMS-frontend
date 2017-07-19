@@ -23,9 +23,9 @@
 <div class="kie-page">
 
   <!-- Masthead -->
-  <nav class="kie-page__masthead navbar navbar-default navbar-pf ">
+  <nav class="kie-page__masthead navbar navbar-default navbar-pf " role="navigation">
     <div class="navbar-header ">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-2">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -37,12 +37,12 @@
       </a>
     </div>
 
-    <div class="collapse navbar-collapse navbar-collapse-2">
+    <div class="collapse navbar-collapse navbar-collapse-1">
 
       <ul class="nav navbar-nav  kie-yamm">
         <li class="dropdown kie-yamm--fw">
           <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="true">
+             aria-expanded="true" tabindex="0">
             Home
             <span class="caret"></span>
           </a>
@@ -84,7 +84,7 @@
               <h3 class="kie-yamm__title">Report</h3>
               <ul class="kie-yamm__subsection">
                 <li><a href="project-populated.html">Action Link</a></li>
-              </ul>
+          </ul>
             </li>
 
           </ul>
@@ -93,29 +93,29 @@
 
       <ul class="nav navbar-nav navbar-right navbar-iconic">
         <li class="dropdown">
-          <a class="dropdown-toggle nav-item-iconic" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+          <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true">
             <span title="Applications" class="fa fa-th"></span>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
             <li><a href="">Application 1</a></li>
             <li><a href="">Application 2</a></li>
             <li><a href="">Application 3</a></li>
           </ul>
         </li>
         <li>
-          <a class="nav-item-iconic" href="#help" data-toggle="modal"><i class="fa fa-question"></i></a>
+          <a class="nav-item-iconic" href="#help" data-toggle="modal" title="help"><i class="fa fa-question"></i></a>
         </li>
         <li>
           <a class="nav-item-iconic" href="settings.html"><i class="pficon pficon-equalizer"></i></a>
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="true">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true" tabindex="0">
             <span title="Username" class="pficon pficon-user"></span>
             Brian Johnson
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
             <li><a href="#about" data-toggle="modal">About</a></li>
             <li><a href="#preferences" data-toggle="modal">Preferences</a></li>
             <li class="divider"></li>
@@ -141,28 +141,28 @@
           you need to work. Select a BPM tool below to get started.
         </p>
         <div class="blank-slate-pf-secondary-action">
-          <div class="kie-hero-card" id="demo1">
+          <div class="kie-hero-card" id="demo1" role="button" tabindex="0">
             <div class="pficon pficon-blueprint kie-hero-card__icon kie-circle-icon"></div>
             <div class="kie-hero-card__text">
               <h2>Design</h2>
               <div>Model build, and publish business processes.</div>
             </div>
           </div>
-          <div class="kie-hero-card" id="demo2">
+          <div class="kie-hero-card" id="demo2" role="button" tabindex="0">
             <div class="pficon pficon-build kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
             <div class="kie-hero-card__text">
               <h2>Deploy</h2>
               <div>Run, assign, and keep track of business processes.</div>
             </div>
           </div>
-          <div class="kie-hero-card" id="demo3">
+          <div class="kie-hero-card" id="demo3" role="button" tabindex="0">
             <div class="fa fa-briefcase kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
             <div class="kie-hero-card__text">
               <h2>Manage</h2>
               <div>Monitor and manage servers and active instances.</div>
             </div>
           </div>
-          <div class="kie-hero-card" id="demo4">
+          <div class="kie-hero-card" id="demo4" role="button" tabindex="0">
             <div class="pficon pficon-trend-up kie-hero-card__icon kie-circle-icon kie-circle-icon--lg">
             </div>
             <div class="kie-hero-card__text">
