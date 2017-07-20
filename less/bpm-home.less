@@ -1,11 +1,5 @@
 // Styles for the bpm-home page
 
-@import (reference) "kie-variables";
-
-@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts";
-@font-path: "../node_modules/patternfly/dist/fonts";
-@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts";
-
 // layout of the page - flex column so that masthead and footer stick to top/bottom
 .kie-page {
   align-items: stretch;
@@ -25,7 +19,12 @@
 }
 .kie-content--bg-image {
   background-color: @color-pf-black-700;
+
+  // downstream background
   background-image: url("../images/landing_page_gray_bg.svg");
+  // community background
+  background-image: url("../images/community_landing_page_rustgray_bg.jpg");
+
   background-size: cover;
   .blank-slate-pf {
     background-color: transparent;
