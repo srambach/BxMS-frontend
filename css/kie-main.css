@@ -18500,8 +18500,7 @@ html {
 }
 .kie-content--bg-image {
   background-color: #4d5258;
-  background-image: url("../images/landing_page_gray_bg.svg");
-  background-image: url("../images/community_landing_page_rustgray_bg.jpg");
+  background-image: url("../images/community_landing_page_gray_bg.jpg");
   background-size: cover;
 }
 .kie-content--bg-image .blank-slate-pf {
