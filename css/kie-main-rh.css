@@ -14576,7 +14576,7 @@ a.disabled {
   background: #030303;
   border: 0;
   border-radius: 0;
-  border-top: 3px solid #39a5dc;
+  border-top: 3px solid #cc0000;
   margin-bottom: 0;
   min-height: 0;
 }
@@ -17657,7 +17657,7 @@ html {
   font-size: 12px;
 }
 .navbar-pf {
-  border-top-color: #39a5dc;
+  border-top-color: #cc0000;
 }
 .kie-brand-icon {
   height: 100%;
@@ -18878,4 +18878,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-toolbar-pf__filter {
   flex-basis: 20em;
 }
-/*# sourceMappingURL=kie-main.css.map */
+.kie-content--bg-image {
+  background-color: #4d5258;
+  background-image: url("../images/landing_page_gray_bg.svg");
+}
+.kie-brand-icon {
+  height: 11px;
+}
+/*# sourceMappingURL=kie-main-rh.css.map */

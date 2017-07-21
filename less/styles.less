@@ -12,7 +12,11 @@ html {
 // Changes masthead border to Red Hat product color
 // For community version, use the default, which is @brand-primary
 .navbar-pf {
-  border-top-color: @color-pf-red;
+  border-top-color: @navbar-pf-border-color;
+}
+
+.kie-brand-icon {
+  height: 100%;
 }
 
 // Bootstrap removes the focus ring on dropdowns; this replaces it for better accessibility
@@ -132,10 +136,6 @@ html {
   .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
     padding-left: 10px;
   }
-}
-
-.navbar-brand img {
-  height: 11px;
 }
 
 // Building block holder
