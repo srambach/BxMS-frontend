@@ -17662,6 +17662,9 @@ html {
 .kie-brand-icon {
   height: 100%;
 }
+.dropdown-toggle {
+  cursor: pointer;
+}
 .dropdown-toggle:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
