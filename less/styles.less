@@ -29,20 +29,18 @@ html {
   .tab-focus();
 }
 
-
 // Skip link for improved accessibility
-.kie-skiplink {
+[href="#kie-main-content"] {
   position: absolute;
-  left: -10000px;
-  top: -10000px;
+  top: 0;
+  right: 100%; /* moves off screen */
   background-color: @color-pf-black-100;
   font-size: @font-size-relative-lg;
   padding: @pf-spacer-md;
-  &:focus {
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
+  z-index: 1;
+}
+[href="#kie-main-content"]:focus {
+  right: auto;
 }
 
 // Status colors

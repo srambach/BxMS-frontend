@@ -17669,18 +17669,18 @@ html {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.kie-skiplink {
+[href="#kie-main-content"] {
   position: absolute;
-  left: -10000px;
-  top: -10000px;
+  top: 0;
+  right: 100%;
+  /* moves off screen */
   background-color: #fafafa;
   font-size: 1.25em;
   padding: 1.25rem;
-}
-.kie-skiplink:focus {
-  left: 0;
-  top: 0;
   z-index: 1;
+}
+[href="#kie-main-content"]:focus {
+  right: auto;
 }
 .status-ok-bxms {
   color: #92d400;
