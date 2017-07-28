@@ -29,6 +29,22 @@ html {
   .tab-focus();
 }
 
+
+// Skip link for improved accessibility
+.kie-skiplink {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+  background-color: @color-pf-black-100;
+  font-size: @font-size-relative-lg;
+  padding: @pf-spacer-md;
+  &:focus {
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
 // Status colors
 .status-ok-bxms {
   color: @color-pf-light-green;
