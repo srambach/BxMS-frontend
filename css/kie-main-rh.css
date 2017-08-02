@@ -12363,7 +12363,7 @@ select.selectpicker {
 }
 .about-modal-pf {
   background-color: #292e34;
-  background-image: url("../images/about-background.jpg");
+  background-image: url("../images/landing_page_gray_bg.svg");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 216px auto;
@@ -17994,6 +17994,7 @@ html {
 .about-modal-pf {
   background-color: #083452;
   min-height: 30em;
+  background-size: cover;
 }
 .page-content-bxms {
   background-color: #f5f5f5;
@@ -18899,5 +18900,8 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 }
 .kie-brand-icon {
   height: 11px;
+}
+.about-modal-pf {
+  background-size: 1216px;
 }
 /*# sourceMappingURL=kie-main-rh.css.map */
