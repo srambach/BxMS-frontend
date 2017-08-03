@@ -12363,7 +12363,7 @@ select.selectpicker {
 }
 .about-modal-pf {
   background-color: #292e34;
-  background-image: url("../images/about-background.jpg");
+  background-image: url("../images/community_landing_page_gray_bg.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 216px auto;
@@ -17994,6 +17994,7 @@ html {
 .about-modal-pf {
   background-color: #083452;
   min-height: 30em;
+  background-size: cover;
 }
 .page-content-bxms {
   background-color: #f5f5f5;
