@@ -33,7 +33,7 @@
   }
 }
 .kie-container-fluid--blank-slate {
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-lg-min) {
     width: 100%;
     background-color: rgba(0, 0, 0, .2);
   }
@@ -53,7 +53,7 @@
   > *:not(:last-child) {
     margin-bottom: @pf-spacer-lg;
   }
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-lg-min) {
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
@@ -63,6 +63,20 @@
       margin-bottom: 0;
       border-right: 1px solid @color-pf-white;
     }
+  }
+}
+
+.kie-homepage-welcome {
+  text-align: left;
+  @media (min-width: @screen-lg-min) {
+    text-align: center;
+  }
+}
+
+.kie-homepage-intro {
+  text-align: left;
+  @media (min-width: @screen-lg-min) {
+    text-align: center;
   }
 }
 
@@ -77,7 +91,7 @@
   & + .kie-hero-card {
     border-left: 0;
   }
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-lg-min) {
     flex: 0 0 24em;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -88,12 +102,11 @@
 
   }
   &:hover, &:focus, &:active {
-    color: @brand-primary;
     .btn {
       .btn-primary;
     }
     .kie-hero-card__icon {
-      background-color: @brand-primary;
+      background-color: @color-pf-blue-400;
       color: @color-pf-white;
     }
   }
@@ -105,7 +118,7 @@
 .kie-hero-card__icon {
   margin-right: @pf-spacer-md;
   .kie-circle-icon--md;
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-lg-min) {
     margin-right: 0;
     .kie-circle-icon--lg;
   }
@@ -114,7 +127,7 @@
 .kie-hero-card__text {
   flex: 3 0;
   text-align: left;
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-lg-min) {
     flex: 1 1 ;
     text-align: center;
   }

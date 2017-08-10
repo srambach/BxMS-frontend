@@ -18527,7 +18527,7 @@ html {
 .kie-content--bg-image .kie-circle-icon {
   background-color: transparent;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .kie-container-fluid--blank-slate {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -18549,7 +18549,7 @@ html {
 .blank-slate-pf-secondary-action > *:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .blank-slate-pf-secondary-action {
     flex-direction: row;
     flex-grow: 1;
@@ -18560,6 +18560,22 @@ html {
   .blank-slate-pf-secondary-action > *:not(:last-child) {
     margin-bottom: 0;
     border-right: 1px solid #fff;
+  }
+}
+.kie-homepage-welcome {
+  text-align: left;
+}
+@media (min-width: 1200px) {
+  .kie-homepage-welcome {
+    text-align: center;
+  }
+}
+.kie-homepage-intro {
+  text-align: left;
+}
+@media (min-width: 1200px) {
+  .kie-homepage-intro {
+    text-align: center;
   }
 }
 .kie-hero-card {
@@ -18573,7 +18589,7 @@ html {
 .kie-hero-card + .kie-hero-card {
   border-left: 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .kie-hero-card {
     flex: 0 0 24em;
     flex-direction: column;
@@ -18583,11 +18599,6 @@ html {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-}
-.kie-hero-card:hover,
-.kie-hero-card:focus,
-.kie-hero-card:active {
-  color: #39a5dc;
 }
 .kie-hero-card:hover .btn,
 .kie-hero-card:focus .btn,
@@ -18821,14 +18832,14 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-hero-card:hover .kie-hero-card__icon,
 .kie-hero-card:focus .kie-hero-card__icon,
 .kie-hero-card:active .kie-hero-card__icon {
-  background-color: #39a5dc;
+  background-color: #0088ce;
   color: #fff;
 }
 .kie-hero-card__icon {
   margin-right: 1.25rem;
   font-size: 3em;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .kie-hero-card__icon {
     margin-right: 0;
     font-size: 4em;
@@ -18838,7 +18849,7 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   flex: 3 0;
   text-align: left;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .kie-hero-card__text {
     flex: 1 1 ;
     text-align: center;
