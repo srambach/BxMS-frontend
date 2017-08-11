@@ -19,5 +19,27 @@
 @import "palette.less";
 @import "kie-yamm.less";
 @import "kie-editor.less";
+
 @import "bpm-home.less";
 @import "bpm-library.less";
+
+// downstream red bar
+@navbar-pf-border-color: @color-pf-red;
+
+// downstream homepage background
+.kie-content--bg-image {
+  background-color: @color-pf-black-700;
+  background-image: url("@{img-path}/landing_page_gray_bg.svg");
+}
+
+// downstream brand icon
+.kie-brand-icon {
+  height: 11px;
+}
+
+// downstream modal background image
+@modal-about-pf-bg-img: 'landing_page_gray_bg.svg';
+// Set background image size to adjust the visual
+.about-modal-pf {
+  background-size: 1216px;
+}

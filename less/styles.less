@@ -1,19 +1,46 @@
 // General styles for common use
 // imported by kie-main.less
 
-@fa-font-path: "../node_modules/patternfly/node_modules/font-awesome/fonts/";
-@font-path: "../node_modules/patternfly/dist/fonts";
-@icon-font-path: "../node_modules/patternfly/node_modules/bootstrap/fonts/";
-
-// Variables
-// path to images
-@img-path: '../images';
-
 // about modal background image
-@modal-about-pf-bg-img: 'about-background.jpg';
+@modal-about-pf-bg-img: 'community_landing_page_gray_bg.jpg';
 
 html {
   font-size: @font-size-base;
+}
+
+// *** RCUE should handle this
+// Changes masthead border to Red Hat product color
+// For community version, use the default, which is @brand-primary
+.navbar-pf {
+  border-top-color: @navbar-pf-border-color;
+}
+
+.kie-brand-icon {
+  height: 100%;
+}
+
+// All drop down toggles should have the pointer cursor
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+// Bootstrap removes the focus ring on dropdowns; this replaces it for better accessibility
+.dropdown-toggle:focus {
+  .tab-focus();
+}
+
+// Skip link for improved accessibility
+[href="#kie-main-content"] {
+  position: absolute;
+  top: 0;
+  right: 100%; /* moves off screen */
+  background-color: @color-pf-black-100;
+  font-size: @font-size-relative-lg;
+  padding: @pf-spacer-md;
+  z-index: 1;
+}
+[href="#kie-main-content"]:focus {
+  right: auto;
 }
 
 // Status colors
@@ -44,7 +71,6 @@ html {
   font-size: 2.5em;
 }
 
-//refactor of the circle icon
 .kie-circle-icon {
   background-color: @alert-info-bg;
   display: flex;
@@ -67,8 +93,6 @@ html {
 .kie-circle-icon--lg {
   font-size: 4em;
 }
-// end refactor of the circle icon
-/////
 
 .button-card-text-bxms {
   max-width: 10em;
@@ -77,32 +101,60 @@ html {
 
 // Masthead overrides
 @media (min-width: @grid-float-breakpoint) {
-  .navbar-pf .navbar-header {
-    float: left;
+  .navbar-pf {
+       display: flex;
+       align-items: center;
+       flex: 1 0 100%;
+     }
+}
+// remove the line under the logo
+.navbar-pf .navbar-header {
+  border-bottom: none;
+  flex-grow: 1;
+  min-height: 58px;
+  display:flex;
+  align-items: center;
+  @media (min-width: @grid-float-breakpoint) {
+    flex-grow: 0;
   }
-  .navbar-pf .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+}
+.navbar-pf .navbar-brand {
+  padding: 0 @pf-spacer-md 0 0;
+}
+
+.navbar-pf .navbar-collapse {
+  flex: 0 1 100%;
+}
+.nav-item-iconic {
+  @media (min-width: @grid-float-breakpoint) {
+    min-height: 58px;
   }
+  font-size: 14px;
+  display:flex;
+  align-items: center;
+  border-left: none;
+  padding-left: 12px;
+}
+.nav li a.nav-item-iconic {
+  display: flex;
+}
+.navbar-pf .navbar-nav > li > a {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+// ridiculously specific fix to override an assumption about the dropdown menu
+.navbar-pf .navbar-iconic li.dropdown > .dropdown-toggle .pficon-user {
+  padding-right: @pf-spacer-xxs;
+}
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+  padding-left: 20px;
 }
 @media (min-width: @grid-float-breakpoint) {
-  .navbar-pf {
-    .navbar-brand {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+  .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
+    padding-left: 10px;
   }
-}
-.navbar-pf .navbar-primary {
-  float:left;
-  width: 100%;
-}
-.navbar-brand img {
-  height: 11px;
-  @media (max-width: 360px) {
-    width: 100%;
-  }
-
 }
 
 // Building block holder
@@ -349,6 +401,7 @@ html {
   .about-modal-pf {
     background-color: #083452;
     min-height: 30em;
+    background-size: cover;
   }
 
   // Page Content
