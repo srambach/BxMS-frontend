@@ -18855,9 +18855,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
     text-align: center;
   }
 }
+
 .kie-hero-card__link {
   font-weight: bold;
 }
+
 .kie-hero-card__action {
   display: flex;
   flex: 1 1 100%;
