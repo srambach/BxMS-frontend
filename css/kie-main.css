@@ -17775,7 +17775,6 @@ html {
 .navbar-pf .navbar-iconic li.dropdown > .dropdown-toggle .pficon-user {
   padding-right: 0.5rem;
 }
-
 .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle {
   padding-left: 20px;
 }
@@ -18527,6 +18526,7 @@ html {
 .kie-content--bg-image .blank-slate-pf {
   background-color: transparent;
   color: #d1d1d1;
+}
 .kie-content--bg-image .kie-circle-icon {
   background-color: transparent;
 }
@@ -18836,7 +18836,6 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-hero-card:focus .kie-hero-card__icon,
 .kie-hero-card:active .kie-hero-card__icon {
   background-color: #0088ce;
-
   color: #fff;
 }
 .kie-hero-card__icon {
