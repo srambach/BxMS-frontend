@@ -18484,7 +18484,10 @@ html {
 .kie-palette {
   background: #fff;
   border-collapse: collapse;
+  left: 0;
   overflow: visible;
+  position: absolute;
+  top: 0;
   width: calc(48px);
   z-index: 1030;
 }
