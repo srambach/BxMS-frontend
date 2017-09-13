@@ -3,6 +3,8 @@
 // No other less file should import Patternfly because this will cause customizations to be overwritten
 // Patternfly or KIE variables might need to be imported by reference so that the variables can be used
 
+@import "kw-fonts";
+
 @import "../node_modules/patternfly/dist/less/patternfly.less";
 @import "../node_modules/patternfly/dist/less/patternfly-additions.less";
 //must re-import variables because they've been overwritten by the bootstrap extras in pf-additions
@@ -16,3 +18,4 @@
 @import "kie-variables";
 @import "kie-nav-wizard";
 @import "case-overview-template";
+@import "kw-page-grid";

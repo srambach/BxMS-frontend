@@ -1,0 +1,170 @@
+// Styles for the knowledge working page grid
+@kie-kw-main-bg-img: 'kw-background.svg';
+@theme-primary: #6D9F00;
+
+.kw-page-grid {
+  min-height: 100vh;
+  //align-content: start;
+  align-items: stretch;
+  display:grid;
+  grid-gap: 0;
+  grid-template:
+          "topbar topbar topbar topbar" 4px
+          "leftbar brand masthead rightbar" 3em
+          "leftbar pagebody pagebody rightbar" auto
+          / 76px 1fr 3fr 12px;
+}
+
+.topbar {
+  grid-area: topbar;
+  background-color: @theme-primary;
+  //background-image: url("@{img-path}/@{kie-kw-main-bg-img}");
+  //background-size: cover;
+  //background-position: center, center;
+}
+.leftbar {
+  grid-area: leftbar;
+  background-color: @theme-primary;
+  background-image: url("@{img-path}/@{kie-kw-main-bg-img}");
+  background-size: cover;
+  background-position: right;
+}
+.rightbar {
+  grid-area: rightbar;
+  background-color: @theme-primary;
+  background-image: url("@{img-path}/@{kie-kw-main-bg-img}");
+  background-size: cover;
+  background-position: right;
+}
+.mask--light {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.mask--dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.topmask {
+  .mask--light;
+  grid-column-start: brand-start;
+  grid-row-start: topbar-start;
+}
+.rightmask {
+  .mask--light;
+  grid-column-start: rightbar-start;
+  grid-row-start: masthead-start;
+ }
+.brand {
+  grid-area: brand;
+  justify-content: center;
+  align-items: center;
+}
+.masthead {
+  grid-area: masthead;
+  background-color: lightskyblue;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+}
+.pagebody {
+  grid-area: pagebody;
+  background-color: lightyellow;
+  display:grid;
+  grid-template:
+          "pagebodysidebar pagebodycontent";
+  // "pagebodycontent pagebodysidebar" auto
+  // / 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  // grid-template-columns: 3fr 1fr;
+}
+.pagebodycontent {
+  border: 1px solid red;
+  grid-area: pagebodycontent;
+}
+.pagebodysidebar {
+  border: 1px solid blue;
+  grid-area: pagebodysidebar;
+}
+
+
+
+//@kie-grid-padding: 1em;
+//
+//.kw-page-grid {
+//  background-image: url("@{img-path}/@{kie-kw-main-bg-img}");
+//  background-size: cover;
+//
+//  min-height: 100vh;
+//  min-width: 100vw;
+//  padding: @kie-grid-padding;
+//  display:grid;
+//  align-content: start;
+//  grid-gap: @kie-grid-padding;
+//  grid-template-columns: repeat(1, 1fr);
+//  grid-template-rows: 1em, auto, 1em;
+//  grid-template:
+//          "mh"
+//          "pagecontent"
+//          "ftr";
+//}
+//
+//.kie-kw-masthead {
+//  grid-area: mh;
+//  background-color: @color-pf-blue;
+//  color: @color-pf-white;
+//}
+//
+//.kie-kw-page-content {
+//  grid-area: pagecontent;
+//  background-color: @color-pf-white;
+//  align-content: stretch;
+//  display: grid;
+//  grid-template:
+//    "breadcrumb breadcrumb" minmax(1em, auto)
+//    "pageheader pageheader" minmax(3em, auto)
+//    "filter listcontent" auto
+//    / 1fr 3fr;
+//}
+//
+//.kie-kw-footer {
+//  grid-area: ftr;
+//  background-color: transparent;
+//  color: @color-pf-white;
+//  text-align: right;
+//}
+//
+//
+//// Subgrid for the content of the page
+//.kie-kw-breadcrumb {
+//  grid-area: breadcrumb;
+//  border-bottom: 1px solid gray;
+//}
+//
+//.kie-kw.page-header {
+//  grid-area: pageheader;
+//  background-color: lightgoldenrodyellow;
+//}
+//
+//.kie-kw-filter {
+//  grid-area:filter;
+//  background-color: lightpink;
+//}
+//
+//.kie-kw-list-content {
+//  grid-area: listcontent;
+//  background-color: #92d400;
+//  //align-self: stretch;
+//}
+//
+//
+//.kie-kw-pagetitle {
+//  grid-area: pagetitle;
+//  background-color: lightyellow;
+//}
+//
+//.kie-kw-list {
+//  grid-area: mylist;
+//  background-color: lightskyblue;
+//}
+//
+//
