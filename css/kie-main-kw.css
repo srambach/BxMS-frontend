@@ -13,6 +13,7 @@
 * limitations under the License.
 */
 @import url('https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono');
+@font-family-sans-serif : “Overpass”, Overpass, “Open Sans”, Helvetica, sans-serif;
 /* PatternFly */
 @font-face {
   font-family: "Open Sans";
@@ -14706,7 +14707,7 @@ a.disabled {
 .list-pf-main-content {
   align-items: center;
   display: flex;
-  flex-basis: 70%;
+  flex-basis: 50%;
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: wrap;
@@ -14738,7 +14739,7 @@ a.disabled {
 }
 .list-pf-additional-content {
   display: flex;
-  flex-basis: 31%;
+  flex-basis: 51%;
   flex-grow: 1;
   flex-shrink: 1;
   flex-wrap: wrap;
@@ -18911,7 +18912,7 @@ h3 {
 }
 @media (min-width: 992px) {
   .kw-page-grid {
-    grid-template: "kw-topbar-area  kw-topbar-area  kw-topbar-area         kw-topbar-area         kw-topbar-area" 4px "kw-leftbar-area kw-brand-area   kw-masthead-area       kw-masthead-area       kw-rightbar-area" 56px "kw-leftbar-area kw-sidebar-area kw-breadcrumb-area     kw-breadcrumb-area     kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-header-area kw-content-status-area kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-area        kw-content-area        kw-rightbar-area" 1fr;
+    grid-template: "kw-topbar-area  kw-topbar-area  kw-topbar-area         kw-topbar-area         kw-topbar-area" 4px "kw-leftbar-area kw-brand-area   kw-masthead-area       kw-masthead-area       kw-rightbar-area" auto "kw-leftbar-area kw-sidebar-area kw-breadcrumb-area     kw-breadcrumb-area     kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-header-area kw-content-status-area kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-area        kw-content-area        kw-rightbar-area" 1fr;
     grid-template-columns: 76px 18em auto auto 12px;
   }
 }
@@ -18959,7 +18960,7 @@ h3 {
   grid-area: kw-brand-area;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 .kw-masthead-area {
   grid-area: kw-masthead-area;
@@ -19000,7 +19001,7 @@ h3 {
   grid-area: kw-sidebar-area;
 }
 .kw-sidebar-area > * + * {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 .kw-sidebar-area > * {
   margin-bottom: 1.5rem;
@@ -19014,7 +19015,11 @@ h3 {
 .filter-section > *:not(.filter-section__title) {
   font-size: 0.8125em;
 }
-.filter-section--buttons * + * {
+.filter-section--buttons > .btn {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.filter-section--buttons > .btn + .btn {
   margin-left: 1.25rem;
 }
 .kw-content-header-area {
@@ -19032,9 +19037,9 @@ h3 {
   grid-area: kw-content-status-area;
   background-color: #ededed;
 }
-.kw-profile {
-  height: 2rem;
-  width: 2rem;
+.kw-avatar {
+  height: 2.875rem;
+  width: 2.875rem;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -19193,6 +19198,10 @@ h3 {
   display: flex;
   align-items: center;
 }
+.navbar-nav > li > a {
+  padding-bottom: 0;
+  padding-top: 0;
+}
 .bootstrap-select {
   border: 2px solid #ededed;
   width: 4em;
@@ -19220,6 +19229,10 @@ h3 {
   border-right: none !important;
   box-shadow: none;
 }
+.bootstrap-datepicker.form-control[readonly]:hover {
+  border: 2px solid #ededed !important;
+  border-right: none !important;
+}
 .input-group .form-control {
   border: 2px solid #ededed;
   border-right: none;
@@ -19239,11 +19252,10 @@ h3 {
 }
 .list-pf-title {
   font-weight: 400;
-  flex-basis: 50%;
 }
 .list-pf-description,
 .list-pf-additional-content {
-  font-size: 0.75em;
+  font-size: 0.8125em;
   justify-content: flex-start;
 }
 .list-pf-description > *,
