@@ -10,11 +10,11 @@ h1, h2, h3 {
 @theme-primary: @color-pf-light-green-500;
 @link-color: @color-pf-light-blue-400;
 @kw-btn-default-color: @link-color;
-@kw-sidebar-width: 18em;
+@kw-sidebar-width: 20em;
 
 // status circles
-@kw-status-diameter: 5em;
-@kw-status__badge-diameter: 1.625em;
+@kw-status-diameter: 5.71428571em;
+@kw-status__badge-diameter: 1.85714286em;
 
 @kw-status-color: @color-pf-light-green-400;
 @kw-status-color--info: @color-pf-light-blue-400;
@@ -223,6 +223,10 @@ h1, h2, h3 {
   }
 }
 
+.filter-section__title {
+  font-size: @font-size-relative-lg;
+}
+
 .filter-section > *:not(.filter-section__title) {
   font-size: @font-size-relative-sm;
 }
@@ -298,7 +302,7 @@ h1, h2, h3 {
 
 .kw-status-aggregate__value {
   color: @kw-status-color;
-  font-size: 1.75em;
+  font-size: 2em;
   line-height: 1em;
   text-align: center;
   &--info {
@@ -475,7 +479,7 @@ list-pf-item.active .list-pf-container {
   font-size: @font-size-sm;
   font-weight: @pf-font-weight-bold;
   line-height: 1;
-  padding: @pf-spacer-xxs @pf-spacer-xl;
+  padding: @pf-spacer-xxs @pf-spacer-lg;
 }
 
 .btn-default {

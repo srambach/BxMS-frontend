@@ -2,7 +2,7 @@
 
 // default font
 @font-family-base: "overpass", Helvetica, Arial, sans-serif;
-@font-size-base: 16px;
+@font-size-base: 14px;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 //@font-size-h1: 2rem; // ~24px
@@ -13,11 +13,11 @@
 
 // Use relative font sizes when font size should vary with the parent
 //@font-size-base: 16px;
-@font-size-relative-xs:   .75em;    // 12px
-@font-size-relative-sm:   .8125em;  // 13px
-@font-size-relative-base: 1em;      // 16px
-@font-size-relative-lg:   1.25em;   // 20px
-@font-size-relative-xl:   1.375em;  // 22px
+@font-size-relative-xs:   calc((12px / @font-size-base) * 1em);    // 12px
+@font-size-relative-sm:   calc((13px / @font-size-base) * 1em);  // 13px
+@font-size-relative-base: 1em;      // 14px
+@font-size-relative-lg:   calc((16px / @font-size-base) * 1em);   // 16px
+@font-size-relative-xl:   calc((22px / @font-size-base) * 1em);  // 22px
 
 @font-size-xs:   .75rem;    // 12px
 @font-size-sm:   .8125rem;  // 13px
