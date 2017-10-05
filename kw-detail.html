@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Knowledge Worker Detail Page</title>
+
+  <link href="css/kie-main-kw.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+</head>
+<body>
+
+<div class="kw-page-grid kw-page-grid--detail">
+
+  <div class="kw-topbar-area"></div>
+  <div class="kw-leftbar-area"></div>
+  <div class="kw-brand-area">
+    <div>RED HAT SAMPLE APPLICATION</div>
+  </div>
+
+  <!-- MASTHEAD AREA -->
+  <div class="kw-masthead-area">
+
+
+    <nav class=""><!-- was: navbar -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#kw-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="fa fa-bell-o"></span></a></li>
+            <li><a href="#"><span class="fa fa-wifi"></span></a></li>
+            <li><a href="#"><span class="fa fa-th"></span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">
+                <img class="kw-avatar" src="images/profile_katie.jpg">&nbsp;&nbsp;&nbsp;
+                Katie Caseworker <span class="caret">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+
+  </div>
+
+  <!-- BREADCRUMB AREA -->
+  <div class="kw-breadcrumb-area kw-breadcrumb-area--detail">
+    <ol class="breadcrumb">
+      <li>
+        <a href="#">Task list</a>
+      </li>
+      <li class="active"><strong>Task 123</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- CONTENT HEADER AREA -->
+  <div class="kw-content-header-area kw-content-header-area--detail">
+    <div class="actions">
+      <div class="pull-right">
+        <button class="btn btn-default">Complete</button>
+      <span class="dropdown dropdown-kebab-pf">
+        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="fa fa-ellipsis-v"></span>
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </span>
+
+      </div>
+      <h2 class="kw-content-title">Task Details</h2>
+    </div>
+  </div>
+
+  <!-- CONTENT AREA -->
+  <div class="kw-content-area kw-content-area--detail">
+
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </span>
+        Form Section 1
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </span>
+        Form Section 2
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- SIDEBAR AREA -->
+  <div class="kw-sidebar-area kw-sidebar-area--detail">
+
+    <div class="list-pf">
+      <div class="list-pf-item active">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-chevron">
+            <span class="fa fa-angle-right"></span>
+          </div>
+          <div class="list-pf-content list-pf-content-flex">
+            <!--<div class="list-pf-left">-->
+            <!--<span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>-->
+            <!--</div>-->
+            <div class="list-pf-content-wrapper">
+              <div class="list-pf-main-content ">
+
+                <div class="list-pf-title">Details</div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /list-pf-container -->
+
+        <div class="list-pf-expansion collapse in">
+          <div class="list-pf-container" tabindex="0">
+            <div class="list-pf-content list-pf-content--vertical">
+              <div class="kw-status--detail">
+                <span class="kw-status__icon kw-status__icon--reverse pficon pficon-spinner"></span>
+                <span class="kw-status__label">State: <a href="#0">Started</a></span>
+              </div>
+              <div class="kw-status kw-status--detail">
+                <span class="kw-status__icon kw-status__icon--reverse kw-status__icon--warning fa fa-arrow-up"></span>
+                <span class="kw-status__label">Priority: <a href="#0">High (7)</a></span>
+              </div>
+              <div class="kw-status kw-status--detail">
+                <span
+                    class="kw-status__icon kw-status__icon--reverse kw-status__icon--warning fa fa-exclamation-triangle"></span>
+                <span class="kw-status__label">Due: <a href="#0">4 Days Ago</a></span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Contents</div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+            Contents expansion
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Activities</div>
+            </div>
+            <div class="list-pf-content">
+              <div>
+                <select class="selectpicker">
+                  <option>All</option>
+                  <option>These</option>
+                  <option>Those</option>
+                  <option disabled>Nothing</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+            Activities expansion
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Assignments</div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+            Assignments expansion
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+  </div>
+</div>
+
+
+<div class="kw-rightbar-area"></div>
+<div class="kw-top-mask"></div>
+<div class="kw-right-mask"></div>
+</div><!-- kie-page-grid -->
+
+
+<!-- To handle the expand and collapse -->
+<script>
+    $(document).ready(function () {
+        $('.list-pf').pfList();
+    });
+</script>
+
+<!-- to handle selectpicker -->
+<script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script>
+    // Initialize Boostrap-select
+    $('.selectpicker').selectpicker();
+</script>
+
+<!-- to handle datepicker -->
+<script>
+    $('#date-2').datepicker({
+        autoclose: true,
+        orientation: "top auto",
+        todayBtn: "linked",
+        todayHighlight: true
+    });
+</script>
+
+</body>
+</html>

@@ -41,10 +41,23 @@ h1, h2, h3 {
 //@kw-shadow-bottom:  inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
 //@kw-shadow-left:    inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
 
-@kw-shadow-top-inset: inset 0 -15px 15px -15px rgba(1, 1, 1, .1);
+@kw-shadow-bottom-inset: inset 0 -15px 15px -15px rgba(1, 1, 1, .1);
 @kw-shadow-right-inset: inset -15px 0 15px -15px rgba(1, 1, 1, .1);
-@kw-shadow-bottom-inset: inset 0 15px 15px -15px rgba(1, 1, 1, .1);
+@kw-shadow-top-inset: inset 0 15px 15px -15px rgba(1, 1, 1, .1);
 @kw-shadow-left-inset: inset 15px 0 15px -15px rgba(1, 1, 1, .1);
+
+.box-shadow-top-inset {
+  .box-shadow(@kw-shadow-top-inset);
+}
+.box-shadow-bottom-inset {
+  .box-shadow(@kw-shadow-bottom-inset);
+}
+.box-shadow-left-inset {
+  .box-shadow(@kw-shadow-left-inset);
+}
+.box-shadow-right-inset {
+  .box-shadow(@kw-shadow-right-inset);
+}
 
 //////
 // Page Layout
@@ -53,12 +66,46 @@ h1, h2, h3 {
   display: grid;
   align-items: stretch;
   grid-gap: 0;
-  grid-template: "kw-topbar-area         kw-topbar-area" 4px "kw-brand-area          kw-masthead-area" "kw-breadcrumb-area     kw-breadcrumb-area" "kw-content-status-area kw-content-status-area" minmax(2em, auto) "kw-sidebar-area        kw-sidebar-area" "kw-content-header-area kw-content-header-area" "kw-content-area        kw-content-area" 1fr;
+  grid-template:
+          "kw-topbar-area         kw-topbar-area" 4px
+          "kw-brand-area          kw-masthead-area"
+          "kw-breadcrumb-area     kw-breadcrumb-area"
+          "kw-content-status-area kw-content-status-area" minmax(2em, auto)
+          "kw-sidebar-area        kw-sidebar-area"
+          "kw-content-header-area kw-content-header-area"
+          "kw-content-area        kw-content-area" 1fr;
   grid-template-columns: auto auto;
 
   @media (min-width: @screen-md-min) {
-    grid-template: "kw-topbar-area  kw-topbar-area  kw-topbar-area         kw-topbar-area         kw-topbar-area" 4px "kw-leftbar-area kw-brand-area   kw-masthead-area       kw-masthead-area       kw-rightbar-area" auto "kw-leftbar-area kw-sidebar-area kw-breadcrumb-area     kw-breadcrumb-area     kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-header-area kw-content-status-area kw-rightbar-area" minmax(2em, auto) "kw-leftbar-area kw-sidebar-area kw-content-area        kw-content-area        kw-rightbar-area" 1fr;
+    grid-template:
+            "kw-topbar-area  kw-topbar-area  kw-topbar-area         kw-topbar-area         kw-topbar-area" 4px
+            "kw-leftbar-area kw-brand-area   kw-masthead-area       kw-masthead-area       kw-rightbar-area" auto
+            "kw-leftbar-area kw-sidebar-area kw-breadcrumb-area     kw-breadcrumb-area     kw-rightbar-area" minmax(2em, auto)
+            "kw-leftbar-area kw-sidebar-area kw-content-header-area kw-content-status-area kw-rightbar-area" minmax(2em, auto)
+            "kw-leftbar-area kw-sidebar-area kw-content-area        kw-content-area        kw-rightbar-area" 1fr;
     grid-template-columns: 76px @kw-sidebar-width auto auto 12px;
+
+  }
+}
+
+.kw-page-grid--detail {
+  grid-template: "kw-topbar-area         kw-topbar-area" 4px
+  "kw-brand-area          kw-masthead-area"
+  "kw-breadcrumb-area     kw-breadcrumb-area"
+  "kw-content-status-area kw-content-status-area" minmax(2em, auto)
+  "kw-sidebar-area        kw-sidebar-area"
+  "kw-content-header-area kw-content-header-area"
+  "kw-content-area        kw-content-area" 1fr;
+  grid-template-columns: auto auto;
+
+  @media (min-width: @screen-md-min) {
+    grid-template:
+            "kw-topbar-area  kw-topbar-area         kw-topbar-area         kw-topbar-area         kw-topbar-area" 4px
+            "kw-leftbar-area kw-brand-area          kw-masthead-area       kw-masthead-area       kw-rightbar-area" auto
+            "kw-leftbar-area kw-breadcrumb-area     kw-breadcrumb-area     kw-sidebar-area kw-rightbar-area" minmax(2em, auto)
+            "kw-leftbar-area kw-content-header-area kw-content-header-area kw-sidebar-area kw-rightbar-area" minmax(2em, auto)
+            "kw-leftbar-area kw-content-area        kw-content-area        kw-sidebar-area kw-rightbar-area" 1fr;
+    grid-template-columns: 76px auto auto @kw-sidebar-width 12px;
 
   }
 }
@@ -130,11 +177,23 @@ h1, h2, h3 {
     .box-shadow(@kw-shadow-left-inset);
   }
 }
+.kw-breadcrumb-area--detail {
+  @media (min-width: @screen-sm-min) {
+    .box-shadow(@kw-shadow-right-inset);
+  }
+}
 
 .kw-content-area {
   grid-area: kw-content-area;
   @media (min-width: @screen-sm-min) {
     .box-shadow(@kw-shadow-left-inset);
+  }
+}
+.kw-content-area--detail {
+  padding: @pf-spacer-sm @pf-spacer-lg;
+  background-color: @color-pf-black-200;
+  @media (min-width: @screen-sm-min) {
+    .box-shadow(@kw-shadow-right-inset);
   }
 }
 
@@ -146,6 +205,12 @@ h1, h2, h3 {
   }
   > * {
     margin-bottom: @pf-spacer-lg;
+  }
+}
+.kw-sidebar-area--detail {
+  padding: 0;
+  @media (min-width: @screen-sm-min) {
+    .box-shadow(@kw-shadow-top-inset);
   }
 }
 
@@ -178,6 +243,11 @@ h1, h2, h3 {
   padding: 0 2em;
   @media (min-width: @screen-sm-min) {
     .box-shadow(@kw-shadow-left-inset);
+  }
+}
+.kw-content-header-area--detail {
+  @media (min-width: @screen-sm-min) {
+    .box-shadow(@kw-shadow-right-inset);
   }
 }
 
@@ -305,16 +375,45 @@ h1, h2, h3 {
   padding-left: @pf-spacer-md;
 }
 
+.kw-status--detail {
+  font-size: @font-size-relative-sm;
+  > * + * {
+    margin-left: @pf-spacer-sm;
+  }
+}
 .kw-status__icon {
   color: @kw-status-color;
   font-size: @font-size-relative-xl;
   &--info {
     color: @kw-status-color--info;
+    &.kw-status__icon--reverse {
+      color: white;
+      background-color: @kw-status-color--info;
+    }
   }
   &--warning {
     color: @kw-status-color--warning;
+    &.kw-status__icon--reverse {
+      color: white;
+      background-color: @kw-status-color--warning;
+    }
   }
 }
+
+.kw-status__icon--reverse {
+  width: @kw-status__badge-diameter;
+  height: @kw-status__badge-diameter;
+  color: @color-pf-white;
+  //text-align: center;
+  //align-self: flex-end;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @kw-status-color;
+// TODO: FIX THIS!!
+}
+
 
 .kw-additional-content__item * + * {
   margin-left: @pf-spacer-xs;
@@ -323,6 +422,49 @@ h1, h2, h3 {
 // TEMPORARY FIX FOR PATTERNFLY LIST
 .list-pf-chevron {
   min-width: 1.2em; // ensures that the width does not shift when the chevron is sideways
+}
+// Other tweaks to Patternfly list
+// turn off the border for active list items
+list-pf-item.active .list-pf-container {
+  border-bottom-width: 0;
+}
+.list-pf-expansion .list-pf-container {
+  border-top-width: 0;
+  border-bottom-color: red;
+}
+// make the items transparent so that the shadown shows through
+.list-pf-item,
+.list-pf-item:hover,
+.list-pf-item.active,
+.list-pf-expansion {
+  background-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.list-pf-title {
+  //font-size: @font-size-relative-base;
+  font-weight: @pf-font-weight-normal;
+}
+
+.list-pf-description,
+.list-pf-additional-content {
+  font-size: @font-size-relative-sm;
+  justify-content: flex-start;
+  > * {
+    margin-left: @pf-spacer-sm;
+    margin-right: @pf-spacer-sm;
+  }
+}
+
+// adds an option to display the items inside the list contents vertically
+.list-pf-content--vertical {
+  display:flex;
+  flex-direction: column;
+  > * + * {
+    margin-top: @pf-spacer-md;
+  }
 }
 
 //// general button style
@@ -353,7 +495,7 @@ h1, h2, h3 {
 // dropdowns
 .dropdown-toggle {
   border-radius: 0;
-  background-color: @color-pf-white;
+  background-color: transparent;
   font-size: @font-size-sm;
 }
 
@@ -441,27 +583,6 @@ h1, h2, h3 {
   box-shadow: none;
 }
 
-.list-pf-item,
-.list-pf-item:hover,
-.list-pf-item.active,
-.list-pf-expansion {
-  background-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
+.panel-heading {
+  border-bottom: 2px solid @color-pf-black-200;
 }
-
-.list-pf-title {
-  //font-size: @font-size-relative-base;
-  font-weight: @pf-font-weight-normal;
-}
-
-.list-pf-description,
-.list-pf-additional-content {
-  font-size: @font-size-relative-sm;
-  justify-content: flex-start;
-  > * {
-    margin-left: @pf-spacer-sm;
-    margin-right: @pf-spacer-sm;
-  }
-}
-
