@@ -1,0 +1,391 @@
+/// try this
+//nav *:not(.dropdown),
+//nav *:not(.dropdown) .dropdown-toggle,
+//nav * {
+//  display:flex;
+//  align-items: stretch;
+//}
+//nav a {
+//  display: flex;
+//  align-items: center;
+//}
+
+// adjust the hamburger menu
+.icon-bar {
+  background-color: @text-color;
+}
+.navbar-toggle {
+  margin: 0;
+  top: inherit;
+}
+.navbar {
+  margin: 0;
+  width: 100%;
+  min-height: 0;
+  font-size: @font-size-relative-lg
+}
+.nav.navbar-nav {
+  display: block;
+  @media (min-width: @grid-float-breakpoint) {
+    display: flex;
+  }
+}
+
+// specifics for sections of filters
+.filter-section {
+  > * + * {
+    margin-top: @pf-spacer-sm;
+  }
+  > * {
+    margin-bottom: @pf-spacer-md;
+  }
+}
+
+.filter-section__title {
+  font-size: @font-size-relative-lg;
+}
+
+.filter-section > *:not(.filter-section__title) {
+  font-size: @font-size-relative-sm;
+}
+
+.filter-section--buttons {
+  > .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  > .btn + .btn {
+    margin-left: @pf-spacer-md;
+  }
+}
+
+/////
+// Components
+
+// avatar
+.kw-avatar {
+  height: @kw-avatar-size;
+  width: @kw-avatar-size;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+//breadcrumb
+.breadcrumb {
+  font-size: @font-size-relative-sm;
+  font-weight: @pf-font-weight-bold;
+  margin: 0;
+}
+
+///// Status circles
+.kw-statuses {
+  display: flex;
+  justify-content: space-between;
+  padding: @pf-spacer-xl @pf-spacer-xxxl;
+  > * {
+    margin-right: @pf-spacer-md;
+  }
+}
+
+.kw-status-aggregate {
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  height: @kw-status-diameter;
+  width: @kw-status-diameter;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.kw-status-aggregate__value {
+  color: @kw-status-color;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  &--info {
+    color: @kw-status-color--info;
+  }
+  &--warning {
+    color: @kw-status-color--warning;
+  }
+}
+
+.kw-status-aggregate__label {
+  font-size: @font-size-relative-sm;
+  text-align: center;
+}
+
+.kw-status-aggregate__badge {
+  position: absolute;
+  bottom: 0;
+  right: -.4375em;
+  width: @kw-status__badge-diameter;
+  height: @kw-status__badge-diameter;
+  background-color: @kw-status-color;
+  color: @color-pf-white;
+  text-align: center;
+  align-self: flex-end;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &--info {
+    background-color: @kw-status-color--info;
+  }
+  &--warning {
+    background-color: @kw-status-color--warning;
+  }
+}
+
+// content title
+.kw-content-title {
+  font-size: @font-size-relative-xl;
+  font-weight: @pf-font-weight-light;
+  //padding-top: @pf-spacer-md;
+  //padding-bottom: @pf-spacer-sm;
+}
+
+// Filter list
+.kw-filter-labels {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  > * {
+    margin-right: @pf-spacer-sm;
+    margin-bottom: @pf-spacer-xs;
+  }
+}
+
+.kw-label--filter {
+  background-color: @color-pf-white;
+  border-radius: 1em;
+  color: @text-color;
+  font-size: @font-size-relative-sm;
+  font-weight: @pf-font-weight-bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: .3em;
+  padding-bottom: .2em;
+}
+
+.kw-filter__closer {
+  font-size: @font-size-relative-xl;
+  padding-left: @pf-spacer-md;
+}
+
+.kw-status--detail {
+  font-size: @font-size-relative-sm;
+  > * + * {
+    margin-left: @pf-spacer-sm;
+  }
+}
+.kw-status__icon {
+  color: @kw-status-color;
+  font-size: @font-size-relative-xl;
+  &--info {
+    color: @kw-status-color--info;
+    &.kw-status__icon--reverse {
+      color: white;
+      background-color: @kw-status-color--info;
+    }
+  }
+  &--warning {
+    color: @kw-status-color--warning;
+    &.kw-status__icon--reverse {
+      color: white;
+      background-color: @kw-status-color--warning;
+    }
+  }
+}
+
+.kw-status__icon--reverse {
+  width: @kw-status__badge-diameter;
+  height: @kw-status__badge-diameter;
+  color: @color-pf-white;
+  //text-align: center;
+  //align-self: flex-end;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @kw-status-color;
+  // TODO: FIX THIS!!
+}
+
+
+.kw-additional-content__item * + * {
+  margin-left: @pf-spacer-xs;
+}
+
+// TEMPORARY FIX FOR PATTERNFLY LIST
+.list-pf-chevron {
+  min-width: 1.2em; // ensures that the width does not shift when the chevron is sideways
+}
+// Other tweaks to Patternfly list
+// turn off the border for active list items
+list-pf-item.active .list-pf-container {
+  border-bottom-width: 0;
+}
+.list-pf-expansion .list-pf-container {
+  border-top-width: 0;
+  border-bottom-color: red;
+}
+// make the items transparent so that the shadown shows through
+.list-pf-item,
+.list-pf-item:hover,
+.list-pf-item.active,
+.list-pf-expansion {
+  background-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.list-pf-title {
+  //font-size: @font-size-relative-base;
+  font-weight: @pf-font-weight-normal;
+}
+
+.list-pf-description,
+.list-pf-additional-content {
+  font-size: @font-size-relative-sm;
+  justify-content: flex-start;
+  > * {
+    margin-left: @pf-spacer-sm;
+    margin-right: @pf-spacer-sm;
+  }
+}
+
+// adds an option to display the items inside the list contents vertically
+.list-pf-content--vertical {
+  display:flex;
+  flex-direction: column;
+  > * + * {
+    margin-top: @pf-spacer-md;
+  }
+}
+
+//// general button style
+.btn {
+  border-radius: @pf-spacer-sm;
+  background-color: @color-pf-black-200;
+  box-shadow: none;
+  font-size: @font-size-sm;
+  font-weight: @pf-font-weight-bold;
+  line-height: 1;
+  padding: @pf-spacer-xxs @pf-spacer-lg;
+}
+
+.btn-default {
+  background-image: none;
+  border: none;
+  &:not(.dropdown-toggle) {
+    background-color: @kw-btn-default-color;
+    color: @color-pf-white;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten(@kw-btn-default-color, 10%)
+    }
+  }
+}
+
+// dropdowns
+.dropdown-toggle {
+  border-radius: 0;
+  background-color: transparent;
+  font-size: @font-size-sm;
+}
+
+.dropdown-menu {
+  font-size: @font-size-sm;
+}
+
+// fix the dropdown in the masthead
+.kw-masthead-area a {
+  color: @text-color;
+  &:hover {
+    color: @link-color;
+    background-color: transparent;
+  }
+}
+
+// remove masthead nav hover
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+// vertically center the nav items
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  & > li > a {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+// override bootstrap for the select controls
+.bootstrap-select {
+  border: 2px solid @color-pf-black-200;
+  width: 4em;
+  > .dropdown-toggle {
+    padding-left: @pf-spacer-xxs;
+  }
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100%;
+}
+
+// style the input button to be on top of the text input
+// override bootstrap here
+.input-group-btn,
+.input-group-addon:last-child {
+  border: 2px solid @color-pf-black-200;
+  border-left: none;
+
+}
+
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group,
+.input-group-addon:last-child {
+  background-color: @color-pf-white;
+  border-radius: 0;
+  padding: 0 @pf-spacer-xs;
+}
+
+// this styles the datepicker
+// !important required to override datepicker's !important
+.bootstrap-datepicker.form-control[readonly] {
+  border: 2px solid @color-pf-black-200 !important;
+  border-right: none !important;
+  box-shadow: none;
+  &:hover {
+    border: 2px solid @color-pf-black-200 !important;
+    border-right: none !important;
+  }
+}
+
+// this styles the search
+.input-group .form-control {
+  border: 2px solid @color-pf-black-200;
+  border-right: none;
+  box-shadow: none;
+}
+
+// this styles the search box
+.form-control {
+  border: 2px solid @color-pf-black-200;
+  box-shadow: none;
+}
+
+.panel-heading {
+  border-bottom: 2px solid @color-pf-black-200;
+}

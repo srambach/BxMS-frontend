@@ -4,6 +4,9 @@
 @font-family-base: "overpass", Helvetica, Arial, sans-serif;
 @font-size-base: 14px;
 
+html, body {
+  font-size: @font-size-base;
+}
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 //@font-size-h1: 2rem; // ~24px
 //@font-size-h2: 1.8333rem; // ~22px
@@ -19,10 +22,37 @@
 @font-size-relative-lg:   calc((16px / @font-size-base) * 1em);   // 16px
 @font-size-relative-xl:   calc((22px / @font-size-base) * 1em);  // 22px
 
-@font-size-xs:   .75rem;    // 12px
-@font-size-sm:   .8125rem;  // 13px
-//@font-size-base: 16px
-@font-size-lg:   1.25rem;   // 20px
-@font-size-xl:   1.375rem;  // 22px
+@font-size-xs:   calc((12px / @font-size-base) * 1rem); //.75rem;    // 12px
+@font-size-sm:   calc((13px / @font-size-base) * 1rem); //.8125rem;  // 13px
+//@font-size-base: 14px
+@font-size-lg:   calc((16px / @font-size-base) * 1rem); //1.25rem;   // 16px
+@font-size-xl:   calc((22px / @font-size-base) * 1rem); //1.375rem;  // 22px
 
 @text-color: #252525;
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/////
+// Variables
+@kie-kw-main-bg-img: 'kw-background.svg';
+@theme-primary: @color-pf-light-green-500;
+@link-color: @color-pf-light-blue-400;
+@kw-btn-default-color: @link-color;
+@kw-sidebar-width: 21em;
+
+// status circles
+@kw-status-diameter: 5.71428571em;
+@kw-status__badge-diameter: 1.85714286em;
+
+@kw-status-color: @color-pf-light-green-400;
+@kw-status-color--info: @color-pf-light-blue-400;
+@kw-status-color--warning: @color-pf-gold-400;
+
+//  avatar
+@kw-avatar-size: calc((46px / @font-size-base) * 1rem);
+
+//
+@list-pf-main-content-width: 50%; // sets the proportional width of the main content vs the additional content
+
