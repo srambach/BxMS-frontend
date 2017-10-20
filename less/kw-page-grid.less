@@ -221,11 +221,12 @@
 .kw-content-header-area {
   grid-area: kw-content-header-area;
   background-color: @color-pf-black-200;
-  padding: 1em 2em;
+  padding: @pf-spacer-lg @pf-spacer-xxl;
   @media (min-width: @screen-md-min) {
     .box-shadow(@kw-shadow-left-inset);
+    padding-top: 0;
   }
-  > * + *:not(:last-child) {
+  > *:not(:last-child) {
     margin-bottom: @pf-spacer-sm;
   }
 }
