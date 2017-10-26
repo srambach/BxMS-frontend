@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Knowledge Worker Detail Page</title>
+
+  <link href="css/kie-main-kw.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+</head>
+<body>
+
+<div class="kw-page-grid kw-page-grid--detail">
+
+  <div class="kw-topbar-area"></div>
+  <div class="kw-leftbar-area"></div>
+  <div class="kw-brand-area">
+    <span>RED HAT SAMPLE APPLICATION</span>
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+  </div>
+
+  <!-- MASTHEAD AREA -->
+  <div class="kw-masthead-area">
+
+
+    <nav class="navbar"><!-- was: navbar -->
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+                  <!--data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+            <!--<span class="sr-only">Toggle Navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+          <!--</button>-->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="fa fa-bell-o"></span></a></li>
+            <li><a href="#"><span class="fa fa-signal"></span></a></li>
+            <li><a href="#"><span class="fa fa-th"></span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">
+                <img class="kw-avatar" src="images/profile_katie.jpg">&nbsp;&nbsp;&nbsp;
+                Katie Caseworker <span class="caret">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+
+  </div>
+
+  <!-- BREADCRUMB AREA -->
+  <div class="kw-breadcrumb-area kw-breadcrumb-area--detail">
+    <ol class="breadcrumb">
+      <li>
+        <a href="#">Task list</a>
+      </li>
+      <li class="active"><strong>Task 123</strong>
+      </li>
+    </ol>
+  </div>
+
+  <!-- CONTENT HEADER AREA -->
+  <div class="kw-content-header-area kw-content-header-area--detail">
+    <div class="actions">
+      <div class="pull-right">
+        <button class="btn btn-default">Complete</button>
+      <span class="dropdown dropdown-kebab-pf">
+        <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="fa fa-ellipsis-v"></span>
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="dropdownKebab">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </span>
+
+      </div>
+      <h2 class="kw-content-title">Task Details</h2>
+    </div>
+  </div>
+
+  <!-- CONTENT AREA -->
+  <div class="kw-content-area kw-content-area--detail">
+
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </span>
+        Form Section 1
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </span>
+        Form Section 2
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- SIDEBAR AREA -->
+  <div class="kw-sidebar-area kw-sidebar-area--detail">
+
+    <div class="list-pf">
+      <div class="list-pf-item active">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-chevron">
+            <span class="fa fa-angle-right"></span>
+          </div>
+          <div class="list-pf-content list-pf-content-flex">
+            <!--<div class="list-pf-left">-->
+            <!--<span class="fa fa-plane list-pf-icon list-pf-icon-bordered list-pf-icon-small"></span>-->
+            <!--</div>-->
+            <div class="list-pf-content-wrapper">
+              <div class="list-pf-main-content ">
+
+                <div class="list-pf-title">Details</div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /list-pf-container -->
+
+        <div class="list-pf-expansion collapse in">
+          <div class="list-pf-container" tabindex="0">
+            <div class="list-pf-content list-pf-content--vertical">
+              <div class="kw-status--detail">
+                <span class="kw-status__icon kw-status__icon--reverse pficon pficon-spinner"></span>
+                <span class="kw-status__label">State: <a href="#0">Started</a></span>
+              </div>
+              <div class="kw-status kw-status--detail">
+                <span class="kw-status__icon kw-status__icon--reverse kw-status__icon--warning fa fa-arrow-up"></span>
+                <span class="kw-status__label">Priority: <a href="#0">High (7)</a></span>
+              </div>
+              <div class="kw-status kw-status--detail">
+                <span
+                    class="kw-status__icon kw-status__icon--reverse kw-status__icon--warning fa fa-exclamation-triangle"></span>
+                <span class="kw-status__label">Due: <a href="#0">4 Days Ago</a></span>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Contents</div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+            Contents expansion
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Activities</div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+              <select class="selectpicker">
+                <option>All activities</option>
+                <option>Milestones</option>
+                <option>Comments</option>
+                <option>Documents</option>
+                <option disabled>Nothing</option>
+              </select>
+            <!-- Activities -->
+            <div class="kie-scrollbox kie-scrollbox--activities">
+              <div class="list-group kie-activities kie-activities--dotted-line">
+
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon1">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm " data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          4 seconds ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Milestone1 reached
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon2">
+                        <span class="fa fa-paperclip list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Document activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          1 minute ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          admin added a document
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon3">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          5 days ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Milestone1 ready
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon4">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Comment activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          10 minutes ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Aimee added a comment
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          9 days ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Aimee added a comment
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Comment activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          9 days ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Aimee added a comment
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                  <div class="list-view-pf-main-info kie-activities__main-info">
+                    <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                    </div>
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                        <div class="list-group-item-text">
+                          10 days ago
+                        </div>
+                        <div class="list-group-item-heading">
+                          Case started by Cami (owner)
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+    <div class="list-pf-item">
+      <div class="list-pf-container" tabindex="0">
+        <div class="list-pf-chevron">
+          <span class="fa fa-angle-right"></span>
+        </div>
+        <div class="list-pf-content list-pf-content-flex">
+          <div class="list-pf-content-wrapper">
+            <div class="list-pf-main-content ">
+
+              <div class="list-pf-title">Assignments</div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /list-pf-container -->
+
+      <div class="list-pf-expansion collapse">
+        <div class="list-pf-container" tabindex="0">
+          <div class="list-pf-content">
+            <!-- ROLES -->
+            <div class="kie-scrollbox">
+              <div class=" list-group kie-list-view--embedded">
+                <div class="list-group-item">
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Case Owner
+                        </div>
+                        <div class="list-group-item-text">
+                          Aimee
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Compliance
+                        </div>
+                        <div class="list-group-item-text">
+                          Cami
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Reviewers
+                        </div>
+                        <div class="list-group-item-text">
+                          Cami, Paula
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- more items that are below the fold of the list -->
+                <div class="list-group-item">
+                  <!--<div class="">-->
+                  <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                  <!--<button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"-->
+                  <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                  <!--<span class="fa fa-ellipsis-v"></span>-->
+                  <!--</button>-->
+                  <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                  <!--<li><a href="#">Accept</a></li>-->
+                  <!--</ul>-->
+                  <!--</div>-->
+                  <!--</div>-->
+
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Case Owner
+                        </div>
+                        <div class="list-group-item-text">
+                          Aimee
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Compliance
+                        </div>
+                        <div class="list-group-item-text">
+                          Cami
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="kie-list-group-item-content">
+                    <div class="list-view-pf-body">
+                      <div class="list-view-pf-description">
+                        <div class="list-group-item-heading">
+                          Reviewers
+                        </div>
+                        <div class="list-group-item-text">
+                          Cami, Paula
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- scrollbox -->
+          </div>
+        </div> <!-- /list-pf-container -->
+
+
+      </div> <!-- /list-pf-expansion level 2 -->
+    </div> <!-- /list-pf-expansion level 1 -->
+  </div>
+</div>
+
+
+<div class="kw-rightbar-area"></div>
+<div class="kw-top-mask"></div>
+<div class="kw-right-mask"></div>
+</div><!-- kie-page-grid -->
+
+
+<!-- To handle the list expand and collapse -->
+<script>
+    $(document).ready(function () {
+        $('.list-pf').pfList();
+    });
+</script>
+
+<!-- to handle selectpicker -->
+<script src="/components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script>
+    // Initialize Boostrap-select
+    $('.selectpicker').selectpicker();
+</script>
+
+<!-- to handle datepicker -->
+<script>
+    $('#date-2').datepicker({
+        autoclose: true,
+        orientation: "top auto",
+        todayBtn: "linked",
+        todayHighlight: true
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Case View</title>
+
+  <!-- CSS for Knowledge Worker pages -->
+  <link href="css/kie-main-kw.css" rel="stylesheet" media="screen, print">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.js"></script>
+
+  <!-- matchHeight for cards -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+
+</head>
+<body>
+
+
+<!-- Masthead -->
+<nav class="navbar navbar-default navbar-pf ">
+  <div class="navbar-header ">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/" class="navbar-brand">
+      <h4>APPLICATION NAME</h4>
+    </a>
+  </div>
+  <nav class="collapse navbar-collapse navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-utility">
+      <li class="dropdown">
+        <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="true">
+          <span title="Username" class="pficon pficon-user"></span>
+          Administrator
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</nav>
+
+<!--everything under the masthead -->
+<div class="container-fluid kie-container--page">
+
+  <div class="row">
+    <!-- breadcrumb -->
+    <div class="col-xs-9 col-sm-10">
+      <ol class="breadcrumb">
+        <li>
+          <a href="#">Back to Case List</a>
+        </li>
+        <li class="active">
+          <strong>Case0200b</strong>
+        </li>
+      </ol>
+    </div>
+    <!-- refresh button -->
+    <div class="col-xs-3 col-sm-2 text-right">
+      <span class="fa fa-refresh " id="refreshCaseList" data-toggle="tooltip" data-placement="left"
+            title="refresh"></span>
+      <a href="">Refresh</a>
+    </div>
+  </div>
+
+  <!-- toolbar -->
+  <div class="row vertical-align row-eq-height kie-case-view-header">
+    <!-- Title  -->
+    <div class="col-xs-12 col-sm-3 kie-case-view-header__lhs">
+      <span class="kie-case-view-header__title">Case0020b </span>
+      <span class="kie-case-view-header__subtitle">(Robert Frost)</span>
+    </div>
+
+    <!-- right hand side -->
+    <div class="col-xs-12 col-sm-9  ">
+      <div class="row kie-case-view-header__rhs">
+        <!-- stages -->
+        <div class="col-xs-12 col-sm-9 col-md-10 kie-case-view-header__stages">
+          <ul class="nav kie-nav-wizard kie-toolbar__nav-wizard" data-toggle="tooltip" data-placement="bottom"
+              title="Step 1 - Completed
+                  Step 2 - Completed
+                  Step 3 - Completed and long text here
+                  Step 4 - Completed
+                  Step 5 - Active (current)
+                  Step 6 - Not Yet Reached asdf
+                  Step 7 - Not Yet Reached
+                  Step 8 - Not Yet Reached and also quite long
+                  Step 9 - Not Yet Reached">
+            <li><a>Step 1 - Completed</a></li>
+            <li><a>Step 2 - Completed</a></li>
+            <li><a>Step 3 - Completed and long text here</a></li>
+            <li><a>Step 4 - Completed</a></li>
+            <li class='active'><a>Step 5 - Active</a></li>
+            <li><a>Step 6 - Not Yet Reached</a></li>
+            <li><a>Step 7 - Not Yet Reached</a></li>
+            <li><a>Step 8 - Not Yet Reached and also quite long</a></li>
+            <li><a>Step 9 - Not Yet Reached</a></li>
+          </ul>
+        </div>
+
+        <!-- actions -->
+        <div class="col-xs-12 col-sm-3 col-md-2 kie-case-view-header__actions">
+      <span class="btn-group">
+              <button type="button" class="btn btn-primary" id="newProjectButton">Complete</button>
+
+        <!-- kebab menu -->
+        <div class="dropdown btn-group  dropdown-kebab-pf">
+          <button class="btn btn-link dropdown-toggle" type="button" id="dropdownProjectKebab"
+                  data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="true">
+            <span class="fa fa-ellipsis-v"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownProjectKebab"
+              id="dropdownProjectKebabMenu">
+            <li><a href="#">Close</a></li>
+          </ul>
+        </div>
+     </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- tabs -->
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- navigation tabs -->
+      <ul class=" nav nav-tabs" id="navTabs">
+        <li class="active"><a href="#">Overview</a></li>
+        <li><a href="#">Activity</a></li>
+        <li><a href="#">Documents</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div class="row ">
+    <div class="col-sm-12">
+
+      <div class="cards-pf">
+        <div class="container-cards-pf">
+          <div class="row row-cards-pf">
+
+            <!-- case details card -->
+            <div class="col-xs-12 col-sm-12 col-md-3">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <!--<div class="dropdown kie-card__toolbar">-->
+                  <!--<button type="button" class="btn btn-default">-->
+                  <!--Close-->
+                  <!--</button>-->
+                  <!--</div>-->
+                  <h2 class="card-pf-title">
+                    Case Details
+                  </h2>
+                </div>
+                <div class="card-pf-body">
+                  <dl>
+                    <dt>Case ID</dt>
+                    <dd>Case0200b</dd>
+                    <dt>Case Name</dt>
+                    <dd>Development case instance.</dd>
+                    <dt>Status</dt>
+                    <dd>
+                      <span class="label label-success">Active</span>
+                    </dd>
+                    <dt>Owner</dt>
+                    <dd>Cami</dd>
+                    <dt>State</dt>
+                    <dd>Started on 2016-11-07</dd>
+
+                  </dl>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- task actions card -->
+            <div class="col-xs-12 col-sm-12 col-md-9 ">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class=" kie-card__toolbar">
+                    <!-- View All Tasks feature removed -->
+                    <!--<div class="kie-toolbar__group">-->
+                    <!--<span>-->
+                    <!--<a href="" class="card-pf-link-with-icon">-->
+                    <!--<span class="fa fa-external-link-square glyphicon-resize-full"></span>-->
+                    <!--View All Tasks </a>-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <div class="kie-toolbar__group">
+                      <button type="button" class="btn btn-default">
+                        Add
+                      </button>
+                      <!--<div class="dropdown dropdown-kebab-pf pull-right">-->
+                      <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab"-->
+                      <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                      <!--<span class="fa fa-ellipsis-v"></span>-->
+                      <!--</button>-->
+                      <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">-->
+                      <!--<li><a href="#">Action</a></li>-->
+                      <!--<li><a href="#">Another action</a></li>-->
+                      <!--<li><a href="#">Something else here</a></li>-->
+                      <!--<li role="separator" class="divider"></li>-->
+                      <!--<li><a href="#">Separated link</a></li>-->
+                      <!--</ul>-->
+                      <!--</div>-->
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Task Actions
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+                    <!-- Available task actions -->
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                      <div>
+                        <div class="kie-card-heading--embedded">
+                          <h3 class="card-pf-subtitle kie-card__subtitle">
+                            <span class="fa fa-flag-o kie-card__subtitle-icon kie-card__subtitle-icon--available"></span>
+                            Available
+                            <span class="badge">12</span>
+                            <!--<div class="dropdown dropdown-kebab-pf pull-right">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab"-->
+                            <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                            <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+
+                          </h3>
+                        </div>
+
+                        <div class="kie-scrollbox">
+                          <div class=" list-group kie-list-view--embedded"><!-- list-view-pf list-view-pf-view -->
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Review Document
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded2"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Collect documents
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf dropup">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Approve document
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- more items that are below the fold of the list -->
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded4"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Collect documents
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded5"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Approve document
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="">
+                                <div class="dropdown pull-right dropdown-kebab-pf dropup">
+                                  <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded6"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                    <li><a href="#">Accept</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="kie-list-group-item-content">
+                                <div class="list-view-pf-body">
+                                  <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                      Collect documents
+                                    </div>
+                                    <div class="list-group-item-text">
+                                      Unassigned
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div><!-- scrollbox -->
+                        <div class="kie-list__pagination">
+                          <a href="" class=" disabled"><span class="fa fa-chevron-circle-up"></span></a>
+                          <a href="" class=""><span class="fa fa-chevron-circle-down"></span></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- In-progress task actions -->
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                      <div class="kie-card-heading--embedded">
+                        <h3 class="card-pf-subtitle kie-card__subtitle">
+                    <span
+                        class="fa fa-flag-checkered kie-card__subtitle-icon kie-card__subtitle-icon--inprogress"></span>
+                          In-Progress
+                          <span class="badge">1</span>
+                          <!--<div class="dropdown dropdown-kebab-pf pull-right">-->
+                          <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab"-->
+                          <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                          <!--<span class="fa fa-ellipsis-v"></span>-->
+                          <!--</button>-->
+                          <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebab">-->
+                          <!--<li><a href="#">Action</a></li>-->
+                          <!--<li><a href="#">Another action</a></li>-->
+                          <!--<li><a href="#">Something else here</a></li>-->
+                          <!--<li role="separator" class="divider"></li>-->
+                          <!--<li><a href="#">Separated link</a></li>-->
+                          <!--</ul>-->
+                          <!--</div>-->
+
+                        </h3>
+
+                      </div>
+
+                      <div class="kie-scrollbox">
+                        <div class="list-group kie-list-view--embedded">
+                          <div class="list-group-item">
+                            <!--<div class="">-->
+                            <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                            <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="kie-list-group-item-content">-->
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Review other documents
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    2 seconds ago (Aimee)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Completed task actions -->
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                      <div class="kie-card-heading--embedded">
+                        <h3 class="card-pf-subtitle kie-card__subtitle">
+                          <span class="fa fa-flag kie-card__subtitle-icon kie-card__subtitle-icon--complete"></span>
+                          Completed
+                          <!--<span class="badge">1</span>-->
+                        </h3>
+                      </div>
+
+                      <div class="kie-scrollbox">
+                        <div class="list-group kie-list-view--embedded">
+                          <div class="list-group-item">
+                            <!--<div class="">-->
+                            <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                            <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="kie-list-group-item-content">-->
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Reconcile payments
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    2 days ago (Deepak)
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div><!-- /row -->
+
+          <div class="row row-cards-pf">
+
+            <!-- roles card -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-md-push-9">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class=" kie-card__toolbar">
+                    <div class="kie-toolbar__group">
+                      <button type="button" class="btn btn-default">
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Roles
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+                    <!-- Roles -->
+                    <div class="col-xs-12">
+
+                      <div class="kie-scrollbox">
+                        <div class=" list-group kie-list-view--embedded">
+                          <div class="list-group-item">
+                            <!--<div class="">-->
+                            <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"-->
+                            <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                            <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                            <!--<li><a href="#">Accept</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Case Owner
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Aimee
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-group-item">
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Compliance
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Cami
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-group-item">
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Reviewers
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Cami, Paula
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- more items that are below the fold of the list -->
+                          <div class="list-group-item">
+                            <!--<div class="">-->
+                            <!--<div class="dropdown pull-right dropdown-kebab-pf">-->
+                            <!--<button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded1"-->
+                            <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                            <!--<span class="fa fa-ellipsis-v"></span>-->
+                            <!--</button>-->
+                            <!--<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">-->
+                            <!--<li><a href="#">Accept</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Case Owner
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Aimee
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-group-item">
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Compliance
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Cami
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-group-item">
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Reviewers
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Cami, Paula
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div><!-- scrollbox -->
+                      <div class="kie-list__pagination">
+                        <a href="" class="disabled"><span class="fa fa-chevron-circle-up"></span></a>
+                        <a href="" class=""><span class="fa fa-chevron-circle-down"></span></a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- comments card -->
+            <div class="col-xs-12 col-sm-6">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <h2 class="card-pf-title">
+                    Comments
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+
+                    <!-- Comments list -->
+                    <div class="col-xs-12">
+
+                      <!-- input for comments -->
+                      <!--<div class=" list-group kie-list-view&#45;&#45;embedded">-->
+
+                      <div class="list-group-item kie-list-group-item--header">
+                        <div class="list-view-pf-actions kie-comments__pf-actions">
+                          <a href="">
+                            <span class="fa fa-plus-circle pull-right kie-comments__add-button"></span>
+                          </a>
+                        </div>
+                        <div class="list-view-pf-main-info kie-comments__main-info">
+                          <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                            <span class="pficon pficon-user list-view-pf-icon-sm"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-comments__list-view-pf-description">
+                              <input type="text" class="form-control input-lg" placeholder="Add a comment.">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--</div>-->
+
+                      <!-- list of comments -->
+                      <div class="kie-scrollbox kie-scrollbox--comments">
+                        <div class=" list-group kie-list-view--embedded">
+
+                          <div class="list-group-item list-view-pf-stacked">
+                            <div class="list-view-pf-actions kie-comments__pf-actions">
+                              2 seconds ago
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+                                  <li><a href="#">Delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-view-pf-main-info kie-comments__main-info">
+                              <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                                <span class="pficon pficon-user list-view-pf-icon-sm kie-no-highlight"></span>
+                              </div>
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description kie-comments__list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Katie Person <span class="kie-item-heading__role">(kw-01)</span>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    @aimee: Meeting with Jane Person today.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item list-view-pf-stacked">
+                            <div class="list-view-pf-actions kie-comments__pf-actions">
+                              2 days ago
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+                                  <li><a href="#">Delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-view-pf-main-info kie-comments__main-info">
+                              <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                                <span class="pficon pficon-user list-view-pf-icon-sm kie-no-highlight"></span>
+                              </div>
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description  kie-comments__list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Cameron Person <span class="kie-item-heading__role">(devs-auth)</span>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    I revised the rules and came up with the most creative solution cause I'm super.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item list-view-pf-stacked">
+                            <div class="list-view-pf-actions kie-comments__pf-actions">
+                              2 days ago
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+                                  <li><a href="#">Delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-view-pf-main-info kie-comments__main-info">
+                              <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                                <span class="pficon pficon-user list-view-pf-icon-sm kie-no-highlight"></span>
+                              </div>
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description kie-comments__list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Katie Person <span class="kie-item-heading__role">(kw-01)</span>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    @aimee: Any updates to Case#000000000 (Jane Person)?
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item list-view-pf-stacked">
+                            <div class="list-view-pf-actions kie-comments__pf-actions">
+                              3 days ago
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+                                  <li><a href="#">Delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-view-pf-main-info kie-comments__main-info">
+                              <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                                <span class="pficon pficon-user list-view-pf-icon-sm kie-no-highlight"></span>
+                              </div>
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description kie-comments__list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Aimee Person <span class="kie-item-heading__role">(admin)</span>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    I posted the intake data for Case#000000000 (Jane Person). Follow-up with somebody about something.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item list-view-pf-stacked">
+                            <div class="list-view-pf-actions kie-comments__pf-actions">
+                              4 days ago
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">
+                                  <li><a href="#">Delete</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-view-pf-main-info kie-comments__main-info">
+                              <div class="list-view-pf-left kie-comments__list-view-pf-left">
+                                <span class="pficon pficon-user list-view-pf-icon-sm"></span>
+                              </div>
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description kie-comments__list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    Cami Person <span class="kie-item-heading__role">(owner)</span>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    @katie: Any updates to Case#000000000 (Jane Person)?
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- milestones card -->
+            <div class="col-xs-12 col-sm-6 col-md-3 col-md-pull-9">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="kie-card__toolbar">
+                    <select class="selectpicker" data-width="8em">
+                      <option>Name</option>
+                      <option>Action</option>
+                    </select>
+                    <button class="btn btn-link" type="button" id="kie-sort">
+                      <span class="fa fa-sort-alpha-asc"></span>
+                    </button>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Milestones
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+                    <!-- Milestones -->
+                    <div class="col-xs-12">
+
+                      <div class=" list-group kie-list-view--embedded kie-milestones">
+
+                        <div class="list-group-item kie-milestones__item--completed">
+                          <div class="kie-list-group-item-content">
+                            <div class="list-view-pf-main-info kie-milestones__main-info">
+                              <div class="list-view-pf-left">
+                                <span class="fa fa-check list-view-pf-icon-sm kie-milestones__icon--completed" data-toggle="tooltip" data-placement="right" title="Milestone has been completed."></span>
+                              </div>
+                              <div class="list-group-item-heading">
+                                A Milestone Name that is completed
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="list-group-item ">
+                          <div class="kie-list-group-item-content">
+                            <div class="list-view-pf-main-info kie-milestones__main-info">
+                              <div class="list-view-pf-left" id="projectListItemIcon1">
+                                <span class="fa fa-flag fa-process-flow-bxms list-view-pf-icon-sm" data-toggle="tooltip" data-placement="right" title="Available - Milestone has not been completed."></span>
+                              </div>
+                              <div class="list-group-item-heading">
+                                Compliance Checkpoint for Updated FINRA 2017 Rules
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="list-group-item kie-milestones__item--terminated">
+                          <div class="kie-list-group-item-content">
+                            <div class="list-view-pf-main-info kie-milestones__main-info">
+                              <div class="list-view-pf-left">
+                                <span class="fa fa-check list-view-pf-icon-sm kie-milestones__icon--terminated" data-toggle="tooltip" data-placement="right" title="Milestone has been terminated."></span>
+                              </div>
+                              <div class="list-group-item-heading">
+                                Representative item that is term'd
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="list-group-item ">
+                          <div class="kie-list-group-item-content">
+                            <div class="list-view-pf-main-info kie-milestones__main-info">
+                              <div class="list-view-pf-left" id="projectListItemIcon1">
+                                <span class="fa fa-flag fa-process-flow-bxms list-view-pf-icon-sm" data-toggle="tooltip" data-placement="right" title="Available - Milestone has not been completed."></span>
+                              </div>
+                              <div class="list-group-item-heading">
+                                Renew More Documents
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div><!-- /row -->
+
+          <div class="row row-cards-pf">
+
+            <!-- Activities card -->
+            <div class="col-xs-12 col-sm-6 col-md-3 ">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class="kie-card__toolbar">
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All Activities
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Milestones</a></li>
+                        <li><a href="#">Comments</a></li>
+                        <li><a href="#">Documents</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Activities
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <!-- Activities -->
+                  <div class="kie-scrollbox kie-scrollbox--activities">
+                    <div class="list-group kie-activities kie-activities--dotted-line">
+
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon1">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm " data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                4 seconds ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Milestone1 reached
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon2">
+                        <span class="fa fa-paperclip list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Document activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                1 minute ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                admin added a document
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon3">
+                        <span class="fa fa-flag fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                5 days ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Milestone1 ready
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon4">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Comment activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                10 minutes ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Aimee added a comment
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                9 days ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Aimee added a comment
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-comment list-view-pf-icon-sm kie-no-highlight" data-toggle="tooltip"
+                              data-placement="right" title="Comment activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                9 days ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Aimee added a comment
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item list-view-pf-stacked kie-activities__list-group-item">
+                        <div class="list-view-pf-main-info kie-activities__main-info">
+                          <div class="list-view-pf-left kie-activities__list-view-pf-left" id="activitiesItemIcon5">
+                        <span class="fa fa-flag list-view-pf-icon-sm" data-toggle="tooltip"
+                              data-placement="right" title="Milestone activity"></span>
+                          </div>
+                          <div class="list-view-pf-body">
+                            <div class="list-view-pf-description kie-activities__list-view-pf-description">
+
+                              <div class="list-group-item-text">
+                                10 days ago
+                              </div>
+                              <div class="list-group-item-heading">
+                                Case started by Cami (owner)
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- files card -->
+            <div class="col-xs-12 col-sm-6 col-md-3 ">
+              <div class="card-pf">
+                <div class="card-pf-heading">
+                  <div class=" kie-card__toolbar">
+                    <div class="kie-toolbar__group">
+                      <button type="button" class="btn btn-default">
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <h2 class="card-pf-title">
+                    Documents
+                  </h2>
+                </div>
+                <div class="card-pf-body ">
+                  <div class="row">
+                    <!-- Documents -->
+                    <div class="col-xs-12">
+
+                      <div class="kie-scrollbox kie-scrollbox--files">
+                        <div class=" list-group kie-list-view--embedded">
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>3 seconds ago, by aimee</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Warranty_2017</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Updated product warranty.
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>7 minutes ago by keithwarring</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Pricing-sheet_2017_06</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Updated prices for 2017, they might be lower or they could be higher, it's really anyone's guess.
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>20 minutes ago by keithwarring</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>3 seconds ago, by aimee</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>3 seconds ago, by aimee</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="list-group-item">
+                            <div class="">
+                              <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="kebabEmbedded3"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                  <li><a href="#">Archive</a></li>
+                                  <li><a href="#">Remove</a></li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="kie-list-group-item-content">
+                              <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                  <div class="list-group-item-heading">
+                                    <a href=""><span class="fa fa-external-link"></span> Contract 1.2</a>
+                                  </div>
+                                  <div class="list-group-item-text">
+                                    Sales contract for New Jersey
+                                    <div class="kie-files__notification"><span class="fa fa-clock-o kie-notification__icon"  data-toggle="tooltip" data-placement="right"  title="Last update"></span>3 seconds ago, by aimee</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div><!-- scrollbox -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div><!-- /row -->
+
+        </div><!-- /container -->
+      </div>
+    </div><!-- container-fluid-->
+
+    <!-- This script is needed for the tooltips -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <script>
+        $(function() {
+            // matchHeight the contents of each .card-pf and then the .card-pf itself
+            $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+            $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+            // initialize tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</body>
+</html>
