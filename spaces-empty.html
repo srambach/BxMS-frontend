@@ -125,56 +125,83 @@
     </div>
   </nav>
 
-  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content kie-content--bg-image kie-blank-slate">
-    <div class="container-fluid kie-container-fluid--blank-slate">
-      <!-- blank state content -->
-      <div class="blank-slate-pf kie-blank-slate-pf--light row">
+  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
 
-        <h1 class="kie-homepage-welcome" id="welcome">
-          Welcome to jBPM
-        </h1>
-        <div class="row">
-          <p class="kie-homepage-intro col-xs-12 col-sm-10 col-md-8 col-lg-8 col-lg-push-2 col-xl-6 col-xl-push-3">
-          jBoss Business Process Management (jBPM) Suite offers a set of flexible, process management tools that support the way
-          you need to work. Select a jBPM tool below to get started.
-        </p>
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">Spaces</a>
+            </li>
+            <li class="active"> <strong>Space Name</strong>
+            </li>
+          </ol>
         </div>
-        <div class="blank-slate-pf-secondary-action kie-blank-slate-pf-secondary-action--home">
-          <div class="kie-hero-card" id="demo1" role="button" tabindex="0">
-            <div class="pficon pficon-blueprint kie-hero-card__icon kie-circle-icon"></div>
-            <div class="kie-hero-card__text">
-              <h2>Design</h2>
-              <div>Create and modify <a href="" class="kie-hero-card__link">projects</a> and <a href="" class="kie-hero-card__link">dashboards</a>.</div>
-            </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12 page-header kie-page-header"> <!--       page-header page-header-bleed-right  ------->
+          <div class="actions pull-right">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+            <span class="dropdown  dropdown-kebab-pf">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownKebab">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </span>
+
           </div>
-          <div class="kie-hero-card" id="demo2" role="button" tabindex="0">
-            <div class="fa fa-gears kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
-            <div class="kie-hero-card__text">
-              <h2>Configure</h2>
-              <div>Administer <a href="" class="kie-hero-card__link">deployments</a> and <a href="" class="kie-hero-card__link">servers</a>.</div>
-            </div>
+          <h1>Space Name</h1>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li class="active"><a href="#">Projects <span class="badge">0</span></a></li>
+            <li><a href="#">Contributors <span class="badge">12</span></a></li>
+            <li><a href="#">Metrics</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- blank state content -->
+      <div class="row kie-row--tabcontent">
+        <div class="col-sm-12 blank-slate-pf" id="">
+          <div class="blank-slate-pf-icon">
+            <span class="pficon pficon pficon-add-circle-o"></span>
           </div>
-          <div class="kie-hero-card" id="demo3" role="button" tabindex="0">
-            <div class="fa fa-briefcase kie-hero-card__icon kie-circle-icon kie-circle-icon--lg"></div>
-            <div class="kie-hero-card__text">
-              <h2>Manage</h2>
-              <div>Access <a href="" class="kie-hero-card__link">process definitions</a>, <a href="" class="kie-hero-card__link">process instances</a>, and <a href="" class="kie-hero-card__link">jobs</a>.</div>
-            </div>
+          <h1>
+            Nothing Here
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Learn more about this <a href="#">on the documentation</a>.
+          </p>
+          <div class="blank-slate-pf-main-action">
+            <button class="btn btn-primary btn-lg"> Add Project </button>
           </div>
-          <div class="kie-hero-card" id="demo4" role="button" tabindex="0">
-            <div class="pficon pficon-trend-up kie-hero-card__icon kie-circle-icon kie-circle-icon--lg">
-            </div>
-            <div class="kie-hero-card__text">
-              <h2>Track</h2>
-              <div>View <a href="" class="kie-hero-card__link">tasks</a>, <a href="" class="kie-hero-card__link">reports</a>, and <a href="" class="kie-hero-card__link">dashboards</a>.</div>
-            </div>
+          <div class="blank-slate-pf-secondary-action">
+            <button class="btn btn-default"> Try Samples </button>
+            <button class="btn btn-default"> Import Project </button>
           </div>
         </div>
       </div>
     </div>
   </main>
-
-</div>
 
 
 </div><!-- kie-page -->
@@ -210,7 +237,7 @@
       </div>
       <div class="modal-body">
         <h1 id="aboutModalTitle">
-          <img class="kie-brand-icon" src="images/kie-ide.png" alt="JBoss BPM Suite"/>
+          <img class="kie-brand-icon" src="images/jbpm_logo_noshadow_100px.png" alt="JBoss BPM Suite"/>
         </h1>
         <div class="product-versions-pf">
           <ul class="list-unstyled" id="aboutModalVersions">
