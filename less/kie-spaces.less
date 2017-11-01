@@ -1,8 +1,17 @@
 // Styles for kie spaces
 
+// show a badge on an active tab differently
 .badge {
   .active & {
     background-color: @color-pf-blue-400;
   }
 }
 
+// fix up formatting within the toolbar
+.kie-search-pf.has-button .form-group {
+  display:flex;
+  width: auto;
+  &:first-child {
+    padding-left: 0;
+  }
+}

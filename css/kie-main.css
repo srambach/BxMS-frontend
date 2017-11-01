@@ -19726,4 +19726,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .active .badge {
   background-color: #0088ce;
 }
+.kie-search-pf.has-button .form-group {
+  display: flex;
+  width: auto;
+}
+.kie-search-pf.has-button .form-group:first-child {
+  padding-left: 0;
+}
 /*# sourceMappingURL=kie-main.css.map */
