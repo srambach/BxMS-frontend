@@ -17,6 +17,7 @@ html {
 
 .kie-brand-icon {
   height: 100%;
+  max-height: @navbar-height;
 }
 
 // All drop down toggles should have the pointer cursor
@@ -244,6 +245,8 @@ html {
   .dropdown-kebab-pf .btn-link {
     padding-left: .5em;
     padding-right: .5em;
+    margin-left: 0;
+    margin-right: 0;
   }
   // with padding on the kebab, need to adjust the position of the dropdown
   .dropdown-kebab-pf .dropdown-menu.dropdown-menu-right {
@@ -415,7 +418,7 @@ html {
     .box-shadow(0 1px 1px fade(@color-pf-black, 17.5%));
   }
   // Blank slate
-  .blank-slate-pf {
+  .kie-blank-slate-pf--light {
     background-color: @color-pf-white;
     border: 0px;
   }
@@ -593,3 +596,13 @@ html {
     border-color: transparent;
   }
 
+.kie-page-header {
+  margin: 0;
+ > *,
+ & .actions {   // have to add .actions to overcome specificity
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
