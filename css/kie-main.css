@@ -19733,4 +19733,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-search-pf.has-button .form-group:first-child {
   padding-left: 0;
 }
+.kie-nav-vertical li {
+  display: block;
+  border: none;
+}
+.kie-nav-vertical li.active {
+  border-left: 2px solid #39a5dc;
+}
 /*# sourceMappingURL=kie-main.css.map */

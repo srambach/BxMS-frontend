@@ -15,3 +15,12 @@
     padding-left: 0;
   }
 }
+
+// vertical nav to go with the scrollspy
+.kie-nav-vertical li {
+  display: block;
+  border: none;
+  &.active {
+    border-left: @navbar-pf-alt-border-width solid @navbar-pf-border-color;
+  }
+}
