@@ -24,3 +24,18 @@
     border-left: @navbar-pf-alt-border-width solid @navbar-pf-border-color;
   }
 }
+
+.kie-list-pf-item--header {
+  background-color: @color-pf-black-200;
+  &:hover {
+    background-color: @color-pf-black-200
+  }
+  .list-pf-actions {
+    visibility:hidden; // This might cause accessibility problems
+  }
+}
+.kie-list-pf-container--header {
+  padding-bottom: 0;// @pf-spacer-xs;
+  padding-top: 0;
+
+}

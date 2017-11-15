@@ -19740,4 +19740,17 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-nav-vertical li.active {
   border-left: 2px solid #39a5dc;
 }
+.kie-list-pf-item--header {
+  background-color: #ededed;
+}
+.kie-list-pf-item--header:hover {
+  background-color: #ededed;
+}
+.kie-list-pf-item--header .list-pf-actions {
+  visibility: hidden;
+}
+.kie-list-pf-container--header {
+  padding-bottom: 0;
+  padding-top: 0;
+}
 /*# sourceMappingURL=kie-main.css.map */
