@@ -128,8 +128,8 @@
     </div>
   </nav>
 
-  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content "
-          data-spy="scroll" data-target="#kiePreferences" >
+  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
+    <!-- from scrollspy no longer needed data-spy="scroll" data-target="#kiePreferences"  -->
 
     <div class="container-fluid ">
         <!-- Breadcrumb row -->
@@ -195,38 +195,38 @@
         <!-- Content - Settings List -->
         <div class="row kie-row--tabcontent">
 
-          <!-- scrollspy navigation -->
+          <!-- section navigation -->
         <div class="col-md-3">
-          <nav class="navbar navbar-static .nav-stacked" id="kiePreferences">
-            <ul class="nav  kie-nav-vertical" role="tablist" data-spy="affix">
-              <li><a href="#kieSettingsScrollGeneral" >General Settings</a></li>
-              <li><a href="#kieSettingsScrollDependencies">Dependencies</a></li>
-              <li><a href="#kieSettingsScrollKnowledgeBase">Knowledge Base</a></li>
-              <li><a href="#kieSettingsScrollImports" >Imports</a></li>
-              <li><a href="#kieSettingsScrollValidation" >Validation</a></li>
-              <li><a href="#kieSettingsScrollConfiguration" >Configuration Files</a></li>
-              <li><a href="#kieSettingsScrollPreferences" >Preferences</a></li>
+          <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
+            <ul class="nav" role="tablist" >
+              <li><a href="#kieSettingsGeneral" data-toggle="tab">General Settings</a></li>
+              <li><a href="#kieSettingsDependencies" data-toggle="tab">Dependencies</a></li>
+              <li><a href="#kieSettingsKnowledgeBase" data-toggle="tab">Knowledge Base</a></li>
+              <li><a href="#kieSettingsImports" data-toggle="tab">Imports</a></li>
+              <li><a href="#kieSettingsExternalData" data-toggle="tab">External Data</a></li>
+              <li><a href="#kieSettingsValidation" data-toggle="tab">Validation</a></li>
+              <li><a href="#kieSettingsConfiguration" data-toggle="tab">Configuration Files</a></li>
+              <li><a href="#kieSettingsPreferences" data-toggle="tab">Preferences</a></li>
             </ul>
           </nav>
+          <button type="submit" class="btn btn-default btn-primary">
+            Save
+          </button>
+          <button type="reset" class="btn btn-default">
+            Reset
+          </button>
+
         </div>
 
           <!-- Content - settings -->
-        <div class="col-md-9" >
+        <div class="col-md-9 tab-content" >
           <br />
 
           <!-- GENERAL -->
-          <div class="panel-group" id="kieSettingsScrollGeneral">
-            <div class="panel panel-default" id="panel1">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseGeneral"
-                     href="#kieSettingsCollapseGeneral">
+          <div class="tab-pane active"  id="kieSettingsGeneral">
+                <h3>
                     General Settings
-                  </a>
-                </h4>
-              </div>
-              <div id="kieSettingsCollapseGeneral" class="panel-collapse collapse in">
-                <div class="panel-body">
+                </h3>
                   <form role="form">
 
                     <div class="form-group">
@@ -272,158 +272,139 @@
                       <input type="text" class="form-control" id="kieSettingsInputVersion">
                       <p class="help-block">Example: 1.0.0</p>
                     </div>
-                </div>
-              </div>
-            </div>
+                  </form>
           </div>
 
           <!-- DEPENDENCIES -->
-          <div class="panel-group" id="kieSettingsScrollDependencies">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseDependencies"
-                     href="#kieSettingsCollapseDependencies">
-                    Dependencies
-                  </a>
-                </h4>
-              </div>
-              <div id="kieSettingsCollapseDependencies" class="panel-collapse collapse in">
-                <div class="panel-body">
-                  <div class="list-pf">
-                    <!-- header row -->
-                    <div class="list-pf-item kie-list-pf-item--header">
-                      <div class="list-pf-container kie-list-pf-container--header">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
+          <div class="tab-pane" id="kieSettingsDependencies">
+            <h3>
+                Dependencies
+            </h3>
+            <div class="list-pf">
+              <!-- header row -->
+              <div class="list-pf-item kie-list-pf-item--header">
+                <div class="list-pf-container kie-list-pf-container--header">
+                  <div class="list-pf-content list-pf-content-flex">
+                    <div class="list-pf-content-wrapper">
+                      <div class="list-pf-main-content ">
 
-                              <div class="list-pf-title">Group ID</div>
-                              <div class="list-pf-description text-overflow-pf">Artifact ID</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Version</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Package white list</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
+                        <div class="list-pf-title">Group ID</div>
+                        <div class="list-pf-description text-overflow-pf">Artifact ID</div>
                       </div>
-
+                      <div class="list-pf-additional-content">
+                        <div>Version</div>
+                      </div>
+                      <div class="list-pf-additional-content">
+                        <div>Package white list</div>
+                      </div>
                     </div>
-                    <!-- content rows -->
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">AA1234567890</div>
-                              <div class="list-pf-description text-overflow-pf">987654fOO321</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Version 1.0.0</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                  All
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                  None
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">Group ID</div>
-                              <div class="list-pf-description text-overflow-pf">Artifact ID</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Version</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                  All
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                  None
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
+                    <div class="list-pf-actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
                     </div>
                   </div>
-                  <br/>
-                  <button type="button" class="btn btn-primary">Add</button>
-                  <button type="button" class="btn btn-default">Add from Repository</button>
                 </div>
+
+              </div>
+              <!-- content rows -->
+              <div class="list-pf-item ">
+                <div class="list-pf-container">
+                  <div class="list-pf-content list-pf-content-flex">
+                    <div class="list-pf-content-wrapper">
+                      <div class="list-pf-main-content ">
+
+                        <div class="list-pf-title">AA1234567890</div>
+                        <div class="list-pf-description text-overflow-pf">987654fOO321</div>
+                      </div>
+                      <div class="list-pf-additional-content">
+                        <div>Version 1.0.0</div>
+                      </div>
+                      <div class="list-pf-additional-content">
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            All
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            None
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-pf-actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="list-pf-item ">
+                <div class="list-pf-container">
+                  <div class="list-pf-content list-pf-content-flex">
+                    <div class="list-pf-content-wrapper">
+                      <div class="list-pf-main-content ">
+
+                        <div class="list-pf-title">Group ID</div>
+                        <div class="list-pf-description text-overflow-pf">Artifact ID</div>
+                      </div>
+                      <div class="list-pf-additional-content">
+                        <div>Version</div>
+                      </div>
+                      <div class="list-pf-additional-content">
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            All
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            None
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-pf-actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
+            <br/>
+            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-default">Add from Repository</button>
           </div>
 
           <!-- KNOWLEDGE BASE -->
-          <div class="panel-group" id="kieSettingsScrollKnowledgeBase">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseKnowledgeBase"
-                     href="#kieSettingsCollapseKnowledgeBase">
+          <div class="tab-pane" id="kieSettingsKnowledgeBase">
+                <h4>
                     Knowledge Base
-                  </a>
                 </h4>
+              <div id="kieSettingsCollapseKnowledgeBase" >
               </div>
-              <div id="kieSettingsCollapseKnowledgeBase" class="panel-collapse collapse in">
-                <div class="panel-body">
-                </div>
+          </div>
+
+          <!-- IMPORTS -->
+          <div class="tab-pane" id="kieSettingsImports">
+                <h3>
+                    Imports
+                </h3>
+              <div id="kieSettingsCollapseImports" class="panel-collapse collapse in">
+                  External Data Objects are Data Objects not explicitly defined within a Project or Project's dependencies that a rule author may need available. They are usually provided by the Java runtime. For example: java.util.List
               </div>
-            </div>
           </div>
 
           <!-- EXTERNAL DATA OBJECTS -->
-          <div class="panel-group" id="kieSettingsScrollExternalData">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseExternalData"
-                     href="#kieSettingsCollapseExternalData">
+          <div class="tab-pane" id="kieSettingsExternalData">
+                <h3>
                     External Data Objects
-                  </a>
-                </h4>
-              </div>
+                </h3>
               <div id="kieSettingsCollapseExternalData" class="panel-collapse collapse in">
-                <div class="panel-body">
                   <div class="list-pf">
                     <!-- content rows -->
                     <div class="list-pf-item ">
@@ -524,25 +505,15 @@
                     </div>
                   </div>
                   <br/>
-                  <button type="button" class="btn btn-primary">Add</button>
+                  <button type="button" class="btn btn-default">Add</button>
                 </div>
-              </div>
-            </div>
           </div>
 
           <!-- VALIDATION -->
-          <div class="panel-group" id="kieSettingsScrollValidation">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseValidation"
-                     href="#kieSettingsCollapseValidation">
+          <div class="tab-pane" id="kieSettingsValidation">
+                <h3>
                     Validation
-                  </a>
-                </h4>
-              </div>
-              <div id="kieSettingsCollapseValidation" class="panel-collapse collapse in">
-                <div class="panel-body">
+                </h3>
                   <p>These Maven Repositories are used to check the uniqueness of a Project's GAV when (1) creating a new Project or Module, (2) Installing or Deploying a Project to a Maven Repository.
                   </p>
                   <div class="list-pf">
@@ -610,14 +581,11 @@
                       </div>
 
                     </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
           <!-- DEPLOYMENTS -->
-          <div class="panel-group" id="kieSettingsScrollDeployments">
+          <div class="tab-pane" id="kieSettingsDeployments">
             <div class="panel panel-default" id="panel1">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -740,38 +708,12 @@
             </div>
           </div>
 
-          <!-- IMPORTS -->
-          <div class="panel-group" id="kieSettingsScrollImports">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseImports"
-                     href="#kieSettingsCollapseImports">
-                    Imports
-                  </a>
-                </h4>
-              </div>
-              <div id="kieSettingsCollapseImports" class="panel-collapse collapse in">
-                <div class="panel-body">
-                  External Data Objects are Data Objects not explicitly defined within a Project or Project's dependencies that a rule author may need available. They are usually provided by the Java runtime. For example: java.util.List
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- CONFIGURATION FILES -->
-          <div class="panel-group" id="kieSettingsScrollConfiguration">
-            <div class="panel panel-default" id="">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapseConfiguration"
-                     href="#kieSettingsCollapseConfiguration">
+          <div class="tab-pane" id="kieSettingsConfiguration">
+                <h3>
                     Configuration Files
-                  </a>
-                </h4>
-              </div>
-              <div id="kieSettingsCollapseConfiguration" class="panel-collapse collapse in">
-                <div class="panel-body">
+                </h3>
+              <div>
                   <p>Whenever a runtime component (such as jbpm console) is about to process kjar it looks up kmodule.xml to build its runtime representation. In addition to kmodule.xml a deployment descriptor (that provides fine grained control over deployments) is available (since 6.1).
                   </p>
                   <p>
@@ -780,35 +722,18 @@
                   <p>
                     <a href="#0">Persistance descriptor file <span class="fa fa-external-link"></span></a>
                   </p>
-                </div>
               </div>
-            </div>
           </div>
 
           <!-- PREFERENCES -->
-          <div class="panel-group" id="kieSettingsScrollPreferences">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-target="#kieSettingsCollapsePreferences"
-                     href="#kieSettingsCollapsePreferences">
+          <div class="tab-pane" id="kieSettingsPreferences">
+                <h3>
                     Preferences
-                  </a>
-                </h4>
+                </h3>
+              <div>
+                  Preferences here Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
               </div>
-              <div id="kieSettingsCollapsePreferences" class="panel-collapse collapse in">
-                <div class="panel-body"> Preferences here Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-              </div>
-            </div>
           </div>
-
-          <button type="reset" class="btn btn-default">
-            Reset
-          </button>
-          <button type="submit" class="btn btn-default btn-primary">
-            Save
-          </button>
-
 
         </div>
 
@@ -864,8 +789,8 @@
     </div>
   </div>
 </div>
-<!-- END About Modal -->
 
+<!-- preferences modal -->
 <div class="modal fade" id="preferences">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -913,13 +838,8 @@
   </div>
 </div>
 
-<!-- initialize scrollspy scrolling navigation -->
+<!-- Initialize Popovers -->
 <script>
-    $('body').scrollspy({ target: '#kiePreferences' });
-</script>
-
-<script>
-    // Initialize Popovers
     $(document).ready(function() {
         $('[data-toggle=popover]').popovers()
     });

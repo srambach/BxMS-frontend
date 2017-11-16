@@ -7,6 +7,7 @@
   }
 }
 
+
 // fix up formatting within the toolbar
 .kie-search-pf.has-button .form-group {
   display:flex;
@@ -16,15 +17,8 @@
   }
 }
 
-// vertical nav to go with the scrollspy
-.kie-nav-vertical li {
-  display: block;
-  border: none;
-  &.active {
-    border-left: @navbar-pf-alt-border-width solid @navbar-pf-border-color;
-  }
-}
 
+// Style a special list-pf-item to be the header of a list
 .kie-list-pf-item--header {
   background-color: @color-pf-black-200;
   &:hover {
@@ -35,7 +29,7 @@
   }
 }
 .kie-list-pf-container--header {
-  padding-bottom: 0;// @pf-spacer-xs;
-  padding-top: 0;
+  padding-bottom: @pf-spacer-xs;
+  padding-top: @pf-spacer-xs;
 
 }
