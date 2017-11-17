@@ -181,6 +181,8 @@
 <!------------------------------->
 <div class="container-fluid">
 <div class="row">
+          <!-- Tabs for the filter control -->
+          <!-- should be implemented with existing slide-in panel control -->
           <div class="col-xs-1" style="padding-left:0; padding-right:0;">
             <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
               <ul class="nav" role="tablist" >
@@ -201,7 +203,7 @@
           </div>
 
           <!-- Content - filters -->
-          <div class="col-xs-11 tab-content" >
+          <div class="col-xs-11 tab-content">
             <!-- GENERAL -->
             <div class="tab-pane active"  id="kieFilterDockBasic">
               <h3>
@@ -331,6 +333,67 @@
               <h3>
                 Advanced Filters
               </h3>
+              <form role="form">
+                <div class="form-group">
+                  <label for="kieSettingsInputPersistenceMode">Filter Type</label>
+                  <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                    <option>processInstanceID</option>
+                    <option>processID</option>
+                    <option>start_date</option>
+                    <option>end_date</option>
+                    <option>status</option>
+                    <option>parentProcessInstanceID</option>
+                    <option>outcome</option>
+                    <option>duration</option>
+                    <option>user_identity</option>
+                    <option>processVersion</option>
+                    <option>processName</option>
+                    <option>correlationKey</option>
+                    <option>externalID</option>
+                    <option>processInstanceDescription</option>
+                    <option>lastModificationDate</option>
+                    <option>errorCount</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="kieSettingsInputPersistenceMode">Expression</label>
+                  <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                    <option>Is</option>
+                    <option>Is Not</option>
+                    <option>Greater than</option>
+                    <option>Greater than or Equal to</option>
+                    <option>Between</option>
+                    <option>...</option>
+                  </select>
+                </div>
+
+                <!--<div class="form-group">-->
+                  <!--<label for="kieSettingsInputProjectName">Numeric value</label>-->
+                  <!--<input type="number" class="form-control" id="kieSettingsInputProjectName" placeholder="#">-->
+                <!--</div>-->
+
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Numeric value
+                    <div class="form-group">
+                      <input type="number" class="form-control" id="kieSettingsInputProjectName" placeholder="#">
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    "Null"
+                  </label>
+                </div>
+
+                <button class="btn btn-primary">Apply</button>
+                <button class="btn btn-default">Clear</button>
+
+              </form>
+
             </div>
 
             <!-- SAVED FILTERS -->
@@ -486,7 +549,7 @@
 
 <!-- initialize Bootstrap Datepicker-->
 <script>
-    // Initialize Boostrap-datepicker
+    // Initialize Bootstrap-datepicker
     $('.bootstrap-datepicker').datepicker({
         autoclose: true,
         todayBtn: "linked",
