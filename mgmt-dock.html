@@ -91,7 +91,7 @@
                 <li><a href="#">Task Reports</a></li>
                 <li><a href="#">Process Reports</a></li>
                 <li><a href="#">Business Dashboards</a></li>
-          </ul>
+              </ul>
             </li>
 
           </ul>
@@ -100,7 +100,8 @@
 
       <ul class="nav navbar-nav navbar-right navbar-iconic">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true">
+          <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown"
+             aria-haspopup="true">
             <span title="Applications" class="fa fa-th"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
@@ -142,7 +143,7 @@
             <li>
               <a href="#">Home</a>
             </li>
-            <li class="active"> <strong>Manage</strong>
+            <li class="active"><strong>Manage</strong>
             </li>
           </ol>
         </div>
@@ -156,7 +157,8 @@
             <button type="button" class="btn btn-default">Middle</button>
             <button type="button" class="btn btn-default">Right</button>
             <span class="dropdown  dropdown-kebab-pf">
-              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
                 <span class="fa fa-ellipsis-v"></span>
               </button>
               <ul class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownKebab">
@@ -174,254 +176,397 @@
       </div>
 
 
-      <!-- Content - blank state -->
+      <!-- Content -->
       <div class="row kie-row--tabcontent">
+        <!-- Content of the left sidebar filter controls -->
         <div class="col-sm-3">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- Tabs for the filter control -->
+              <!-- should be implemented with existing slide-in panel control -->
+              <div class="col-xs-1" style="padding-left:0; padding-right:0;">
+                <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
+                  <ul class="nav" role="tablist">
+                    <li><a href="#kieFilterDockBasic" data-toggle="tab">
+                      <span class="fa fa-filter"></span>
+                    </a></li>
+                    <li><a href="#kieFilterDockAdvanced" data-toggle="tab">
+                      <span class="fa fa-filter">+</span>
+                    </a></li>
+                    <li><a href="#kieFilterDockSaved" data-toggle="tab">
+                      <span class="fa fa-star-o"></span>
+                    </a></li>
+                    <li><a href="#kieFilterDockDisplay" data-toggle="tab">
+                      <span class="fa fa-list-alt"></span>
+                    </a></li>
+                  </ul>
+                </nav>
+              </div>
 
-<!------------------------------->
-<div class="container-fluid">
-<div class="row">
-          <!-- Tabs for the filter control -->
-          <!-- should be implemented with existing slide-in panel control -->
-          <div class="col-xs-1" style="padding-left:0; padding-right:0;">
-            <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
-              <ul class="nav" role="tablist" >
-                <li><a href="#kieFilterDockBasic" data-toggle="tab">
-                  <span class="fa fa-filter"></span>
-                </a></li>
-                <li><a href="#kieFilterDockAdvanced" data-toggle="tab">
-                  <span class="fa fa-filter">+</span>
-                </a></li>
-                <li><a href="#kieFilterDockSaved" data-toggle="tab">
-                  <span class="fa fa-star-o"></span>
-                </a></li>
-                <li><a href="#kieFilterDockDisplay" data-toggle="tab">
-                  <span class="fa fa-list-alt"></span>
-                </a></li>
-              </ul>
-            </nav>
-          </div>
+              <!-- Content - filters -->
+              <div class="col-xs-11 tab-content">
+                <!-- GENERAL -->
+                <div class="tab-pane active" id="kieFilterDockBasic">
+                  <h3>
+                    Basic Filters
+                  </h3>
+                  <form role="form">
 
-          <!-- Content - filters -->
-          <div class="col-xs-11 tab-content">
-            <!-- GENERAL -->
-            <div class="tab-pane active"  id="kieFilterDockBasic">
-              <h3>
-                Basic Filters
-              </h3>
-              <form role="form">
-
-                <div class="panel-group">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">
-                        <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
-                           href="#kieFilterDockBasicState">State
-                        </a>
-                      </h4>
-                    </div>
-                    <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
-                      <div class="panel-body">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Active
-                          </label>
+                    <div class="panel-group">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
+                               href="#kieFilterDockBasicState">State
+                            </a>
+                          </h4>
                         </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            In-Progress
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Aborted
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Completed
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Suspended
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Pending
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel-group">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h3 class="panel-title">
-                        <a data-toggle="collapse" data-target="#kieFilterDockBasicErrors"
-                           href="#kieFilterDockBasicErrors">Errors
-                        </a>
-                      </h3>
-                    </div>
-                    <div id="kieFilterDockBasicErrors" class="panel-collapse collapse in">
-                      <div class="panel-body">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            With errors
-                          </label>
-                        </div>
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox" value="">
-                            Without errors
-                          </label>
+                        <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Active
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                In-Progress
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Aborted
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Completed
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Suspended
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Pending
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <hr/>
+                    <div class="panel-group">
+                      <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">
+                            <a data-toggle="collapse" data-target="#kieFilterDockBasicErrors"
+                               href="#kieFilterDockBasicErrors">Errors
+                            </a>
+                          </h3>
+                        </div>
+                        <div id="kieFilterDockBasicErrors" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                With errors
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Without errors
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                <div class="form-group">
-                  <label for="kieSettingsInputPersistenceMode">Persistence Mode</label>
-                  <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
-                    <option>Process instance ID</option>
-                    <option>Initiator</option>
-                    <option>Correlation Key</option>
-                    <option>Name</option>
-                    <option>All</option>
-                  </select>
-                </div>
+                    <hr/>
 
-                <div class="form-group">
-                  <label for="kieSettingsInputProjectName">Project Name</label>
-                  <input type="text" class="form-control" id="kieSettingsInputProjectName" placeholder="Enter value">
-                </div>
-
-                <button class="btn btn-default">Apply</button>
-
-                <hr/>
-
-                <div class="pull-right"><a href="#0">Clear Dates</a></div>
-
-                <h4>Start Date</h4>
-                <div>
-                  <input type="text" class="form-control bootstrap-datepicker">
-                </div>
-
-                <h4>Last Update</h4>
-                <div>
-                  <input type="text" class="form-control bootstrap-datepicker">
-                </div>
-
-              </form>
-            </div>
-
-            <!-- ADVANCED FILTERS -->
-            <div class="tab-pane" id="kieFilterDockAdvanced">
-              <h3>
-                Advanced Filters
-              </h3>
-              <form role="form">
-                <div class="form-group">
-                  <label for="kieSettingsInputPersistenceMode">Filter Type</label>
-                  <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
-                    <option>processInstanceID</option>
-                    <option>processID</option>
-                    <option>start_date</option>
-                    <option>end_date</option>
-                    <option>status</option>
-                    <option>parentProcessInstanceID</option>
-                    <option>outcome</option>
-                    <option>duration</option>
-                    <option>user_identity</option>
-                    <option>processVersion</option>
-                    <option>processName</option>
-                    <option>correlationKey</option>
-                    <option>externalID</option>
-                    <option>processInstanceDescription</option>
-                    <option>lastModificationDate</option>
-                    <option>errorCount</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="kieSettingsInputPersistenceMode">Expression</label>
-                  <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
-                    <option>Is</option>
-                    <option>Is Not</option>
-                    <option>Greater than</option>
-                    <option>Greater than or Equal to</option>
-                    <option>Between</option>
-                    <option>...</option>
-                  </select>
-                </div>
-
-                <!--<div class="form-group">-->
-                  <!--<label for="kieSettingsInputProjectName">Numeric value</label>-->
-                  <!--<input type="number" class="form-control" id="kieSettingsInputProjectName" placeholder="#">-->
-                <!--</div>-->
-
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                    Numeric value
                     <div class="form-group">
-                      <input type="number" class="form-control" id="kieSettingsInputProjectName" placeholder="#">
+                      <label for="kieSettingsInputPersistenceMode">Persistence Mode</label>
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>Process instance ID</option>
+                        <option>Initiator</option>
+                        <option>Correlation Key</option>
+                        <option>Name</option>
+                        <option>All</option>
+                      </select>
                     </div>
-                  </label>
+
+                    <div class="form-group">
+                      <label for="kieSettingsInputProjectName">Project Name</label>
+                      <input type="text" class="form-control" id="kieSettingsInputProjectName"
+                             placeholder="Enter value">
+                    </div>
+
+                    <button class="btn btn-default">Apply</button>
+
+                    <hr/>
+
+                    <div class="pull-right"><a href="#0">Clear Dates</a></div>
+
+                    <h4>Start Date</h4>
+                    <div>
+                      <input type="text" class="form-control bootstrap-datepicker">
+                    </div>
+
+                    <h4>Last Update</h4>
+                    <div>
+                      <input type="text" class="form-control bootstrap-datepicker">
+                    </div>
+
+                  </form>
                 </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    "Null"
-                  </label>
+
+                <!-- ADVANCED FILTERS -->
+                <div class="tab-pane" id="kieFilterDockAdvanced">
+                  <h3>
+                    Advanced Filters
+                  </h3>
+                  <form role="form">
+                    <div class="form-group">
+                      <label for="kieSettingsInputPersistenceMode">Filter Type</label>
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>processInstanceID</option>
+                        <option>processID</option>
+                        <option>start_date</option>
+                        <option>end_date</option>
+                        <option>status</option>
+                        <option>parentProcessInstanceID</option>
+                        <option>outcome</option>
+                        <option>duration</option>
+                        <option>user_identity</option>
+                        <option>processVersion</option>
+                        <option>processName</option>
+                        <option>correlationKey</option>
+                        <option>externalID</option>
+                        <option>processInstanceDescription</option>
+                        <option>lastModificationDate</option>
+                        <option>errorCount</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="kieSettingsInputPersistenceMode">Expression</label>
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>Is</option>
+                        <option>Is Not</option>
+                        <option>Greater than</option>
+                        <option>Greater than or Equal to</option>
+                        <option>Between</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Numeric value
+                        <div class="form-group">
+                          <input type="number" class="form-control" id="kieSettingsInputProjectName" placeholder="#">
+                        </div>
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        "Null"
+                      </label>
+                    </div>
+
+                    <button class="btn btn-primary">Apply</button>
+                    <button class="btn btn-default">Clear</button>
+
+                  </form>
+
                 </div>
 
-                <button class="btn btn-primary">Apply</button>
-                <button class="btn btn-default">Clear</button>
+                <!-- SAVED FILTERS -->
+                <div class="tab-pane" id="kieFilterDockSaved">
+                  <h3>
+                    Saved Filters
+                  </h3>
+                  <div>
+                    Select a saved filter to clear existing filters and apply saved ones.
+                  </div>
+                  <div class="list-pf list-pf-stacked">
+                    <div class="list-pf-item">
+                      <div class="list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left">
+                            <span class="fa fa-users list-pf-icon list-pf-icon-small"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content">
+                              <div class="list-pf-title"><a href="">Issues</a></div>
+                              <div class="list-pf-description">Key: Value, Key: Value</div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions">
+                            <button class="btn btn-link"><span class="fa fa-trash"></span></button>
+                          </div>
+                        </div>
+                      </div>
 
-              </form>
+                    </div>
+                    <div class="list-pf-item">
+                      <div class="list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left">
+                            <span class="fa fa-star-o list-pf-icon list-pf-icon-small"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content">
+                              <div class="list-pf-title"><a href="">High-priority</a></div>
+                              <div class="list-pf-description">State: In Progress; Errors: Without, Priority: 2</div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions">
+                            <button class="btn btn-link"><span class="fa fa-trash"></span></button>
+                          </div>
+                        </div>
+                      </div>
 
-            </div>
+                    </div>
+                    <div class="list-pf-item">
+                      <div class="list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left">
+                            <span class="fa fa-star list-pf-icon list-pf-icon-small"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content">
+                              <div class="list-pf-title"><a href="">In-Progress</a></div>
+                              <div class="list-pf-description">State: In-Progress</div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions">
+                            <button class="btn btn-link"><span class="fa fa-trash"></span></button>
+                          </div>
+                        </div>
+                      </div>
 
-            <!-- SAVED FILTERS -->
-            <div class="tab-pane" id="kieFilterDockSaved">
-              <h3>
-                Saved Filters
-              </h3>
-              <div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- DISPLAY PREFERENCES -->
+                <div class="tab-pane" id="kieFilterDockDisplay">
+                  <h3>
+                    Display Preferences
+                  </h3>
+                  <strong>Customize columns</strong>
+                  <div>Customize the table presentation by selecting which columns to show in the results list.</div>
+                  <div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked disabled>
+                        Actions
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Correlation Key
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Description
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Errors
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Initiator
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Last Update
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked disabled>
+                        Process Instance ID
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Start Date
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        State
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Version
+                      </label>
+                    </div>
+                    <button class="btn btn-primary">Reset</button>
+
+                  </div>
+                  <hr/>
+
+                  <strong>Set per view limits</strong>
+                  <div>Select the number of results to display, per view.</div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios1" value="option1" checked>
+                      10 results (default)
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios2" value="option2">
+                      25 results
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios3" value="option3">
+                      50 results
+                    </label>
+                  </div>
+
+                </div>
+
+
               </div>
             </div>
-
-            <!-- DISPLAY PREFERENCES -->
-            <div class="tab-pane" id="kieFilterDockDisplay">
-              <h3>
-                Display Preferences
-              </h3>
-              <div>
-              </div>
-            </div>
-
-
           </div>
-</div>
-</div>
-<!------------------------------------>
-
-
         </div>
+        <!-- end left side filter controls -->
+
+        <!-- Data area of page content -->
         <div class="col-sm-9 blank-slate-pf" id="">
           <div class="blank-slate-pf-icon">
             <span class="pficon pficon pficon-add-circle-o"></span>
@@ -430,19 +575,23 @@
             Nothing Here
           </h1>
           <p>
-            You can safely ignore this as it is just a placeholder for content to come. But we should think about what empty results gives the user. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            You can safely ignore this as it is just a placeholder for content to come. But we should think about what
+            empty results gives the user. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <p>
             Learn more about this <a href="#">on the documentation</a>.
           </p>
           <div class="blank-slate-pf-main-action">
-            <button class="btn btn-primary btn-lg"> Show all </button>
+            <button class="btn btn-primary btn-lg"> Show all</button>
           </div>
           <div class="blank-slate-pf-secondary-action">
-            <button class="btn btn-default"> Reset filters </button>
-            <button class="btn btn-default"> These are just placeholders </button>
+            <button class="btn btn-default"> Reset filters</button>
+            <button class="btn btn-default"> These are just placeholders</button>
           </div>
         </div>
+        <!-- end of data area of page content -->
       </div>
     </div>
   </main>
