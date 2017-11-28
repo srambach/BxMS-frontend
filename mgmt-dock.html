@@ -204,7 +204,7 @@
               </div>
 
               <!-- Content - filters -->
-              <div class="col-xs-11 tab-content">
+              <div class="col-xs-11 tab-content kie-tab-content--filters">
                 <!-- GENERAL -->
                 <div class="tab-pane active" id="kieFilterDockBasic">
                   <h3>
@@ -295,18 +295,18 @@
                     <hr/>
 
                     <div class="form-group">
-                      <label for="kieSettingsInputPersistenceMode">Persistence Mode</label>
+                      <!--<label for="kieSettingsInputPersistenceMode">Persistence Mode</label>-->
                       <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>Any field</option>
                         <option>Process instance ID</option>
                         <option>Initiator</option>
                         <option>Correlation Key</option>
                         <option>Name</option>
-                        <option>All</option>
                       </select>
                     </div>
 
                     <div class="form-group">
-                      <label for="kieSettingsInputProjectName">Project Name</label>
+                      <!--<label for="kieSettingsInputProjectName">Project Name</label>-->
                       <input type="text" class="form-control" id="kieSettingsInputProjectName"
                              placeholder="Enter value">
                     </div>
@@ -317,23 +317,27 @@
 
                     <div class="pull-right"><a href="#0">Clear Dates</a></div>
 
-                    <h4>Start Date</h4>
+                    <h5>Start Date</h5>
                     <div>
+                      <!-- This may be the existing datepicker within the application instead of this Bootstrap one -->
                       <input type="text" class="form-control bootstrap-datepicker">
                     </div>
 
-                    <h4>Last Update</h4>
+                    <h5>Last Update</h5>
                     <div>
+                      <!-- This may be the existing datepicker within the application instead of this Bootstrap one -->
                       <input type="text" class="form-control bootstrap-datepicker">
                     </div>
 
                   </form>
+                  <br/>
+
                 </div>
 
                 <!-- ADVANCED FILTERS -->
                 <div class="tab-pane" id="kieFilterDockAdvanced">
                   <h3>
-                    Advanced Filters
+                    Advanced Filter
                   </h3>
                   <form role="form">
                     <div class="form-group">
@@ -386,10 +390,12 @@
                       </label>
                     </div>
 
-                    <button class="btn btn-primary">Apply</button>
+                    <!-- TODO: space between -->
+                    <button class="btn btn-default">Apply</button>&nbsp;
                     <button class="btn btn-default">Clear</button>
 
                   </form>
+                  <br/>
 
                 </div>
 
@@ -401,7 +407,8 @@
                   <div>
                     Select a saved filter to clear existing filters and apply saved ones.
                   </div>
-                  <div class="list-pf list-pf-stacked">
+                  <br/>
+                  <div class="list-pf list-pf-stacked kie-list-pf-light">
                     <div class="list-pf-item">
                       <div class="list-pf-container">
                         <div class="list-pf-content list-pf-content-flex ">
@@ -411,6 +418,25 @@
                           <div class="list-pf-content-wrapper">
                             <div class="list-pf-main-content">
                               <div class="list-pf-title"><a href="">Issues</a></div>
+                              <div class="list-pf-description">Key: Value, Key: Value</div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions">
+                            <button class="btn btn-link"><span class="fa fa-trash"></span></button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="list-pf-item active">
+                      <div class="list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left">
+                            <span class="fa fa-users list-pf-icon list-pf-icon-small"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content">
+                              <div class="list-pf-title"><a href="">Selected filter</a></div>
                               <div class="list-pf-description">Key: Value, Key: Value</div>
                             </div>
                           </div>
@@ -461,6 +487,9 @@
                     </div>
 
                   </div>
+
+                  <br/>
+
                 </div>
 
                 <!-- DISPLAY PREFERENCES -->
@@ -531,7 +560,7 @@
                         Version
                       </label>
                     </div>
-                    <button class="btn btn-primary">Reset</button>
+                    <button class="btn btn-default">Reset</button>
 
                   </div>
                   <hr/>
@@ -556,6 +585,7 @@
                       50 results
                     </label>
                   </div>
+                  <br/>
 
                 </div>
 

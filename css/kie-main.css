@@ -19733,4 +19733,27 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-search-pf.has-button .form-group:first-child {
   padding-left: 0;
 }
+.kie-tab-content--filters hr {
+  color: red;
+}
+.tab-content {
+  border-left: 1px solid #bbb;
+  background-color: #fafafa;
+}
+.kie-list-pf-light {
+  background-color: #fff;
+}
+.panel-group .panel-default .panel-heading {
+  background: none;
+}
+.panel-group .panel-default .panel-heading + .panel-collapse .panel-body {
+  border-top-color: transparent;
+}
+.panel-group .panel-title > a:before {
+  float: right;
+  content: "\f147";
+}
+.panel-group .panel-title > a.collapsed:before {
+  content: "\f196";
+}
 /*# sourceMappingURL=kie-main.css.map */
