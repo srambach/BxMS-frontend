@@ -1,0 +1,37 @@
+// Styles for KIE Manage screens
+
+// filter styles
+.kie-tab-content--filters {
+  //darken horizontal rules
+  hr {
+    border-color: @color-pf-black-300;
+  }
+}
+
+// add background color. Left border may not be needed once in place
+.tab-content {
+  border-left: 1px solid @panel-default-border-color;
+  background-color: @color-pf-black-100;
+}
+
+// New kind of list with a background color for placement on a background color other than white
+.kie-list-pf-light {
+  background-color: @color-pf-white;
+}
+
+// Remove gradient from collapsible panel heading
+.panel-group .panel-default .panel-heading {
+  background: none;
+}
+.panel-group .panel-default .panel-heading + .panel-collapse .panel-body {
+  border-top-color: transparent;
+}
+
+// Change expand/collapse character and move to right
+.panel-group .panel-title > a:before {
+  float: right;
+  content: "\f147"; //minus
+}
+.panel-group .panel-title > a.collapsed:before {
+  content: "\f196"; //plus
+}

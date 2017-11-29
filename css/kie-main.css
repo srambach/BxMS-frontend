@@ -19723,18 +19723,8 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-toolbar-pf__filter {
   flex-basis: 20em;
 }
-.active .badge {
-  background-color: #0088ce;
-}
-.kie-search-pf.has-button .form-group {
-  display: flex;
-  width: auto;
-}
-.kie-search-pf.has-button .form-group:first-child {
-  padding-left: 0;
-}
 .kie-tab-content--filters hr {
-  color: red;
+  border-color: #d1d1d1;
 }
 .tab-content {
   border-left: 1px solid #bbb;
@@ -19755,5 +19745,15 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 }
 .panel-group .panel-title > a.collapsed:before {
   content: "\f196";
+}
+.active .badge {
+  background-color: #0088ce;
+}
+.kie-search-pf.has-button .form-group {
+  display: flex;
+  width: auto;
+}
+.kie-search-pf.has-button .form-group:first-child {
+  padding-left: 0;
 }
 /*# sourceMappingURL=kie-main.css.map */
