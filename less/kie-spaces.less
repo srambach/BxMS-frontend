@@ -24,12 +24,15 @@
   &:hover {
     background-color: @color-pf-black-200
   }
-  .list-pf-actions {
-    visibility:hidden; // This might cause accessibility problems
-  }
 }
 .kie-list-pf-container--header {
   padding-bottom: @pf-spacer-xs;
   padding-top: @pf-spacer-xs;
 
 }
+.kie-list-pf-actions--fixed {
+  flex-basis: 10em;
+  display: flex;
+  justify-content: flex-end;
+}
+

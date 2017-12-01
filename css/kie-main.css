@@ -19739,11 +19739,13 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-list-pf-item--header:hover {
   background-color: #ededed;
 }
-.kie-list-pf-item--header .list-pf-actions {
-  visibility: hidden;
-}
 .kie-list-pf-container--header {
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
+}
+.kie-list-pf-actions--fixed {
+  flex-basis: 10em;
+  display: flex;
+  justify-content: flex-end;
 }
 /*# sourceMappingURL=kie-main.css.map */
