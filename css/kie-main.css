@@ -19748,4 +19748,15 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   display: flex;
   justify-content: flex-end;
 }
+.kie-list-pf-select-kb {
+  flex-basis: 3em;
+  flex-grow: 0;
+}
+.kie-list-pf-title-kb {
+  min-width: 5em;
+  max-width: 15em;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 /*# sourceMappingURL=kie-main.css.map */
