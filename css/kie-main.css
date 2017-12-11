@@ -19736,15 +19736,93 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .panel-group .panel-default .panel-heading {
   background: none;
 }
-.panel-group .panel-default .panel-heading + .panel-collapse .panel-body {
+.panel-group .panel-heading + .panel-collapse .panel-body {
   border-top-color: transparent;
 }
-.panel-group .panel-title > a:before {
-  float: right;
-  content: "\f147";
+.kie-dock__divider {
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
-.panel-group .panel-title > a.collapsed:before {
-  content: "\f196";
+.form-group + .kie-dock__divider,
+.panel-group + .kie-dock__divider {
+  margin-top: 15px;
+}
+.kie-dock__heading {
+  font-weight: 600;
+}
+.kie-dock__heading--section {
+  font-size: 12px;
+  font-weight: 600;
+}
+.kie-dock__panel-group {
+  margin-bottom: 0;
+}
+.kie-dock__panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.kie-dock__panel-heading {
+  padding: 0;
+}
+.kie-dock__panel-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.kie-dock__datepicker {
+  margin-bottom: 15px;
+}
+.kie-dock__list-pf-item :hover {
+  background-color: #EDF8FF;
+}
+.kie-dock__list-pf-item :hover .btn-link {
+  color: #00659c;
+}
+.kie-dock__list-pf-item.active {
+  background-color: #def3ff;
+  border-color: transparent;
+}
+.kie-dock__list-pf-actions .btn-link {
+  color: #363636;
+  font-size: 1.16666667;
+}
+.kie-list-pf-icon-md {
+  font-size: 21px;
+}
+.radio .kie-label--embedded,
+.checkbox .kie-label--embedded {
+  padding-left: 0;
+}
+.radio .kie-input--inline,
+.checkbox .kie-input--inline {
+  display: inline-block;
+  width: auto;
+}
+.kie-dock-selector > li > a {
+  padding: 1rem 2rem;
+  color: #030303;
+}
+.kie-dock-selector > li > a:hover,
+.kie-dock-selector > li > a:focus {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector > li.active a {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector__tab {
+  font-size: 1.16666667;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+.kie-dock-selector__tab:hover {
+  border-color: #def3ff;
+}
+.kie-dock-selector__tab.active {
+  border-color: #0088ce;
 }
 .active .badge {
   background-color: #0088ce;
