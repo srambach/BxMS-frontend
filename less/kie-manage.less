@@ -1,5 +1,6 @@
 // Styles for KIE Manage screens
 
+/////////////////
 // filter styles
 .kie-tab-content--filters {
   //darken horizontal rules
@@ -29,6 +30,8 @@
 
 
 // Dock panel styles
+
+// adjust spacing of an HR
 .kie-dock__divider {
   margin-top: 25px;
   margin-bottom: 15px;
@@ -81,16 +84,40 @@
   background-color: @color-pf-blue-50;
   border-color: transparent;
 }
+.kie-dock__list-pf-container {
+  padding: @list-pf-padding/2 0 @list-pf-padding/2 @list-pf-padding/2;
+}
+
+.kie-dock__list-pf-left {
+  margin-right: @list-pf-padding/2;
+}
+
+.kie-dock__list-pf-title {
+  margin-bottom: .5em;
+}
+
+.kie-dock__list-pf-main-content {
+  line-height: 1.4em;
+}
+
+.kie-dock__KVP:not(:last-child) {
+  margin-bottom: .5em;
+}
+
+.kie-dock__list-pf-actions {
+  margin-left: 0;
+}
 .kie-dock__list-pf-actions .btn-link {
   color: @text-color;
   font-size: @kie-icon-size-base;
+  min-width: @min-touch-width;
 }
 
 .kie-list-pf-icon-md {
-  font-size: 21px;
+  font-size: @icon-size-md;
 }
 
-// override normal label and form-control so that
+// override normal label and form-control for input box embedded inside the radio button (or checkbox)
 .radio .kie-label--embedded,
 .checkbox .kie-label--embedded {
   padding-left: 0;
@@ -121,7 +148,7 @@
 .kie-dock-selector__tab {
   font-size: @kie-icon-size-base;
   text-align: left;
-  border-left: 3px solid transparent;
+  border-left: 3px solid transparent; @border
   &:hover {
     border-color: @color-pf-blue-50;
   }

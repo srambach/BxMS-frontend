@@ -19784,12 +19784,31 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   background-color: #def3ff;
   border-color: transparent;
 }
+.kie-dock__list-pf-container {
+  padding: 10px 0 10px 10px;
+}
+.kie-dock__list-pf-left {
+  margin-right: 10px;
+}
+.kie-dock__list-pf-title {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-main-content {
+  line-height: 1.4em;
+}
+.kie-dock__KVP:not(:last-child) {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-actions {
+  margin-left: 0;
+}
 .kie-dock__list-pf-actions .btn-link {
   color: #363636;
   font-size: 1.16666667;
+  min-width: 44px;
 }
 .kie-list-pf-icon-md {
-  font-size: 21px;
+  font-size: 1.75rem;
 }
 .radio .kie-label--embedded,
 .checkbox .kie-label--embedded {
@@ -19818,7 +19837,7 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   text-align: left;
   border-left: 3px solid transparent;
 }
-.kie-dock-selector__tab:hover {
+@border &:hover {
   border-color: #def3ff;
 }
 .kie-dock-selector__tab.active {
