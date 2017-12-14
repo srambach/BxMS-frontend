@@ -309,112 +309,72 @@
             <p>
               Lorem ipsum banana orange papaya dolor sunt.
             </p>
-            <div class="list-pf">
-              <!-- header row -->
-              <div class="list-pf-item kie-list-pf-item--header">
-                <div class="list-pf-container kie-list-pf-container--header">
-                  <div class="list-pf-select">
-                    <input type="checkbox">
-                  </div>
-
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title">Group ID</div>
-                        <div class="list-pf-description text-overflow-pf">Artifact ID</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Version</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Package white list</div>
-                      </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-responsive kie-tablelist">
+              <thead>
+                <tr class="kie-tablelist__row kie-tablelist__row--header">
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0">Delete selected</a>
+                  </th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Group ID</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Artifact ID</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Version</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Package White List</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                    <a href="#0">Delete selected</a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="kie-tablelist__row">
+                  <td class="kie-tablelist__cell">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- content rows -->
-              <div class="list-pf-item ">
-                <div class="list-pf-container">
-                  <div class="list-pf-select">
-                    <input type="checkbox">
-                  </div>
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title">AA1234567890</div>
-                        <div class="list-pf-description text-overflow-pf">987654fOO321</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Version 1.0.0</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input checked class="form-check-input" type="radio" name="dependencyWhiteList1" id="inlineRadio1" value="option1">
-                            All
-                          </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="dependencyWhiteList1" id="inlineRadio2" value="option2">
-                            None
-                          </label>
-                        </div>
-                      </div>
+                  </td>
+                  <td class="kie-tablelist__cell">AA12324567890</td>
+                  <td class="kie-tablelist__cell">987654fOO321</td>
+                  <td class="kie-tablelist__cell">Version 1.0.0</td>
+                  <td class="kie-tablelist__cell">
+                    <label class="radio-inline">
+                      <input checked type="radio" name="inlineRadioOptions1" id="inlineRadio1-1" value="option1"> All
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions1" id="inlineRadio1-2" value="option3"> None
+                    </label>
+                  </td>
+                  <td class="kie-tablelist__cell--actions">
+                    <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row">
+                  <td class="kie-tablelist__cell">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0"><span class="fa fa-trash-o"></span></a>
-                    </div>
-                  </div>
-                </div>
+                  </td>
+                  <td class="kie-tablelist__cell">BB8888888888</td>
+                  <td class="kie-tablelist__cell">8675309</td>
+                  <td class="kie-tablelist__cell">Version 1.0.1</td>
+                  <td class="kie-tablelist__cell">
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions2" id="inlineRadio2-1" value="option1"> All
+                    </label>
+                    <label class="radio-inline">
+                      <input checked type="radio" name="inlineRadioOptions2" id="inlineRadio2-2" value="option3"> None
+                    </label>
+                  </td>
+                  <td class="kie-tablelist__cell--actions">
+                    <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                </tr>
+              </tbody>
 
-              </div>
-              <div class="list-pf-item ">
-                <div class="list-pf-container">
-                  <div class="list-pf-select">
-                    <input type="checkbox">
-                  </div>
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title">Group ID</div>
-                        <div class="list-pf-description text-overflow-pf">Artifact ID</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Version</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="dependencyWhiteList2" id="inlineRadio1" value="option1">
-                            All
-                          </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <label class="form-check-label">
-                            <input checked class="form-check-input" type="radio" name="dependencyWhiteList2" id="inlineRadio2" value="option2">
-                            None
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0"><span class="fa fa-trash-o"></span></a>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+            </table>
             </div>
-            <br/>
+
             <button type="button" class="btn btn-default">Add</button>
             <button type="button" class="btn btn-default">Add from Repository</button>
           </div>
@@ -425,247 +385,207 @@
                     Knowledge Bases
                 </h4>
             <p>Lorem ipsum squirrel chipmunk acorn rabbit dolor sunt.</p>
-            <div class="list-pf">
-              <!-- header row -->
-              <div class="list-pf-item kie-list-pf-item--header">
-                <div class="list-pf-container kie-list-pf-container--header">
-                  <div class="list-pf-select">
-                    Default
-                  </div>
 
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title">Name</div>
-                        <div class="list-pf-description text-overflow-pf">Included Knowledge Bases</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Package</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Equals behavior</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Event processing model</div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div>Knowledge Sessions</div>
-                      </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-responsive kie-tablelist">
+                <thead>
+                <tr class="kie-tablelist__row kie-tablelist__row--header">
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header ">
+                    <div class="kie-tablelist__select">Default</div>
+                  </th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Included Knowledge Bases</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Package</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Equal Behavior</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Event Processing Model</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Knowledge Sessions</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                    <!--Delete Selected-->
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="kie-tablelist__row ">
+                  <td class="kie-tablelist__cell ">
+                    <div class="kie-tablelist__select">
+                      <input type="radio" name="kieKnowledgeBaseDefaultRadio">
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0">Delete selected</a>
+                  </td>
+                  <td class="kie-tablelist__cell ">Added</td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
+                    <div><a href="#0">Add</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
+                        <option>Identity</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
                     </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- content rows -->
-              <div class="list-pf-item ">
-                <div class="list-pf-container ">
-                  <div class="list-pf-select">
-                    <input type="radio" name="kieKnowledgeBaseDefaultRadio">
-                  </div>
-
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title kie-list-pf-title-kb">Added</div>
-                        <div class="list-pf-additional-content ">
-                          <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                          <div><a href="#0">Add</a></div>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content text-overflow-pf">
-                        <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                        <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                        <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                        <div class="text-nowrap"><a href="#0">Add</a></div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
-                            <option>Identity</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
-                            <option>Cloud</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div><a href="#0">Knowledge Sessions (2)</a></div>
-                      </div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
+                        <option>Cloud</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row ">
+                  <td class="kie-tablelist__cell ">
+                    <div class="kie-tablelist__select">
+                      <input type="radio" name="kieKnowledgeBaseDefaultRadio">
                     </div>
-                  </div>
-                </div>
 
-              </div>
-              <div class="list-pf-item ">
-                <div class="list-pf-container ">
-                  <div class="list-pf-select">
-                    <input type="radio" name="kieKnowledgeBaseDefaultRadio">
-                  </div>
-
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title kie-list-pf-title-kb">Added</div>
-                        <div class="list-pf-additional-content ">
-                          <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                          <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                          <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                          <div><a href="#0">Add</a></div>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content text-overflow-pf">
-                        <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                        <div><a href="#0">Add</a></div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
-                            <option>Identity</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
-                            <option>Cloud</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div><a href="#0">Knowledge Sessions (2)</a></div>
-                      </div>
+                  </td>
+                  <td class="kie-tablelist__cell ">Added</td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
+                    <a href="#0">Add</a>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
+                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
+                        <option>Identity</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
+                        <option>Cloud</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
                     </div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="list-pf-item ">
-                <div class="list-pf-container ">
-                  <div class="list-pf-select">
-                    <input type="radio" name="kieKnowledgeBaseDefaultRadio">
-                  </div>
-
-                  <div class="list-pf-content list-pf-content-flex">
-                    <div class="list-pf-content-wrapper">
-                      <div class="list-pf-main-content ">
-
-                        <div class="list-pf-title kie-list-pf-title-kb">Added</div>
-                        <div class="list-pf-additional-content ">
-                          <div><a href="#0">Add</a></div>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content text-overflow-pf">
-                        <div><a href="#0">Add</a></div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
-                            <option>Identity</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div class="form-group">
-                          <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
-                          <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
-                            <option>Cloud</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="list-pf-additional-content">
-                        <div><a href="#0">Knowledge Sessions (2)</a></div>
-                      </div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row ">
+                  <td class="kie-tablelist__cell ">
+                    <div class="kie-tablelist__select">
+                      <input type="radio" name="kieKnowledgeBaseDefaultRadio">
                     </div>
-                    <div class="list-pf-actions kie-list-pf-actions--fixed">
-                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                  <td class="kie-tablelist__cell ">Added</td>
+                  <td class="kie-tablelist__cell ">
+                    <a href="#0">Add</a>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEqualsBehavior">Runtime Strategy</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEqualsBehavior">
+                        <option>Identity</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
                     </div>
-                  </div>
-                </div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div class="form-group">
+                      <!--<label for="kieSettingsEventProcessingModel">Event Processing Model</label>-->
+                      <select class="selectpicker form-control" id="kieSettingsEventProcessingModel">
+                        <option>Cloud</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <a href="#0"><span class="fa fa-trash-o"></span></a>
+                  </td>
+                </tr>
+                </tbody>
 
-              </div>
+              </table>
             </div>
-            <br/>
             <button type="button" class="btn btn-default">Add</button>
           </div>
 
@@ -675,126 +595,59 @@
                     External Data Objects
                 </h3>
             <p>Lorem ipsum chevy tesla ford radiator tire pontiac dolor sunt.</p>
-              <div id="kieSettingsCollapseExternalData" class="panel-collapse collapse in">
-                  <div class="list-pf">
-                   <!-- header row -->
-                    <div class="list-pf-item kie-list-pf-item--header">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
+                <div class="table-responsive">
+                  <table class="table table-hover table-responsive kie-tablelist">
+                    <thead>
+                    <tr class="kie-tablelist__row kie-tablelist__row--header">
+                      <th class="kie-tablelist__cell kie-tablelist__cell--header">Type</th>
+                      <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                        <a href="#0">Delete selected</a>
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.Double</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.Integer</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.Number</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.String</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.ArrayList</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    <tr class="kie-tablelist__row">
+                      <td class="kie-tablelist__cell">java.lang.Collection</td>
+                      <td class="kie-tablelist__cell--actions">
+                        <a href="#0"><span class="fa fa-trash-o"></span></a>
+                      </td>
+                    </tr>
+                    </tbody>
 
-                              <div class="list-pf-title">Type</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <!-- content rows -->
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.Double</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.Integer</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.Number</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.String</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.ArrayList</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-main-content ">
-
-                              <div class="list-pf-title">java.lang.Collection</div>
-                            </div>
-                          </div>
-                          <div class="list-pf-actions">
-                            <a href="#0"><span class="fa fa-trash-o"></span></a>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <br/>
-                  <button type="button" class="btn btn-default">Add</button>
+                  </table>
                 </div>
+
+                  <button type="button" class="btn btn-default">Add</button>
           </div>
 
           <!-- VALIDATION -->
@@ -804,86 +657,56 @@
                 </h3>
                   <p>These Maven Repositories are used to check the uniqueness of a Project's GAV when (1) creating a new Project or Module, (2) Installing or Deploying a Project to a Maven Repository.
                   </p>
-                  <div class="list-pf">
-                    <!-- header row -->
-                    <div class="list-pf-item kie-list-pf-item--header">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-additional-content">
-                              Include
-                            </div>
-                            <div class="list-pf-main-content ">
-                              <div class="list-pf-title">ID</div>
-                              <div class="list-pf-description text-overflow-pf">URL</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Source</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
+            <div class="table-responsive">
+              <table class="table table-hover table-responsive kie-tablelist">
+                <thead>
+                <tr class="kie-tablelist__row kie-tablelist__row--header">
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">
+                    <div class="kie-tablelist__select">
+                      Include
                     </div>
-                    <!-- content rows -->
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-additional-content">
-                                <input type="checkbox" value="" aria-label="include">
-                            </div>
-                            <div class="list-pf-main-content ">
-                              <div class="list-pf-title">guvnor-m2-repo</div>
-                              <div class="list-pf-description text-overflow-pf">http://kieci-02.lab.eng.brq.readhat.com:32828/kie-wb/maven2/</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
+                  </th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">ID</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">URL</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header">Source</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="kie-tablelist__row">
+                  <td class="kie-tablelist__cell">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-additional-content">
-                                <input type="checkbox" value="" aria-label="include">
-                            </div>
-                            <div class="list-pf-main-content ">
-                              <div class="list-pf-title">guvnor-m2-repo</div>
-                              <div class="list-pf-description text-overflow-pf">http://kieci-02.lab.eng.brq.readhat.com:32828/kie-wb/maven2/</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
+                  </td>
+                  <td class="kie-tablelist__cell">guvnor-m2-repo</td>
+                  <td class="kie-tablelist__cell">http://kieci-02.lab.eng.brq.redhat.com:32828/kie-wb/maven2/</td>
+                  <td class="kie-tablelist__cell">Project</td>
+                </tr>
+                <tr class="kie-tablelist__row">
+                  <td class="kie-tablelist__cell">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
-                    <div class="list-pf-item ">
-                      <div class="list-pf-container">
-                        <div class="list-pf-content list-pf-content-flex">
-                          <div class="list-pf-content-wrapper">
-                            <div class="list-pf-additional-content">
-                                <input type="checkbox" value="" aria-label="include">
-                            </div>
-                            <div class="list-pf-main-content ">
-                              <div class="list-pf-title">guvnor-m2-repo</div>
-                              <div class="list-pf-description text-overflow-pf">http://kieci-02.lab.eng.brq.readhat.com:32828/kie-wb/maven2/</div>
-                            </div>
-                            <div class="list-pf-additional-content">
-                              <div>Project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
+                  </td>
+                  <td class="kie-tablelist__cell">guvnor-m2-repo</td>
+                  <td class="kie-tablelist__cell">http://kieci-02.lab.eng.brq.redhat.com:32828/kie-wb/maven2/</td>
+                  <td class="kie-tablelist__cell">Project</td>
+                </tr>
+                <tr class="kie-tablelist__row">
+                  <td class="kie-tablelist__cell">
+                    <div class="kie-tablelist__select">
+                      <input type="checkbox">
                     </div>
+                  </td>
+                  <td class="kie-tablelist__cell">guvnor-m2-repo</td>
+                  <td class="kie-tablelist__cell">http://kieci-02.lab.eng.brq.redhat.com:32828/kie-wb/maven2/</td>
+                  <td class="kie-tablelist__cell">Project</td>
+                </tr>
+                </tbody>
+
+              </table>
             </div>
+
           </div>
 
           <!-- DEPLOYMENTS -->
@@ -960,265 +783,285 @@
 
               <!-- MARSHALLING STRATEGIES -->
               <h3>Marshalling Strategies </h3>
-              <div class="list-pf">
-                <!-- content rows -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Resolver</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Parameters</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Resolver
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">org.drools.persistence.jpa.marshaller</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters (2)</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Marshalling Strategy</button>
               <hr/>
 
               <!-- EVENT LISTENERS -->
               <h3>Event Listeners</h3>
-              <div class="list-pf">
-                <!-- content rows -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Resolver</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Parameters</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Resolver
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">org.drools.persistence.jpa.marshaller</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters (2)</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Event Listener</button>
               <hr/>
 
               <!-- GLOBAL -->
               <h3>Global</h3>
-              <div class="list-pf">
-                <!-- content rows -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Resolver</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Parameters</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Resolver
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">org.drools.persistence.jpa.marshaller</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters (2)</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Global</button>
               <hr/>
 
               <!-- REQUIRED ROLES -->
               <h3>Required Roles</h3>
-              <div class="list-pf">
-                <!-- content rows -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Resolver</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Parameters</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">org.drools.persistence.jpa.marshaller</td>
+                    <td class="kie-tablelist__cell">
+                      <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
+                        <option>Mustard</option>
+                        <option>Ketchup</option>
+                        <option>Relish</option>
+                        <option>Onions</option>
+                        <option>Mushrooms</option>
+                        <option>Pickles</option>
+                        <option>Mayonnaise</option>
+                        <option data-divider="true"></option>
+                        <option data-subtext="Hot">Tabasco</option>
+                        <option data-subtext="Hotter" disabled>Sriracha</option>
+                        <option data-subtext="Hottest">Wasabi</option>
+                      </select>
+                    </td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">Parameters (2)</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Resolver
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">org.drools.persistence.jpa.marshaller</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <select class="selectpicker form-control" id="kieSettingsInputMarshallingStrategies">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                            <option>Onions</option>
-                            <option>Mushrooms</option>
-                            <option>Pickles</option>
-                            <option>Mayonnaise</option>
-                            <option data-divider="true"></option>
-                            <option data-subtext="Hot">Tabasco</option>
-                            <option data-subtext="Hotter" disabled>Sriracha</option>
-                            <option data-subtext="Hottest">Wasabi</option>
-                          </select>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          <a href="#0">Parameters (2)</a>
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Required Role</button>
 
             </form>
@@ -1254,177 +1097,99 @@
 
               <!-- PROPERTIES -->
               <h3>Properties</h3>
-              <div class="list-pf">
-                <!-- header row -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Value</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">hibernate.max_fetch_depth</td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">org.hibernate.dialect.H2Dialect</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">hibernate.hbm2ddl.auto</td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">org.hibernate.dialect.H2Dialect</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">hibernate.show_sql</td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">org.hibernate.dialect.H2Dialect</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">hibernate.id.new_generator_mappings</td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">org.hibernate.dialect.H2Dialect</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">hibernate.transaction.jta.platform</td>
+                    <td class="kie-tablelist__cell">
+                      <a href="#0">org.hibernate.dialect.H2Dialect</a>
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Value
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">hibernate.max_fetch_depth</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          org.hibernate.dialect.H2Dialect
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">hibernate.hbm2ddl.auto</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          org.hibernate.dialect.H2Dialect
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">hibernate.show_sql</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          org.hibernate.dialect.H2Dialect
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">hibernate.id.new_generator_mappings</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          org.hibernate.dialect.H2Dialect
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="list-pf-item ">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">hibernate.transaction.jta.platform</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          org.hibernate.dialect.H2Dialect
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash-o"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Property</button>
               <hr/>
 
               <!-- PROJECT PERSISTABLE DATA OBJECTS -->
               <h3>Project Persistable Data Objects</h3>
-              <div class="list-pf">
-                <!-- Header row -->
-                <div class="list-pf-item  kie-list-pf-item--header">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
+              <div class="table-responsive">
+                <table class="table table-hover table-responsive kie-tablelist">
+                  <thead>
+                  <tr class="kie-tablelist__row kie-tablelist__row--header">
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Class Name</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header">Something</th>
+                    <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
+                      <!-- no label -->
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="kie-tablelist__row">
+                    <td class="kie-tablelist__cell">Class Name</td>
+                    <td class="kie-tablelist__cell">
+                      Something
+                    </td>
+                    <td class="kie-tablelist__cell--actions">
+                      <a href="#0"><span class="fa fa-trash-o"></span></a>
+                    </td>
+                  </tr>
+                  </tbody>
 
-                          <div class="list-pf-title">Class Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Something
-                        </div>
-                        <div class="list-pf-additional-content">
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- content rows -->
-                <div class="list-pf-item">
-                  <div class="list-pf-container">
-                    <div class="list-pf-content list-pf-content-flex">
-                      <div class="list-pf-content-wrapper">
-                        <div class="list-pf-main-content ">
-
-                          <div class="list-pf-title">Class Name</div>
-                        </div>
-                        <div class="list-pf-additional-content">
-                          Something
-                        </div>
-                        <div class="list-pf-additional-content">
-                        </div>
-                      </div>
-                      <div class="list-pf-actions">
-                        <a href="#0"><span class="fa fa-trash"></span></a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+                </table>
               </div>
-              <br/>
+
               <button type="button" class="btn btn-default">Add Project Persistable Data Object</button>
               <hr/>
 

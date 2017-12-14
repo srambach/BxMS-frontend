@@ -46,3 +46,48 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
+
+///////
+// Slightly shameful non-BEM styling of a table into a fake list-pf based on tables.less
+.kie-tablelist {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @pf-spacer-lg;
+        border-bottom: none;
+        > a:hover {
+          //text-decoration: none;
+        }
+      }
+      > th {
+        //font-family: "Open Sans";
+        //font-style: normal;
+        //font-weight: 600;
+        //background-color: #92d400;
+      }
+    }
+  }
+  > thead {
+    //background-clip: padding-box;
+    background-color: @color-pf-black-150;
+    background-image: none;
+    //#gradient > .vertical(@start-color: @color-pf-black-100; @end-color: @color-pf-black-200; @start-percent: 0%; @end-percent: 100%);
+    > tr {
+      > th,
+      > td {
+        padding: @pf-spacer-xs @pf-spacer-lg;
+      }
+    }
+  }
+}
+.kie-tablelist__cell--actions {
+  text-align: right;
+}
+.kie-tablelist__select {
+  border-right: 1px solid @table-border-color;
+  padding-right: @pf-spacer-lg;
+  text-align: center;
+}

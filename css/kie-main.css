@@ -19759,4 +19759,29 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   flex-grow: 0;
   flex-shrink: 0;
 }
+.kie-tablelist > thead > tr > th,
+.kie-tablelist > tbody > tr > th,
+.kie-tablelist > tfoot > tr > th,
+.kie-tablelist > thead > tr > td,
+.kie-tablelist > tbody > tr > td,
+.kie-tablelist > tfoot > tr > td {
+  padding: 1.5rem;
+  border-bottom: none;
+}
+.kie-tablelist > thead {
+  background-color: #f5f5f5;
+  background-image: none;
+}
+.kie-tablelist > thead > tr > th,
+.kie-tablelist > thead > tr > td {
+  padding: 0.75rem 1.5rem;
+}
+.kie-tablelist__cell--actions {
+  text-align: right;
+}
+.kie-tablelist__select {
+  border-right: 1px solid #d1d1d1;
+  padding-right: 1.5rem;
+  text-align: center;
+}
 /*# sourceMappingURL=kie-main.css.map */
