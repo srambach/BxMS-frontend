@@ -222,7 +222,7 @@
           <br />
 
           <!-- GENERAL -->
-          <div class="tab-pane active"  id="kieSettingsGeneral">
+          <div class="tab-pane kie-tab-pane active"  id="kieSettingsGeneral">
                 <h3>
                     General
                 </h3>
@@ -302,15 +302,14 @@
           </div>
 
           <!-- DEPENDENCIES -->
-          <div class="tab-pane" id="kieSettingsDependencies">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsDependencies">
             <h3>
                 Dependencies
             </h3>
             <p>
               Lorem ipsum banana orange papaya dolor sunt.
             </p>
-            <div class="table-responsive">
-              <table class="table table-hover table-responsive kie-tablelist">
+            <table class="table table-hover kie-tablelist">
               <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
                   <th class="kie-tablelist__cell kie-tablelist__cell--header">
@@ -373,21 +372,19 @@
               </tbody>
 
             </table>
-            </div>
 
             <button type="button" class="btn btn-default">Add</button>
             <button type="button" class="btn btn-default">Add from Repository</button>
           </div>
 
           <!-- KNOWLEDGE BASES -->
-          <div class="tab-pane" id="kieSettingsKnowledgeBase">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsKnowledgeBase">
                 <h4>
                     Knowledge Bases
                 </h4>
             <p>Lorem ipsum squirrel chipmunk acorn rabbit dolor sunt.</p>
 
-            <div class="table-responsive">
-              <table class="table table-hover table-responsive kie-tablelist">
+              <table class="table table-hover kie-tablelist">
                 <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
                   <th class="kie-tablelist__cell kie-tablelist__cell--header ">
@@ -585,23 +582,21 @@
                 </tbody>
 
               </table>
-            </div>
             <button type="button" class="btn btn-default">Add</button>
           </div>
 
           <!-- EXTERNAL DATA OBJECTS -->
-          <div class="tab-pane" id="kieSettingsExternalData">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsExternalData">
                 <h3>
                     External Data Objects
                 </h3>
             <p>Lorem ipsum chevy tesla ford radiator tire pontiac dolor sunt.</p>
-                <div class="table-responsive">
-                  <table class="table table-hover table-responsive kie-tablelist">
+                  <table class="table table-hover kie-tablelist">
                     <thead>
                     <tr class="kie-tablelist__row kie-tablelist__row--header">
                       <th class="kie-tablelist__cell kie-tablelist__cell--header">Type</th>
                       <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions">
-                        <a href="#0">Delete selected</a>
+                        <!--<a href="#0">Delete selected</a>-->
                       </th>
                     </tr>
                     </thead>
@@ -645,20 +640,18 @@
                     </tbody>
 
                   </table>
-                </div>
 
                   <button type="button" class="btn btn-default">Add</button>
           </div>
 
           <!-- VALIDATION -->
-          <div class="tab-pane" id="kieSettingsValidation">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsValidation">
                 <h3>
                     Validation
                 </h3>
                   <p>These Maven Repositories are used to check the uniqueness of a Project's GAV when (1) creating a new Project or Module, (2) Installing or Deploying a Project to a Maven Repository.
                   </p>
-            <div class="table-responsive">
-              <table class="table table-hover table-responsive kie-tablelist">
+              <table class="table table-hover kie-tablelist">
                 <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
                   <th class="kie-tablelist__cell kie-tablelist__cell--header">
@@ -705,12 +698,11 @@
                 </tbody>
 
               </table>
-            </div>
 
           </div>
 
           <!-- DEPLOYMENTS -->
-          <div class="tab-pane" id="kieSettingsDeployments">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsDeployments">
                 <h3>
                     Deployments
                 </h3>
@@ -783,8 +775,7 @@
 
               <!-- MARSHALLING STRATEGIES -->
               <h3>Marshalling Strategies </h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
@@ -847,15 +838,13 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Marshalling Strategy</button>
               <hr/>
 
               <!-- EVENT LISTENERS -->
               <h3>Event Listeners</h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
@@ -918,15 +907,13 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Event Listener</button>
               <hr/>
 
               <!-- GLOBAL -->
               <h3>Global</h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
@@ -989,15 +976,13 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Global</button>
               <hr/>
 
               <!-- REQUIRED ROLES -->
               <h3>Required Roles</h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
@@ -1060,7 +1045,6 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Required Role</button>
 
@@ -1070,7 +1054,7 @@
             </div>
 
           <!-- PERSISTENCE -->
-          <div class="tab-pane" id="kieSettingsPersistence">
+          <div class="tab-pane kie-tab-pane" id="kieSettingsPersistence">
             <h3>
               Persistence
             </h3>
@@ -1097,8 +1081,7 @@
 
               <!-- PROPERTIES -->
               <h3>Properties</h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover  kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Name</th>
@@ -1157,15 +1140,13 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Property</button>
               <hr/>
 
               <!-- PROJECT PERSISTABLE DATA OBJECTS -->
               <h3>Project Persistable Data Objects</h3>
-              <div class="table-responsive">
-                <table class="table table-hover table-responsive kie-tablelist">
+                <table class="table table-hover  kie-tablelist">
                   <thead>
                   <tr class="kie-tablelist__row kie-tablelist__row--header">
                     <th class="kie-tablelist__cell kie-tablelist__cell--header">Class Name</th>
@@ -1188,7 +1169,6 @@
                   </tbody>
 
                 </table>
-              </div>
 
               <button type="button" class="btn btn-default">Add Project Persistable Data Object</button>
               <hr/>

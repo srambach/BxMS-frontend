@@ -19784,4 +19784,7 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   padding-right: 1.5rem;
   text-align: center;
 }
+.kie-tab-pane {
+  overflow-x: auto;
+}
 /*# sourceMappingURL=kie-main.css.map */
