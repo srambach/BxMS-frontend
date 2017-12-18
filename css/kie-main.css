@@ -19723,6 +19723,126 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-toolbar-pf__filter {
   flex-basis: 20em;
 }
+.kie-tab-content--filters hr {
+  border-color: #d1d1d1;
+}
+.tab-content {
+  border-left: 1px solid #bbb;
+  background-color: #fafafa;
+}
+.kie-list-pf-light {
+  background-color: #fff;
+}
+.panel-group .panel-default .panel-heading {
+  background: none;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+  border-top-color: transparent;
+}
+.kie-dock__divider {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.form-group + .kie-dock__divider,
+.panel-group + .kie-dock__divider {
+  margin-top: 15px;
+}
+.kie-dock__heading {
+  font-weight: 600;
+}
+.kie-dock__heading--section {
+  font-size: 12px;
+  font-weight: 600;
+}
+.kie-dock__panel-group {
+  margin-bottom: 0;
+}
+.kie-dock__panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.kie-dock__panel-heading {
+  padding: 0;
+}
+.kie-dock__panel-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.kie-dock__datepicker {
+  margin-bottom: 15px;
+}
+.kie-dock__list-pf-item :hover {
+  background-color: #EDF8FF;
+}
+.kie-dock__list-pf-item :hover .btn-link {
+  color: #00659c;
+}
+.kie-dock__list-pf-item.active {
+  background-color: #def3ff;
+  border-color: transparent;
+}
+.kie-dock__list-pf-container {
+  padding: 10px 0 10px 10px;
+}
+.kie-dock__list-pf-left {
+  margin-right: 10px;
+}
+.kie-dock__list-pf-title {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-main-content {
+  line-height: 1.4em;
+}
+.kie-dock__KVP:not(:last-child) {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-actions {
+  margin-left: 0;
+}
+.kie-dock__list-pf-actions .btn-link {
+  color: #363636;
+  font-size: 1.16666667;
+  min-width: 44px;
+}
+.kie-list-pf-icon-md {
+  font-size: 1.75rem;
+}
+.radio .kie-label--embedded,
+.checkbox .kie-label--embedded {
+  padding-left: 0;
+}
+.radio .kie-input--inline,
+.checkbox .kie-input--inline {
+  display: inline-block;
+  width: auto;
+}
+.kie-dock-selector > li > a {
+  padding: 1rem 2rem;
+  color: #030303;
+}
+.kie-dock-selector > li > a:hover,
+.kie-dock-selector > li > a:focus {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector > li.active a {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector__tab {
+  font-size: 1.16666667;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+@border &:hover {
+  border-color: #def3ff;
+}
+.kie-dock-selector__tab.active {
+  border-color: #0088ce;
+}
 .active .badge {
   background-color: #0088ce;
 }
