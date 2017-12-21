@@ -58,15 +58,6 @@
       > td {
         padding: @pf-spacer-lg;
         border-bottom: none;
-        > a:hover {
-          //text-decoration: none;
-        }
-      }
-      > th {
-        //font-family: "Open Sans";
-        //font-style: normal;
-        //font-weight: 600;
-        //background-color: #92d400;
       }
       &:last-of-type td {
         border-bottom: 1px solid @table-border-color;
@@ -95,7 +86,8 @@ td .kie-tablelist__select {
 .kie-tab-pane {
   overflow-x: auto;
 }
-///
+
+// Allows tabs across the top to extend to the margins
 .nav-tabs--settings {
   margin-left: -20px;
   margin-right: -20px;
@@ -106,6 +98,8 @@ td .kie-tablelist__select {
   margin-left: -20px;
   margin-right: -20px;
 }
+// Handle hover/selection on the left side settings tabs
+//TODO: May be able to refactor to combine this with the dock tabs from management filter story
 .nav--left li {
   border-left: 3px solid transparent;
   &.active {
