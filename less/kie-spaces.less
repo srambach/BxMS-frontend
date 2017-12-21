@@ -68,13 +68,14 @@
         //font-weight: 600;
         //background-color: #92d400;
       }
+      &:last-of-type td {
+        border-bottom: 1px solid @table-border-color;
+      }
     }
   }
   > thead {
-    //background-clip: padding-box;
-    background-color: @color-pf-black-150;
+    background-color: transparent;
     background-image: none;
-    //#gradient > .vertical(@start-color: @color-pf-black-100; @end-color: @color-pf-black-200; @start-percent: 0%; @end-percent: 100%);
     > tr {
       > th,
       > td {
@@ -86,11 +87,59 @@
 .kie-tablelist__cell--actions {
   text-align: right;
 }
-.kie-tablelist__select {
+td .kie-tablelist__select {
   border-right: 1px solid @table-border-color;
   padding-right: @pf-spacer-lg;
   text-align: center;
 }
 .kie-tab-pane {
   overflow-x: auto;
+}
+///
+.nav-tabs--settings {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav--left {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.nav--left li {
+  border-left: 3px solid transparent;
+  &.active {
+    border-left-color: @color-pf-blue-400;
+    background-color: @color-pf-blue-50;
+  }
+  &:hover {
+    border-left: 3px solid @color-pf-blue-50;
+  }
+}
+.nav--left li > a {
+  color: @text-color;
+}
+
+.nav--left li > a:hover,
+.nav--left li > a:focus {
+  background-color: @color-pf-blue-50;
+  color: @link-hover-color;
+}
+
+.col--leftnav{
+  background-color: @color-pf-black-100;
+  border-right: 1px solid @nav-tabs-border-color;
+}
+
+// This makes the row have matching height columns
+@media only screen and (min-width : @screen-md-min) {
+  .kie-row--is-table {
+    display: table;
+    width: 100%;
+  }
+  .kie-row--is-table > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
 }

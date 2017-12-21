@@ -19768,8 +19768,13 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
   padding: 1.5rem;
   border-bottom: none;
 }
+.kie-tablelist > thead > tr:last-of-type td,
+.kie-tablelist > tbody > tr:last-of-type td,
+.kie-tablelist > tfoot > tr:last-of-type td {
+  border-bottom: 1px solid #d1d1d1;
+}
 .kie-tablelist > thead {
-  background-color: #f5f5f5;
+  background-color: transparent;
   background-image: none;
 }
 .kie-tablelist > thead > tr > th,
@@ -19779,12 +19784,55 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-tablelist__cell--actions {
   text-align: right;
 }
-.kie-tablelist__select {
+td .kie-tablelist__select {
   border-right: 1px solid #d1d1d1;
   padding-right: 1.5rem;
   text-align: center;
 }
 .kie-tab-pane {
   overflow-x: auto;
+}
+.nav-tabs--settings {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav--left {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.nav--left li {
+  border-left: 3px solid transparent;
+}
+.nav--left li.active {
+  border-left-color: #0088ce;
+  background-color: #def3ff;
+}
+.nav--left li:hover {
+  border-left: 3px solid #def3ff;
+}
+.nav--left li > a {
+  color: #363636;
+}
+.nav--left li > a:hover,
+.nav--left li > a:focus {
+  background-color: #def3ff;
+  color: #00659c;
+}
+.col--leftnav {
+  background-color: #fafafa;
+  border-right: 1px solid #ededed;
+}
+@media only screen and (min-width: 992px) {
+  .kie-row--is-table {
+    display: table;
+    width: 100%;
+  }
+  .kie-row--is-table > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
 }
 /*# sourceMappingURL=kie-main.css.map */

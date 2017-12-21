@@ -20,6 +20,8 @@
   <!-- Bootstrap Select -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
+  <!-- Patternfly -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
 </head>
 <body>
 
@@ -183,43 +185,44 @@
         <!-- Tab nav row -->
         <div class="row" >
           <div class="col-xs-12">
-            <ul class="nav nav-tabs nav-tabs-pf">
+            <ul class="nav nav-tabs nav-tabs-pf nav-tabs--settings">
               <li><a href="#">Assets <span class="badge">8</span></a></li>
               <li><a href="#">Contributors <span class="badge">12</span></a></li>
-              <li><a href="#">Metrics</a></li>
-              <li class="active"><a href="#">Settings</a></li>
+              <li><a href="#">Metrics<span class="badge"></span></a></li>
+              <li class="active"><a href="#">Settings<span class="badge"></span></a></li>
             </ul>
           </div>
         </div>
 
         <!-- Content - Settings List -->
-        <div class="row kie-row--tabcontent">
+        <div class="row kie-row--is-table">
 
           <!-- section navigation -->
-        <div class="col-md-3">
-          <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
+        <div class="col-xs-12 col-md-3 col--leftnav">
+          <nav class="navbar navbar-static nav-stacked nav--left" id="kiePreferences">
             <ul class="nav" role="tablist" >
-              <li><a href="#kieSettingsGeneral" data-toggle="tab">General Settings</a></li>
+              <li class="active"><a href="#kieSettingsGeneral" data-toggle="tab">General <sup>*</sup></a></li>
               <li><a href="#kieSettingsDependencies" data-toggle="tab">Dependencies</a></li>
-              <li><a href="#kieSettingsKnowledgeBase" data-toggle="tab">Knowledge Bases</a></li>
+              <li><a href="#kieSettingsKnowledgeBase" data-toggle="tab">Knowledge Bases <sup>*</sup></a></li>
               <li><a href="#kieSettingsExternalData" data-toggle="tab">External Data Objects</a></li>
-              <li><a href="#kieSettingsValidation" data-toggle="tab">Validation</a></li>
+              <li><a href="#kieSettingsValidation" data-toggle="tab">Validation <sup>*</sup></a></li>
               <li><a href="#kieSettingsDeployments" data-toggle="tab">Deployments</a></li>
               <li><a href="#kieSettingsPersistence" data-toggle="tab">Persistence</a></li>
-            </ul>
           </nav>
-          <button type="submit" class="btn btn-default btn-primary">
-            Save
-          </button>
-          <button type="reset" class="btn btn-default">
-            Reset
-          </button>
-
+            </ul>
+            <button type="submit" class="btn btn-default btn-primary">
+              Save
+            </button>
+          &nbsp;
+            <button type="reset" class="btn btn-default">
+              Reset
+            </button>
+          <br/>
+          <br/>
         </div>
 
           <!-- Content - settings -->
-        <div class="col-md-9 tab-content" >
-          <br />
+        <div class="col-xs-12 col-md-9 tab-content" >
 
           <!-- GENERAL -->
           <div class="tab-pane kie-tab-pane active"  id="kieSettingsGeneral">
@@ -227,22 +230,23 @@
                     General
                 </h3>
             <p>Lorem ipsum bacon dolor sausage. </p>
+            <hr/>
                   <form role="form">
 
                     <div class="form-group">
                       <label for="kieSettingsInputName"> Name</label>
-                      <input type="text" class="form-control" id="kieSettingsInputName" placeholder="enter a project name">
+                      <input type="text" class="form-control" id="kieSettingsInputName" placeholder="Enter a project name">
                     </div>
 
                     <div class="form-group">
                       <label for="kieSettingsInputDescription"> Description</label>
-                      <textarea class="form-control" id="kieSettingsInputDescription" rows="3" placeholder="enter a project description"></textarea>
+                      <textarea class="form-control" id="kieSettingsInputDescription" rows="3" placeholder="Enter a project description"></textarea>
                     </div>
 
                     <div class="form-group">
                       <label for="kieSettingsInputGitHub">GitHub</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" id="kieSettingsInputGitHub" placeholder="enter the GitHub location">
+                        <input type="text" class="form-control" id="kieSettingsInputGitHub" placeholder="Enter the GitHub location">
                         <span class="input-group-btn">
                           <button class="btn btn-default" type="button">
                             <span class="fa fa-file-archive-o"></span>
@@ -268,7 +272,7 @@
                     <!--<h3>Group Artifact Version</h3>-->
                     <div class="form-group">
                       <label class=control-label" for="kieSettingsInputGroupID">
-                        Group ID
+                        Group ID &nbsp;
                         <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" title=""
                            data-content="A universally unique identifier for a project. It is normal to use a fully-qualified package name to distinguish it from other projects with a similar name."
                            data-placement="top">
@@ -281,7 +285,7 @@
 
                     <div class="form-group">
                       <label for="kieSettingsInputArtifactID">
-                        Artifact ID
+                        Artifact ID &nbsp;
                         <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" title=""
                            data-content="The identifier for this artifact blah blah blah"
                            data-placement="top">
@@ -309,6 +313,7 @@
             <p>
               Lorem ipsum banana orange papaya dolor sunt.
             </p>
+            <hr/>
             <table class="table table-hover kie-tablelist">
               <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
@@ -357,8 +362,8 @@
 
             </table>
 
-            <button type="button" class="btn btn-default">Add</button>
-            <button type="button" class="btn btn-default">Add from Repository</button>
+            <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add dependency</button>
+            <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add from repository</button>
           </div>
 
           <!-- KNOWLEDGE BASES -->
@@ -367,7 +372,7 @@
                     Knowledge Bases
                 </h4>
             <p>Lorem ipsum squirrel chipmunk acorn rabbit dolor sunt.</p>
-
+            <hr/>
               <table class="table table-hover kie-tablelist">
                 <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
@@ -395,13 +400,13 @@
                   <td class="kie-tablelist__cell ">Added</td>
                   <td class="kie-tablelist__cell ">
                     <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                    <div><a href="#0">Add</a></div>
+                    <div><a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a></div>
                   </td>
                   <td class="kie-tablelist__cell ">
                     <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
                     <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
                     <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                    <div class="text-nowrap"><a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a></div>
                   </td>
                   <td class="kie-tablelist__cell ">
                     <div class="form-group">
@@ -458,11 +463,11 @@
                     <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
                     <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
                     <div class="text-nowrap">Included <span class="fa fa-times"></span></div>
-                    <a href="#0">Add</a>
+                    <a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a>
                   </td>
                   <td class="kie-tablelist__cell ">
                     <div class="text-nowrap">packages.have.long.names.with.com.in.them <span class="fa fa-times"></span></div>
-                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                    <div class="text-nowrap"><a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a></div>
                   </td>
                   <td class="kie-tablelist__cell ">
                     <div class="form-group">
@@ -515,10 +520,10 @@
                   </td>
                   <td class="kie-tablelist__cell ">Added</td>
                   <td class="kie-tablelist__cell ">
-                    <a href="#0">Add</a>
+                    <a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a>
                   </td>
                   <td class="kie-tablelist__cell ">
-                    <div class="text-nowrap"><a href="#0">Add</a></div>
+                    <div class="text-nowrap"><a href="#0"><span class="pficon pficon-add-circle-o"></span> Add</a></div>
                   </td>
                   <td class="kie-tablelist__cell ">
                     <div class="form-group">
@@ -566,7 +571,7 @@
                 </tbody>
 
               </table>
-            <button type="button" class="btn btn-default">Add</button>
+            <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add knowledge base</button>
           </div>
 
           <!-- EXTERNAL DATA OBJECTS -->
@@ -575,6 +580,7 @@
                     External Data Objects
                 </h3>
             <p>Lorem ipsum chevy tesla ford radiator tire pontiac dolor sunt.</p>
+            <hr/>
                   <table class="table table-hover kie-tablelist">
                     <thead>
                     <tr class="kie-tablelist__row kie-tablelist__row--header">
@@ -625,7 +631,7 @@
 
                   </table>
 
-                  <button type="button" class="btn btn-default">Add</button>
+            <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add external data object</button>
           </div>
 
           <!-- VALIDATION -->
@@ -635,6 +641,7 @@
                 </h3>
                   <p>These Maven Repositories are used to check the uniqueness of a Project's GAV when (1) creating a new Project or Module, (2) Installing or Deploying a Project to a Maven Repository.
                   </p>
+            <hr/>
               <table class="table table-hover kie-tablelist">
                 <thead>
                 <tr class="kie-tablelist__row kie-tablelist__row--header">
@@ -691,7 +698,7 @@
                     Deployments
                 </h3>
             <p>Lorem ipsum crimson beige kumquat mauve dolor sunt.</p>
-
+            <hr/>
             <form role="form">
 
               <div class="form-group">
@@ -755,7 +762,7 @@
                 </select>
               </div>
 
-              <hr/>
+              <br/>
 
               <!-- MARSHALLING STRATEGIES -->
               <h3>Marshalling Strategies </h3>
@@ -823,8 +830,10 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Marshalling Strategy</button>
-              <hr/>
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add Marshalling Strategy</button>
+
+              <br/>
+              <br/>
 
               <!-- EVENT LISTENERS -->
               <h3>Event Listeners</h3>
@@ -892,8 +901,9 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Event Listener</button>
-              <hr/>
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add Event Listener</button>
+              <br/>
+              <br/>
 
               <!-- GLOBAL -->
               <h3>Global</h3>
@@ -961,8 +971,9 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Global</button>
-              <hr/>
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add Global</button>
+              <br/>
+              <br/>
 
               <!-- REQUIRED ROLES -->
               <h3>Required Roles</h3>
@@ -1030,7 +1041,7 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Required Role</button>
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add Required Role</button>
 
             </form>
             <br/>
@@ -1043,6 +1054,7 @@
               Persistence
             </h3>
             <p>Lorem puella agricola rana bellum veritas sunt.</p>
+            <hr/>
 
             <form role="form">
 
@@ -1060,9 +1072,7 @@
                 <label for="kieSettingsInputAuditPersistenceDataSource">Data Source</label>
                 <input type="text" class="form-control" id="kieSettingsInputAuditPersistenceDataSource">
               </div>
-
-              <hr/>
-
+<br/>
               <!-- PROPERTIES -->
               <h3>Properties</h3>
                 <table class="table table-hover  kie-tablelist">
@@ -1125,9 +1135,8 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Property</button>
-              <hr/>
-
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add property</button>
+<br/>
               <!-- PROJECT PERSISTABLE DATA OBJECTS -->
               <h3>Project Persistable Data Objects</h3>
                 <table class="table table-hover  kie-tablelist">
@@ -1154,8 +1163,7 @@
 
                 </table>
 
-              <button type="button" class="btn btn-default">Add Project Persistable Data Object</button>
-              <hr/>
+              <button type="button" class="btn btn-link"><span class="pficon pficon-add-circle-o"></span> Add project persistable data object</button>
 
             </form>
             <br/>
@@ -1273,6 +1281,7 @@
         $('[data-toggle=popover]').popovers()
     });
 </script>
+
 
 </body>
 </html>
