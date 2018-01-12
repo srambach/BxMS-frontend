@@ -19589,6 +19589,12 @@ html {
   margin-top: 0;
   margin-bottom: 0;
 }
+.kie-row--inverse {
+  background-color: #fafafa;
+}
+.kie-row--topPadding {
+  padding-top: 1.5rem;
+}
 .kie-palette {
   background: #fff;
   border-collapse: collapse;
