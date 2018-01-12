@@ -444,7 +444,9 @@
                     </div>
                   </td>
                   <td class="kie-tablelist__cell ">
-                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                    <div>
+                      <a href="#settings-knowledge-sessions" data-toggle="modal" title="Knowledge Sessions">Knowledge Sessions (2)</a>
+                    </div>
                   </td>
                   <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
                     <a href="#0" class="btn btn-link"><span class="fa fa-trash-o"></span></a>
@@ -505,7 +507,9 @@
                     </div>
                   </td>
                   <td class="kie-tablelist__cell ">
-                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                    <div>
+                      <a href="#settings-knowledge-sessions" data-toggle="modal" title="Knowledge Sessions">Knowledge Sessions (2)</a>
+                    </div>
                   </td>
                   <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
                     <a href="#0" class="btn btn-link"><span class="fa fa-trash-o"></span></a>
@@ -560,7 +564,9 @@
                     </div>
                   </td>
                   <td class="kie-tablelist__cell ">
-                    <div><a href="#0">Knowledge Sessions (2)</a></div>
+                    <div>
+                      <a href="#settings-knowledge-sessions" data-toggle="modal" title="Knowledge Sessions">Knowledge Sessions (2)</a>
+                    </div>
                   </td>
                   <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
                     <a href="#0" class="btn btn-link"><span class="fa fa-trash-o"></span></a>
@@ -1178,7 +1184,678 @@
 
 </div><!-- kie-page -->
 
-<!-- modals -->
+<!-- Settings - Knowledge Sessions Modal -->
+<div class="modal fade" id="settings-knowledge-sessions">
+  <div class="modal-dialog" style="width:90%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Knowledge Sessions</h4>
+      </div>
+      <div class="modal-body">
+
+<!-- tiagos code -->
+        <div class="list-group list-view-pf list-view-pf-view list-view-pf--header" data-field="">
+          <div class="list-group-item">
+            <div class="list-view-pf-checkbox">
+              Default
+            </div>
+            <div class="list-view-pf-actions">
+              <a href="#0" class="btn btn-link" data-field="remove-button">
+                <span class="fa fa-trash-o"></span>
+              </a>
+            </div>
+            <div class="list-view-pf-main-info">
+              <div class="list-view-pf-body">
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item ksessions-list-group-item-text-content">
+                    Name
+                  </div>
+                  <div class="list-view-pf-additional-info-item ksessions-list-group-item-text-content">
+                    State
+                  </div>
+                  <div class="list-view-pf-additional-info-item ksessions-list-group-item-text-content">
+                    Clock
+                  </div>
+                </div>
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item">
+                    Listeners
+                  </div>
+                  <div class="list-view-pf-additional-info-item">
+                    Work Item Handlers
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="list-group list-view-pf list-view-pf-view" data-field="knowledge-sessions-table">
+          <div class="list-group-item" data-i18n-prefix="KnowledgeSessionListItemView.">
+            <div class="list-view-pf-checkbox">
+              <input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">
+            </div>
+            <div class="list-view-pf-actions">
+              <a href="#0" class="btn btn-link" data-field="remove-button">
+                <span class="fa fa-trash-o"></span>
+              </a>
+            </div>
+
+            <div class="list-view-pf-main-info">
+              <div class="list-view-pf-body">
+                <!--<div class="list-view-pf-description">-->
+                  <!--<div class="list-group-item-text ksessions-list-group-item-text-content">-->
+                    <!--&lt;!&ndash;<input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">&ndash;&gt;-->
+                    <!--<input type="text" data-field="name" placeholder="Name">-->
+                    <!--<input type="text" data-field="type" placeholder="State">-->
+                    <!--<div data-field="clock-select-container">-->
+                      <!--<div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">-->
+                        <!--<div class="btn-group bootstrap-select form-control">-->
+                          <!--<button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Realtime">-->
+                            <!--<span class="filter-option pull-left">Realtime</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>-->
+                          <!--</button>-->
+                          <!--<div class="dropdown-menu open">-->
+                            <!--<ul class="dropdown-menu inner" role="menu">-->
+                              <!--<li data-original-index="0">-->
+                                <!--<a tabindex="0" class="" style="" data-tokens="null"><span class="text">Pseudo</span><span class="glyphicon glyphicon-ok check-mark"></span></a>-->
+                              <!--</li>-->
+                              <!--<li data-original-index="1" class="selected">-->
+                                <!--<a tabindex="0" class="" style="" data-tokens="null"><span class="text">Realtime</span><span class="glyphicon glyphicon-ok check-mark"></span></a>-->
+                              <!--</li>-->
+                            <!--</ul>-->
+                          <!--</div>-->
+                          <!--<select class="selectpicker form-control" tabindex="-98" data-field="select">-->
+                            <!--<option data-field="option" data-i18n-prefix="KieSelectElementView." value="PSEUDO">Pseudo</option>-->
+                            <!--<option data-field="option" data-i18n-prefix="KieSelectElementView." value="REALTIME">Realtime</option>-->
+                          <!--</select></div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <!--<input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">-->
+                    <input type="text" data-field="name" placeholder="Name">
+                  </div>
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <input type="text" data-field="type" placeholder="State">
+                  </div>
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <div data-field="clock-select-container">
+                        <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                          <div class="btn-group bootstrap-select form-control">
+                            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Realtime">
+                              <span class="filter-option pull-left">Realtime</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                            </button>
+                            <div class="dropdown-menu open">
+                              <ul class="dropdown-menu inner" role="menu">
+                                <li data-original-index="0">
+                                  <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Pseudo</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                                </li>
+                                <li data-original-index="1" class="selected">
+                                  <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Realtime</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                                </li>
+                              </ul>
+                            </div>
+                            <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                              <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PSEUDO">Pseudo</option>
+                              <option data-field="option" data-i18n-prefix="KieSelectElementView." value="REALTIME">Realtime</option>
+                            </select></div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item">
+                    <div class="list-view-pf-expand" data-field="listeners-button">
+                      <span class="fa fa-angle-right"></span>
+                      <strong data-field="listeners-count">4</strong> Listeners
+                    </div>
+                  </div>
+                  <div class="list-view-pf-additional-info-item">
+                    <div class="list-view-pf-expand" data-field="work-item-handlers-button">
+                      <span class="fa fa-angle-right"></span>
+                      <strong data-field="work-item-handlers-count">1</strong> Work Item Handlers
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item-container container-fluid hidden">
+              <div class="close">
+                <span class="pficon pficon-close"></span>
+              </div>
+
+              <br>
+              <br>
+
+              <table class="table table-hover kie-tablelist">
+                <thead>
+                <tr>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Type">Type</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Kind">Kind</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions"></th>
+                </tr>
+                </thead>
+                <tbody data-field="listeners-container">
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Process Event Listener">
+                            <span class="filter-option pull-left">Process Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Agenda Event Listener">
+                            <span class="filter-option pull-left">Agenda Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Rule Runtime Event Listener">
+                            <span class="filter-option pull-left">Rule Runtime Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Rule Runtime Event Listener">
+                            <span class="filter-option pull-left">Rule Runtime Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="button" class="btn btn-link" data-field="add-listener-button">
+                  <span class="pficon pficon-add-circle-o"></span>
+                  <span data-i18n-key="AddListener">Add Listener</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="list-group-item-container container-fluid hidden">
+              <div class="close">
+                <span class="pficon pficon-close"></span>
+              </div>
+
+              <br>
+              <br>
+
+              <table class="table table-hover kie-tablelist">
+                <thead>
+                <tr>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Type">Type</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Name">Name</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions"></th>
+                </tr>
+                </thead>
+                <tbody data-field="work-item-handlers-container">
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="WorkItemHandlerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="name">
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="button" class="btn btn-link" data-field="add-work-item-handler-button">
+                  <span class="pficon pficon-add-circle-o"></span>
+                  <span data-i18n-key="AddWorkItemHandler">Add Work Item Handler</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="list-group-item" data-i18n-prefix="KnowledgeSessionListItemView.">
+            <div class="list-view-pf-checkbox">
+              <input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">
+            </div>
+            <div class="list-view-pf-actions">
+              <a href="#0" class="btn btn-link" data-field="remove-button">
+                <span class="fa fa-trash-o"></span>
+              </a>
+            </div>
+
+            <div class="list-view-pf-main-info">
+              <div class="list-view-pf-body">
+                <!--<div class="list-view-pf-description">-->
+                <!--<div class="list-group-item-text ksessions-list-group-item-text-content">-->
+                <!--&lt;!&ndash;<input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">&ndash;&gt;-->
+                <!--<input type="text" data-field="name" placeholder="Name">-->
+                <!--<input type="text" data-field="type" placeholder="State">-->
+                <!--<div data-field="clock-select-container">-->
+                <!--<div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">-->
+                <!--<div class="btn-group bootstrap-select form-control">-->
+                <!--<button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Realtime">-->
+                <!--<span class="filter-option pull-left">Realtime</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>-->
+                <!--</button>-->
+                <!--<div class="dropdown-menu open">-->
+                <!--<ul class="dropdown-menu inner" role="menu">-->
+                <!--<li data-original-index="0">-->
+                <!--<a tabindex="0" class="" style="" data-tokens="null"><span class="text">Pseudo</span><span class="glyphicon glyphicon-ok check-mark"></span></a>-->
+                <!--</li>-->
+                <!--<li data-original-index="1" class="selected">-->
+                <!--<a tabindex="0" class="" style="" data-tokens="null"><span class="text">Realtime</span><span class="glyphicon glyphicon-ok check-mark"></span></a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<select class="selectpicker form-control" tabindex="-98" data-field="select">-->
+                <!--<option data-field="option" data-i18n-prefix="KieSelectElementView." value="PSEUDO">Pseudo</option>-->
+                <!--<option data-field="option" data-i18n-prefix="KieSelectElementView." value="REALTIME">Realtime</option>-->
+                <!--</select></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <!--<input type="radio" data-field="is-default" name="kieKnowledgeSessionDefaultRadio">-->
+                    <input type="text" data-field="name" placeholder="Name">
+                  </div>
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <input type="text" data-field="type" placeholder="State">
+                  </div>
+                  <div class="list-view-pf-additional-info-item list-view-pf-additional-info-item--modal ksessions-list-group-item-text-content">
+                    <div data-field="clock-select-container">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Realtime">
+                            <span class="filter-option pull-left">Realtime</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Pseudo</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Realtime</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PSEUDO">Pseudo</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="REALTIME">Realtime</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-view-pf-additional-info">
+                  <div class="list-view-pf-additional-info-item">
+                    <div class="list-view-pf-expand" data-field="listeners-button">
+                      <span class="fa fa-angle-right"></span>
+                      <strong data-field="listeners-count">4</strong> Listeners
+                    </div>
+                  </div>
+                  <div class="list-view-pf-additional-info-item">
+                    <div class="list-view-pf-expand" data-field="work-item-handlers-button">
+                      <span class="fa fa-angle-right"></span>
+                      <strong data-field="work-item-handlers-count">1</strong> Work Item Handlers
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item-container container-fluid hidden">
+              <div class="close">
+                <span class="pficon pficon-close"></span>
+              </div>
+
+              <br>
+              <br>
+
+              <table class="table table-hover kie-tablelist">
+                <thead>
+                <tr>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Type">Type</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Kind">Kind</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions"></th>
+                </tr>
+                </thead>
+                <tbody data-field="listeners-container">
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Process Event Listener">
+                            <span class="filter-option pull-left">Process Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Agenda Event Listener">
+                            <span class="filter-option pull-left">Agenda Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Rule Runtime Event Listener">
+                            <span class="filter-option pull-left">Rule Runtime Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="ListenerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <div data-field="kind-select-container" class="form-group">
+                      <div class="btn-group bootstrap-select form-control" data-field="root" data-i18n-prefix="KieSelectElementView.">
+                        <div class="btn-group bootstrap-select form-control">
+                          <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Rule Runtime Event Listener">
+                            <span class="filter-option pull-left">Rule Runtime Event Listener</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span>
+                          </button>
+                          <div class="dropdown-menu open">
+                            <ul class="dropdown-menu inner" role="menu">
+                              <li data-original-index="0">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Agenda Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="1" class="selected">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Rule Runtime Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                              <li data-original-index="2">
+                                <a tabindex="0" class="" style="" data-tokens="null"><span class="text">Process Event Listener</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <select class="selectpicker form-control" tabindex="-98" data-field="select">
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="AGENDA_EVENT_LISTENER">Agenda Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="RULE_RUNTIME_EVENT_LISTENER">Rule Runtime Event Listener</option>
+                            <option data-field="option" data-i18n-prefix="KieSelectElementView." value="PROCESS_EVENT_LISTENER">Process Event Listener</option>
+                          </select></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="button" class="btn btn-link" data-field="add-listener-button">
+                  <span class="pficon pficon-add-circle-o"></span>
+                  <span data-i18n-key="AddListener">Add Listener</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="list-group-item-container container-fluid hidden">
+              <div class="close">
+                <span class="pficon pficon-close"></span>
+              </div>
+
+              <br>
+              <br>
+
+              <table class="table table-hover kie-tablelist">
+                <thead>
+                <tr>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Type">Type</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header" data-i18n-key="Name">Name</th>
+                  <th class="kie-tablelist__cell kie-tablelist__cell--header kie-tablelist__cell--actions"></th>
+                </tr>
+                </thead>
+                <tbody data-field="work-item-handlers-container">
+                <tr class="kie-tablelist__row" data-field="root" data-i18n-prefix="WorkItemHandlerListItemView.">
+
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="type">
+                  </td>
+                  <td class="kie-tablelist__cell ">
+                    <input type="text" class="form-control" data-field="name">
+                  </td>
+                  <td class="kie-tablelist__cell  kie-tablelist__cell--actions">
+                    <span data-field="remove-button" class="fa fa-times"></span>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="button" class="btn btn-link" data-field="add-work-item-handler-button">
+                  <span class="pficon pficon-add-circle-o"></span>
+                  <span data-i18n-key="AddWorkItemHandler">Add Work Item Handler</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- end tiagos code -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Help Modal -->
 <div class="modal fade" id="help">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1280,6 +1957,65 @@
     });
 </script>
 
+<!-- Compound expansion for list-view -->
+<script>
+    $(document).ready(function () {
+        // Row Checkbox Selection
+        $("input[type='checkbox']").change(function (e) {
+            if ($(this).is(":checked")) {
+                $(this).closest('.list-group-item').addClass("active");
+            } else {
+                $(this).closest('.list-group-item').removeClass("active");
+            }
+        });
+        // toggle dropdown menu
+        $(".list-view-pf-actions").on("show.bs.dropdown", function () {
+            var $this = $(this);
+            var $dropdown = $this.find(".dropdown");
+            var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find(".dropdown-menu").outerHeight(true);
+            $dropdown.toggleClass("dropup", space < 10);
+        });
+        // compound expansion
+        $(".list-view-pf-expand").on("click", function () {
+            var $this = $(this);
+            var $heading = $(this).parents(".list-group-item");
+            //var $row = $heading.parent();
+            var $subPanels = $heading.find(".list-group-item-container");
+            var index = $heading.find(".list-view-pf-expand").index(this);
+
+            //Remove all active status
+            $heading.find(".list-view-pf-expand.active").find(".fa-angle-right").removeClass("fa-angle-down")
+                .end().removeClass("active")
+                .end().removeClass("list-view-pf-expand-active");
+            // Add active to the clicked item
+            $(this).addClass("active")
+                .parents(".list-group-item").addClass("list-view-pf-expand-active")
+                .end().find(".fa-angle-right").addClass("fa-angle-down");
+            // check if it needs to hide
+            if($subPanels.eq(index).hasClass("hidden")){
+                $heading.find(".list-group-item-container:visible").addClass("hidden");
+                $subPanels.eq(index).removeClass("hidden");
+            } else {
+                $subPanels.eq(index).addClass("hidden");
+                $heading.find(".list-view-pf-expand.active").find(".fa-angle-right").removeClass("fa-angle-down")
+                    .end().removeClass("active")
+                    .end().removeClass("list-view-pf-expand-active");
+            }
+        });
+
+        // click close button to close the panel
+        $(".list-group-item-container .close").on("click", function (){
+            var $this = $(this);
+            var $panel = $this.parent();
+
+            // close the container and remove the active status
+            $panel.addClass("hidden")
+                .parent().removeClass("list-view-pf-expand-active")
+                .find(".list-view-pf-expand.active").removeClass("active")
+                .find(".fa-angle-right").removeClass("fa-angle-down")
+        });
+    });
+</script>
 
 </body>
 </html>
