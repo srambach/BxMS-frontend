@@ -20490,6 +20490,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .active .badge {
   background-color: #0088ce;
 }
+.kie-badge--superscript {
+  margin-top: -20px;
+  margin-left: -0.75rem;
+  font-size: smaller;
+}
 .kie-search-pf.has-button .form-group {
   display: flex;
   width: auto;
@@ -20601,5 +20606,41 @@ td .kie-tablelist__select {
 }
 .kie-list-group > *:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+.kie-list-pf-additional-content--right {
+  justify-content: flex-end;
+}
+.kie-table--codeview {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  width: 100%;
+}
+.kie-table--codeview__linenumber {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 5em;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.kie-table--codeview__code {
+  padding-left: 1rem;
+  width: 100%;
+}
+.kie-table--codeview__code:before {
+  content: '\00a0\00a0';
+}
+.kie-table--codeview__line--added {
+  background-color: #e6ffed;
+}
+.kie-table--codeview__line--added .kie-table--codeview__code:before {
+  content: '+ ';
+}
+.kie-table--codeview__line--deleted {
+  background-color: #ffeef0;
+}
+.kie-table--codeview__line--deleted .kie-table--codeview__code:before {
+  content: '- ';
+}
+.kie-btn-group--separate {
+  margin-right: 1.25rem;
 }
 /*# sourceMappingURL=kie-main.css.map */
