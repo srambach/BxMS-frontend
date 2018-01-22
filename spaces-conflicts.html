@@ -165,7 +165,7 @@
       </div>
 
       <!-- Content -->
-      <div class="row kie-row--tabcontent" style="background-color: #eee;">
+      <div class="row kie-row--tabcontent kie-row--inverse kie-row--topPadding">
         <div class="col-xs-12 col-md-6 col-lg-4 " id="" >
           <form role="form">
             <div class="form-group">
@@ -183,19 +183,105 @@
 
           <div class="panel-group kie__panel-group">
             <div class="panel kie__panel">
-              <div class="panel-heading kie__panel-heading">
-                <div class="panel-title kie__heading--section">
-                  <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
-                     href="#kieFilterDockBasicState">File Name</a>
+              <div class="panel-heading  kie-panel-header">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile1"
+                     href="#kieFile1">First File Name</a>
                 </div>
+
               </div>
-              <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
+              <div id="kieFile1" class="panel-collapse collapse in">
                 <div class="panel-body kie__panel-body">
-                  code
+
+                  <table class="kie-table--codeview">
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">1</td>
+                      <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">2</td>
+                      <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">3</td>
+                      <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                    </tr>
+                    <tr class="">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">8</td>
+                      <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">9</td>
+                      <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">10</td>
+                      <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">11</td>
+                      <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">12</td>
+                      <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">13</td>
+                      <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">14000</td>
+                      <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                    </tr>
+                  </table>
+
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="panel-group kie__panel-group">
+            <div class="panel kie__panel">
+              <div class="panel-heading  kie-panel-header">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile2"
+                     href="#kieFile2">Second File Name</a>
+                </div>
+
+              </div>
+              <div id="kieFile2" class="panel-collapse collapse in">
+                <div class="panel-body kie__panel-body">
+
+                  <div style="overflow:auto;max-width:100%;"><img src="images/example_diagram.png" alt="" style="overflow:auto;"/></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
