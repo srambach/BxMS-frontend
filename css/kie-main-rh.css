@@ -19496,10 +19496,31 @@ html {
 .bxms-list-view__status {
   margin-right: 2em;
 }
+.list-view-pf-body {
+  display: flex;
+}
+.list-view-pf-additional-info-item {
+  width: 7em;
+}
 .bxms-list-group--case {
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
+  .list-view-pf-additional-info {
+    flex: 0 0 auto;
+    float: left;
+    width: 15%;
+  }
+  .list-view-pf .list-group-item-heading {
+    -ms-flex: 1 0 calc(70% - 20px);
+    flex: 1 0 calc(70% - 20px);
+    width: calc(70% - 20px);
+  }
+  .list-view-pf .list-group-item-text {
+    -ms-flex: 0 0 calc(30% - 20px);
+    flex: 0 0 calc(30% - 20px);
+    width: calc(30% - 20px);
+  }
   .list-view-pf .bxms-list-view-pf-description--case {
     -ms-flex: 1 0 calc(80% - 20em);
     flex: 1 0 calc(80% - 20em);

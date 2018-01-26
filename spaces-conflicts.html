@@ -17,9 +17,6 @@
   <!-- Bootstrap JS -->
   <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-  <!-- Pretty print code -->
-  <script src="//rawgit.com/tcollard/google-code-prettify/v1.0.4/bin/prettify.min.js"></script>
-
 </head>
 <body>
 
@@ -138,13 +135,7 @@
             <li>
               <a href="#">Spaces</a>
             </li>
-            <li>
-              <a href="#">Space Name</a>
-            </li>
-            <li>
-              <a href="#">Project Name</a>
-            </li>
-            <li class="active"> <strong>Submit Change Request</strong>
+            <li class="active"> <strong>Space Name</strong>
             </li>
           </ol>
         </div>
@@ -155,14 +146,26 @@
         <div class="col-sm-12 page-header kie-page-header">
           <div class="actions pull-right">
             <button type="button" class="btn btn-default">Cancel</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary">Resolve</button>
           </div>
-          <h1>Submit Change Request</h1>
+          <h1>Resolve conflicts</h1>
+        </div>
+      </div>
+
+      <!-- Tab nav row -->
+      <div class="row" >
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li class="active"><a href="#">Projects <span class="badge">0</span></a></li>
+            <li><a href="#">Contributors <span class="badge">12</span></a></li>
+            <li><a href="#">Metrics</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
         </div>
       </div>
 
       <!-- Content -->
-      <div class="row kie-row--inverse kie-row--topPadding">
+      <div class="row kie-row--tabcontent kie-row--inverse kie-row--topPadding">
         <div class="col-xs-12 col-md-6 col-lg-4 " id="" >
           <form role="form">
             <div class="form-group">
@@ -171,45 +174,90 @@
             </div>
             <div class="form-group">
               <label for="kieDescriptionInput">Description</label>
-              <textarea class="form-control" id="kieDescriptionInput" rows="15"></textarea>
+              <textarea class="form-control" id="kieDescriptionInput"></textarea>
             </div>
           </form>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-8 " id="" >
-          <label for="">2 files changed with 140 additions and 140 deletions</label>
+          <label for="">2 files changed with 140 deletions</label>
 
           <div class="panel-group kie__panel-group">
             <div class="panel kie__panel">
               <div class="panel-heading  kie-panel-header">
                 <div class="panel-title ">
-                  <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
-                     href="#kieFilterDockBasicState">File Name</a>
-                </div>
-                <div class="checkbox ">
-                  <label>
-                    <input type="checkbox" checked> Include
-                  </label>
+                  <a data-toggle="collapse" data-target="#kieFile1"
+                     href="#kieFile1">First File Name</a>
                 </div>
 
               </div>
-              <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
+              <div id="kieFile1" class="panel-collapse collapse in">
                 <div class="panel-body kie__panel-body">
-      <pre class="prettyprint linenums lang-html">
-&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;&lt;/header&gt;
-  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;
-  &lt;footer&gt;&lt;/footer&gt;
-  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+
+                  <table class="kie-table--codeview">
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">1</td>
+                      <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">2</td>
+                      <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">3</td>
+                      <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                    </tr>
+                    <tr class="">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">8</td>
+                      <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">9</td>
+                      <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">10</td>
+                      <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">11</td>
+                      <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">12</td>
+                      <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">13</td>
+                      <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                    </tr>
+                    <tr>
+                      <td class="kie-table--codeview__linenumber">14000</td>
+                      <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                    </tr>
+                  </table>
+
                 </div>
               </div>
             </div>
@@ -219,34 +267,16 @@
             <div class="panel kie__panel">
               <div class="panel-heading  kie-panel-header">
                 <div class="panel-title ">
-                  <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
-                     href="#kieFilterDockBasicState">File Name</a>
-                </div>
-                <div class="checkbox ">
-                  <label>
-                    <input type="checkbox" checked> Include
-                  </label>
+                  <a data-toggle="collapse" data-target="#kieFile2"
+                     href="#kieFile2">Second File Name</a>
                 </div>
 
               </div>
-              <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
+              <div id="kieFile2" class="panel-collapse collapse in">
                 <div class="panel-body kie__panel-body">
-      <pre class="prettyprint linenums lang-html">
-&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;&lt;/header&gt;
-  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;
-  &lt;footer&gt;&lt;/footer&gt;
-  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+
+                  <div style="overflow:auto;max-width:100%;"><img src="images/example_diagram.png" alt="" style="overflow:auto;"/></div>
+
                 </div>
               </div>
             </div>
@@ -354,12 +384,6 @@
     </div>
   </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        prettyPrint();
-    });
-</script>
 
 </body>
 </html>

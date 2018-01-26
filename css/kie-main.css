@@ -19496,10 +19496,31 @@ html {
 .bxms-list-view__status {
   margin-right: 2em;
 }
+.list-view-pf-body {
+  display: flex;
+}
+.list-view-pf-additional-info-item {
+  width: 7em;
+}
 .bxms-list-group--case {
   margin-bottom: 0;
 }
 @media (min-width: 992px) {
+  .list-view-pf-additional-info {
+    flex: 0 0 auto;
+    float: left;
+    width: 15%;
+  }
+  .list-view-pf .list-group-item-heading {
+    -ms-flex: 1 0 calc(70% - 20px);
+    flex: 1 0 calc(70% - 20px);
+    width: calc(70% - 20px);
+  }
+  .list-view-pf .list-group-item-text {
+    -ms-flex: 0 0 calc(30% - 20px);
+    flex: 0 0 calc(30% - 20px);
+    width: calc(30% - 20px);
+  }
   .list-view-pf .bxms-list-view-pf-description--case {
     -ms-flex: 1 0 calc(80% - 20em);
     flex: 1 0 calc(80% - 20em);
@@ -20465,6 +20486,11 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .active .badge {
   background-color: #0088ce;
 }
+.kie-badge--superscript {
+  margin-top: -20px;
+  margin-left: -0.75rem;
+  font-size: smaller;
+}
 .kie-search-pf.has-button .form-group {
   display: flex;
   width: auto;
@@ -20604,5 +20630,49 @@ td .kie-tablelist__select {
 }
 .list-view-pf--header .list-view-pf-checkbox {
   padding-top: 0;
+}
+.kie-list-pf-additional-content--right {
+  justify-content: flex-end;
+}
+.kie-table--codeview {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  width: 100%;
+}
+.kie-table--codeview__linenumber {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 5em;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.kie-table--codeview__code {
+  padding-left: 1rem;
+  width: 100%;
+}
+.kie-table--codeview__code:before {
+  content: '\00a0\00a0';
+}
+.kie-table--codeview__line--added {
+  background-color: #e6ffed;
+}
+.kie-table--codeview__line--added .kie-table--codeview__code:before {
+  content: '+ ';
+}
+.kie-table--codeview__line--deleted {
+  background-color: #ffeef0;
+}
+.kie-table--codeview__line--deleted .kie-table--codeview__code:before {
+  content: '- ';
+}
+.kie-btn-group--separate {
+  margin-right: 1.25rem;
+}
+.kie-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kie-header--codeview {
+  font-size: 1em;
 }
 /*# sourceMappingURL=kie-main.css.map */

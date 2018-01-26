@@ -6,7 +6,12 @@
     background-color: @color-pf-blue-400;
   }
 }
-
+// show a badge as a superscript
+.kie-badge--superscript {
+  margin-top: -(@line-height-computed);
+  margin-left: -@pf-spacer-xs;
+  font-size: smaller;
+}
 
 // fix up formatting within the toolbar
 .kie-search-pf.has-button .form-group {
@@ -146,7 +151,6 @@ td .kie-tablelist__select {
   margin-bottom: @pf-spacer-lg;
 }
 
-
 // Create a special list-view-pf to be used as a header preceding a regular list-view-pf
 .list-view-pf--header {
   margin-top: 0;
@@ -180,3 +184,59 @@ td .kie-tablelist__select {
     padding-top: 0;
   }
 }
+
+// Added for change request
+.kie-list-pf-additional-content--right {
+  justify-content: flex-end;
+}
+
+// Table for displaying code insertions and deletions
+@kie-table--codeview__added-BackgroundColor: #e6ffed;
+@kie-table--codeview__deleted-BackgroundColor: #ffeef0;
+
+.kie-table--codeview {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  width: 100%;
+}
+.kie-table--codeview__linenumber {
+  padding-left: @pf-spacer-sm;
+  padding-right: @pf-spacer-sm;
+  max-width: 5em;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.05); // darken the line number column but let the added and deleted colors show through
+}
+.kie-table--codeview__code {
+  padding-left: @pf-spacer-sm;
+  width: 100%; // makes the associated kie-table--codeview__linenumber column as small as it can be and still fit the line numbers no matter what the width of the table
+  &:before {
+    content: '\00a0\00a0'; // two spaces before all lines
+  }
+}
+.kie-table--codeview__line--added {
+  background-color: @kie-table--codeview__added-BackgroundColor;
+  .kie-table--codeview__code:before {
+    content: '+ '; // put a + before added lines
+  }
+}
+.kie-table--codeview__line--deleted {
+   background-color: @kie-table--codeview__deleted-BackgroundColor;
+  .kie-table--codeview__code:before {
+    content: '- '; // put a - before deleted lines
+  }
+ }
+
+// Allows a button to be physically separated from a button group
+.kie-btn-group--separate {
+  margin-right: @pf-spacer-md;
+}
+
+.kie-panel-heading {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kie-header--codeview {
+  font-size: @font-size-relative-base;
+}
+
