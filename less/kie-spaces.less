@@ -80,6 +80,10 @@
     }
   }
 }
+
+.kie-tablelist__subrow {
+  display:none;
+ }
 .kie-tablelist__cell--actions {
   text-align: right;
 }
@@ -147,6 +151,40 @@ td .kie-tablelist__select {
   margin-bottom: @pf-spacer-lg;
 }
 
+// Create a special list-view-pf to be used as a header preceding a regular list-view-pf
+.list-view-pf--header {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom-color: @color-pf-white;
+  font-weight: @pf-font-weight-bold;
+
+  .list-group-item {
+    &:first-child {
+      border-top-color: @color-pf-white;
+      border-bottom-color: @color-pf-white;
+    }
+    &:hover {
+      border-left-color: @color-pf-white;
+      border-right-color: @color-pf-white;
+      background-color: @color-pf-white;
+    }
+    // Fix up margin/padding on all the children
+    & > * {
+      margin-bottom: @pf-spacer-xs;
+      padding-bottom: 0;
+    }
+  }
+
+  // remove margin on the list-view-pf that this is the header for
+  &+.list-view-pf {
+    margin-top: 0;
+  }
+
+  .list-view-pf-checkbox {
+    padding-top: 0;
+  }
+}
+
 // Added for change request
 .kie-list-pf-additional-content--right {
   justify-content: flex-end;
@@ -196,9 +234,9 @@ td .kie-tablelist__select {
   display:flex;
   justify-content: space-between;
   align-items: center;
-  //padding-left: @pf-spacer-md;
 }
 
 .kie-header--codeview {
   font-size: @font-size-relative-base;
 }
+
