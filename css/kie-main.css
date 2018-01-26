@@ -20639,4 +20639,12 @@ td .kie-tablelist__select {
 .kie-btn-group--separate {
   margin-right: 1.25rem;
 }
+.kie-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kie-header--codeview {
+  font-size: 1em;
+}
 /*# sourceMappingURL=kie-main.css.map */
