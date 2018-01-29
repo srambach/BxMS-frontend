@@ -8,175 +8,373 @@
 
   <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
 
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+    section {
+      background-color: white;
+      border: 1px solid #EEE;
+      padding: .5em;
+      margin-top: 1em;
+    }
+    td {
+      padding: .5em .5em;
+    }
+    td:first-child {
+      min-width: 8em;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>BxMS</h2>
+  <div class="row">
+    <h1>BxMS</h1>
+  </div>
 
-  <section>
-    <row>
-      <!--<section>-->
-      <!--<a href="designer-palette.html">Designer palette - old way</a>-->
-      <!--</section>-->
+  <div class="row">
+    <h2>In progress</h2>
 
-      <h3>In progress</h3>
+    <section>
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <a href="kw-case-view-filled.html">(experimental) Knowledge Worker Case View</a>
+          </td>
+        </tr>
+        <tr>
+          <td>AF-632</td>
+          <td>
+            <a href="spaces-conflicts.html">Spaces - conflict resolution </a>
+          </td>
+        </tr>
+        <tr>
+          <td>AF-937</td>
+          <td>
+            <a href="spaces-submitChangeRequest.html">Spaces - change request </a>
+          </td>
+        </tr>
+        <tr>
+          <td>AF-938</td>
+          <td>
+            <a href="spaces-changeRequestList.html">Spaces - change request list </a>
+          </td>
+        </tr>
+        <tr>
+          <td>AF-938</td>
+          <td>
+            <a href="spaces-changeRequestOverview.html">Spaces - change request overview </a>
+          </td>
+        </tr>
+        <tr>
+          <td>AF-938</td>
+          <td>
+            <a href="spaces-changeRequestFiles.html">Spaces - change request files </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-settings.html">Spaces - Settings</a>
+          </td>
+        </tr>
+      </table>
 
-      <section>
-        <a href="kw-case-view-filled.html">(experimental) Knowledge Worker Case View</a>
-      </section>
-      <!--<section>-->
-        <!--<a href="spaces-conflicts.html">Spaces - conflict resolution AF-632</a>-->
-      <!--</section>-->
-      <section>
-        <a href="spaces-submitChangeRequest.html">Spaces - change request AF-937</a>
-      </section>
-      <section>
-        <a href="spaces-changeRequestList.html">Spaces - change request list AF-938</a>
-      </section>
-      <section>
-        <a href="spaces-changeRequestOverview.html">Spaces - change request overview AF-938</a>
-      </section>
-      <section>
-        <a href="spaces-changeRequestFiles.html">Spaces - change request files AF-938</a>
-      </section>
-      <section>
-        <a href="spaces-settings.html">Spaces - Settings</a>
-      </section>
+    </section>
 
-      <h3>In Review</h3>
+  </div>
 
-      <h3>"Done" but possibly out of date as future stories affect them</h3>
-      <section>
-        <a href="blank-slate.html">Blank Slate </a>
-      </section>
-      <section>
-        <a href="about-modal.html">About Modal</a>
-      </section>
-      <section>
-        <a href="project-list.html">Project List </a>
-      </section>
-      <section>
-        <a href="project-empty.html">Project - empty project </a>
-      </section>
-      <section>
-        <a href="project-populated.html">Project - populated project </a>
-      </section>
-      <section>
-        <a href="palette.html">BXMSUX-140 Just the designer palette on its own (NOTE: has been reskinned by
-          BXMSUX-284)</a>
-      </section>
+  <div class="row">
+    <h2>"Done" but possibly out of date as future stories affect them</h2>
+    <section class="col-xs-12">
+      <h4>Spaces</h4>
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-empty.html">Spaces - empty state</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-contributorlist.html">Spaces - contributor list</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-assetlist.html">Spaces - asset list</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-assetlist-alert.html">Spaces - asset list alert</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-assetlist-conflict.html">Spaces - asset list conflict</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="spaces-metrics.html">Spaces - metrics</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="mgmt-dock.html">Management - dock</a>
+          </td>
+        </tr>
+      </table>
+    </section>
 
-      <section>
-        <a href="case-list.html">BXMSUX-187 Case list building block</a>
-      </section>
-      <section>
-        <a href="case-overview-template.html">BXMSUX-199 Case overview Screen Template</a>
-      </section>
-      <section>
-        <a href="case-view-template.html">BXMSUX-201 Case View Screen Template</a>
-      </section>
-      <section>
-        <a href="case-view.html">BXMSUX-213 Case View</a>
-      </section>
-      <section>
-        <a href="case-actions.html">BXMSUX-209 Case Actions building block</a>
-      </section>
-      <section>
-        <a href="case-details.html">BXMSUX-190 Case Details building block</a>
-      </section>
-      <section>
-        <a href="case-stages.html">BXMSUX-212 Case stages block</a>
-      </section>
-      <section>
-        <a href="case-roles.html">BXMSUX-192 Case roles block</a>
-      </section>
-      <section>
-        <a href="case-milestones.html">BXMSUX-210 Case milestones block</a>
-      </section>
-      <section>
-        <a href="case-view-filled.html">Case view filled in with new building blocks</a>
-      </section>
-      <section>
-        <a href="editor-toolbar.html">BXMSUX-223 Editor Toolbar</a>
-      </section>
-      <section>
-        <a href="case-activities.html">BXMSUX-248 Case Activities building block</a>
-      </section>
-      <section>
-        <a href="case-comments.html">BXMSUX-211 Case Comments building block</a>
-      </section>
-      <section>
-        <a href="detail-panel-template.html">BXMSUX-260 Process Detail Panel Template</a>
-      </section>
-      <section>
-        <a href="settings.html">BXMSUX-197 Settings</a>
-      </section>
-      <section>
-        <a href="case-files.html">BXMSUX-258 Case View - Files building block</a>
-      </section>
-      <section>
-        <a href="bpm-home.html">BXMSUX-276 BPM Suite Home Page</a>
-      </section>
-      <section>
-        <a href="bpm-library.html">BXMSUX-294 BPM Design Library</a>
-      </section>
-      <section>
-        <a href="bpm-processes.html">BXMSUX-274 BPM Processes and tasks view</a>
-      </section>
-      <section>
-        <a href="palette.html">BXMSUX-284 Designer palette reskinned (css only on palette.html)</a>
-      </section>
-      <section>
-        <a href="bpm-home.html">jBPM Suite Home Page - cleanup, add background graphic</a>
-      </section>
-      <section>
-        <a href="bpm-home-rh.html">Red Hat BPM Suite Home Page - cleanup, add background graphic</a>
-      </section>
+    <section class="col-xs-12">
+      <h4>Knowledge Worker</h4>
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <a href="kw-home.html">Knowledge Worker Home Page</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="kw-detail.html">Knowledge Worker Detail Page</a>
+          </td>
+        </tr>
+      </table>
+    </section>
 
-      <section>
-        <a href="kw-home.html">Knowledge Worker Home Page</a>
-      </section>
-      <section>
-        <a href="kw-detail.html">Knowledge Worker Detail Page</a>
-      </section>
+    <section class="col-xs-12">
+      <h4>BPM Home page</h4>
+      <table>
+        <tr>
+          <td>BXMSUX-276</td>
+          <td>
+            <a href="bpm-home.html">BPM Suite Home Page</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-294</td>
+          <td>
+            <a href="bpm-library.html">BPM Design Library</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-274</td>
+          <td>
+            <a href="bpm-processes.html">BPM Processes and tasks view</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-284</td>
+          <td>
+            <a href="palette.html">Designer palette reskinned (css only on palette.html)</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="bpm-home.html">jBPM Suite Home Page - cleanup, add background graphic</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="bpm-home-rh.html">Red Hat BPM Suite Home Page - cleanup, add background graphic</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-197</td>
+          <td>
+            <a href="settings.html">Settings</a>
+          </td>
+        </tr>
+      </table>
 
-      <section>
-        <a href="spaces-empty.html">Spaces - empty state</a>
-      </section>
-      <section>
-        <a href="spaces-contributorlist.html">Spaces - contributor list</a>
-      </section>
-      <section>
-        <a href="spaces-assetlist.html">Spaces - asset list</a>
-      </section>
-      <section>
-        <a href="spaces-assetlist-alert.html">Spaces - asset list alert</a>
-      </section>
-      <section>
-        <a href="spaces-assetlist-conflict.html">Spaces - asset list conflict</a>
-      </section>
-      <section>
-        <a href="spaces-metrics.html">Spaces - metrics</a>
-      </section>
-      <section>
-        <a href="mgmt-dock.html">Management - dock</a>
-      </section>
+    </section>
 
-      <h3>Old/out of date/probably broken</h3>
-      <section>
-        <a href="designer-palette-nav.html">Designer palette implemented as vertical navigation</a>
-      </section>
-      <section>
-        <a href="layout-editor.html">Basic layout for BxMS Editor screen</a>
-      </section>
-      <section>
-        <a href="layout-editor-palette.html">Basic layout for BxMS Editor screen, adding in the palette</a>
-      </section>
+    <section class="col-xs-12">
+      <h4>Case View</h4>
+      <table>
+        <tr>
+          <td>BXMSUX-187</td>
+          <td>
+            <a href="case-list.html">Case list building block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-199</td>
+          <td>
+            <a href="case-overview-template.html">Case overview Screen Template</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-201</td>
+          <td>
+            <a href="case-view-template.html">Case View Screen Template</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-213</td>
+          <td>
+            <a href="case-view.html">Case View</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-209</td>
+          <td>
+            <a href="case-actions.html">Case Actions building block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-190</td>
+          <td>
+            <a href="case-details.html">Case Details building block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-212</td>
+          <td>
+            <a href="case-stages.html">Case stages block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-192</td>
+          <td>
+            <a href="case-roles.html">Case roles block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-210</td>
+          <td>
+            <a href="case-milestones.html">Case milestones block</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="case-view-filled.html">Case view filled in with new building blocks</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-248</td>
+          <td>
+            <a href="case-activities.html">Case Activities building block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-211</td>
+          <td>
+            <a href="case-comments.html">Case Comments building block</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-258</td>
+          <td>
+            <a href="case-files.html">Case View - Files building block</a>
+          </td>
+        </tr>
+      </table>
 
-    </row>
-  </section>
+    </section>
+
+    <section class="col-xs-12">
+      <h4>Page layout, palette</h4>
+      <table>
+        <tr>
+          <td>BXMSUX-260</td>
+          <td>
+            <a href="detail-panel-template.html">Process Detail Panel Template</a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-223</td>
+          <td>
+            <a href="editor-toolbar.html">Editor Toolbar</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="blank-slate.html">Blank Slate </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="about-modal.html">About Modal</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="project-list.html">Project List </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="project-empty.html">Project - empty project </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <a href="project-populated.html">Project - populated project </a>
+          </td>
+        </tr>
+        <tr>
+          <td>BXMSUX-140</td>
+          <td>
+            <a href="palette.html">Just the designer palette on its own (NOTE: has been reskinned by BXMSUX-284)</a>
+          </td>
+        </tr>
+      </table>
+
+    </section>
+
+  </div>
+
+  <div class="row">
+    <h2>Old/out of date/probably broken</h2>
+    <section>
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <a href="designer-palette-nav.html">Designer palette implemented as vertical navigation</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="layout-editor.html">Basic layout for BxMS Editor screen</a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <a href="layout-editor-palette.html">Basic layout for BxMS Editor screen, adding in the palette</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+  </div>
 
 </div>
+
+
 </body>
 </html>
