@@ -20637,6 +20637,7 @@ td .kie-tablelist__select {
 .kie-table--codeview {
   font-family: Menlo, Monaco, Consolas, monospace;
   width: 100%;
+  border: 1px solid #d1d1d1;
 }
 .kie-table--codeview__linenumber {
   padding-left: 1rem;
