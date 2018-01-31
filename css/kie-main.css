@@ -20675,4 +20675,7 @@ td .kie-tablelist__select {
 .kie-header--codeview {
   font-size: 1em;
 }
+.dropdown-menu .fa.fa-pull-right {
+  line-height: inherit;
+}
 /*# sourceMappingURL=kie-main.css.map */
