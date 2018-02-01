@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jBPM Suite</title>
+
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Pretty print code -->
+  <script src="//rawgit.com/tcollard/google-code-prettify/v1.0.4/bin/prettify.min.js"></script>
+
+</head>
+<body>
+
+<div class="kie-page">
+  <a class="kie-skiplink" href="#kie-main-content">Skip to main content</a>
+
+  <!-- Masthead -->
+  <nav class="kie-page__masthead navbar navbar-default navbar-pf " role="navigation">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img class="kie-brand-icon" src="images/kie-ide.png" alt="JBoss BPM Suite"/>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-iconic">
+        <li>
+          <a class="nav-item-iconic" href="bpm-home-rh.html" title="Home"><i class="pficon pficon-home"></i></a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav  kie-yamm">
+        <li class="dropdown kie-yamm--fw">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true" tabindex="0">
+            Menu
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu kie-yamm__dropdown-menu" aria-labelledby="dropdownMenu2">
+
+            <!-- mega menu sections -->
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Design</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Dashboards</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Configure</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Deployments</a></li>
+                <li><a href="#">Execution Servers</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3 ">
+              <h3 class="kie-yamm__title">Manage</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Process Definitions</a></li>
+                <li><a href="#">Process Instances</a></li>
+                <li><a href="#">Jobs</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Track</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Task Lists</a></li>
+                <li><a href="#">Task Reports</a></li>
+                <li><a href="#">Process Reports</a></li>
+                <li><a href="#">Business Dashboards</a></li>
+          </ul>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right navbar-iconic">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true">
+            <span title="Applications" class="fa fa-th"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+            <li><a href="">Application 1</a></li>
+            <li><a href="">Application 2</a></li>
+            <li><a href="">Application 3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="#help" data-toggle="modal" title="Help"><i class="fa fa-question"></i></a>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="settings.html" title="Settings"><i class="pficon pficon-equalizer"></i></a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true" tabindex="0">
+            <span title="Username" class="pficon pficon-user"></span>
+            Brian Johnson
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+            <li><a href="#about" data-toggle="modal">About</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
+
+    <div class="container-fluid ">
+      <!-- Breadcrumb row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">Spaces</a>
+            </li>
+            <li>
+              <a href="#">Space Name</a>
+            </li>
+            <li>
+              <a href="#">Project Name</a>
+            </li>
+            <li class="active"> <strong>Resolve Conflicts</strong>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Page Title Row -->
+      <div class="row">
+        <div class="col-sm-12 page-header kie-page-header">
+          <div class="actions pull-right">
+            <button type="button" class="btn btn-default">Cancel</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+          <h1>Resolve Conflicts</h1>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="row kie-row--inverse kie-row--topPadding">
+        <!-- changed files -->
+        <div class="col-xs-12" id="" >
+
+          <div class="panel-group kie__panel-group">
+            <div class="panel kie__panel">
+              <div class="panel-heading  kie-panel-heading">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile1"
+                     href="#kieFile1">File Name.changed</a>
+                </div>
+
+              </div>
+              <div id="kieFile1" class="row panel-collapse collapse in">
+                <div class="panel-body kie__panel-body">
+                  <div class="col-xs-12 col-md-6">
+                    <div class="kie-header--codeview">
+                      <div class="pull-right">October 26, 2017 at 10:30am</div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="kieFileOwnerRadio1" id="kieUserSelect1" value="option1" checked="">
+                          Alex Porcelli
+                        </label>
+                      </div>
+
+                    </div>
+                    <table class="kie-table--codeview">
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">1</td>
+                          <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">2</td>
+                          <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">3</td>
+                          <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                        </tr>
+                        <tr class="">
+                          <td class="kie-table--codeview__linenumber">4</td>
+                          <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                        </tr>
+                        <tr class="">
+                          <td class="kie-table--codeview__linenumber">5</td>
+                          <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                        </tr>
+                        <tr class="kie-table--codeview__line--deleted">
+                          <td class="kie-table--codeview__linenumber">7</td>
+                          <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                        </tr>
+
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">6</td>
+                          <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                        </tr>
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">7</td>
+                          <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                        </tr>
+
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">8</td>
+                          <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">9</td>
+                          <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">10</td>
+                          <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">11</td>
+                          <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                      </tr>
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">12</td>
+                          <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">13</td>
+                          <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">14000</td>
+                          <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                        </tr>
+    </table>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <div class="kie-header--codeview">
+                      <div class="pull-right">January 18, 2018 at 4:35pm</div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="kieFileOwnerRadio1" id="kieUserSelect1" value="option1" checked="">
+                          Tiago Bento
+                        </label>
+                      </div>
+                    </div>
+                      <table class="kie-table--codeview">
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">1</td>
+                          <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">2</td>
+                          <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">3</td>
+                          <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                        </tr>
+                        <tr class="">
+                          <td class="kie-table--codeview__linenumber">4</td>
+                          <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                        </tr>
+                        <tr class="">
+                          <td class="kie-table--codeview__linenumber">5</td>
+                          <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                        </tr>
+                        <tr class="kie-table--codeview__line--deleted">
+                          <td class="kie-table--codeview__linenumber">7</td>
+                          <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                        </tr>
+
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">6</td>
+                          <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                        </tr>
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">7</td>
+                          <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                        </tr>
+
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">8</td>
+                          <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">9</td>
+                          <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">10</td>
+                          <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">11</td>
+                          <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                        </tr>
+                        <tr class="kie-table--codeview__line--added">
+                          <td class="kie-table--codeview__linenumber">12</td>
+                          <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">13</td>
+                          <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                        </tr>
+                        <tr>
+                          <td class="kie-table--codeview__linenumber">14000</td>
+                          <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                        </tr>
+                      </table>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-group kie__panel-group">
+            <div class="panel kie__panel">
+              <div class="panel-heading  kie-panel-heading">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile1"
+                     href="#kieFile1">OtherFiletype.changed</a>
+                </div>
+
+              </div>
+              <div id="kieFile1" class="row panel-collapse collapse in">
+                <div class="panel-body kie__panel-body">
+                  <div class="col-xs-12 col-md-6">
+                    <div class="kie-header--codeview">
+                      <div class="pull-right">October 26, 2017 at 10:30am</div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="kieFileOwnerRadio4" id="kieUserSelect4" value="option1" checked="">
+                          Alex Porcelli
+                        </label>
+                      </div>
+
+                    </div>
+
+                    <div class="kie-fileView"><img src="images/example_diagram.png" alt="" style="overflow:auto;"/></div>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <div class="kie-header--codeview">
+                      <div class="pull-right">October 26, 2017 at 10:30am</div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="kieFileOwnerRadio4" id="kieUserSelectTiago" value="option1" checked="">
+                          Tiago Bento
+                        </label>
+                      </div>
+
+                    </div>
+
+                    <div class="kie-fileView"><img src="images/example_diagram.png" alt="" style="overflow:auto;"/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-group kie__panel-group">
+            <div class="panel kie__panel">
+              <div class="panel-heading  kie-panel-heading">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile8"
+                     href="#kieFile8">Filename.new</a>
+                </div>
+
+              </div>
+              <div id="kieFile8" class="panel-collapse collapse in">
+                <div class="panel-body kie__panel-body">
+                  <div class="kie-header--codeview">
+                    <div class="pull-right">October 26, 2017 at 10:30am</div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kieFileOwnerRadio2" id="kieUserSelect2" value="option1" checked="">
+                        Alex Porcelli
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <table class="kie-table--codeview">
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">1</td>
+                      <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">2</td>
+                      <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">3</td>
+                      <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    <tr class="kie-table--codeview__line--added">
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">8</td>
+                      <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">9</td>
+                      <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">10</td>
+                      <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">11</td>
+                      <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">12</td>
+                      <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">13</td>
+                      <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--added">
+                      <td class="kie-table--codeview__linenumber">14</td>
+                      <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-group kie__panel-group">
+            <div class="panel kie__panel">
+              <div class="panel-heading  kie-panel-header">
+                <div class="panel-title ">
+                  <a data-toggle="collapse" data-target="#kieFile2"
+                     href="#kieFile2">Filename.deleted</a>
+                </div>
+
+              </div>
+              <div id="kieFile2" class="panel-collapse collapse in">
+                <div class="panel-body kie__panel-body">
+                  <div class="kie-header--codeview">
+                    <div class="pull-right">October 26, 2017 at 10:30am</div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="kieFileOwnerRadio3" id="kieUserSelect3" value="option1" checked="">
+                        Alex Porcelli
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <table class="kie-table--codeview">
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">1</td>
+                      <td class="kie-table--codeview__code">&lt;!doctype html&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">2</td>
+                      <td class="kie-table--codeview__code">&lt;html lang=&quot;en&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">3</td>
+                      <td class="kie-table--codeview__code">&lt;head&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    </tr class="kie-table--codeview__line--deleted">
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">4</td>
+                      <td class="kie-table--codeview__code">  &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">5</td>
+                      <td class="kie-table--codeview__code">  &lt;title&gt;&lt;/title&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">6</td>
+                      <td class="kie-table--codeview__code">  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">7</td>
+                      <td class="kie-table--codeview__code">&lt;/head&gt;</td>
+                    </tr>
+
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">8</td>
+                      <td class="kie-table--codeview__code">&lt;body&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">9</td>
+                      <td class="kie-table--codeview__code">  &lt;header&gt;&lt;/header&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">10</td>
+                      <td class="kie-table--codeview__code">  &lt;div role=&quot;main&quot;&gt;&lt;/div&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">11</td>
+                      <td class="kie-table--codeview__code">  &lt;footer&gt;&lt;/footer&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">12</td>
+                      <td class="kie-table--codeview__code">  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">13</td>
+                      <td class="kie-table--codeview__code">&lt;/body&gt;</td>
+                    </tr>
+                    <tr class="kie-table--codeview__line--deleted">
+                      <td class="kie-table--codeview__linenumber">14</td>
+                      <td class="kie-table--codeview__code">&lt;/html&gt;</td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+</div><!-- kie-page -->
+
+<!-- Help modal -->
+<div class="modal fade" id="help">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Help</h4>
+      </div>
+      <div class="modal-body">
+        <div><img src="img/help.png" alt="" style="width: 568px;"/></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content about-modal-pf">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1 id="aboutModalTitle">
+          <img class="kie-brand-icon" src="images/jbpm_logo_noshadow_100px.png" alt="JBoss BPM Suite"/>
+        </h1>
+        <div class="product-versions-pf">
+          <ul class="list-unstyled" id="aboutModalVersions">
+            <li><strong>Version</strong> 0.0</li>
+          </ul>
+        </div>
+        <div class="trademark-pf">
+          jBPM is open source software, released under the <br>
+          <strong>Apache Software License 2.0</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Preferences modal -->
+<div class="modal fade" id="preferences">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Preferences</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="control-label">Language</label>
+          <select class="form-control">
+            <option value="default">English</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="ja">Japanese</option>
+            <option value="pt_BR">Portuguese</option>
+            <option value="zh_CN">Chinese (Simplified)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="control-label">View Mode</label>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Basic</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Compact</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Advanced</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Layouts</label>
+          <p><a href="#">Reset Perspective Layouts</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        prettyPrint();
+    });
+</script>
+
+</body>
+</html>

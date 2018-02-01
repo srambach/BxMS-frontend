@@ -20637,6 +20637,7 @@ td .kie-tablelist__select {
 .kie-table--codeview {
   font-family: Menlo, Monaco, Consolas, monospace;
   width: 100%;
+  border: 1px solid #d1d1d1;
 }
 .kie-table--codeview__linenumber {
   padding-left: 1rem;
@@ -20663,6 +20664,11 @@ td .kie-tablelist__select {
 }
 .kie-table--codeview__line--deleted .kie-table--codeview__code:before {
   content: '- ';
+}
+.kie-fileView {
+  overflow: auto;
+  max-width: 100%;
+  border: 1px solid #d1d1d1;
 }
 .kie-btn-group--separate {
   margin-right: 1.25rem;
