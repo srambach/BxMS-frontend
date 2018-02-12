@@ -19648,6 +19648,9 @@ html {
   margin-left: -10px;
   margin-right: -10px;
 }
+.toolbar-pf .kie-toolbar--last-of-leftside {
+  border-right-color: transparent;
+}
 .kie-toolbar__breadcrumb {
   padding: 0;
   margin: 0;
@@ -20720,6 +20723,7 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .checkbox .kie-label--embedded {
   padding-left: 0;
 }
+.kie-input--inline,
 .radio .kie-input--inline,
 .checkbox .kie-input--inline {
   display: inline-block;
@@ -20949,5 +20953,25 @@ td .kie-tablelist__select {
 }
 .dropdown-menu .fa.fa-pull-right {
   line-height: inherit;
+}
+.kie-navbar--optaplanner {
+  display: block;
+  flex: 0 0 auto;
+}
+.kie-navbar--optaplanner .navbar-header {
+  min-height: auto;
+}
+.kie-pagination--optaplanner {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.kie-form-group--vcenter {
+  align-items: center;
+}
+.kie-fullwidth {
+  width: 100%;
+}
+.kie-alert--inTable {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=kie-main.css.map */
