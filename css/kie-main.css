@@ -19648,6 +19648,9 @@ html {
   margin-left: -10px;
   margin-right: -10px;
 }
+.toolbar-pf .kie-toolbar--last-of-leftside {
+  border-right-color: transparent;
+}
 .kie-toolbar__breadcrumb {
   padding: 0;
   margin: 0;

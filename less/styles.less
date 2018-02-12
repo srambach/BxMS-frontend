@@ -343,6 +343,12 @@ html {
     }
   }
 }
+
+// turns off the line to the right so that the last one on the left side won't have a bar
+// specificity necessary to override other toolbar-pf styles
+.toolbar-pf .kie-toolbar--last-of-leftside {
+  border-right-color:transparent;
+}
 // end kie-toolbar
 
 // KIE breadcrumb contained in a toolbar
