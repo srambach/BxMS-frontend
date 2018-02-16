@@ -20974,4 +20974,41 @@ td .kie-tablelist__select {
 .kie-alert--inTable {
   margin-bottom: 0;
 }
+.content-view-pf-pagination,
+.table-view-pf-toolbar.toolbar-pf {
+  background-color: transparent;
+  border-color: transparent;
+}
+.kie-datatable > thead > tr > th,
+.kie-datatable > tbody > tr > th,
+.kie-datatable > tfoot > tr > th,
+.kie-datatable > thead > tr > td,
+.kie-datatable > tbody > tr > td,
+.kie-datatable tfoot > tr > td {
+  padding: 1rem 1.25rem;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.kie-datatable > thead {
+  background-color: transparent;
+  background-image: none;
+}
+.table-view-pf-actions {
+  background-color: transparent;
+}
+table.kie-datatable tbody > tr:hover > td.table-view-pf-actions {
+  background-color: transparent;
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before {
+  background: transparent;
+}
+.kie-table--pagination .btn {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.kie-table__cell--separated {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 /*# sourceMappingURL=kie-main.css.map */
