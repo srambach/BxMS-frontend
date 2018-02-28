@@ -20632,6 +20632,385 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-toolbar-pf__filter {
   flex-basis: 20em;
 }
+.kie-tab-content--filters hr {
+  border-color: #d1d1d1;
+}
+.tab-content {
+  border-left: 1px solid #bbb;
+  background-color: #fafafa;
+}
+.kie-list-pf-light {
+  background-color: #fff;
+}
+.panel-group .panel-default .panel-heading {
+  background: none;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+  border-top-color: transparent;
+}
+.kie-dock__divider {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.form-group + .kie-dock__divider,
+.panel-group + .kie-dock__divider {
+  margin-top: 15px;
+}
+.kie-dock__heading {
+  font-weight: 600;
+}
+.kie-dock__heading--section {
+  font-size: 12px;
+  font-weight: 600;
+}
+.kie-dock__panel-group {
+  margin-bottom: 0;
+}
+.kie-dock__panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.kie-dock__panel-heading {
+  padding: 0;
+}
+.kie-dock__panel-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.kie-dock__datepicker {
+  margin-bottom: 15px;
+}
+.kie-dock__list-pf-item :hover {
+  background-color: #EDF8FF;
+}
+.kie-dock__list-pf-item :hover .btn-link {
+  color: #00659c;
+}
+.kie-dock__list-pf-item.active {
+  background-color: #def3ff;
+  border-color: transparent;
+}
+.kie-dock__list-pf-container {
+  padding: 10px 0 10px 10px;
+}
+.kie-dock__list-pf-left {
+  margin-right: 10px;
+}
+.kie-dock__list-pf-title {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-main-content {
+  line-height: 1.4em;
+}
+.kie-dock__KVP:not(:last-child) {
+  margin-bottom: .5em;
+}
+.kie-dock__list-pf-actions {
+  margin-left: 0;
+}
+.kie-dock__list-pf-actions .btn-link {
+  color: #363636;
+  font-size: 1.16666667;
+  min-width: 44px;
+}
+.kie-list-pf-icon-md {
+  font-size: 1.75rem;
+}
+.radio .kie-label--embedded,
+.checkbox .kie-label--embedded {
+  padding-left: 0;
+}
+.kie-input--inline,
+.radio .kie-input--inline,
+.checkbox .kie-input--inline {
+  display: inline-block;
+  width: auto;
+}
+.kie-dock-selector > li > a {
+  padding: 1rem 2rem;
+  color: #030303;
+}
+.kie-dock-selector > li > a:hover,
+.kie-dock-selector > li > a:focus {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector > li.active a {
+  background-color: #def3ff;
+  color: #0088ce;
+}
+.kie-dock-selector__tab {
+  font-size: 1.16666667;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+@border &:hover {
+  border-color: #def3ff;
+}
+.kie-dock-selector__tab.active {
+  border-color: #0088ce;
+}
+.active .badge {
+  background-color: #0088ce;
+}
+.kie-badge--superscript {
+  margin-top: -20px;
+  margin-left: -0.75rem;
+  font-size: smaller;
+}
+.kie-search-pf.has-button .form-group {
+  display: flex;
+  width: auto;
+}
+.kie-search-pf.has-button .form-group:first-child {
+  padding-left: 0;
+}
+.kie-list-pf-item--header {
+  background-color: #ededed;
+}
+.kie-list-pf-item--header:hover {
+  background-color: #ededed;
+}
+.kie-list-pf-container--header {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+.kie-list-pf-actions--fixed {
+  flex-basis: 10em;
+  display: flex;
+  justify-content: flex-end;
+}
+.kie-list-pf-select-kb {
+  flex-basis: 3em;
+  flex-grow: 0;
+}
+.kie-list-pf-title-kb {
+  min-width: 5em;
+  max-width: 15em;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.kie-tablelist > thead > tr > th,
+.kie-tablelist > tbody > tr > th,
+.kie-tablelist > tfoot > tr > th,
+.kie-tablelist > thead > tr > td,
+.kie-tablelist > tbody > tr > td,
+.kie-tablelist > tfoot > tr > td {
+  padding: 1.5rem;
+  border-bottom: none;
+}
+.kie-tablelist > thead > tr:last-of-type td,
+.kie-tablelist > tbody > tr:last-of-type td,
+.kie-tablelist > tfoot > tr:last-of-type td {
+  border-bottom: 1px solid #d1d1d1;
+}
+.kie-tablelist > thead {
+  background-color: transparent;
+  background-image: none;
+}
+.kie-tablelist > thead > tr > th,
+.kie-tablelist > thead > tr > td {
+  padding: 0.75rem 1.5rem;
+}
+.kie-tablelist__subrow {
+  display: none;
+}
+.kie-tablelist__cell--actions {
+  text-align: right;
+}
+td .kie-tablelist__select {
+  border-right: 1px solid #d1d1d1;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+.kie-tab-pane {
+  overflow-x: auto;
+}
+.nav-tabs--settings {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav--left {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.nav--left li {
+  border-left: 3px solid transparent;
+}
+.nav--left li.active {
+  border-left-color: #0088ce;
+  background-color: #def3ff;
+}
+.nav--left li:hover {
+  border-left: 3px solid #def3ff;
+}
+.nav--left li > a {
+  color: #363636;
+}
+.nav--left li > a:hover,
+.nav--left li > a:focus {
+  background-color: #def3ff;
+  color: #00659c;
+}
+.col--leftnav {
+  background-color: #fafafa;
+  border-right: 1px solid #ededed;
+}
+@media only screen and (min-width: 992px) {
+  .kie-row--is-table {
+    display: table;
+    width: 100%;
+  }
+  .kie-row--is-table > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+.kie-list-group > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.list-view-pf--header {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom-color: #fff;
+  font-weight: 600;
+}
+.list-view-pf--header .list-group-item:first-child {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.list-view-pf--header .list-group-item:hover {
+  border-left-color: #fff;
+  border-right-color: #fff;
+  background-color: #fff;
+}
+.list-view-pf--header .list-group-item > * {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+}
+.list-view-pf--header + .list-view-pf {
+  margin-top: 0;
+}
+.list-view-pf--header .list-view-pf-checkbox {
+  padding-top: 0;
+}
+.kie-list-pf-additional-content--right {
+  justify-content: flex-end;
+}
+.kie-table--codeview {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+}
+.kie-table--codeview__linenumber {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 5em;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.kie-table--codeview__code {
+  padding-left: 1rem;
+  width: 100%;
+}
+.kie-table--codeview__code:before {
+  content: '\00a0\00a0';
+}
+.kie-table--codeview__line--added {
+  background-color: #e6ffed;
+}
+.kie-table--codeview__line--added .kie-table--codeview__code:before {
+  content: '+ ';
+}
+.kie-table--codeview__line--deleted {
+  background-color: #ffeef0;
+}
+.kie-table--codeview__line--deleted .kie-table--codeview__code:before {
+  content: '- ';
+}
+.kie-fileView {
+  overflow: auto;
+  max-width: 100%;
+  border: 1px solid #d1d1d1;
+}
+.kie-btn-group--separate {
+  margin-right: 1.25rem;
+}
+.kie-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kie-header--codeview {
+  font-size: 1em;
+}
+.dropdown-menu .fa.fa-pull-right {
+  line-height: inherit;
+}
+.kie-navbar--optaplanner {
+  display: block;
+  flex: 0 0 auto;
+}
+.kie-navbar--optaplanner .navbar-header {
+  min-height: auto;
+}
+.kie-pagination--optaplanner {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.kie-form-group--vcenter {
+  align-items: center;
+}
+.kie-fullwidth {
+  width: 100%;
+}
+.kie-alert--inTable {
+  margin-bottom: 0;
+}
+.content-view-pf-pagination,
+.table-view-pf-toolbar.toolbar-pf {
+  background-color: transparent;
+  border-color: transparent;
+}
+.kie-datatable > thead > tr > th,
+.kie-datatable > tbody > tr > th,
+.kie-datatable > tfoot > tr > th,
+.kie-datatable > thead > tr > td,
+.kie-datatable > tbody > tr > td,
+.kie-datatable tfoot > tr > td {
+  padding: 1rem 1.25rem;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.kie-datatable > thead {
+  background-color: transparent;
+  background-image: none;
+}
+.table-view-pf-actions {
+  background-color: transparent;
+}
+table.kie-datatable tbody > tr:hover > td.table-view-pf-actions {
+  background-color: transparent;
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before {
+  background: transparent;
+}
+.kie-table--pagination .btn {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.kie-table__cell--separated {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .kie-content--bg-image {
   background-color: #4d5258;
   background-image: url("../images/landing_page_gray_bg.svg");

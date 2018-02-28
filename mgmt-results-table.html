@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jBPM Suite</title>
+
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Datatables.net JS -->
+  <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+
+  <!-- Bootstrap Select -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <!-- Bootstrap Datepicker -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+</head>
+<body>
+
+<div class="kie-page">
+  <a class="kie-skiplink" href="#kie-main-content">Skip to main content</a>
+
+  <!-- Masthead -->
+  <nav class="kie-page__masthead navbar navbar-default navbar-pf " role="navigation">
+    <div class="navbar-header ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img class="kie-brand-icon" src="images/kie-ide.png" alt="JBoss BPM Suite"/>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-iconic">
+        <li>
+          <a class="nav-item-iconic" href="bpm-home-rh.html" title="Home"><i class="pficon pficon-home"></i></a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav  kie-yamm">
+        <li class="dropdown kie-yamm--fw">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true" tabindex="0">
+            Menu
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu kie-yamm__dropdown-menu" aria-labelledby="dropdownMenu2">
+
+            <!-- mega menu sections -->
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Design</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Dashboards</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Configure</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Deployments</a></li>
+                <li><a href="#">Execution Servers</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3 ">
+              <h3 class="kie-yamm__title">Manage</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Process Definitions</a></li>
+                <li><a href="#">Process Instances</a></li>
+                <li><a href="#">Jobs</a></li>
+              </ul>
+            </li>
+            <li class="kie-yamm__section col-xs-12 col-md-3">
+              <h3 class="kie-yamm__title">Track</h3>
+              <ul class="kie-yamm__subsection">
+                <li><a href="#">Task Lists</a></li>
+                <li><a href="#">Task Reports</a></li>
+                <li><a href="#">Process Reports</a></li>
+                <li><a href="#">Business Dashboards</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right navbar-iconic">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown"
+             aria-haspopup="true">
+            <span title="Applications" class="fa fa-th"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+            <li><a href="">Application 1</a></li>
+            <li><a href="">Application 2</a></li>
+            <li><a href="">Application 3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="#help" data-toggle="modal" title="Help"><i class="fa fa-question"></i></a>
+        </li>
+        <li>
+          <a class="nav-item-iconic" href="settings.html" title="Settings"><i class="pficon pficon-equalizer"></i></a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="true" tabindex="0">
+            <span title="Username" class="pficon pficon-user"></span>
+            Brian Johnson
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+            <li><a href="#about" data-toggle="modal">About</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
+
+    <div class="container-fluid ">
+      <!-- Breadcrumb row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="active"><strong>Manage</strong>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Page Title Row -->
+      <div class="row">
+        <div class="col-sm-12 page-header kie-page-header">
+          <div class="actions pull-right btn-group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+            <span class="dropdown  dropdown-kebab-pf">
+              <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebab" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                <span class="fa fa-ellipsis-v"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownKebab">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </span>
+
+          </div>
+          <h1>Manage</h1>
+        </div>
+      </div>
+
+
+      <!-- Content -->
+      <div class="row kie-row--tabcontent">
+        <!-- Content of the left sidebar filter controls -->
+        <div class="col-md-5 col-lg-4">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- Tabs for the filter control -->
+              <!-- should be implemented with existing slide-in panel control -->
+              <div class="col-xs-3" style="padding-left:0; padding-right:0; margin-left: -20px; width: 6em;">
+                <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
+                  <ul class="nav kie-dock-selector" role="tablist">
+                    <li class="kie-dock-selector__tab active" >
+                      <a href="#kieFilterDockBasic" data-toggle="tab" >
+                        <span class="fa fa-filter"></span>
+                      </a>
+                    </li>
+                    <li class="kie-dock-selector__tab">
+                      <a href="#kieFilterDockAdvanced" data-toggle="tab">
+                      <span class="fa fa-filter">+</span>
+                      </a>
+                    </li>
+                    <li class="kie-dock-selector__tab">
+                      <a href="#kieFilterDockSaved" data-toggle="tab">
+                      <span class="fa fa-star-o"></span>
+                      </a>
+                    </li>
+                    <li class="kie-dock-selector__tab">
+                      <a href="#kieFilterDockDisplay" data-toggle="tab">
+                      <span class="fa fa-list-alt"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <!-- Content - filters -->
+              <div class="col-xs-9 tab-content kie-tab-content--filters">
+                <!-- GENERAL -->
+                <div class="tab-pane kie__dock active" id="kieFilterDockBasic">
+                  <h3 class="kie-dock__heading">
+                    Basic Filters
+                  </h3>
+                  <hr class="kie-dock__divider"/>
+                  <form role="form">
+
+                    <div class="panel-group kie-dock__panel-group">
+                      <div class="panel kie-dock__panel">
+                        <div class="panel-heading kie-dock__panel-heading">
+                          <div class="panel-title kie-dock__heading--section">
+                              <a data-toggle="collapse" data-target="#kieFilterDockBasicState"
+                               href="#kieFilterDockBasicState">State</a>
+                          </div>
+                        </div>
+                        <div id="kieFilterDockBasicState" class="panel-collapse collapse in">
+                          <div class="panel-body kie-dock__panel-body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Active
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                In progress
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Aborted
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Completed
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Suspended
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" value="">
+                                Pending
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="kie-dock__divider">
+
+                    <h5 class="kie-dock__heading--section">Errors</h5>
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">
+                          With errors
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">
+                          Without errors
+                        </label>
+                      </div>
+                    </div>
+
+                    <hr class="kie-dock__divider"/>
+
+                    <h5 class="kie-dock__heading--section">Refine</h5>
+                    <div class="form-group">
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>Any field</option>
+                        <option>Process instance ID</option>
+                        <option>Initiator</option>
+                        <option>Correlation key</option>
+                        <option>Name</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="kieSettingsInputProjectName"
+                             placeholder="Enter value">
+                    </div>
+
+                    <button class="btn btn-default disabled">Apply</button><!-- disabled until previous fields are filled in -->
+
+                    <hr  class="kie-dock__divider"/>
+
+                    <div class="form-group">
+                      <h5 class="kie-dock__heading--section">Start Date</h5>
+                      <div class="kie-dock__datepicker">
+                        <!-- This may be the existing datepicker within the application instead of this Bootstrap one -->
+                        <input type="text" class="form-control bootstrap-datepicker">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <h5 class="kie-dock__heading--section">Last Update</h5>
+                      <div class="kie-dock__datepicker">
+                        <!-- This may be the existing datepicker within the application instead of this Bootstrap one -->
+                        <input type="text" class="form-control bootstrap-datepicker">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-default ">Reset Dates</button><!-- disabled until previous fields are filled in -->
+                    </div>
+                  </form>
+                  <br/>
+
+                </div>
+
+                <!-- ADVANCED FILTERS -->
+                <div class="tab-pane" id="kieFilterDockAdvanced">
+                  <h3 class="kie-dock__heading">
+                    Advanced Filter
+                  </h3>
+                  <hr class="kie-dock__divider"/>
+                  <form role="form">
+                    <div class="form-group">
+                      <label class="kie-dock__heading--section" for="kieSettingsInputPersistenceMode">Filter Type</label>
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>processInstanceID</option>
+                        <option>processID</option>
+                        <option>start_date</option>
+                        <option>end_date</option>
+                        <option>status</option>
+                        <option>parentProcessInstanceID</option>
+                        <option>outcome</option>
+                        <option>duration</option>
+                        <option>user_identity</option>
+                        <option>processVersion</option>
+                        <option>processName</option>
+                        <option>correlationKey</option>
+                        <option>externalID</option>
+                        <option>processInstanceDescription</option>
+                        <option>lastModificationDate</option>
+                        <option>errorCount</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="kie-dock__heading--section" for="kieSettingsInputPersistenceMode">Expression</label>
+                      <select class="selectpicker form-control" id="kieSettingsInputPersistenceMode">
+                        <option>Is</option>
+                        <option>Is not</option>
+                        <option>Greater than</option>
+                        <option>Greater than or equal to</option>
+                        <option>Between</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+
+                    <!-- TODO: Figure out correct markup and then styles probably have to be fixed -->
+                    <div class="form-group">
+                      <fieldset aria-label="Select value for expression" >
+                        <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  aria-labelledby="kieSettingsExpressionLabel" checked />
+                          <span class="form-group" id="kieSettingsExpressionLabel">
+                            <label class="kie-label--embedded" for="kieSettingsInputProjectName">Value</label>&nbsp;
+                            <input type="number" class="form-control kie-input--inline" id="kieSettingsInputProjectName" placeholder="Enter value">
+                          </span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          "Null"
+                        </label>
+                      </div>
+                      </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                      <button class="btn btn-primary disabled">Apply</button>&nbsp;
+                      <button class="btn btn-default">Cancel</button>
+                    </div>
+
+                  </form>
+                  <br/>
+
+                </div>
+
+                <!-- SAVED FILTERS -->
+                <div class="tab-pane" id="kieFilterDockSaved">
+                  <h3 class="kie-dock__heading">
+                    Saved Filters
+                  </h3>
+                  <div>
+                    Select a saved filter to clear existing filters and apply saved ones.
+                  </div>
+                  <br/>
+                  <div class="list-pf list-pf-stacked kie-list-pf-light">
+                    <div class="list-pf-item kie-dock__list-pf-item">
+                      <div class="list-pf-container kie-dock__list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left kie-dock__list-pf-left">
+                            <span class="fa fa-star list-pf-icon kie-list-pf-icon-md"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content kie-dock__list-pf-main-content">
+                              <div class="list-pf-title kie-dock__list-pf-title"><a href="">System Default</a></div>
+                              <div class="list-pf-description">
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions kie-dock__list-pf-actions">
+                            <button class="btn btn-link"><span class="pficon pficon-delete"></span></button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    </div>
+                    <div class="list-pf-item kie-dock__list-pf-item active">
+                      <div class="list-pf-container kie-dock__list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left kie-dock__list-pf-left">
+                            <span class="pficon pficon-users list-pf-icon kie-list-pf-icon-md"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content kie-dock__list-pf-main-content">
+                              <div class="list-pf-title kie-dock__list-pf-title"><a href="">Team-generated</a></div>
+                              <div class="list-pf-description">
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><a href="#0">more...</a></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions kie-dock__list-pf-actions">
+                            <button class="btn btn-link"><span class="pficon pficon-delete"></span></button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="list-pf-item kie-dock__list-pf-item">
+                      <div class="list-pf-container kie-dock__list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left kie-dock__list-pf-left">
+                            <span class="pficon pficon-user list-pf-icon kie-list-pf-icon-md"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content kie-dock__list-pf-main-content">
+                              <div class="list-pf-title kie-dock__list-pf-title"><a href="">Usergenerated01234567890</a></div>
+                              <div class="list-pf-description">
+                                <div class="kie-dock__KVP"><strong>Key01234567890:</strong> Value012345678901234567890</div>
+                                <div class="kie-dock__KVP"><strong>Key with a few separate words to wrap:</strong> Value that contains separate words that will wrap also</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions kie-dock__list-pf-actions">
+                            <button class="btn btn-link"><span class="pficon pficon-delete"></span></button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="list-pf-item kie-dock__list-pf-item">
+                      <div class="list-pf-container kie-dock__list-pf-container">
+                        <div class="list-pf-content list-pf-content-flex ">
+                          <div class="list-pf-left kie-dock__list-pf-left">
+                            <span class="pficon pficon-user list-pf-icon kie-list-pf-icon-md"></span>
+                          </div>
+                          <div class="list-pf-content-wrapper">
+                            <div class="list-pf-main-content kie-dock__list-pf-main-content">
+                              <div class="list-pf-title kie-dock__list-pf-title"><a href="">User-generated</a></div>
+                              <div class="list-pf-description">
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                                <div class="kie-dock__KVP"><strong>Key:</strong> Value</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list-pf-actions kie-dock__list-pf-actions">
+                            <button class="btn btn-link"><span class="pficon pficon-delete"></span></button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <br/>
+
+                </div>
+
+                <!-- DISPLAY PREFERENCES -->
+                <div class="tab-pane" id="kieFilterDockDisplay">
+                  <h3 class="kie-dock__heading">
+                    Display Preferences
+                  </h3>
+                  <hr class="kie-dock__divider"/>
+                  <h5 class="kie-dock__heading--section">Customize Columns</h5>
+                  <div>Customize the table presentation by selecting which columns to show in the results list.</div>
+                  <div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked disabled>
+                        Actions
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Correlation key
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Description
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Errors
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Initiator
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Last update
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked disabled>
+                        Process instance ID
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        Start date
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="" checked>
+                        State
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Version
+                      </label>
+                    </div>
+                    <button class="btn btn-default">Reset Columns</button>
+
+                  </div>
+                  <hr class="kie-dock__divider"/>
+
+                  <strong>Set Per View Limits</strong>
+                  <div>Select the number of results to display, per view.</div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios1" value="option1" checked>
+                      10 (default)
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios2" value="option2">
+                      25
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="kieViewLimitRadios" id="kieViewLimitRadios3" value="option3">
+                      50
+                    </label>
+                  </div>
+                  <br/>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end left side filter controls -->
+
+        <!-- Data area of page content -->
+        <div class="col-md-7 col-lg-8" id="">
+
+
+<!-- BEGIN PASTED FROM TABLE-VIEW -->
+
+          <!-- Toolbar -->
+          <div class="row toolbar-pf table-view-pf-toolbar" id="toolbar1">
+            <div class="col-sm-12">
+              <h3>Process Instances</h3>
+            </div>
+          </div>
+
+          <!-- Table HTML -->
+          <table class="table table-hover kie-datatable" id="table1">
+            <thead>
+            <tr>
+              <th><label class="sr-only" for="selectAll">Select all rows</label><input type="checkbox" id="selectAll" name="selectAll"></th>
+              <th>Process Instance ID</th>
+              <th>Errors</th>
+              <th>Description</th>
+              <th>State</th>
+              <th>Last Update</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+          </table>
+
+          <form class="content-view-pf-pagination table-view-pf-pagination clearfix" id="pagination1">
+            <div class="form-group">
+              <select class="selectpicker pagination-pf-pagesize">
+                <option value="6">6</option>
+                <option value="10" >10</option>
+                <option value="15" selected="selected">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+              <span>per page</span>
+            </div>
+            <div class="form-group">
+              <span><span class="pagination-pf-items-current">1-15</span> of <span class="pagination-pf-items-total">75</span></span>
+              <ul class="pagination pagination-pf-back">
+                <li class="disabled"><a href="#" title="First Page"><span class="i fa fa-angle-double-left"></span></a></li>
+                <li class="disabled"><a href="#" title="Previous Page"><span class="i fa fa-angle-left"></span></a></li>
+              </ul>
+              <label for="pagination1-page" class="sr-only">Current Page</label>
+              <input class="pagination-pf-page" type="text" value="1" id="pagination1-page"/>
+              <span>of <span class="pagination-pf-pages">5</span></span>
+              <ul class="pagination pagination-pf-forward">
+                <li><a href="#" title="Next Page"><span class="i fa fa-angle-right"></span></a></li>
+                <li><a href="#" title="Last Page"><span class="i fa fa-angle-double-right"></span></a></li>
+              </ul>
+            </div>
+          </form>
+
+          <!-- Blank Slate HTML -->
+          <div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
+            <div class="blank-slate-pf-icon">
+              <span class="pficon pficon pficon-add-circle-o"></span>
+            </div>
+            <h1>
+              Empty State Title
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Learn more about this <a href="#">on the documentation</a>.
+            </p>
+            <div class="blank-slate-pf-main-action">
+              <button class="btn btn-primary btn-lg"> Main Action </button>
+            </div>
+            <div class="blank-slate-pf-secondary-action">
+              <button class="btn btn-default">Secondary Action</button>
+              <button class="btn btn-default">Secondary Action</button>
+            </div>
+          </div>
+
+
+
+          <!-- END PASTED FROM TABLE-VIEW -->
+        </div>
+        <!-- end of data area of page content -->
+      </div>
+    </div>
+  </main>
+
+
+</div><!-- kie-page -->
+
+<!-- Help Modal -->
+<div class="modal fade" id="help">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Help</h4>
+      </div>
+      <div class="modal-body">
+        <div><img src="img/help.png" alt="" style="width: 568px;"/></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Help Modal -->
+
+<!-- About Modal -->
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content about-modal-pf">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1 id="aboutModalTitle">
+          <img class="kie-brand-icon" src="images/jbpm_logo_noshadow_100px.png" alt="JBoss BPM Suite"/>
+        </h1>
+        <div class="product-versions-pf">
+          <ul class="list-unstyled" id="aboutModalVersions">
+            <li><strong>Version</strong> 0.0</li>
+          </ul>
+        </div>
+        <div class="trademark-pf">
+          jBPM is open source software, released under the <br>
+          <strong>Apache Software License 2.0</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of About Modal -->
+
+<!-- Preferences modal -->
+<div class="modal fade" id="preferences">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title">Preferences</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="control-label">Language</label>
+          <select class="form-control">
+            <option value="default">English</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="ja">Japanese</option>
+            <option value="pt_BR">Portuguese</option>
+            <option value="zh_CN">Chinese (Simplified)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="control-label">View Mode</label>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Basic</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Compact</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Advanced</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Layouts</label>
+          <p><a href="#">Reset Perspective Layouts</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Preferences modal -->
+
+</body>
+
+<!-- initialize Bootstrap Datepicker-->
+<script>
+    // Initialize Bootstrap-datepicker
+    $('.bootstrap-datepicker').datepicker({
+        autoclose: true,
+        todayBtn: "linked",
+        todayHighlight: true
+    });
+</script>
+
+<!-- TABLE CODE -->
+<script>
+    $(document).ready(function() {
+
+// JSON data for Table View
+        var dataSet = [{
+            engine: "Trident",
+            browser: "Internet Explorer 4.0",
+            platforms: "Win 95+",
+            version: "4",
+            grade: "X"
+        },{
+            engine: "Trident",
+            browser: "Internet Explorer 5.0",
+            platforms: "Win 95+",
+            version: "5",
+            grade: "C"
+        }, {
+            engine: "Trident",
+            browser: "Internet Explorer 5.5",
+            platforms: "Win 95+",
+            version: "5.5",
+            grade: "A"
+        }, {
+            engine: "Trident",
+            browser: "Internet Explorer 6",
+            platforms: "Win 98+",
+            version: "6",
+            grade: "A"
+        }, {
+            engine: "Trident",
+            browser: "Internet Explorer 7",
+            platforms: "Win XP SP2+",
+            version: "7",
+            grade: "A"
+        }, {
+            engine: "Trident",
+            browser: "AOL browser (AOL desktop)",
+            platforms: "Win XP",
+            version: "6",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Firefox 1.0",
+            platforms: "Win 98+ / OSX.2+",
+            version: "1.7",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Firefox 1.5",
+            platforms: "Win 98+ / OSX.2+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Firefox 2.0",
+            platforms: "Win 98+ / OSX.2+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Firefox 3.0",
+            platforms: "Win 2k+ / OSX.3+",
+            version: "1.9",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Camino 1.0",
+            platforms: "OSX.2+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Camino 1.5",
+            platforms: "OSX.3+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Netscape 7.2",
+            platforms: "Win 95+ / Mac OS 8.6-9.2",
+            version: "1.7",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Netscape Browser 8",
+            platforms: "Win 98SE+",
+            version: "1.7",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Netscape Navigator 9",
+            platforms: "Win 98+ / OSX.2+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.0",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.1",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.1",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.2",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.2",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.3",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.3",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.4",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.4",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.5",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.5",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.6",
+            platforms: "Win 95+ / OSX.1+",
+            version: "1.6",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.7",
+            platforms: "Win 98+ / OSX.1+",
+            version: "1.7",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Mozilla 1.8",
+            platforms: "Win 98+ / OSX.1+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Seamonkey 1.1",
+            platforms: "Win 98+ / OSX.2+",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Gecko",
+            browser: "Epiphany 2.20",
+            platforms: "Gnome",
+            version: "1.8",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "Safari 1.2",
+            platforms: "OSX.3",
+            version: "125.5",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "Safari 1.3",
+            platforms: "OSX.3",
+            version: "312.8",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "Safari 2.0",
+            platforms: "OSX.4+",
+            version: "419.3",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "Safari 3.0",
+            platforms: "OSX.4+",
+            version: "522.1",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "OmniWeb 5.5",
+            platforms: "OSX.4+",
+            version: "420",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "iPod Touch / iPhone",
+            platforms: "iPod",
+            version: "420.1",
+            grade: "A"
+        }, {
+            engine: "Webkit",
+            browser: "S60",
+            platforms: "S60",
+            version: "413",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 7.0",
+            platforms: "Win 95+ / OSX.1+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 7.5",
+            platforms: "Win 95+ / OSX.2+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 8.0",
+            platforms: "Win 95+ / OSX.2+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 8.5",
+            platforms: "Win 95+ / OSX.2+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 9.0",
+            platforms: "Win 95+ / OSX.3+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 9.2",
+            platforms: "Win 88+ / OSX.3+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera 9.5",
+            platforms: "Win 88+ / OSX.3+",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Opera for Wii",
+            platforms: "Wii",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Nokia N800",
+            platforms: "N800",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Presto",
+            browser: "Nintendo DS browser",
+            platforms: "Nintendo DS",
+            version: "8.5",
+            grade: "C/A<sup>1</sup>"
+        }, {
+            engine: "KHTML",
+            browser: "Konqureror 3.1",
+            platforms: "KDE 3.1",
+            version: "3.1",
+            grade: "C"
+        }, {
+            engine: "KHTML",
+            browser: "Konqureror 3.3",
+            platforms: "KDE 3.3",
+            version: "3.3",
+            grade: "A"
+        }, {
+            engine: "KHTML",
+            browser: "Konqureror 3.5",
+            platforms: "KDE 3.5",
+            version: "3.5",
+            grade: "A"
+        }, {
+            engine: "Tasman",
+            browser: "Internet Explorer 4.5",
+            platforms: "Mac OS 8-9",
+            version: "-",
+            grade: "X"
+        }, {
+            engine: "Tasman",
+            browser: "Internet Explorer 5.1",
+            platforms: "Mac OS 7.6-9",
+            version: "1",
+            grade: "C"
+        }, {
+            engine: "Tasman",
+            browser: "Internet Explorer 5.2",
+            platforms: "Mac OS 8-X",
+            version: "1",
+            grade: "C"
+        }, {
+            engine: "Misc",
+            browser: "NetFront 3.1",
+            platforms: "Embedded devices",
+            version: "-",
+            grade: "C"
+        }, {
+            engine: "Misc",
+            browser: "NetFront 3.4",
+            platforms: "Embedded devices",
+            version: "-",
+            grade: "A"
+        }, {
+            engine: "Misc",
+            browser: "Dillo 0.8",
+            platforms: "Embedded devices",
+            version: "-",
+            grade: "X"
+        }, {
+            engine: "Misc",
+            browser: "Links",
+            platforms: "Text only",
+            version: "-",
+            grade: "X"
+        }, {
+            engine: "Misc",
+            browser: "Lynx",
+            platforms: "Text only",
+            version: "-",
+            grade: "X"
+        }, {
+            engine: "Misc",
+            browser: "IE Mobile",
+            platforms: "Windows Mobile 6",
+            version: "-",
+            grade: "C"
+        }, {
+            engine: "Misc",
+            browser: "PSP browser",
+            platforms: "PSP",
+            version: "-",
+            grade: "C"
+        }, {
+            engine: "Other browsers",
+            browser: "All others",
+            platforms: "-",
+            version: "-",
+            grade: "U"
+        }];
+
+// DataTable Config
+        $("#table1").DataTable({
+            columns: [
+                { data: null,
+                    className: "table-view-pf-select",
+                    render: function (data, type, full, meta) {
+                        // Select row checkbox renderer
+                        var id = "select" + meta.row;
+                        return '<label class="sr-only" for="' + id + '">Select row ' + meta.row +
+                            '</label><input type="checkbox" id="' + id + '" name="' + id + '">';
+                    },
+                    sortable: false
+                },
+                { data: "engine" },
+                { data: "browser" },
+                { data: "platforms" },
+                { data: "version" },
+                { data: "grade"},
+                { data: null,
+                    className: "table-view-pf-actions",
+                    render: function (data, type, full, meta) {
+                        // Inline action kebab renderer
+                        return '<div class="dropdown dropdown-kebab-pf">' +
+                            '<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+                            '<span class="fa fa-ellipsis-v"></span></button>' +
+                            '<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight">' +
+                            '<li><a href="#">Action</a></li>' +
+                            '<li><a href="#">Another action</a></li>' +
+                            '<li><a href="#">Something else here</a></li>' +
+                            '<li role="separator" class="divider"></li>' +
+                            '<li><a href="#">Separated link</a></li></ul></div>';
+                    }
+                }
+            ],
+            data: dataSet,
+            dom: "t",
+            language: {
+                zeroRecords: "No records found"
+            },
+            order: [[ 1, 'asc' ]],
+            pfConfig: {
+                emptyStateSelector: "#emptyState1",
+                filterCaseInsensitive: true,
+                filterCols: [
+                    null,
+                    {
+                        default: true,
+                        optionSelector: "#filter1",
+                        placeholder: "Filter By Process Instance ID..."
+                    }, {
+                        optionSelector: "#filter2",
+                        placeholder: "Filter By Errors..."
+                    }, {
+                        optionSelector: "#filter3",
+                        placeholder: "Filter By Description..."
+                    }, {
+                        optionSelector: "#filter4",
+                        placeholder: "Filter By State..."
+                    }, {
+                        optionSelector: "#filter5",
+                        placeholder: "Filter By Last Update..."
+                    }
+                ],
+                paginationSelector: "#pagination1",
+                toolbarSelector: "#toolbar1",
+                selectAllSelector: 'th:first-child input[type="checkbox"]',
+                colvisMenuSelector: '.table-view-pf-colvis-menu'
+            },
+            select: {
+                selector: 'td:first-child input[type="checkbox"]',
+                style: 'multi'
+            },
+        });
+
+        /**
+         * Utility to show empty Table View
+         *
+         * @param {object} config - Config properties associated with a Table View
+         * @param {object} config.data - Data set for DataTable
+         * @param {string} config.deleteRowsSelector - Selector for delete rows control
+         * @param {string} config.restoreRowsSelector - Selector for restore rows control
+         * @param {string} config.tableSelector - Selector for the HTML table
+         */
+        var emptyTableViewUtil = function (config) {
+            var self = this;
+
+            this.dt = $(config.tableSelector).DataTable(); // DataTable
+            this.deleteRows = $(config.deleteRowsSelector); // Delete rows control
+            this.restoreRows = $(config.restoreRowsSelector); // Restore rows control
+
+            // Handle click on delete rows control
+            this.deleteRows.on('click', function() {
+                self.dt.clear().draw();
+                $(self.restoreRows).prop("disabled", false);
+            });
+
+            // Handle click on restore rows control
+            this.restoreRows.on('click', function() {
+                self.dt.rows.add(config.data).draw();
+                $(this).prop("disabled", true);
+            });
+
+            // Initialize restore rows
+            if (this.dt.data().length === 0) {
+                $(this.restoreRows).prop("disabled", false);
+            }
+        };
+
+// Initialize empty Table View util
+        new emptyTableViewUtil({
+            data: dataSet,
+            deleteRowsSelector: "#deleteRows1",
+            restoreRowsSelector: "#restoreRows1",
+            tableSelector: "#table1"
+        });
+
+        /**
+         * Utility to find items in Table View
+         */
+        var findTableViewUtil = function (config) {
+            // Upon clicking the find button, show the find dropdown content
+            $(".btn-find").click(function () {
+                $(this).parent().find(".find-pf-dropdown-container").toggle();
+            });
+
+            // Upon clicking the find close button, hide the find dropdown content
+            $(".btn-find-close").click(function () {
+                $(".find-pf-dropdown-container").hide();
+            });
+        };
+
+// Initialize find util
+        new findTableViewUtil();
+
+    });
+</script>
+
+</html>
