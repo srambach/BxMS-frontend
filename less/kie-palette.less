@@ -1,0 +1,187 @@
+// Styles for the editor palette
+
+@kie-palette-bg-color: @color-pf-white;
+@kie-palette-bg-color-hover: @color-pf-blue-50;
+//@kie-palette-border-color: @color-pf-black-400;
+@kie-palette-color: @color-pf-black;
+@kie-palette-font-size: @font-size-base;
+@kie-palette-font-weight: 400;
+@kie-palette-icon-color: @color-pf-black-800;
+@kie-palette-icon-color-hover: @color-pf-blue-300;
+@kie-palette-icon-size: 21px;
+@kie-palette-item-border-color: @color-pf-black-400;
+@kie-palette-link-height: 44px;//calc(4.5 * @font-size-base);//calc(5.583333 * @font-size-base);
+@kie-palette-link-padding: 0;
+@kie-palette-box-shadow: 0 2px 6px rgba(3,3,3,.2);
+@kie-palette-width: 44px;//calc(4 * @font-size-base);
+@kie-palette-item-bg-color: @color-pf-black-200;
+
+@kie-palette-flyout-border-color: @color-pf-black-400;
+@kie-palette-flyout-header-size: calc(1.333333 * @font-size-base);
+@kie-palette-flyout-header-weight: 700;
+@kie-palette-flyout-close-btn-size: 40px;
+@kie-palette-flyout-icon-size: 14px;
+@kie-palette-flyout-item-border-color: transparent;//@kie-palette-bg-color;
+@kie-palette-flyout-item-border-color-hover: transparent;//@color-pf-blue-300;
+@kie-palette-flyout-item-color: @color-pf-black;
+@kie-palette-flyout-item-margin-adjust: 1em; //adjusts left/right margin in and out to indent the divider line
+@kie-palette-flyout-max-height: 100vh; //TODO: can we find the top so that we can subtract it off? e.g. calc(100vh ~"-" @top);
+@kie-palette-flyout-min-height: 100%;
+@kie-palette-left-padding: 10px;//calc(1.5 * @font-size-base);
+@kie-palette-flyout-width: 200px;
+@kie-palette-flyout-subheader-color: @color-pf-black-600;
+
+@kie-palette-list-group-item-value-more-color: @link-color;
+
+.kie-palette {
+  border-collapse: collapse;
+  overflow: visible; // so that the flyout shows
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: @kie-palette-width;
+  z-index: @zindex-navbar-fixed;
+
+  .list-group {
+    position: relative; // important to include so that the flyout positions to the list group
+    border-top: none;
+    box-shadow: @kie-palette-box-shadow;
+  }
+  .list-group-item {
+    border-width: 0;
+    display:inline-block;
+    padding: 0;
+    position: unset; // this allows the flyout to be relative to the list-group
+
+    > button {
+      color: @kie-palette-color;
+      cursor: pointer;
+      font-size: @kie-palette-font-size;
+      font-weight: @kie-palette-font-weight;
+      height: @kie-palette-link-height;
+      padding: @kie-palette-link-padding;
+      text-decoration: none;
+      white-space: nowrap;
+      width: @kie-palette-width;
+      box-shadow: none;
+    }
+
+    // *** IMPORTANT *** This is what changes the palette button to white and shows the flyout.
+    // *** For testing purposes, a click on the item gives it :focus-within - in Chrome.
+    // *** So the show/hide of the flyout actually needs to be done in Javascript - it can add the .kie-palette-show-flyout class to the .list-group-item
+    // *** And then the :focus-within part of this selector can be removed
+    // *** The Close (X) Button should remove the class from the .list-group-item so that the flyout closes.
+    &:focus-within,
+    &.kie-palette-show-flyout {
+      > .kie-palette-flyout {
+        display: block;
+      }
+      > button {
+        background-color: @color-pf-white;
+        background-image: none;
+      }
+    }
+
+
+    .list-group-item-value {
+      display: block;
+      line-height: 2em;
+      max-width: 10em;
+      // If flexbox is supported, do not set max-width, take all space with just some right padding
+      @supports (display: flex) {
+        flex: 1;
+        max-width: none;
+        padding-right: 1em;
+      }
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.kie-palette-flyout {
+  background-color: @kie-palette-bg-color;
+  border-top: 1px solid @kie-palette-flyout-border-color;
+  border-right: 1px solid @kie-palette-flyout-border-color;
+  border-bottom: 1px solid @kie-palette-flyout-border-color;
+  box-shadow: @kie-palette-box-shadow;
+  display: none;
+  left: @kie-palette-width;
+  max-height: @kie-palette-flyout-max-height;
+  min-height: @kie-palette-flyout-min-height;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 15px 15px 15px 10px;
+  position: absolute;
+  top: 0;
+
+  h5 {
+    color: @kie-palette-flyout-subheader-color;//@kie-palette-color;
+    cursor: default;
+    font-size: @kie-palette-font-size;
+    margin-top: 0;
+    padding-left: @kie-palette-left-padding;
+    text-transform: uppercase;
+    margin-right: 25px; // to make room for the close button; 40 width of button - 15 padding on the container
+  }
+
+  .list-group {
+    box-shadow: none;
+  }
+  .list-group-item {
+    background-color: @kie-palette-bg-color;
+    float: none;
+    border-width: 0;
+    padding-left: @kie-palette-left-padding;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    > a {
+      color: @kie-palette-color;
+      font-size: @kie-palette-font-size;
+      font-weight: @kie-palette-font-weight;
+      height: auto;
+      padding: @kie-palette-link-padding;
+      text-decoration: none;
+      width: @kie-palette-flyout-width;
+      white-space: nowrap;
+      @supports (display: flex) {
+        display: flex;
+      }
+
+      img {
+        margin-right: @pf-spacer-sm;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+    &:hover {
+      background-color: @kie-palette-bg-color-hover;
+      > a {
+        color: @kie-palette-color;
+        font-weight: @kie-palette-font-weight;
+      }
+
+    }
+  }
+}
+
+.kie-palette-icon {
+  height: @kie-palette-icon-size;
+}
+.kie-palette-flyout-icon {
+  width: @kie-palette-flyout-icon-size;
+  height: @kie-palette-flyout-icon-size;
+}
+
+.kie-palette-flyout__close {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.kie-palette-flyout__btn-link--close {
+  color: @kie-palette-color;
+  min-width: @kie-palette-flyout-close-btn-size;
+  min-height: @kie-palette-flyout-close-btn-size;
+}
