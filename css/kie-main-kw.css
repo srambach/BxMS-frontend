@@ -19639,7 +19639,7 @@ ul.kie-nav-wizard .active ~ li:after {
 .kie-scrollbox {
   overflow-y: hidden;
   max-height: 15em;
-  background: linear-gradient(#fff, rgba(255, 255, 255, 0)) 0 100%, linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0)) 100% 0, linear-gradient(rgba(255, 255, 255, 0), #fff) 0 100%, /* Shadows */ linear-gradient(#f5f5f5, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #f5f5f5) 0 100%;
   background-repeat: no-repeat;
   background-color: #fff;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
