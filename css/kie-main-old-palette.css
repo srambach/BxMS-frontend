@@ -19861,45 +19861,92 @@ html {
   padding-top: 1.5rem;
 }
 .kie-palette {
+  background: #fff;
   border-collapse: collapse;
+  left: 0;
   overflow: visible;
   position: absolute;
-  left: 0;
   top: 0;
-  width: 44px;
+  width: calc(48px);
   z-index: 1030;
+}
+.kie-palette .list-group {
+  margin-bottom: 0;
 }
 .kie-palette .list-group {
   position: relative;
   border-top: none;
-  box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
 }
 .kie-palette .list-group-item {
-  border-width: 0;
-  display: inline-block;
+  background-color: #ededed;
+  border-color: #bbb;
+  float: none;
+  outline: 0;
   padding: 0;
   position: unset;
 }
-.kie-palette .list-group-item > button {
+.kie-palette .list-group-item:last-child {
+  border-bottom: 1px solid #bbb;
+}
+.kie-palette .list-group-item:last-child:hover > a:after {
+  height: calc(101%);
+}
+.kie-palette .list-group-item > a {
   color: #030303;
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  height: 44px;
+  height: calc(54px);
   padding: 0;
   text-decoration: none;
   white-space: nowrap;
-  width: 44px;
-  box-shadow: none;
+  width: calc(48px);
 }
-.kie-palette .list-group-item:focus-within > .kie-palette-flyout,
-.kie-palette .list-group-item.kie-palette-show-flyout > .kie-palette-flyout {
+@supports (display: flex) {
+  .kie-palette .list-group-item > a {
+    display: flex;
+  }
+}
+.kie-palette .list-group-item > a .fa,
+.kie-palette .list-group-item > a .glyphicon,
+.kie-palette .list-group-item > a .pficon {
+  color: #393f44;
+  font-size: calc(21px);
+  margin: auto;
+  min-width: calc(27.999996px);
+  text-align: center;
+}
+.kie-palette .list-group-item:hover {
+  background-color: #fff;
+}
+.kie-palette .list-group-item:hover > .kie-palette-flyout {
   display: block;
 }
-.kie-palette .list-group-item:focus-within > button,
-.kie-palette .list-group-item.kie-palette-show-flyout > button {
-  background-color: #fff;
-  background-image: none;
+.kie-palette .list-group-item:hover > a {
+  background-color: inherit;
+}
+.kie-palette .list-group-item:hover > a .fa,
+.kie-palette .list-group-item:hover > a .glyphicon,
+.kie-palette .list-group-item:hover > a .pficon {
+  color: #39a5dc;
+}
+.kie-palette .list-group-item:hover > a:before {
+  background: #39a5dc;
+  content: " ";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 5px;
+  float: left;
+}
+.kie-palette .list-group-item:hover > a:after {
+  background: #fff;
+  content: " ";
+  height: 100%;
+  margin-right: -1px;
+  top: 0;
+  width: 1px;
+  z-index: 10000;
 }
 .kie-palette .list-group-item .list-group-item-value {
   display: block;
@@ -19915,19 +19962,31 @@ html {
     padding-right: 1em;
   }
 }
+.kie-list-group-item-value-more {
+  color: #0088ce;
+}
+.kie-palette-flyout-header {
+  color: #030303;
+  font-size: calc(15.999996px);
+  font-weight: 700;
+  margin-top: calc(12px);
+  margin-bottom: calc(12px);
+  padding-left: calc(18px);
+}
 .kie-palette-flyout {
   background-color: #fff;
-  border-top: 1px solid #bbb;
+  border-color: #bbb;
+  border-left: 1px solid #bbb;
   border-right: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
-  box-shadow: 0 2px 6px rgba(3, 3, 3, 0.2);
+  -webkit-box-shadow: 2px 2px 2px rgba(3, 3, 3, 0.08);
+  box-shadow: 2px 2px 2px rgba(3, 3, 3, 0.08);
   display: none;
-  left: 44px;
+  left: calc(48px);
   max-height: 100vh;
   min-height: 100%;
   overflow-x: visible;
   overflow-y: scroll;
-  padding: 15px 15px 15px 10px;
   position: absolute;
   top: 0;
 }
@@ -19935,67 +19994,64 @@ html {
   color: #72767b;
   cursor: default;
   font-size: 12px;
-  margin-top: 0;
-  padding-left: 10px;
+  padding-left: calc(18px);
   text-transform: uppercase;
-  margin-right: 25px;
 }
 .kie-palette-flyout .list-group {
-  box-shadow: none;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.kie-palette-flyout .list-group:not(:last-of-type) {
+  border-bottom: 1px solid #bbb;
 }
 .kie-palette-flyout .list-group-item {
   background-color: #fff;
   float: none;
-  border-width: 0;
-  padding-left: 10px;
+  border-color: #fff;
+  padding-left: calc(18px);
   margin-bottom: 0;
+  margin-left: -1em;
+  margin-right: -1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .kie-palette-flyout .list-group-item > a {
-  color: #030303;
   font-size: 12px;
   font-weight: 400;
   height: auto;
   padding: 0;
-  text-decoration: none;
-  width: 200px;
-  white-space: nowrap;
+  width: auto;
 }
-@supports (display: flex) {
-  .kie-palette-flyout .list-group-item > a {
-    display: flex;
-  }
+.kie-palette-flyout .list-group-item > a .fa,
+.kie-palette-flyout .list-group-item > a .glyphicon,
+.kie-palette-flyout .list-group-item > a .pficon {
+  font-size: calc(13.999992px);
+  padding-right: 1em;
 }
-.kie-palette-flyout .list-group-item > a img {
-  margin-right: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
+.kie-palette-flyout .list-group-item:first-child {
+  border-top: 1px solid #fff;
+}
+.kie-palette-flyout .list-group-item:last-child {
+  border-bottom: 1px solid transparent;
 }
 .kie-palette-flyout .list-group-item:hover {
   background-color: #def3ff;
+  border-color: #39a5dc;
+}
+.kie-palette-flyout .list-group-item:hover:first-child {
+  border-top: 1px solid #39a5dc;
 }
 .kie-palette-flyout .list-group-item:hover > a {
   color: #030303;
   font-weight: 400;
 }
-.kie-palette-icon {
-  height: 21px;
+.kie-palette-flyout .list-group-item:hover > a:before {
+  width: 0;
 }
-.kie-palette-flyout-icon {
-  width: 14px;
-  height: 14px;
-}
-.kie-palette-flyout__close {
-  float: right;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.kie-palette-flyout__btn-link--close {
-  color: #030303;
-  min-width: 40px;
-  min-height: 40px;
+.kie-palette-flyout .list-group-item:hover > a .fa,
+.kie-palette-flyout .list-group-item:hover > a .glyphicon,
+.kie-palette-flyout .list-group-item:hover > a .pficon {
+  color: #39a5dc;
 }
 .kie-yamm .nav,
 .kie-yamm .collapse,
@@ -20955,4 +21011,4 @@ table.dataTable thead .sorting_desc:before {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-/*# sourceMappingURL=kie-main.css.map */
+/*# sourceMappingURL=kie-main-old-palette.css.map */
