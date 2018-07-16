@@ -19860,6 +19860,15 @@ html {
 .kie-row--topPadding {
   padding-top: 1.5rem;
 }
+.kie-dl-horizontal dt {
+  text-align: left;
+  font-weight: normal;
+  width: auto;
+}
+.kie-dl-horizontal dd {
+  margin-left: 1rem;
+  float: left;
+}
 .kie-palette {
   border-collapse: collapse;
   overflow: visible;
@@ -19902,9 +19911,10 @@ html {
   background-image: none;
 }
 .kie-palette .list-group-item .list-group-item-value {
-  display: block;
+  display: inline-block;
   line-height: 2em;
   max-width: 10em;
+  min-width: 10em;
   overflow: hidden;
   text-overflow: ellipsis;
 }

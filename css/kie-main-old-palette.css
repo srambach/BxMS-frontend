@@ -19860,6 +19860,15 @@ html {
 .kie-row--topPadding {
   padding-top: 1.5rem;
 }
+.kie-dl-horizontal dt {
+  text-align: left;
+  font-weight: normal;
+  width: auto;
+}
+.kie-dl-horizontal dd {
+  margin-left: 1rem;
+  float: left;
+}
 .kie-palette {
   background: #fff;
   border-collapse: collapse;
