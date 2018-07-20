@@ -19866,7 +19866,7 @@ html {
   width: auto;
 }
 .kie-dl-horizontal dd {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   margin-left: 1rem;
   float: left;
 }
