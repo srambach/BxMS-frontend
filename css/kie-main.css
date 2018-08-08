@@ -20587,12 +20587,12 @@ fieldset[disabled] .kie-hero-card:active .btn.active {
 .kie-toolbar-pf__filter {
   flex-basis: 20em;
 }
-.kie-tab-content--filters hr {
-  border-color: #d1d1d1;
-}
-.tab-content {
+.kie-tab-content--filters {
   border-left: 1px solid #bbb;
   background-color: #fafafa;
+}
+.kie-tab-content--filters hr {
+  border-color: #d1d1d1;
 }
 .kie-list-pf-light {
   background-color: #fff;
