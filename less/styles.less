@@ -8,6 +8,9 @@ html {
   font-size: @font-size-base;
 }
 
+.ul--plain {
+  list-style: none;
+}
 // *** RCUE should handle this
 // Changes masthead border to Red Hat product color
 // For community version, use the default, which is @brand-primary
@@ -574,6 +577,28 @@ html {
     align-items: center;
   }
 
+  // added for the test tools editor
+  .kie-tree-list-view-pf-view--compact {
+    .list-group-item {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .list-group-item-header {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .list-view-pf-expand {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .list-view-pf-main-info {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .list-group-item-container {
+      border-top-color: transparent;
+    }
+  }
   //// Settings
   .kie-background--settings {
     background-color: @well-bg;
