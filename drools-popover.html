@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>jBPM Suite</title>
+  
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+  
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+  
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Select -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  
+  <!-- For the graphs -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+  
+</head>
+<body>
+  
+  <div style="margin: 1em; padding: 1em;">
+    <a href="#" class="" data-toggle="popover" data-html="true" title="Edit Decision" data-content="Put #DecisionForm in here" data-close="true">
+      Decision-1 (string)
+    </a>
+  </div>
+  
+  <form id="#DecisionForm">
+    <label for="kieName">Name</label>
+    <input class="form-control pf-c-form-control" type="text" aria-label="Name text input" id="kieName" placeholder="Name" aria-placeholder="Name">
+    <br/>
+    <div class="pull-right">
+      <a href="#0"><!-- Links to the manage modal? -->
+        <span class="fa fa-gear"></span> Manage
+      </a>
+    </div>
+    <label for="kieDataType">Data Type</label>
+    
+    <div class="btn-group bootstrap-select form-control  pf-c-form-control">
+      <button class="dropdown-toggle btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        <span class="pull-left">Select</span>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><input role="menuitem" class="form-control pf-c-form-control" type="text" aria-label="Data type text input" id="kieSelectTypeIn" placeholder="Data type" aria-placeholder="Data type"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">any</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">boolean</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">date</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">applicant</a></li>
+      </ul>
+    </div>
+            
+  </form>
+    
+  <script>
+    // Initialize Popovers
+    $(document).ready(function() {
+      $('[data-toggle=popover]').popovers()
+      .on('hidden.bs.popover', function (e) {
+        $(e.target).data('bs.popover').inState.click = false;
+      });
+    });
+  </script>   
+  
+</body>
+</html>
