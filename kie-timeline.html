@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>timeline component</title>
+  
+  <!-- CSS for Knowledge Worker pages -->
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+  
+  <!-- jQuery -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- Bootstrap Select -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  
+  <script src="node_modules/patternfly/node_modules/bootstrap/js/dropdown.js"></script>
+  
+  <!-- Patternfly JS -->
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+  
+</head>
+<body>
+  
+  
+  
+  <!-- Process logs example -->
+  <h2>Example of process log timeline</h2>
+  <div>
+    <div class="list-group kie-timeline kie-timeline--dotted-line">
+      
+      
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+        <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+          <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon1">
+            <span class="fa fa-user list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm" data-toggle="tooltip"
+            data-placement="right" title="Timeline human task"></span>
+          </div>
+          <div class="list-view-pf-body">
+            <div class="list-view-pf-description kie-timeline-view-pf-description">
+              
+              <div class="list-group-item-text kie-timeline-list-group-item-text">
+                <div><em>4 seconds ago</em></div>
+                <strong>[Task Type] "Name"</strong> (tech/human) was "(ENTERED/COMPLETED)."
+                <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem1" href="#kieTimelineItem1" role="button" aria-expanded="false" ariaControls="kieTimelineItem1">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem1" class="panel-collapse collapse">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- human task entered -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon2">
+              <span class="fa fa-user list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm" data-toggle="tooltip"
+              data-placement="right" title="Timeline human task"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (human) node was ENTERED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem2" href="#kieTimelineItem2" role="button" aria-expanded="true" ariaControls="kieTimelineItem2">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem2" class="panel-collapse collapse in">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- human task completed -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon2-1">
+              <span class="fa fa-user list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm kie-timeline-icon--completed" data-toggle="tooltip"
+              data-placement="right" title="Timeline human task"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (human) node was COMPLETED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem2-1" href="#kieTimelineItem2-1" role="button" aria-expanded="false" ariaControls="kieTimelineItem2-1">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem2-1" class="panel-collapse collapse">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- system task entered -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon3">
+              <span class="fa fa-cogs list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm" data-toggle="tooltip"
+              data-placement="right" title="Timeline system task"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (system) node was ENTERED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem3" href="#kieTimelineItem3" role="button" aria-expanded="false" ariaControls="kieTimelineItem3">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem3" class="panel-collapse collapse ">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+      <!-- system task completed -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon3-1">
+              <span class="fa fa-cogs list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm kie-timeline-icon--completed" data-toggle="tooltip"
+              data-placement="right" title="Timeline system task"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (system) node was COMPLETED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem3-1" href="#kieTimelineItem3-1" role="button" aria-expanded="false" ariaControls="kieTimelineItem3-1">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem3-1" class="panel-collapse collapse ">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- other task entered -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon4">
+              <span class="fa fa-sitemap list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm" data-toggle="tooltip"
+              data-placement="right" title="Timeline event"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (event) node was ENTERED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem4" href="#kieTimelineItem4" role="button" aria-expanded="false" ariaControls="kieTimelineItem4">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem4" class="panel-collapse collapse ">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+     
+      <!-- other task completed -->
+      <div class="list-group-item list-view-pf-stacked kie-timeline-list-group-item">
+          <div class="list-view-pf-main-info kie-timeline-main-info kie-timeline-list-view-pf-main-info">
+            <div class="list-view-pf-left kie-timeline-list-view-pf-left" id="timelineItemIcon4-1">
+              <span class="fa fa-sitemap list-view-pf-icon-sm kie-timeline-list-view-pf-icon-sm kie-timeline-icon--completed" data-toggle="tooltip"
+              data-placement="right" title="Timeline event"></span>
+            </div>
+            <div class="list-view-pf-body">
+              <div class="list-view-pf-description kie-timeline-view-pf-description">
+                
+                <div class="list-group-item-text kie-timeline-list-group-item-text">
+                  <div><em>4 seconds ago</em></div>
+                  <strong>Task "Loans"</strong> (event) node was COMPLETED.
+                  <div class="panel-group panel-group--timeline">
+                    <div class="panel panel--timeline">
+                      <div class="panel-heading panel-heading--timeline">
+                        <div class="panel-title panel-title--timeline">
+                          <a data-toggle="collapse" data-target="#kieTimelineItem4-1" href="#kieTimelineItem4-1" role="button" aria-expanded="false" ariaControls="kieTimelineItem4-1">Details</a>
+                        </div>
+                      </div>
+                      <div id="kieTimelineItem4-1" class="panel-collapse collapse ">
+                        <dl class="dl-horizontal">
+                            <dt>Timestamp:</dt>
+                            <dd>2018-01-05T11:52:25</dd>
+                            <dt>ID:</dt>
+                            <dd>01200000</dd>
+                            <dt>Task ID:</dt>
+                            <dd>Empty</dd>
+                            <dt>UserID:</dt>
+                            <dd>TaskEventInstance.userid</dd>
+                            <dt>Content:</dt>
+                            <dd>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Fusce commodo aliquam arcu. Nullam tincidunt adipiscing enim.</dd>
+                            </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <br/>
+    <button class="btn btn-default">Load More</button>
+  </div>
+  
+  <br/>
+  <h2>Example of no data</h2>
+  <div href="" class="card-pf-link-with-icon"><span class="pficon pficon-info"></span>No activities have
+    been added
+  </div>
+  
+  
+  
+ <br/> 
+  <h2>Example of loading state</h2>
+  <!-- timeline card VARIATION WITH LOADING DATA -->
+  <div class="spinner spinner-sm spinner-inline"></div>
+  Loading data...
+</div>
+
+
+
+
+<!-- This script is needed for the tooltips -->
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+</body>
+</html>
