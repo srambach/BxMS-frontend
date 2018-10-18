@@ -19862,6 +19862,7 @@ html {
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
+  font-weight: bold;
 }
 .kie-tree-list-view-pf-view--compact .list-view-pf-main-info {
   padding-top: 5px;

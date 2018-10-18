@@ -340,9 +340,9 @@
                         </div>
                         <div class="list-group-item-container container-fluid hidden">
                           <ul class="ul--plain">
-                            <li><b>Age</b> [applicantAge]</li>
-                            <li class="selected"><b>Credit</b> [applicantCredit]</li>
-                            <li><b>Income</b> [applicant income]</li>
+                            <li><a>Age</a> [applicantAge]</li>
+                            <li class="selected"><a>Credit</a> [applicantCredit]</li>
+                            <li><a>Income</a> [applicant income]</li>
                             <li>
 
                               <!-- INNER list expansion -->
@@ -358,9 +358,9 @@
                                   </div>
                                   <div class="list-group-item-container container-fluid ">
                                     <ul class="ul--plain">
-                                      <li><b>This</b> [This stuff]</li>
-                                      <li><b>That</b> [That stuff]</li>
-                                      <li><b>Other</b> [Other stuff]</li>
+                                      <li><a>This</a> [This stuff]</li>
+                                      <li><a>That</a> [That stuff]</li>
+                                      <li><a>Other</a> [Other stuff]</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -477,8 +477,42 @@
                 <div id="kieScenarioCheatsheetTabContent" 
                 class="tab-pane fade"
                 aria-labelledby="Scenario Cheatsheet">
-                <p>Create a row for each scenario, and input values using the following syntax.</p>
-              </div>
+                <div id="kieScenarioCheatsheetTabContent" class="tab-pane fade active in" aria-labelledby="Scenario Cheatsheet" style="padding: 1em">
+                    <p data-i18n-key="Use_contextual_menu_to_add/remove_columns_and_rows.">Use contextual menu to add/remove columns and rows.</p>
+        
+                    <p data-i18n-key="Left_click_on_column_header_&amp;_then_edit_the_mapping_with_a_field_using_the_Test_Editor_tab.">Left click on column header &amp; then edit the mapping with a field using the Test Editor tab.</p>
+        
+                    <p data-i18n-key="Double_click_on_the_field_to_set_the_mapping.">Double click on the field to set the mapping.</p>
+        
+                    <p data-i18n-key="Each_cell_can_contain_an_expression_which_use_following_syntax_">Each cell can contain an expression which use following syntax:</p>
+        
+                    <ul >
+                        <li>
+                            <i data-i18n-key="=_value_(or_no_symbol)">= value (or no symbol)</i>: specifies equals to a value. This is the default and only operator supported under GIVEN section
+                        </li>
+                        <li>
+                            <i data-i18n-key="!_or_!=_or_<>_value">! or != or &lt;&gt; value</i>: specifies not equals to a value. It can be used with other operators.
+                        </li>
+                        <li><i data-i18n-key="<_or_>_or_<=_or_>=_value">&lt; or &gt; or &lt;= or &gt;= value</i>: specifies a comparison</li>
+                        <li>
+                            <i data-i18n-key="[_value1,_value2,_value3_]">[ value1, value2, value3 ]</i>: provides a list of values. This operator works like the logical OR operator
+                        </li>
+                        <li>
+                            <i data-i18n-key="expression1_;_expression2_;_expression3">expression1 ; expression2 ; expression3</i>: specifies a list of expressions. This operator works like the logical AND operator
+                        </li>
+                    </ul>
+        
+                    <p  data-i18n-key="Example_of_expressions_">Example of expressions:</p>
+        
+                    <ul>
+                        <li><i data-i18n-key="<_3">&lt; 3</i></li>
+                        <li><i data-i18n-key="<_3_;_!_[0,-1]">&lt; 3 ; ! [0,-1]</i></li>
+                        <li><i data-i18n-key="[MyString,_My_second_string]">[MyString, My second string]</i></li>
+                        <li><i data-i18n-key="=_3;_>_2">= 3; &gt; 2</i></li>
+                    </ul>
+        
+                    <p>Empty cell is equal to <i data-i18n-key="null">null</i> and use the equals symbol (=) without any value to specify an empty string.</p>
+                </div>              </div>
             </div>
             
           </div>
