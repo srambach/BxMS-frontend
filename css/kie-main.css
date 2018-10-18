@@ -19361,6 +19361,13 @@ html {
 }
 .ul--plain {
   list-style: none;
+  padding-inline-start: 0;
+}
+.ul--plain li {
+  padding: .25em;
+}
+.ul--plain > .selected {
+  background-color: #edf8ff;
 }
 .navbar-pf {
   border-top-color: #39a5dc;
@@ -19828,17 +19835,33 @@ html {
   justify-content: center;
   align-items: center;
 }
+.kie-tree-list-view-pf-view--compact {
+  border-color: transparent;
+}
 .kie-tree-list-view-pf-view--compact .list-group-item {
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: -2px;
+}
+.kie-tree-list-view-pf-view--compact .list-group-item .list-view-pf-expand {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.kie-tree-list-view-pf-view--compact .list-group-item.list-view-pf-expand-active {
+  background-color: #fff;
+  border-color: transparent;
+  box-shadow: none;
+}
+.kie-tree-list-view-pf-view--compact .list-group-item.list-view-pf-expand-active:hover {
+  background-color: #edf8ff;
+}
+.kie-tree-list-view-pf-view--compact .list-group-item.list-view-pf-expand-active:first-child {
+  border-color: transparent;
 }
 .kie-tree-list-view-pf-view--compact .list-group-item-header {
   padding-top: 0;
   padding-bottom: 0;
-}
-.kie-tree-list-view-pf-view--compact .list-view-pf-expand {
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-left: 0;
 }
 .kie-tree-list-view-pf-view--compact .list-view-pf-main-info {
   padding-top: 5px;
@@ -19846,6 +19869,8 @@ html {
 }
 .kie-tree-list-view-pf-view--compact .list-group-item-container {
   border-top-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .kie-background--settings {
   background-color: #f5f5f5;
