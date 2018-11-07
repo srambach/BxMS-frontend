@@ -8,17 +8,6 @@ html {
   font-size: @font-size-base;
 }
 
-.ul--plain {
-  list-style: none;
-  padding-inline-start: 0;
-  li {
-    padding: .25em;
-  }
-  & > .selected {
-    background-color: @color-pf-blue-25;
-  }
-}
-
 // *** RCUE should handle this
 // Changes masthead border to Red Hat product color
 // For community version, use the default, which is @brand-primary
@@ -593,7 +582,9 @@ html {
       padding-top: 0;
       padding-bottom: 0;
       margin-bottom: -2px;
-
+      :hover {
+        background-color: transparent;
+      }
       .list-view-pf-expand {
         margin-top: 0;
         margin-bottom: 0;
@@ -603,18 +594,21 @@ html {
       background-color: @color-pf-white;
       border-color: transparent;
       box-shadow: none;
-      &:hover {
-        background-color: @color-pf-blue-25;
-      }
     }
     .list-group-item.list-view-pf-expand-active:first-child {
       border-color: transparent;
+    }
+    .selected > .list-group-item-header {
+      background-color: @color-pf-blue-25;
     }
     .list-group-item-header {
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0;
       font-weight: bold;
+      &:hover {
+        background-color: @color-pf-blue-25;
+      }
     }
     .list-view-pf-main-info {
       padding-top: 5px;
@@ -625,7 +619,24 @@ html {
       padding-top: 0;
       padding-bottom: 0;
     }
+  .ul--plain {
+    list-style: none;
+    padding-inline-start: 0;
+    li {
+      padding: .25em;
+      &:hover {
+        background-color: @color-pf-blue-25;
+      }
+    }
+    & > .selected {
+      background-color: @color-pf-blue-25;
+    }
   }
+  }
+
+  
+
+  
   //// Settings
   .kie-background--settings {
     background-color: @well-bg;
