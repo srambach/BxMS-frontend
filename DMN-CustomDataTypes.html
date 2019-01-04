@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>jBPM Suite</title>
+    
+    <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Select -->
+    <script src="https//:cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    
+    <!-- For the graphs -->
+    <script src="https//:cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+    <script src="https//:cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.23.1/js/patternfly.min.js"></script>
+    
+</head>
+<body>
+    
+    <div data-i18n-prefix="DataTypeListView.">
+        <h3 data-i18n-key="Title">Custom Data Types</h3>
+        <div class="description" data-field="collapsed-description">
+            <p data-i18n-key="CollapsedText">Data types determine the structure of the data used in DMN decision tables. You can use basic data types (example, Boolean) or you can use this dialog to create custom data types.</p>
+        </div>
+        <div class="description" data-field="expanded-description" hidden="">
+            <p data-i18n-key="ExpandedText1">Data types determine the structure of the data used in DMN decision tables. You can use basic data types (example, Boolean) or you can use this dialog to create custom data types.</p>
+            <p data-i18n-key="ExpandedText2">Custom data types that you create in this dialog can be Simple or Structured data types:</p>
+            <ul>
+                <li>
+                    <b data-i18n-key="Simple">Simple</b>
+                    <span data-i18n-key="ExpandedText3">data types have only a name and a type assignment. Example: "Age (Number)"</span>
+                </li>
+                <li>
+                    <b data-i18n-key="Structured">Structured</b>
+                    <span data-i18n-key="ExpandedText4">data types contain fields and are more complex. A single type "Person" may define a number of fields within it. Example: "name (String), age (Number), email (String)."</span>
+                </li>
+            </ul>
+        </div>
+        <div class="description-buttons">
+            <a data-field="view-more" href="#"><span data-i18n-key="ViewMore">View more</span> »</a>
+            <a data-field="view-less" href="#" hidden="">« <span data-i18n-key="ViewLess">View less</span></a>
+            <button data-field="add-button" class="btn btn-sm btn-primary">
+                <i class="fa fa-plus-circle"></i>
+                <span data-i18n-key="Add">Add</span>
+            </button>
+        </div>
+        <div data-field="list-items-no" class="no-items text-center hidden">
+            <div data-field="list-items-no-content">
+                <i class="fa fa-plus-circle fa-5x"></i>
+                <br>
+                <b><h1 data-i18n-key="NoCustomDataTitle">No custom data types have been defined.</h1></b>
+                <p data-i18n-key="NoCustomData1">There are currently no custom data types available for you to</p>
+                <p data-i18n-key="NoCustomData2">view or edit. To get started, add a custom data type.</p>
+            </div>
+        </div>
+        <div data-field="list-items" class="pf-list-compound-expansion"><div data-field="view" class="list-group-item" data-i18n-prefix="DataTypeListItemView." data-row-uuid="289D0A88-E497-49F2-8D48-318923C5FEE7" data-parent-row-uuid="">
+            <div class="list-view-pf-actions">
+                <button data-type-field="edit-button" class="btn btn-sm btn-default" data-i18n-key="Edit">Edit</button>
+                <button data-type-field="save-button" class="btn btn-sm btn-default hidden" data-i18n-key="Save">Save</button>
+                <button data-type-field="close-button" class="btn btn-sm btn-default close-button hidden" data-i18n-key="✖">✖</button>
+                <div data-type-field="kebab-menu" class="dropdown-kebab-container">
+                    
+                    <div class="dropdown pull-right dropdown-kebab-pf" style="">
+                        <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-ellipsis-v"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a data-type-field="remove-button" href="#" data-i18n-key="Remove">Remove</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a data-type-field="insert-field-above" href="#" data-i18n-key="InsertFieldAbove">Insert field above</a></li>
+                            <li><a data-type-field="insert-field-below" href="#" data-i18n-key="InsertFieldBelow">Insert field below</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a data-type-field="insert-nested-field" href="#" data-i18n-key="InsertNestedField">Insert nested field</a></li>
+                            <!-- TODO: https://issues.jboss.org/browse/DROOLS-3083 -->
+                            <!--<li role="separator" class="divider"></li>-->
+                            <!--<li><a href="#" data-i18n-key="MoveUp"></a></li>-->
+                            <!--<li><a href="#" data-i18n-key="MoveDown"></a></li>-->
+                        </ul>
+                    </div></div>
+                </div>
+                
+                <div class="list-view-pf-main-info">
+                    <div class="list-view-pf-body">
+                        <span class="nesting-level" style="margin-left: 35px"></span>
+                        <span data-type-field="arrow-button" class="icon expand-icon fa fa-caret-down hidden">
+                            <span class="data-type-icon fa fa-object-group"></span>
+                        </span>
+                        
+                        <span class="name-text" data-type-field="name-text">Foo</span>
+                        <input class="name-input hidden" data-type-field="name-input">
+                        <span data-type-field="type"><div data-i18n-prefix="DataTypeSelectView.">
+                            <div data-field="type-text" class="">(string)</div>
+                            <div class="btn-group bootstrap-select" style="display: none;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Structure" aria-expanded="false"><span class="filter-option pull-left">
+                                Structure
+                            </span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><select data-field="type-select" data-container="body" class="selectpicker" tabindex="-98"><optgroup data-field="type-select-optgroup" label="Default"><option data-field="type-select-option" value="Any">Any</option><option data-field="type-select-option" value="boolean">boolean</option><option data-field="type-select-option" value="context">context</option><option data-field="type-select-option" value="date">date</option><option data-field="type-select-option" value="date and time">date and time</option><option data-field="type-select-option" value="days and time duration">days and time duration</option><option data-field="type-select-option" value="number">number</option><option data-field="type-select-option" value="string">string</option><option data-field="type-select-option" value="time">time</option><option data-field="type-select-option" value="years and months duration">years and months duration</option></optgroup><optgroup data-field="type-select-optgroup" label="Custom"><option data-field="type-select-option" value="Foo">Foo</option></optgroup><optgroup data-field="type-select-structure-optgroup">
+                                <option class="option-structure fa fa-object-group" value="Structure" data-i18n-key="_Structure_">
+                                    Structure
+                                </option>
+                            </optgroup></select></div>
+                        </div></span>
+                        <span class="constraint-text hidden" data-type-field="constraint-text"></span>
+                        <div class="collection-component hidden" data-type-field="collection-container">Collection<div data-i18n-prefix="SmallSwitchComponentView.">
+                            <label class="kie-small-switch">
+                                <input data-field="input-checkbox" value="true" type="checkbox">
+                                <span class="kie-slider"></span>
+                                <span data-field="checkbox-text">Yes</span>
+                            </label>
+                        </div></div>
+                        <div class="collection-component" data-type-field="collection-yes">
+                            <span data-i18n-key="Collection">Collection</span>
+                            <div>
+                                <i class="fa fa-check"></i>
+                                <span data-i18n-key="Yes">Yes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden" data-type-field="constraint-container">
+                    <span class="nesting-level" style="margin-left: 35px"></span>
+                    <div data-type-field="constraint"><div data-i18n-prefix="DataTypeConstraintView.">
+                        <label>
+                            <input data-field="constraint-toggle" value="true" type="checkbox">
+                            <span data-i18n-key="AddConstraints">Add Constraints</span>
+                            <span class="required fa fa-info-circle" data-toggle="tooltip" data-placement="top" data-field="constraints-tooltip" title="" data-original-title="Add constraints to limit and define valid input for this Data Type. For example, you can limit the scope of a number value with the following expressions: &quot;1, 2, 3, 4, 5&quot;, &quot;<5&quot;, or &quot;(1..5)&quot;"></span>
+                        </label>
+                        <div>
+                            <input type="text" class="hidden" data-field="constraint-value">
+                        </div>
+                    </div></div>
+                </div>
+            </div><div data-field="view" class="list-group-item" data-i18n-prefix="DataTypeListItemView." data-row-uuid="076E70ED-CD46-440C-8556-4980E323113A" data-parent-row-uuid="">
+                <div class="list-view-pf-actions">
+                    <button data-type-field="edit-button" class="btn btn-sm btn-default" data-i18n-key="Edit">Edit</button>
+                    <button data-type-field="save-button" class="btn btn-sm btn-default hidden" data-i18n-key="Save">Save</button>
+                    <button data-type-field="close-button" class="btn btn-sm btn-default close-button hidden" data-i18n-key="✖">✖</button>
+                    <div data-type-field="kebab-menu" class="dropdown-kebab-container">
+                        <div class="dropdown pull-right dropdown-kebab-pf">
+                            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a data-type-field="remove-button" href="#" data-i18n-key="Remove">Remove</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a data-type-field="insert-field-above" href="#" data-i18n-key="InsertFieldAbove">Insert field above</a></li>
+                                <li><a data-type-field="insert-field-below" href="#" data-i18n-key="InsertFieldBelow">Insert field below</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a data-type-field="insert-nested-field" href="#" data-i18n-key="InsertNestedField">Insert nested field</a></li>
+                                <!-- TODO: https://issues.jboss.org/browse/DROOLS-3083 -->
+                                <!--<li role="separator" class="divider"></li>-->
+                                <!--<li><a href="#" data-i18n-key="MoveUp"></a></li>-->
+                                <!--<li><a href="#" data-i18n-key="MoveDown"></a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-view-pf-main-info">
+                    <div class="list-view-pf-body">
+                        <span class="nesting-level" style="margin-left: 35px"></span>
+                        <span data-type-field="arrow-button" class="icon expand-icon fa fa-caret-down hidden">
+                            <span class="data-type-icon fa fa-object-group"></span>
+                        </span>
+                        
+                        <span class="name-text" data-type-field="name-text">bar</span>
+                        <input class="name-input hidden" data-type-field="name-input">
+                        <span data-type-field="type"><div data-i18n-prefix="DataTypeSelectView.">
+                            <div data-field="type-text" class="">(string)</div>
+                            <div class="btn-group bootstrap-select" style="display: none;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Structure" aria-expanded="false"><span class="filter-option pull-left">
+                                Structure
+                            </span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><select data-field="type-select" data-container="body" class="selectpicker" tabindex="-98"><optgroup data-field="type-select-optgroup" label="Default"><option data-field="type-select-option" value="Any">Any</option><option data-field="type-select-option" value="boolean">boolean</option><option data-field="type-select-option" value="context">context</option><option data-field="type-select-option" value="date">date</option><option data-field="type-select-option" value="date and time">date and time</option><option data-field="type-select-option" value="days and time duration">days and time duration</option><option data-field="type-select-option" value="number">number</option><option data-field="type-select-option" value="string">string</option><option data-field="type-select-option" value="time">time</option><option data-field="type-select-option" value="years and months duration">years and months duration</option></optgroup><optgroup data-field="type-select-optgroup" label="Custom"><option data-field="type-select-option" value="Foo">Foo</option><option data-field="type-select-option" value="bar">bar</option></optgroup><optgroup data-field="type-select-structure-optgroup">
+                                <option class="option-structure fa fa-object-group" value="Structure" data-i18n-key="_Structure_">
+                                    Structure
+                                </option>
+                            </optgroup></select></div>
+                        </div></span>
+                        <span class="constraint-text hidden" data-type-field="constraint-text"></span>
+                        <div class="collection-component hidden" data-type-field="collection-container">Collection<div data-i18n-prefix="SmallSwitchComponentView.">
+                            <label class="kie-small-switch">
+                                <input data-field="input-checkbox" value="true" type="checkbox">
+                                <span class="kie-slider"></span>
+                                <span data-field="checkbox-text">No</span>
+                            </label>
+                        </div></div>
+                        <div class="hidden collection-component" data-type-field="collection-yes">
+                            <span data-i18n-key="Collection">Collection</span>
+                            <div>
+                                <i class="fa fa-check"></i>
+                                <span data-i18n-key="Yes">Yes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden" data-type-field="constraint-container">
+                    <span class="nesting-level" style="margin-left: 35px"></span>
+                    <div data-type-field="constraint"><div data-i18n-prefix="DataTypeConstraintView.">
+                        <label>
+                            <input data-field="constraint-toggle" value="true" type="checkbox">
+                            <span data-i18n-key="AddConstraints">Add Constraints</span>
+                            <span class="required fa fa-info-circle" data-toggle="tooltip" data-placement="top" data-field="constraints-tooltip" title="" data-original-title="Add constraints to limit and define valid input for this Data Type. For example, you can limit the scope of a number value with the following expressions: &quot;1, 2, 3, 4, 5&quot;, &quot;<5&quot;, or &quot;(1..5)&quot;"></span>
+                        </label>
+                        <div>
+                            <input type="text" class="hidden" data-field="constraint-value">
+                        </div>
+                    </div></div>
+                </div>
+            </div><div data-field="view" class="list-group-item focused-data-type" data-i18n-prefix="DataTypeListItemView." data-row-uuid="BC7DDBBE-7F50-4F4D-A61F-DAD5E2AF1F9A" data-parent-row-uuid="">
+                <div class="list-view-pf-actions">
+                    <button data-type-field="edit-button" class="btn btn-sm btn-default hidden" data-i18n-key="Edit">Edit</button>
+                    <button data-type-field="save-button" class="btn btn-sm btn-default" data-i18n-key="Save">Save</button>
+                    <button data-type-field="close-button" class="btn btn-sm btn-default close-button" data-i18n-key="✖">✖</button>
+                    <div data-type-field="kebab-menu" class="dropdown-kebab-container">
+                        
+                        <div class="dropdown pull-right dropdown-kebab-pf" style="">
+                            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a data-type-field="remove-button" href="#" data-i18n-key="Remove">Remove</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a data-type-field="insert-field-above" href="#" data-i18n-key="InsertFieldAbove">Insert field above</a></li>
+                                <li><a data-type-field="insert-field-below" href="#" data-i18n-key="InsertFieldBelow">Insert field below</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a data-type-field="insert-nested-field" href="#" data-i18n-key="InsertNestedField">Insert nested field</a></li>
+                                <!-- TODO: https://issues.jboss.org/browse/DROOLS-3083 -->
+                                <!--<li role="separator" class="divider"></li>-->
+                                <!--<li><a href="#" data-i18n-key="MoveUp"></a></li>-->
+                                <!--<li><a href="#" data-i18n-key="MoveDown"></a></li>-->
+                            </ul>
+                        </div></div>
+                    </div>
+                    
+                    <div class="list-view-pf-main-info">
+                        <div class="list-view-pf-body">
+                            <span class="nesting-level" style="margin-left: 35px"></span>
+                            <span data-type-field="arrow-button" class="icon expand-icon fa fa-caret-down">
+                                <span class="data-type-icon fa fa-object-group"></span>
+                            </span>
+                            
+                            <span class="name-text hidden" data-type-field="name-text">--</span>
+                            <input class="name-input" data-type-field="name-input">
+                            <span data-type-field="type"><div data-i18n-prefix="DataTypeSelectView.">
+                                <div data-field="type-text" class="hidden">(Structure)</div>
+                                <div class="btn-group bootstrap-select" style="display: none;"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Structure" aria-expanded="false"><span class="filter-option pull-left">
+                                    Structure
+                                </span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><select data-field="type-select" data-container="body" class="selectpicker" tabindex="-98"><optgroup data-field="type-select-optgroup" label="Default"><option data-field="type-select-option" value="Any">Any</option><option data-field="type-select-option" value="boolean">boolean</option><option data-field="type-select-option" value="context">context</option><option data-field="type-select-option" value="date">date</option><option data-field="type-select-option" value="date and time">date and time</option><option data-field="type-select-option" value="days and time duration">days and time duration</option><option data-field="type-select-option" value="number">number</option><option data-field="type-select-option" value="string">string</option><option data-field="type-select-option" value="time">time</option><option data-field="type-select-option" value="years and months duration">years and months duration</option></optgroup><optgroup data-field="type-select-optgroup" label="Custom"><option data-field="type-select-option" value="--">--</option><option data-field="type-select-option" value="Foo">Foo</option><option data-field="type-select-option" value="bar">bar</option></optgroup><optgroup data-field="type-select-structure-optgroup">
+                                    <option class="option-structure fa fa-object-group" value="Structure" data-i18n-key="_Structure_">
+                                        Structure
+                                    </option>
+                                </optgroup></select></div>
+                            </div></span>
+                            <span class="constraint-text hidden" data-type-field="constraint-text"></span>
+                            <div class="collection-component" data-type-field="collection-container">Collection<div data-i18n-prefix="SmallSwitchComponentView.">
+                                <label class="kie-small-switch">
+                                    <input data-field="input-checkbox" value="true" type="checkbox">
+                                    <span class="kie-slider"></span>
+                                    <span data-field="checkbox-text">Yes</span>
+                                </label>
+                            </div></div>
+                            <div class="collection-component" data-type-field="collection-yes">
+                                <span data-i18n-key="Collection">Collection</span>
+                                <div>
+                                    <i class="fa fa-check"></i>
+                                    <span data-i18n-key="Yes">Yes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="" data-type-field="constraint-container">
+                        <span class="nesting-level" style="margin-left: 35px"></span>
+                        <div data-type-field="constraint"><div data-i18n-prefix="DataTypeConstraintView.">
+                            <label>
+                                <input data-field="constraint-toggle" value="true" type="checkbox">
+                                <span data-i18n-key="AddConstraints">Add Constraints</span>
+                                <span class="required fa fa-info-circle" data-toggle="tooltip" data-placement="top" data-field="constraints-tooltip" title="" data-original-title="Add constraints to limit and define valid input for this Data Type. For example, you can limit the scope of a number value with the following expressions: &quot;1, 2, 3, 4, 5&quot;, &quot;<5&quot;, or &quot;(1..5)&quot;"></span>
+                            </label>
+                            <div>
+                                <input type="text" class="hidden" data-field="constraint-value">
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div data-field="view" class="list-group-item has-sub-data-types" data-i18n-prefix="DataTypeListItemView." data-row-uuid="1463ACF4-E59B-4AAE-AB5D-83BA2A94143C" data-parent-row-uuid="BC7DDBBE-7F50-4F4D-A61F-DAD5E2AF1F9A">
+                    <div class="list-view-pf-actions">
+                        <button data-type-field="edit-button" class="btn btn-sm btn-default" data-i18n-key="Edit">Edit</button>
+                        <button data-type-field="save-button" class="btn btn-sm btn-default hidden" data-i18n-key="Save">Save</button>
+                        <button data-type-field="close-button" class="btn btn-sm btn-default close-button hidden" data-i18n-key="✖">✖</button>
+                        <div data-type-field="kebab-menu" class="dropdown-kebab-container">
+                            <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a data-type-field="remove-button" href="#" data-i18n-key="Remove">Remove</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a data-type-field="insert-field-above" href="#" data-i18n-key="InsertFieldAbove">Insert field above</a></li>
+                                    <li><a data-type-field="insert-field-below" href="#" data-i18n-key="InsertFieldBelow">Insert field below</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a data-type-field="insert-nested-field" href="#" data-i18n-key="InsertNestedField">Insert nested field</a></li>
+                                    <!-- TODO: https://issues.jboss.org/browse/DROOLS-3083 -->
+                                    <!--<li role="separator" class="divider"></li>-->
+                                    <!--<li><a href="#" data-i18n-key="MoveUp"></a></li>-->
+                                    <!--<li><a href="#" data-i18n-key="MoveDown"></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-view-pf-main-info">
+                        <div class="list-view-pf-body">
+                            <span class="nesting-level" style="margin-left: 70px"></span>
+                            <span data-type-field="arrow-button" class="icon expand-icon fa fa-caret-down">
+                                <span class="data-type-icon fa fa-object-group"></span>
+                            </span>
+                            
+                            <span class="name-text" data-type-field="name-text">blah</span>
+                            <input class="name-input hidden" data-type-field="name-input">
+                            <span data-type-field="type"><div data-i18n-prefix="DataTypeSelectView.">
+                                <div data-field="type-text">(Structure)</div>
+                                <select data-field="type-select" data-container="body" class="selectpicker">
+                                    <optgroup data-field="type-select-optgroup">
+                                        <option data-field="type-select-option"></option>
+                                    </optgroup>
+                                    <optgroup data-field="type-select-structure-optgroup">
+                                        <option class="option-structure fa fa-object-group" value="Structure" data-i18n-key="_Structure_">
+                                            Structure
+                                        </option>
+                                    </optgroup>
+                                </select>
+                            </div></span>
+                            <span class="constraint-text hidden" data-type-field="constraint-text"></span>
+                            <div class="hidden collection-component" data-type-field="collection-container">Collection<div data-i18n-prefix="SmallSwitchComponentView.">
+                                <label class="kie-small-switch">
+                                    <input data-field="input-checkbox" value="true" type="checkbox">
+                                    <span class="kie-slider"></span>
+                                    <span data-field="checkbox-text">No</span>
+                                </label>
+                            </div></div>
+                            <div class="hidden collection-component" data-type-field="collection-yes">
+                                <span data-i18n-key="Collection">Collection</span>
+                                <div>
+                                    <i class="fa fa-check"></i>
+                                    <span data-i18n-key="Yes">Yes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" data-type-field="constraint-container">
+                        <span class="nesting-level" style="margin-left: 70px"></span>
+                        <div data-type-field="constraint"><div data-i18n-prefix="DataTypeConstraintView.">
+                            <label>
+                                <input data-field="constraint-toggle" value="true" type="checkbox">
+                                <span data-i18n-key="AddConstraints">Add Constraints</span>
+                                <span class="required fa fa-info-circle" data-toggle="tooltip" data-placement="top" data-field="constraints-tooltip" title="" data-original-title="Add constraints to limit and define valid input for this Data Type. For example, you can limit the scope of a number value with the following expressions: &quot;1, 2, 3, 4, 5&quot;, &quot;<5&quot;, or &quot;(1..5)&quot;"></span>
+                            </label>
+                            <div>
+                                <input type="text" class="hidden" data-field="constraint-value">
+                            </div>
+                        </div></div>
+                    </div>
+                </div><div data-field="view" class="list-group-item" data-i18n-prefix="DataTypeListItemView." data-row-uuid="1DDA701C-169C-4721-A9CC-57148A371889" data-parent-row-uuid="1463ACF4-E59B-4AAE-AB5D-83BA2A94143C">
+                    <div class="list-view-pf-actions">
+                        <button data-type-field="edit-button" class="btn btn-sm btn-default" data-i18n-key="Edit">Edit</button>
+                        <button data-type-field="save-button" class="btn btn-sm btn-default hidden" data-i18n-key="Save">Save</button>
+                        <button data-type-field="close-button" class="btn btn-sm btn-default close-button hidden" data-i18n-key="✖">✖</button>
+                        <div data-type-field="kebab-menu" class="dropdown-kebab-container">
+                            <div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a data-type-field="remove-button" href="#" data-i18n-key="Remove">Remove</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a data-type-field="insert-field-above" href="#" data-i18n-key="InsertFieldAbove">Insert field above</a></li>
+                                    <li><a data-type-field="insert-field-below" href="#" data-i18n-key="InsertFieldBelow">Insert field below</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a data-type-field="insert-nested-field" href="#" data-i18n-key="InsertNestedField">Insert nested field</a></li>
+                                    <!-- TODO: https://issues.jboss.org/browse/DROOLS-3083 -->
+                                    <!--<li role="separator" class="divider"></li>-->
+                                    <!--<li><a href="#" data-i18n-key="MoveUp"></a></li>-->
+                                    <!--<li><a href="#" data-i18n-key="MoveDown"></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-view-pf-main-info">
+                        <div class="list-view-pf-body">
+                            <span class="nesting-level" style="margin-left: 105px"></span>
+                            <span data-type-field="arrow-button" class="icon expand-icon fa fa-caret-down hidden">
+                                <span class="data-type-icon fa fa-object-group"></span>
+                            </span>
+                            
+                            <span class="name-text" data-type-field="name-text">garble</span>
+                            <input class="name-input hidden" data-type-field="name-input">
+                            <span data-type-field="type"><div data-i18n-prefix="DataTypeSelectView.">
+                                <div data-field="type-text">(time)</div>
+                                <select data-field="type-select" data-container="body" class="selectpicker">
+                                    <optgroup data-field="type-select-optgroup">
+                                        <option data-field="type-select-option"></option>
+                                    </optgroup>
+                                    <optgroup data-field="type-select-structure-optgroup">
+                                        <option class="option-structure fa fa-object-group" value="Structure" data-i18n-key="_Structure_">
+                                            Structure
+                                        </option>
+                                    </optgroup>
+                                </select>
+                            </div></span>
+                            <span class="constraint-text hidden" data-type-field="constraint-text"></span>
+                            <div class="hidden collection-component" data-type-field="collection-container">Collection<div data-i18n-prefix="SmallSwitchComponentView.">
+                                <label class="kie-small-switch">
+                                    <input data-field="input-checkbox" value="true" type="checkbox">
+                                    <span class="kie-slider"></span>
+                                    <span data-field="checkbox-text">No</span>
+                                </label>
+                            </div></div>
+                            <div class="hidden collection-component" data-type-field="collection-yes">
+                                <span data-i18n-key="Collection">Collection</span>
+                                <div>
+                                    <i class="fa fa-check"></i>
+                                    <span data-i18n-key="Yes">Yes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" data-type-field="constraint-container">
+                        <span class="nesting-level" style="margin-left: 105px"></span>
+                        <div data-type-field="constraint"><div data-i18n-prefix="DataTypeConstraintView.">
+                            <label>
+                                <input data-field="constraint-toggle" value="true" type="checkbox">
+                                <span data-i18n-key="AddConstraints">Add Constraints</span>
+                                <span class="required fa fa-info-circle" data-toggle="tooltip" data-placement="top" data-field="constraints-tooltip" title="" data-original-title="Add constraints to limit and define valid input for this Data Type. For example, you can limit the scope of a number value with the following expressions: &quot;1, 2, 3, 4, 5&quot;, &quot;<5&quot;, or &quot;(1..5)&quot;"></span>
+                            </label>
+                            <div>
+                                <input type="text" class="hidden" data-field="constraint-value">
+                            </div>
+                        </div></div>
+                    </div>
+                </div></div>
+            </div>
+            
+        </body>
+        
+        </html>
