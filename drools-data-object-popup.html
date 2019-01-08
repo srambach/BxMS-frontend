@@ -162,7 +162,7 @@
             { Test Scenario }
 
             <div>
-              <a href="#confirmation" data-toggle="modal" data-target="#kie-dataTypesList" title="Confirmation">Test the data types list popup</a>       
+              <a href="#confirmation" data-toggle="modal" data-target="#kie-dataTypesList-modal" title="Confirmation">Test the data types list popup</a>       
             </div>
           </div>
           <div class="col-xs-8">
@@ -659,14 +659,8 @@
   <!-- modals -->
 
 <!------ DMN Object Data List Popup Modal DROOLS-3474------>
-<!-- style block here for convenience but it should be put into the less -->
-<style>
-#kie-dataTypesList .tab-content {
-  border-left: 1px solid rgb(238,238,238); /* should actually be @color-black-pf-200 */
-}
-</style>
-
-<div class="modal fade" tabindex="-1" role="dialog" id="kie-dataTypesList">
+<!-- this dialog also relies on the styles in kie-drools.less -->
+<div class="modal fade kie-dataTypesList-modal" tabindex="-1" role="dialog" id="kie-dataTypesList-modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -705,7 +699,7 @@
                   <!-- GENERAL -->
                   <div class="tab-pane kie__dock active" id="kie-ObjectListItem1" aria-labelledby="#kie-ObjectListTab1">
                       <div>
-                          <input value="Danielle" placeholder="Input user name">
+                          <input value="Daniele" placeholder="Input user name">
                         </div>
                         <br/>
                         <div>

@@ -21072,4 +21072,7 @@ table.dataTable thead .sorting_desc:before {
 .panel-heading--timeline {
   padding: 0;
 }
+.kie-dataTypesList-modal .tab-content {
+  border-left: 1px solid #ededed;
+}
 /*# sourceMappingURL=kie-main.css.map */
