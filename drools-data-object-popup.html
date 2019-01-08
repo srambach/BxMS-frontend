@@ -272,16 +272,16 @@
                     <ul class="nav nav-tabs nav-tabs-pf" id="kieTestTools" role="tablist">
                       <li class="nav-item active">
                         <a class="nav-link" id="kieTestEditorTab" data-toggle="tab" href="#kieTestEditorTabContent"
-                          role="tab" aria-controls="Test Editor" aria-selected="true">Test Editor</a>
+                          role="tab" aria-controls="#kieTestToolsContent" aria-selected="true">Test Editor</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="kieTestEditorTab" data-toggle="tab" href="#kieScenarioCheatsheetTabContent"
-                          role="tab" aria-controls="Test Editor" aria-selected="true">Scenario Cheatsheet</a>
+                          role="tab" aria-controls="#kieTestToolsContent" aria-selected="true">Scenario Cheatsheet</a>
                       </li>
                     </ul>
                     <div class="tab-content" id="kieTestToolsContent">
                       <!-- content for the test editor tab -->
-                      <div id="kieTestEditorTabContent" class="tab-pane fade in active" aria-labelledby="Test Editor">
+                      <div id="kieTestEditorTabContent" class="tab-pane fade in active" aria-labelledby="#kieTestEditorTabContent">
                         <br />
                         <p>To create a test template, define "Given" and "Expect" columns by entering an expression or
                           use the expression editor below.</p>
@@ -676,10 +676,7 @@
           <h4 class="modal-title">ContactList <span class="fa fa-list"></span></h4>
         </div>
         <div class="modal-body">
-          
-          <!-- copied from management for the master-detail list -->
-          <!-- <div class="col-md-5 col-lg-4"> -->
-            <div class="container-fluid">
+          <div class="container-fluid">
 
               <div class="row">
                 <!-- Tabs for the filter control -->
@@ -691,8 +688,8 @@
                       Add list item
                     </button>
                   </div>
-                  <div class="row" id="kie-ObjectListSelector"> <!-- navbar navbar-static nav-stacked-->
-                    <div class="list-group" role="tablist" aria-label="List of objects"> <!-- nav kie-dock-selector -->
+                  <div class="row" id="kie-ObjectListSelector">
+                    <div class="list-group" role="tablist" aria-label="List of objects">
                       <a href="#kie-ObjectListItem1" class="list-group-item " data-toggle="tab" role="tab" aria-controls="#kie-ObjectListItem1" id="kie-ObjectListTab1">
                         Daniele
                       </a>
@@ -828,7 +825,7 @@
                     </div>
                     <br/>
                     <div>
-                        <div id="treeview-newuser"></div>              
+                        <div id="treeview-object2"></div>              
                         <!-- TREE VIEW FOR THE OBJECT INFO -->
                         <script>
                             $(function() {
@@ -859,7 +856,7 @@
                                           tags: ['0']
                                         },
                                         {
-                                          text: '<button class="btn btn-link">Add work</button>',
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add work</button>',
                                           href: '#item1-1-2',
                                           icon: '',
                                           tags: ['0']
@@ -879,7 +876,7 @@
                                           tags: ['0']
                                         },
                                         {
-                                          text: '<button class="btn btn-link">Add home</button>',
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add home</button>',
                                           href: '#item1-2-2',
                                           icon: '',
                                           tags: ['0']
@@ -899,7 +896,7 @@
                                           tags: ['0']
                                         },
                                         {
-                                          text: '<button class="btn btn-link">Add cell</button>',
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add cell</button>',
                                           href: '#item1-3-2',
                                           icon: '',
                                           tags: ['0']
@@ -907,10 +904,16 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add Phones</button>',
+                                      href: '#object2-item1',
+                                      icon: '',
+                                      tags: ['0']
                                 }
                               ];
                               //Default
-                              $('#treeview-newuser').treeview({
+                              $('#treeview-object2').treeview({
                                 collapseIcon: collapseIcon,
                                 data: defaultData,
                                 expandIcon: expandIcon,
@@ -928,7 +931,7 @@
   
                 </div>
               </div>
-            </div>
+          </div>
           <!-- </div> -->
           <!-- end of copied from management dock for the master detail list -->
 
@@ -938,7 +941,7 @@
         </div>
         <div class="modal-footer">
             <div class="pull-left">
-              <input type="checkbox" value="showFieldNames" id="#showFieldNamesCheckbox"> <label for="#showFieldNamesCheckbox">show the field names</label>
+              <input type="checkbox" value="showFieldNames" id="showFieldNamesCheckbox"> <label for="showFieldNamesCheckbox">show the field names</label>
             </div>
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal">Insert Item</button>
@@ -947,7 +950,7 @@
     </div>
   </div>
 
-<!------ DMN Object Data List Popup Modal DROOLS-3474 ------>
+<!------ end of DMN Object Data List Popup Modal DROOLS-3474 ------>
 
 
 
