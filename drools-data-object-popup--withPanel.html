@@ -165,9 +165,6 @@
         <div>
           <a href="#confirmation" data-toggle="modal" data-target="#kie-dataTypesList-modal" title="Confirmation">Test the data types list popup</a>       
         </div>
-        <div>
-          <a href="#confirmation" data-toggle="modal" data-target="#kie-dataTypesList-EditInPlace-modal" title="Confirmation">Test the data types list popup - Edit In Place variation (no panel)</a>       
-        </div>
       </div>
       <div class="col-xs-8">
         <!-- *********** CONTENTS of sidebar for DROOLS-2707 ********** -->
@@ -663,248 +660,6 @@
       <!-- modals -->
       
       <!------ DMN Object Data List Popup Modal DROOLS-3474------>
-      <!-- TREE VIEW FOR THE OBJECT INFO -->
-      <script>
-        $(function() {
-          //icon options
-          var collapseIcon = "fa fa-angle-down",
-          expandIcon = "fa fa-angle-right",
-          nodeIcon = "",
-          checkedIcon = "",
-          uncheckedIcon = "",
-          partiallyCheckedIcon = "",
-          borderColor = "green",
-          loadingIcon = "glyphicon glyphicon-hourglass";
-          
-          var defaultData = [
-          {
-            text: '<span class="kie-object-list__field-value">visitedcities</span>',
-            nodes: [
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<span class="kie-object-list__field-value">Rome</span>  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<span class="kie-object-list__field-value">Italy</span>  <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<span class="kie-object-list__field-value">Euro</span>  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              }
-              ]
-            },
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<span class="kie-object-list__field-value">New York</span>  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<span class="kie-object-list__field-value">United States</span>  <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<span class="kie-object-list__field-value">USD</span>  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<span class="kie-object-list__field-value">617</span>  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              },
-              ]
-            },
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<span class="kie-object-list__field-value">Zurich</span>  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<span class="kie-object-list__field-value">Switzerland</span>  <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<span class="kie-object-list__field-value">Swiss Franc</span>  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              },
-              ]
-            } 
-            
-            ]
-          },
-          {
-            text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add new item</button>',
-            class: 'kie-drools-object-separator'
-          }
-          ];
-
-          // Edit fields separately inside a panel
-          var editData = [
-          {
-            text: '<input value="New York" placeholder="#city"> <span class="kie-object-list__field-label">#city</span>'
-          },
-          {
-            text: '<input value="US" placeholder="#country"> <span class="kie-object-list__field-label">#country</span>'
-          },
-          {
-            text: 'Details',
-            nodes: [
-            {
-              text: '<input value="Dollar" placeholder="#currency"> <span class="kie-object-list__field-label">#currency</span>'
-            },
-            {
-              text: '<input value="202" placeholder="#area"> <span class="kie-object-list__field-label">#area</span>'
-            }
-            ]
-            
-          }
-          ];
-          
-          // Data for example showing editing in place
-          var editInPlaceData = [
-          {
-            text: '<span class="kie-object-list__field-value">visitedcities</span>',
-            nodes: [
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<span class="kie-object-list__field-value">Rome</span>  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<span class="kie-object-list__field-value">Italy</span>  <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<span class="kie-object-list__field-value">Euro</span>  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              }
-              ]
-            },
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<input value="New York" placeholder="#city">  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<input value="US" placeholder="#country"> <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<input value="Dollar" placeholder="#currency">  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<input value="202" placeholder="#area">  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              },
-              {
-                text: '<button class="btn btn-link"><span class="fa fa-check"></span> Save changes</button> <button class="btn btn-link"><span class="fa fa-close"></span> Cancel</button>',
-              }
-              ]
-            },
-            {
-              text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
-              class: 'kie-drools-object-separator',
-              nodes: [
-              {
-                text: '<span class="kie-object-list__field-value">Zurich</span>  <span class="kie-object-list__field-label">#city</span>'
-              },
-              {
-                text: '<span class="kie-object-list__field-value">Switzerland</span>  <span class="kie-object-list__field-label">#country</span>'
-              },
-              {
-                text: 'Details',
-                nodes: [
-                {
-                  text: '<span class="kie-object-list__field-value">Swiss Franc</span>  <span class="kie-object-list__field-label">#currency</span>'
-                },
-                {
-                  text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
-                }
-                ]
-              },
-              ]
-            } 
-            
-            ]
-          },
-          {
-            text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add new item</button>',
-            class: 'kie-drools-object-separator'
-          }
-          ];
-
-
-          // Main Listing
-          $('#treeview-object1').treeview({
-            collapseIcon: collapseIcon,
-            data: defaultData,
-            expandIcon: expandIcon,
-            nodeIcon: nodeIcon,
-            showBorder: true,
-            showIcon: false,
-            levels: 99
-          });
-          
-          // Editing list
-          $('#treeview-object-edit').treeview({
-            collapseIcon: collapseIcon,
-            data: editData,
-            expandIcon: expandIcon,
-            nodeIcon: nodeIcon,
-            showBorder: true,
-            showIcon: false,
-            levels: 99
-          });
-          
-          // Edit in place list
-          $('#treeview-object-editInPlace').treeview({
-            collapseIcon: collapseIcon,
-            data: editInPlaceData,
-            expandIcon: expandIcon,
-            nodeIcon: nodeIcon,
-            showBorder: true,
-            showIcon: false,
-            levels: 99
-          });
-
-        });
-      </script>
-      <!-- END TREE VIEW FOR THE OBJECT INFO -->
-      
-      <!-- This is the first style of dialog, with a panel for editing as in the Invision, although not in the middle of the list -->
       <!-- this dialog also relies on the styles in kie-drools.less -->
       <div class="modal fade kie-dataTypesList-modal" tabindex="-1" role="dialog" id="kie-dataTypesList-modal">
         <div class="modal-dialog" role="document">
@@ -923,9 +678,150 @@
                   <!-- Data objects -->
                   <div class="col-xs-12 tab-content">
                     <!-- first right side panel -->
-                    <div class="tab-pane kie__dock active kie-object-list">
+                    <div class="tab-pane kie__dock active kie-object-list" id="kie-ObjectListItem1" aria-labelledby="#kie-ObjectListTab1">
                       <div>
                         <div id="treeview-object1"></div>              
+                        <!-- TREE VIEW FOR THE OBJECT INFO -->
+                        <script>
+                          $(function() {
+                            //icon options
+                            var collapseIcon = "fa fa-angle-down",
+                            expandIcon = "fa fa-angle-right",
+                            nodeIcon = "",
+                            checkedIcon = "",
+                            uncheckedIcon = "",
+                            partiallyCheckedIcon = "",
+                            borderColor = "green",
+                            loadingIcon = "glyphicon glyphicon-hourglass";
+                            
+                            var defaultData = [
+                            {
+                              text: '<span class="kie-object-list__field-value">visitedcities</span>',
+                              nodes: [
+                              {
+                                text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+                                class: 'kie-drools-object-separator',
+                                nodes: [
+                                {
+                                  text: '<span class="kie-object-list__field-value">Rome</span>  <span class="kie-object-list__field-label">#city</span>'
+                                },
+                                {
+                                  text: '<span class="kie-object-list__field-value">Italy</span>  <span class="kie-object-list__field-label">#country</span>'
+                                },
+                                {
+                                  text: 'Details',
+                                  nodes: [
+                                  {
+                                    text: '<span class="kie-object-list__field-value">Euro</span>  <span class="kie-object-list__field-label">#currency</span>'
+                                  },
+                                  {
+                                    text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
+                                  }
+                                  ]
+                                }
+                                ]
+                              },
+                              {
+                                text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+                                class: 'kie-drools-object-separator',
+                                nodes: [
+                                {
+                                  text: '<span class="kie-object-list__field-value">New York</span>  <span class="kie-object-list__field-label">#city</span>'
+                                },
+                                {
+                                  text: '<span class="kie-object-list__field-value">United States</span>  <span class="kie-object-list__field-label">#country</span>'
+                                },
+                                {
+                                  text: 'Details',
+                                  nodes: [
+                                  {
+                                    text: '<span class="kie-object-list__field-value">USD</span>  <span class="kie-object-list__field-label">#currency</span>'
+                                  },
+                                  {
+                                    text: '<span class="kie-object-list__field-value">617</span>  <span class="kie-object-list__field-label">#area</span>'
+                                  }
+                                  ]
+                                },
+                                ]
+                              },
+                              {
+                                text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+                                class: 'kie-drools-object-separator',
+                                nodes: [
+                                {
+                                  text: '<span class="kie-object-list__field-value">Zurich</span>  <span class="kie-object-list__field-label">#city</span>'
+                                },
+                                {
+                                  text: '<span class="kie-object-list__field-value">Switzerland</span>  <span class="kie-object-list__field-label">#country</span>'
+                                },
+                                {
+                                  text: 'Details',
+                                  nodes: [
+                                  {
+                                    text: '<span class="kie-object-list__field-value">Swiss Franc</span>  <span class="kie-object-list__field-label">#currency</span>'
+                                  },
+                                  {
+                                    text: '<span class="kie-object-list__field-value">100</span>  <span class="kie-object-list__field-label">#area</span>'
+                                  }
+                                  ]
+                                },
+                                ]
+                              } 
+                              
+                              ]
+                            },
+                            {
+                              text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add new item</button>',
+                              class: 'kie-drools-object-separator'
+                            }
+                            ];
+                            // Edit fields in a treeview
+                            var editData = [
+                            {
+                              text: '<input value="New York" placeholder="#city"> <span class="kie-object-list__field-label">#city</span>'
+                            },
+                            {
+                              text: '<input value="US" placeholder="#country"> <span class="kie-object-list__field-label">#country</span>'
+                            },
+                            {
+                              text: 'Details',
+                              nodes: [
+                              {
+                                text: '<input value="Dollar" placeholder="#currency"> <span class="kie-object-list__field-label">#currency</span>'
+                              },
+                              {
+                                text: '<input value="202" placeholder="#area"> <span class="kie-object-list__field-label">#area</span>'
+                              }
+                              ]
+                              
+                            }
+                            ];
+                            
+                            // Main Listing
+                            $('#treeview-object1').treeview({
+                              collapseIcon: collapseIcon,
+                              data: defaultData,
+                              expandIcon: expandIcon,
+                              nodeIcon: nodeIcon,
+                              showBorder: true,
+                              showIcon: false,
+                              levels: 99
+                            });
+                            
+                            // Editing list
+                            $('#treeview-object-edit').treeview({
+                              collapseIcon: collapseIcon,
+                              data: editData,
+                              expandIcon: expandIcon,
+                              nodeIcon: nodeIcon,
+                              showBorder: true,
+                              showIcon: false,
+                              levels: 99
+                            });
+                            
+                          });
+                        </script>
+                        <!-- END TREE VIEW FOR THE OBJECT INFO -->
                         
                         <!-- Panel for editing an item -->
                         <div class="panel panel-default">
@@ -943,12 +839,129 @@
                         </div>
                         <!-- END Panel for editing an item -->
                         
+                        <!-- adding the old right side panel for fun -->
+                        <div class="kie-object-list" id="treeview-object2"></div>              
+
+
+
+
                       </div>
+                    </div>
+                    <!-- second right side panel  -->
+                    <div class="tab-pane" id="kie-ObjectListItem2" aria-labelledby="#kie-ObjectListTab2">
+                      <!-- <div>
+                        <input placeholder="Input user name">
+                      </div>
+                      <br/> -->
+                      <div>
+                        <div id="treeview-object2"></div>              
+                        <!-- TREE VIEW FOR THE OBJECT INFO -->
+                        <script>
+                          $(function() {
+                            //icon options
+                            var collapseIcon = "fa fa-angle-down",
+                            expandIcon = "fa fa-angle-right",
+                            nodeIcon = "",
+                            checkedIcon = "",
+                            uncheckedIcon = "",
+                            partiallyCheckedIcon = "",
+                            loadingIcon = "glyphicon glyphicon-hourglass";
+                            
+                            var defaultData = [
+                            {
+                              text: 'Phones',
+                              href: '#item1',
+                              tags: ['4'],
+                              nodes: [
+                              {
+                                text: 'work',
+                                href: '#item1-1',
+                                tags: ['2'],
+                                nodes: [
+                                {
+                                  text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                  href: '#item1-1-1',
+                                  icon: '',
+                                  tags: ['0']
+                                },
+                                {
+                                  text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add work</button>',
+                                  href: '#item1-1-2',
+                                  icon: '',
+                                  tags: ['0']
+                                }
+                                ]
+                              },
+                              {
+                                text: 'home',
+                                href: '#item-1-2',
+                                icon: '',
+                                tags: ['0'],
+                                nodes: [
+                                {
+                                  text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                  href: '#item1-2-1',
+                                  icon: '',
+                                  tags: ['0']
+                                },
+                                {
+                                  text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add home</button>',
+                                  href: '#item1-2-2',
+                                  icon: '',
+                                  tags: ['0']
+                                }
+                                ]
+                              },
+                              {
+                                text: 'cell',
+                                href: '#item-1-3',
+                                icon: '',
+                                tags: ['0'],
+                                nodes: [
+                                {
+                                  text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                  href: '#item1-3-1',
+                                  icon: '',
+                                  tags: ['0']
+                                },
+                                {
+                                  text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add cell</button>',
+                                  href: '#item1-3-2',
+                                  icon: '',
+                                  tags: ['0']
+                                }
+                                ]
+                              }
+                              ]
+                            },
+                            {
+                              text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add Phones</button>',
+                              href: '#object2-item1',
+                              icon: '',
+                              tags: ['0']
+                            }
+                            ];
+                            //Default
+                            $('#treeview-object2').treeview({
+                              collapseIcon: collapseIcon,
+                              data: defaultData,
+                              expandIcon: expandIcon,
+                              nodeIcon: nodeIcon,
+                              showBorder: false,
+                              showIcon: false,
+                              levels: 99
+                            });
+                          });
+                        </script>
+                        <!-- END TREE VIEW FOR THE OBJECT INFO -->
+                      </div>
+                      
                     </div>
                     
                   </div>
                 </div>
               </div>
+              <!-- </div> -->
               <!-- end of copied from management dock for the master detail list -->
               
               <!-- end outlined data object box -->
@@ -966,51 +979,6 @@
         </div>
       </div>
       
-      <!-- This is the second dialog option, editing inline without a separate panel -->
-      <!-- this dialog also relies on the styles in kie-drools.less -->
-      <div class="modal fade kie-dataTypesList-modal" tabindex="-1" role="dialog" id="kie-dataTypesList-EditInPlace-modal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span class="pficon pficon-close"></span>
-              </button>
-              <h4 class="modal-title">Scenario A - visitedCities <span class="fa fa-list"></span></h4>
-            </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                
-                <div class="row">
-                  
-                  <!-- Data objects -->
-                  <div class="col-xs-12 tab-content">
-                    <!-- first right side panel -->
-                    <div class="tab-pane kie__dock active kie-object-list">
-                      <div>
-                        <div class="kie-object-list" id="treeview-object-editInPlace"></div>              
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-              <!-- end of copied from management dock for the master detail list -->
-              
-              <!-- end outlined data object box -->
-              <br/>
-              
-            </div>
-            <div class="modal-footer">
-              <div class="pull-left">
-                <input type="checkbox" value="showFieldNames" id="showFieldNamesCheckbox"> <label for="showFieldNamesCheckbox">show the field names</label>
-              </div>
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Insert Item</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!------ end of DMN Object Data List Popup Modal DROOLS-3474 ------>
       
       

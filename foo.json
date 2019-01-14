@@ -1,0 +1,80 @@
+var defaultData = [
+  {
+    text: 'Visited Cities',
+    nodes: [
+      {
+        text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+        class: 'kie-drools-object-separator',
+        nodes: [
+          {
+            text: 'Rome  <span class="kie-object-list__label">#city</span>'
+          },
+          {
+            text: 'Italy  <span class="kie-object-list__label">#country</span>'
+          },
+          {
+            text: 'Details',
+            nodes: [
+              {
+                text: 'Euro  <span class="kie-object-list__label">#currency</span>'
+              },
+              {
+                text: '100  <span class="kie-object-list__label">#area</span>'
+              }
+            ]
+          }
+        ]
+      }
+      {
+        text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+        class: 'kie-drools-object-separator',
+        nodes: [
+          {
+            text: 'New York  <span class="kie-object-list__label">#city</span>'
+          },
+          {
+            text: 'United States  <span class="kie-object-list__label">#country</span>'
+          },
+          {
+            text: 'Details',
+            nodes: [
+              {
+                text: 'USD  <span class="kie-object-list__label">#currency</span>'
+              },
+              {
+                text: '617  <span class="kie-object-list__label">#area</span>'
+              }
+            ]
+          },
+        ]
+      },
+      {
+        text: 'Item <div class="pull-right"><button class="btn btn-link" aria-label="Edit item"><span class="fa fa-pencil" aria-hidden="true"></span></button><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button></div>',
+        class: 'kie-drools-object-separator',
+        nodes: [
+          {
+            text: 'Zurich  <span class="kie-object-list__label">#city</span>'
+          },
+          {
+            text: 'Switzerland  <span class="kie-object-list__label">#country</span>'
+          },
+          {
+            text: 'Details',
+            nodes: [
+              {
+                text: 'Swiss Franc  <span class="kie-object-list__label">#currency</span>'
+              },
+              {
+                text: '100  <span class="kie-object-list__label">#area</span>'
+              }
+            ]
+          },
+        ]
+      }
+          
+    ]
+  },
+  {
+    text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add new element</button>',
+  }
+];

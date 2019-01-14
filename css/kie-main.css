@@ -21072,7 +21072,13 @@ table.dataTable thead .sorting_desc:before {
 .panel-heading--timeline {
   padding: 0;
 }
-.kie-dataTypesList-modal .tab-content {
-  border-left: 1px solid #ededed;
+.list-group-item.kie-drools-object-separator {
+  border-top-color: #ededed !important;
+}
+.kie-object-list__field-value {
+  font-weight: bold;
+}
+.kie-object-list__field-label {
+  font-weight: normal;
 }
 /*# sourceMappingURL=kie-main.css.map */
