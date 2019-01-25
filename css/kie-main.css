@@ -21072,8 +21072,25 @@ table.dataTable thead .sorting_desc:before {
 .panel-heading--timeline {
   padding: 0;
 }
-.list-group-item.kie-drools-object-separator {
-  border-top-color: #ededed !important;
+.kie-object-list {
+  list-style-type: none;
+}
+.kie-object-list .list-group {
+  border-top: none;
+  padding-left: 1.25rem;
+}
+.kie-object-list .list-group-item {
+  border: none;
+}
+.kie-object-list--mapping {
+  display: inline-table;
+}
+.kie-object-list__expander {
+  padding-right: 1em;
+}
+li.list-group-item.kie-object-list__separator,
+li.list-group-item.kie-object-list__separator:first-child {
+  border-top: 1px solid #ededed;
 }
 .kie-object-list__field-value {
   font-weight: bold;
