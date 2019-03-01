@@ -6846,8 +6846,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.eot?v=4.7.0');
-  src: url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../includes/patternfly-fonts/font-awesome/fonts//fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.eot?v=4.7.0');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.woff?v=4.7.0') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts//fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -21071,5 +21071,31 @@ table.dataTable thead .sorting_desc:before {
 }
 .panel-heading--timeline {
   padding: 0;
+}
+.kie-object-list {
+  list-style-type: none;
+}
+.kie-object-list .list-group {
+  border-top: none;
+  padding-left: 1.25rem;
+}
+.kie-object-list .list-group-item {
+  border: none;
+}
+.kie-object-list--mapping {
+  display: inline-table;
+}
+.kie-object-list__expander {
+  padding-right: 1em;
+}
+li.list-group-item.kie-object-list__separator,
+li.list-group-item.kie-object-list__separator:first-child {
+  border-top: 1px solid #ededed;
+}
+.kie-object-list__field-value {
+  font-weight: bold;
+}
+.kie-object-list__field-label {
+  font-weight: normal;
 }
 /*# sourceMappingURL=kie-main.css.map */

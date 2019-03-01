@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jBPM Suite</title>
+
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+  
+  <!-- For the graphs -->
+  <script src="https//:cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+  <script src="https//:cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.23.1/js/patternfly.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="kie-page">
+    <a class="kie-skiplink" href="#kie-main-content">Skip to main content</a>
+
+    <!-- Masthead -->
+    <nav class="kie-page__masthead navbar navbar-default navbar-pf " role="navigation">
+      <div class="navbar-header ">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+          <img class="kie-brand-icon" src="images/kie-ide.png" alt="JBoss BPM Suite" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-iconic">
+          <li>
+            <a class="nav-item-iconic" href="bpm-home-rh.html" title="Home"><i class="pficon pficon-home"></i></a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav  kie-yamm">
+          <li class="dropdown kie-yamm--fw">
+            <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true" tabindex="0">
+              Menu
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu kie-yamm__dropdown-menu" aria-labelledby="dropdownMenu2">
+
+              <!-- mega menu sections -->
+              <li class="kie-yamm__section col-xs-12 col-md-3">
+                <h3 class="kie-yamm__title">Design</h3>
+                <ul class="kie-yamm__subsection">
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Dashboards</a></li>
+                </ul>
+              </li>
+              <li class="kie-yamm__section col-xs-12 col-md-3">
+                <h3 class="kie-yamm__title">Configure</h3>
+                <ul class="kie-yamm__subsection">
+                  <li><a href="#">Deployments</a></li>
+                  <li><a href="#">Execution Servers</a></li>
+                </ul>
+              </li>
+              <li class="kie-yamm__section col-xs-12 col-md-3 ">
+                <h3 class="kie-yamm__title">Manage</h3>
+                <ul class="kie-yamm__subsection">
+                  <li><a href="#">Process Definitions</a></li>
+                  <li><a href="#">Process Instances</a></li>
+                  <li><a href="#">Jobs</a></li>
+                </ul>
+              </li>
+              <li class="kie-yamm__section col-xs-12 col-md-3">
+                <h3 class="kie-yamm__title">Track</h3>
+                <ul class="kie-yamm__subsection">
+                  <li><a href="#">Task Lists</a></li>
+                  <li><a href="#">Task Reports</a></li>
+                  <li><a href="#">Process Reports</a></li>
+                  <li><a href="#">Business Dashboards</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right navbar-iconic">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-item-iconic" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true">
+              <span title="Applications" class="fa fa-th"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+              <li><a href="">Application 1</a></li>
+              <li><a href="">Application 2</a></li>
+              <li><a href="">Application 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-item-iconic" href="#help" data-toggle="modal" title="Help"><i class="fa fa-question"></i></a>
+          </li>
+          <li>
+            <a class="nav-item-iconic" href="settings.html" title="Settings"><i class="pficon pficon-equalizer"></i></a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle nav-item-iconic" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true" tabindex="0">
+              <span title="Username" class="pficon pficon-user"></span>
+              Brian Johnson
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+              <li><a href="#about" data-toggle="modal">About</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
+
+      <div class="container-fluid ">
+
+        <!-- Breadcrumb row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li>
+                <a href="#">Spaces</a>
+              </li>
+              <li>
+                <a href="#">Space Name</a>
+              </li>
+              <li>
+                <a href="#">Mortgage Application</a>
+              </li>
+              <li class="active"> <strong>Scenario Test1</strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Content - Asset List -->
+        <div class="row kie-row--tabcontent">
+          <div class="col-xs-4 ">
+            { Test Scenario }
+
+            <div>
+              <a href="#confirmation" data-toggle="modal" data-target="#kie-dataTypesList-modal" title="Confirmation">Test the data types list popup</a>       
+            </div>
+          </div>
+          <div class="col-xs-8">
+            <!-- *********** CONTENTS of sidebar for DROOLS-2707 ********** -->
+            <!-- Content of the sidebar controls -->
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Content - filters -->
+                <div class="col-xs-9 tab-content kie-tab-content--filters">
+                  <!-- FIRST DOCK TAB - TEST REPORT -->
+                  <div class="tab-pane kie__dock" id="kieDockPanel1">
+                    <h3 class="kie-dock__heading">
+                      Test Report
+                    </h3>
+                    <hr class="kie-dock__divider" />
+
+                    <h5 class="kie-dock__heading--section">Overview</h5>
+
+                    <dl class="dl-horizontal kie-dl-horizontal clearfix">
+                      <dt>
+                        Test Results:
+                      </dt>
+                      <dd>
+                        <span class="pficon pficon-error-circle-o"></span> TEST FAILED
+                      </dd>
+                      <dt>
+                        Completed at:
+                      </dt>
+                      <dd>
+                        17:11:40.391
+                      </dd>
+                      <dt>
+                        Scenarios run:
+                      </dt>
+                      <dd>
+                        2
+                      </dd>
+                      <dt>
+                        Duration:
+                      </dt>
+                      <dd>
+                        552 seconds
+                      </dd>
+                    </dl>
+
+                    <a href="">View Details</a>
+
+                    <hr class="kie-dock__divider" />
+                    <h5 class="kie-dock__heading--section">Scenario Status</h5>
+
+                    <!-- *************** donut graph here *******************-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+                    <div id="kie-test-results1" class="example-donut-chart-bottom-legend"></div>
+                    <div id="kie-test-results2" class="example-donut-chart-bottom-legend"></div>
+                    <div id="kie-test-results3" class="example-donut-chart-bottom-legend"></div>
+                    <script>
+                      var c3ChartDefaults = $().c3ChartDefaults();
+
+                      var donutData = {
+                        type: 'donut',
+                        columns: [
+                          ['Passed', 1],
+                          ['Failed', 1],
+                          ['Known', 0],
+                          ['Undefined', 0]
+                        ],
+                        onclick: function (d, i) { console.log("onclick", d, i); },
+                        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                      };
+
+                      // Donut Chart Bottom Legend
+                      var donutChartBottomConfig = c3ChartDefaults.getDefaultRelationshipDonutConfig();
+                      donutChartBottomConfig.bindto = '#kie-test-results3';
+                      donutChartBottomConfig.tooltip = { show: true };
+                      donutChartBottomConfig.data = donutData;
+                      donutChartBottomConfig.legend = {
+                        show: true,
+                        position: 'bottom'
+                      };
+                      donutChartBottomConfig.size = {
+                        width: 200,
+                        height: 191
+                      };
+                      donutChartBottomConfig.tooltip = {
+                        contents: $().pfDonutTooltipContents
+                      };
+
+                      var donutChartBottomLegend = c3.generate(donutChartBottomConfig);
+                      $().pfSetDonutChartTitle("#kie-test-results3", "50%", "Failed");
+                    </script>
+                    <!-- *************** END donut graph here *******************-->
+
+                    <br />
+
+                  </div>
+
+                  <!-- SECOND DOCK TAB - TEST TOOLS -->
+                  <div class="tab-pane kie-dock active" id="kieDockPanel2">
+                    <h3 class="kie-dock__heading">
+                      Test Tools
+                    </h3>
+                    <hr class="kie-dock__divider" />
+
+                    <ul class="nav nav-tabs nav-tabs-pf" id="kieTestTools" role="tablist">
+                      <li class="nav-item active">
+                        <a class="nav-link" id="kieTestEditorTab" data-toggle="tab" href="#kieTestEditorTabContent"
+                          role="tab" aria-controls="#kieTestToolsContent" aria-selected="true">Test Editor</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="kieTestEditorTab" data-toggle="tab" href="#kieScenarioCheatsheetTabContent"
+                          role="tab" aria-controls="#kieTestToolsContent" aria-selected="true">Scenario Cheatsheet</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="kieTestToolsContent">
+                      <!-- content for the test editor tab -->
+                      <div id="kieTestEditorTabContent" class="tab-pane fade in active" aria-labelledby="#kieTestEditorTabContent">
+                        <br />
+                        <p>To create a test template, define "Given" and "Expect" columns by entering an expression or
+                          use the expression editor below.</p>
+
+                        <label for="kie-search">Select Data Object</label>
+                        <div class="kie-test-tools-content__box">
+                          <!-- outlined data object box -->
+                          <!-- search box -->
+                          <form role="form" class="search-pf has-button">
+                            <div class="form-group has-clear">
+                              <div class="search-pf-input-group">
+                                <!-- <label for="search1" class="sr-only">Search</label> -->
+                                <input id="search1" type="search" class="form-control" placeholder="Search">
+                                <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                            </div>
+                          </form>
+                          <script>
+                            (function ($) {
+                              $(document).ready(function () {
+                                // Hide the clear button if the search input is empty
+                                $(".search-pf .has-clear .clear").each(function () {
+                                  if (!$(this).prev('.form-control').val()) {
+                                    $(this).hide();
+                                  }
+                                });
+                                // Show the clear button upon entering text in the search input
+                                $(".search-pf .has-clear .form-control").keyup(function () {
+                                  var t = $(this);
+                                  t.next('button').toggle(Boolean(t.val()));
+                                });
+                                // Upon clicking the clear button, empty the entered text and hide the clear button
+                                $(".search-pf .has-clear .clear").click(function () {
+                                  $(this).prev('.form-control').val('').focus();
+                                  $(this).hide();
+                                });
+                              });
+                            })(jQuery);
+                          </script>
+                          <!-- end search box -->
+
+                          <!-- from GABRIELE -->
+                          <div id="pf-list-simple-expansion" class="list-group tree-list-view-pf-view kie-tree-list-view-pf-view--compact"
+                            data-field="listContainer">
+                            <div class="list-group-item" data-field="listGroupItem" id="listGroupItem-do1">
+                              <div class="list-group-item-header list-view-pf-expand-active" data-field="listGroupItemHeader">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right fa-angle-down" data-field="faAngleRight"></span>
+                                </div>
+                                <div class="list-view-pf-main-info" data-field="fullClassName">do1</div>
+                              </div>
+                              <div class="list-group-item-container container-fluid" data-field="listGroupItemContainer">
+                                <ul class="ul--plain" data-field="factProperties">
+                                  <li data-field="fieldElement" data-i18n-prefix="FieldItemViewImpl." id="fieldElement-do1-myint1"
+                                    fieldname="myint1" classname="int" fullpath="do1"><a>myint1</a> [int]</li>
+                                  <li data-field="fieldElement" data-i18n-prefix="FieldItemViewImpl." id="fieldElement-do1-myint2"
+                                    fieldname="myint2" classname="int" fullpath="do1"><a>myint2</a> [int]</li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-group-item selected" data-field="listGroupItem" id="listGroupItem-do2">
+                              <div class="list-group-item-header list-view-pf-expand-active" data-field="listGroupItemHeader">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right fa-angle-down" data-field="faAngleRight"></span>
+                                </div>
+                                <div class="list-view-pf-main-info" data-field="fullClassName">do2</div>
+                              </div>
+                              <div class="list-group-item-container container-fluid" data-field="listGroupItemContainer">
+                                <ul class="ul--plain" data-field="factProperties">
+                                  <li data-field="fieldElement" data-i18n-prefix="FieldItemViewImpl." id="fieldElement-do2-mydbl2"
+                                    fieldname="mydbl2" classname="double" fullpath="do2"><a>mydbl2</a> [double]</li>
+                                </ul>
+                                <div class="list-group list-view-pf tree-list-view-pf-view kie-tree-list-view-pf-view--compact"
+                                  data-field="listGroupExpansion" data-i18n-prefix="ListGroupItemViewImpl.">
+                                  <div class="list-group-item" data-field="listGroupItem" id="listGroupItem-mydo1">
+                                    <div class="list-group-item-header list-view-pf-expand-active" data-field="listGroupItemHeader">
+                                      <div class="list-view-pf-expand">
+                                        <span class="fa fa-angle-right fa-angle-down" data-field="faAngleRight"></span>
+                                      </div>
+                                      <div class="list-view-pf-main-info" data-field="fullClassName" factname="mydo1"
+                                        facttype="do1" parentpath="do2"><b>mydo1</b> do1</div>
+                                    </div>
+                                    <div class="list-group-item-container container-fluid" data-field="listGroupItemContainer">
+                                      <ul class="ul--plain" data-field="factProperties">
+                                        <li data-field="fieldElement" data-i18n-prefix="FieldItemViewImpl." id="fieldElement-mydo1-myint1"
+                                          fieldname="myint1" classname="int" fullpath="do2.mydo1"><a>myint1</a> [int]</li>
+                                        <li data-field="fieldElement" data-i18n-prefix="FieldItemViewImpl." id="fieldElement-mydo1-myint2"
+                                          fieldname="myint2" classname="int" fullpath="do2.mydo1"><a>myint2</a> [int]</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end from GABRIELE -->
+                          <!-- OUTER list expansion -->
+                          <div id="pf-list-simple-expansion" class="list-group list-view-pf tree-list-view-pf-view kie-tree-list-view-pf-view--compact">
+                            <div class="list-group-item">
+                              <div class="list-group-item-header">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right"></span>
+                                </div>
+                                <div class="list-view-pf-main-info">
+                                  applicant
+                                </div>
+                              </div>
+                              <div class="list-group-item-container container-fluid hidden">
+                                <ul class="ul--plain">
+                                  <li><a>Age</a> [applicantAge]</li>
+                                  <li class="selected"><a>Credit</a> [applicantCredit]</li>
+                                  <li><a>Income</a> [applicant income]</li>
+                                  <li>
+
+                                    <!-- INNER list expansion -->
+                                    <div id="pf-list-simple-expansion-2" class="list-group list-view-pf tree-list-view-pf-view kie-tree-list-view-pf-view--compact">
+                                      <div class="list-group-item">
+                                        <div class="list-group-item-header">
+                                          <div class="list-view-pf-expand">
+                                            <span class="fa fa-angle-right"></span>
+                                          </div>
+                                          <div class="list-view-pf-main-info">
+                                            More stuff
+                                          </div>
+                                        </div>
+                                        <div class="list-group-item-container container-fluid ">
+                                          <ul class="ul--plain">
+                                            <li><a>This</a> [This stuff]</li>
+                                            <li><a>That</a> [That stuff]</li>
+                                            <li><a>Other</a> [Other stuff]</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="list-group-item-header">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right"></span>
+                                </div>
+                                <div class="list-view-pf-main-info">
+                                  applicationForm
+                                </div>
+                              </div>
+                              <div class="list-group-item-container container-fluid hidden">
+                                application form data here
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="list-group-item-header">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right"></span>
+                                </div>
+                                <div class="list-view-pf-main-info">
+                                  creditScore
+                                </div>
+                              </div>
+                              <div class="list-group-item-container container-fluid hidden">
+                                Credit Score data here
+                              </div>
+                            </div>
+                            <div class="list-group-item">
+                              <div class="list-group-item-header">
+                                <div class="list-view-pf-expand">
+                                  <span class="fa fa-angle-right"></span>
+                                </div>
+                                <div class="list-view-pf-main-info">
+                                  incomeSource
+                                </div>
+                              </div>
+                              <div class="list-group-item-container container-fluid hidden">
+                                income source data here
+                              </div>
+                            </div>
+                          </div>
+                          <script>
+                            $(document).ready(function () {
+                              // Row Checkbox Selection
+                              $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
+                                if ($(this).is(":checked")) {
+                                  $(this).closest('.list-group-item').addClass("active");
+                                } else {
+                                  $(this).closest('.list-group-item').removeClass("active");
+                                }
+                              });
+                              // toggle dropdown menu
+                              $("#pf-list-simple-expansion .list-view-pf-actions").on('show.bs.dropdown', function () {
+                                var $this = $(this);
+                                var $dropdown = $this.find('.dropdown');
+                                var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+                                $dropdown.toggleClass('dropup', space < 10);
+                              });
+
+                              // click the list-view heading then expand a row
+                              $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+                                if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+                                  $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+                                    .end().parent().toggleClass("list-view-pf-expand-active")
+                                    .find(".list-group-item-container").toggleClass("hidden");
+                                } else {
+                                }
+                              })
+
+                              // click the close button, hide the expand row and remove the active status
+                              $("#pf-list-simple-expansion .list-group-item-container .close").on("click", function () {
+                                $(this).parent().addClass("hidden")
+                                  .parent().removeClass("list-view-pf-expand-active")
+                                  .find(".fa-angle-right").removeClass("fa-angle-down");
+                              })
+
+                            });
+                          </script>
+                          <!-- end list expansion -->
+                        </div><!-- end outlined data object box -->
+
+                        <label for="kie-name">Name Field</label>
+                        <input id="kie-name" type="text" class="form-control" placeholder="Name">
+
+                        <br />
+
+                        <label for="kieDropdownConditions">Set Conditions</label>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="kieDropdownConditions"
+                            data-toggle="dropdown">
+                            Condition
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="kieDropdownConditions">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Required</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Preferred</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other options here</a></li>
+                          </ul>
+                        </div>
+
+                        <hr />
+                        <button class="btn btn-default" type="button">Add</button>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="#0" role="button">Clear</a>
+                      </div>
+                      <br />
+                      <!-- content for cheatsheet tab -->
+                      <div id="kieScenarioCheatsheetTabContent" class="tab-pane fade" aria-labelledby="Scenario Cheatsheet">
+                        <div id="kieScenarioCheatsheetTabContent" class="tab-pane fade active in" aria-labelledby="Scenario Cheatsheet"
+                          style="padding: 1em">
+                          <p data-i18n-key="Use_contextual_menu_to_add/remove_columns_and_rows.">Use contextual menu to
+                            add/remove columns and rows.</p>
+
+                          <p data-i18n-key="Left_click_on_column_header_&amp;_then_edit_the_mapping_with_a_field_using_the_Test_Editor_tab.">Left
+                            click on column header &amp; then edit the mapping with a field using the Test Editor tab.</p>
+
+                          <p data-i18n-key="Double_click_on_the_field_to_set_the_mapping.">Double click on the field to
+                            set the mapping.</p>
+
+                          <p data-i18n-key="Each_cell_can_contain_an_expression_which_use_following_syntax_">Each cell
+                            can contain an expression which use following syntax:</p>
+
+                          <ul>
+                            <li>
+                              <i data-i18n-key="=_value_(or_no_symbol)">= value (or no symbol)</i>: specifies equals to
+                              a value. This is the default and only operator supported under GIVEN section
+                            </li>
+                            <li>
+                              <i data-i18n-key="!_or_!=_or_<>_value">! or != or &lt;&gt; value</i>: specifies not
+                              equals to a value. It can be used with other operators.
+                            </li>
+                            <li><i data-i18n-key="<_or_>_or_<=_or_>=_value">&lt; or &gt; or &lt;= or &gt;= value</i>:
+                              specifies a comparison</li>
+                            <li>
+                              <i data-i18n-key="[_value1,_value2,_value3_]">[ value1, value2, value3 ]</i>: provides a
+                              list of values. This operator works like the logical OR operator
+                            </li>
+                            <li>
+                              <i data-i18n-key="expression1_;_expression2_;_expression3">expression1 ; expression2 ;
+                                expression3</i>: specifies a list of expressions. This operator works like the logical
+                              AND operator
+                            </li>
+                          </ul>
+
+                          <p data-i18n-key="Example_of_expressions_">Example of expressions:</p>
+
+                          <ul>
+                            <li><i data-i18n-key="<_3">&lt; 3</i></li>
+                            <li><i data-i18n-key="<_3_;_!_[0,-1]">&lt; 3 ; ! [0,-1]</i></li>
+                            <li><i data-i18n-key="[MyString,_My_second_string]">[MyString, My second string]</i></li>
+                            <li><i data-i18n-key="=_3;_>_2">= 3; &gt; 2</i></li>
+                          </ul>
+
+                          <p>Empty cell is equal to <i data-i18n-key="null">null</i> and use the equals symbol (=)
+                            without any value to specify an empty string.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- THIRD DOCK TAB -->
+                  <div class="tab-pane" id="kieDockPanel3">
+                    <h3 class="kie-dock__heading">
+                      Placeholder
+                    </h3>
+                    <hr class="kie-dock__divider" />
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                          aria-controls="home" aria-selected="true">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                          aria-selected="false">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                          aria-selected="false">Contact</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">...home..</div>
+                      <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">..profile..</div>
+                      <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab">..contact..</div>
+                    </div>
+                    <br />
+
+
+
+                  </div>
+
+
+                </div>
+
+                <!-- Tabs for the filter control -->
+                <!-- should be implemented with existing slide-in panel control -->
+                <div class="col-xs-3" style="">
+                  <nav class="navbar navbar-static nav-stacked" id="kiePreferences">
+                    <ul class="nav kie-dock-selector" role="tablist">
+                      <li class="kie-dock-selector__tab ">
+                        <a href="#kieDockPanel1" data-toggle="tab">
+                          <span class="fa fa-file-text"></span>
+                        </a>
+                      </li>
+                      <li class="kie-dock-selector__tab active">
+                        <a href="#kieDockPanel2" data-toggle="tab">
+                          <span class="pficon pficon-info"></span>
+                        </a>
+                      </li>
+                      <li class="kie-dock-selector__tab">
+                        <a href="#kieDockPanel3" data-toggle="tab">
+                          <span class="fa fa-play-circle"></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- end sidebar controls -->
+            <!-- *********** END of CONTENTS of sidebar for DROOLS-2707 ************** -->
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+
+  </div><!-- kie-page -->
+
+  <!-- modals -->
+
+<!------ DMN Object Data List Popup Modal DROOLS-3474------>
+<!-- this dialog also relies on the styles in kie-drools.less -->
+<div class="modal fade kie-dataTypesList-modal" tabindex="-1" role="dialog" id="kie-dataTypesList-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span   class="pficon pficon-close"></span>
+          </button>
+          <h4 class="modal-title">ContactList <span class="fa fa-list"></span></h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+
+              <div class="row">
+                <!-- Tabs for the filter control -->
+                <!-- should be implemented with existing slide-in panel control -->
+                <div class="col-xs-3">
+                  <div class="row">
+                    <button class="btn btn-link">
+                      <span class="fa fa-plus"></span>
+                      Add list item
+                    </button>
+                  </div>
+                  <div class="row" id="kie-ObjectListSelector">
+                    <div class="list-group" role="tablist" aria-label="List of objects">
+                      <a href="#kie-ObjectListItem1" class="list-group-item " data-toggle="tab" role="tab" aria-controls="#kie-ObjectListItem1" id="kie-ObjectListTab1">
+                        Daniele
+                      </a>
+                      <a href="#kie-ObjectListItem2"  class="list-group-item" data-toggle="tab" role="tab" aria-controls="#kie-ObjectListItem2"  id="kie-ObjectListTab2">
+                        New User
+                      </a>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Content - data objects -->
+                <div class="col-xs-9 tab-content">
+                  <!-- first right side panel -->
+                  <div class="tab-pane kie__dock active" id="kie-ObjectListItem1" aria-labelledby="#kie-ObjectListTab1">
+                      <div>
+                          <input value="Daniele" placeholder="Input user name">
+                        </div>
+                        <br/>
+                        <div>
+                            <div id="treeview-object1"></div>              
+                            <!-- TREE VIEW FOR THE OBJECT INFO -->
+                            <script>
+                                $(function() {
+                                  //icon options
+                                  var collapseIcon = "fa fa-angle-down",
+                                    expandIcon = "fa fa-angle-right",
+                                    nodeIcon = "",
+                                    checkedIcon = "",
+                                    uncheckedIcon = "",
+                                    partiallyCheckedIcon = "",
+                                    loadingIcon = "glyphicon glyphicon-hourglass";
+    
+                                  var defaultData = [
+                                    {
+                                      text: 'Phones',
+                                      href: '#object1-item1',
+                                      tags: ['4'],
+                                      class: 'foobar',
+                                      nodes: [
+                                        {
+                                          text: 'work',
+                                          href: '#object1-item1-1',
+                                          tags: ['2'],
+                                          nodes: [
+                                          {
+                                              text: '<input value="111" placeholder="phonelongdistance"> <input value="111-1111" placeholder="phonenumber"><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button>',
+                                              href: '#object1-item1-1-1',
+                                              icon: '',
+                                              tags: ['0']
+                                            },
+                                            {
+                                              text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button>',
+                                              href: '#object1-item1-1-2',
+                                              icon: '',
+                                              tags: ['0']
+                                            },
+                                            {
+                                              text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add work</button>',
+                                              href: '#object1-item1-1-3',
+                                              icon: '',
+                                              tags: ['0']
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          text: 'home',
+                                          href: '#object1-item-1-2',
+                                          icon: '',
+                                          tags: ['0'],
+                                          nodes: [
+                                            {
+                                              text: '<input value="222" placeholder="phonelongdistance"> <input value="222-2222" placeholder="phonenumber"><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button>',
+                                              href: '#object1-item1-2-1',
+                                              icon: '',
+                                              tags: ['0']
+                                            },
+                                            {
+                                              text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add home</button>',
+                                              href: '#object1-item1-2-2',
+                                              icon: '',
+                                              tags: ['0']
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          text: 'cell',
+                                          href: '#object1-item-1-3',
+                                          icon: '',
+                                          tags: ['0'],
+                                          nodes: [
+                                            {
+                                              text: '<input value="3333333" placeholder="phonelongdistance"> <input value="3333-3333" placeholder="phonenumber"><button class="btn btn-link" aria-label="Delete item"><span class="fa fa-trash" aria-hidden="true"></span></button>',
+                                              href: '#object1-item1-3-1',
+                                              icon: '',
+                                              tags: ['0']
+                                            },
+                                            {
+                                              text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add cell</button>',
+                                              href: '#object1-item1-3-2',
+                                              icon: '',
+                                              tags: ['0']
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                        {
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add Phones</button>',
+                                              href: '#object2-item1',
+                                              icon: '',
+                                              tags: ['0']
+                                        }
+                                  ];
+                                  //Default
+                                  $('#treeview-object1').treeview({
+                                    collapseIcon: collapseIcon,
+                                    data: defaultData,
+                                    expandIcon: expandIcon,
+                                    nodeIcon: nodeIcon,
+                                    showBorder: false,
+                                    showIcon: false,
+                                    levels: 99
+                                  });
+                                });
+                            </script>
+                            <!-- END TREE VIEW FOR THE OBJECT INFO -->
+                        </div>
+                      </div>
+                  <!-- second right side panel -->
+                  <div class="tab-pane" id="kie-ObjectListItem2" aria-labelledby="#kie-ObjectListTab2">
+                    <div>
+                      <input placeholder="Input user name">
+                    </div>
+                    <br/>
+                    <div>
+                        <div id="treeview-object2"></div>              
+                        <!-- TREE VIEW FOR THE OBJECT INFO -->
+                        <script>
+                            $(function() {
+                              //icon options
+                              var collapseIcon = "fa fa-angle-down",
+                                expandIcon = "fa fa-angle-right",
+                                nodeIcon = "",
+                                checkedIcon = "",
+                                uncheckedIcon = "",
+                                partiallyCheckedIcon = "",
+                                loadingIcon = "glyphicon glyphicon-hourglass";
+
+                              var defaultData = [
+                                {
+                                  text: 'Phones',
+                                  href: '#item1',
+                                  tags: ['4'],
+                                  nodes: [
+                                    {
+                                      text: 'work',
+                                      href: '#item1-1',
+                                      tags: ['2'],
+                                      nodes: [
+                                        {
+                                          text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                          href: '#item1-1-1',
+                                          icon: '',
+                                          tags: ['0']
+                                        },
+                                        {
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add work</button>',
+                                          href: '#item1-1-2',
+                                          icon: '',
+                                          tags: ['0']
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      text: 'home',
+                                      href: '#item-1-2',
+                                      icon: '',
+                                      tags: ['0'],
+                                      nodes: [
+                                        {
+                                          text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                          href: '#item1-2-1',
+                                          icon: '',
+                                          tags: ['0']
+                                        },
+                                        {
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add home</button>',
+                                          href: '#item1-2-2',
+                                          icon: '',
+                                          tags: ['0']
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      text: 'cell',
+                                      href: '#item-1-3',
+                                      icon: '',
+                                      tags: ['0'],
+                                      nodes: [
+                                        {
+                                          text: '<input placeholder="phonelongdistance"> <input placeholder="phonenumber"><button class="btn btn-link"><span class="fa fa-trash"></span></button>',
+                                          href: '#item1-3-1',
+                                          icon: '',
+                                          tags: ['0']
+                                        },
+                                        {
+                                          text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add cell</button>',
+                                          href: '#item1-3-2',
+                                          icon: '',
+                                          tags: ['0']
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  text: '<button class="btn btn-link"><span class="fa fa-plus"></span> Add Phones</button>',
+                                      href: '#object2-item1',
+                                      icon: '',
+                                      tags: ['0']
+                                }
+                              ];
+                              //Default
+                              $('#treeview-object2').treeview({
+                                collapseIcon: collapseIcon,
+                                data: defaultData,
+                                expandIcon: expandIcon,
+                                nodeIcon: nodeIcon,
+                                showBorder: false,
+                                showIcon: false,
+                                levels: 99
+                              });
+                            });
+                        </script>
+                        <!-- END TREE VIEW FOR THE OBJECT INFO -->
+                    </div>
+
+                  </div>
+  
+                </div>
+              </div>
+          </div>
+          <br/>  
+        </div>
+        
+        <div class="modal-footer">
+            <div class="pull-left">
+              <input type="checkbox" value="showFieldNames" id="showFieldNamesCheckbox"> <label for="showFieldNamesCheckbox">show the field names</label>
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Insert Item</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!------ end of DMN Object Data List Popup Modal DROOLS-3474 ------>
+
+
+
+
+  <div class="modal fade" id="help">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <span class="pficon pficon-close"></span>
+          </button>
+          <h4 class="modal-title">Help</h4>
+        </div>
+        <div class="modal-body">
+          <div><img src="img/help.png" alt="" style="width: 568px;" /></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content about-modal-pf">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <span class="pficon pficon-close"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1 id="aboutModalTitle">
+            <img class="kie-brand-icon" src="images/jbpm_logo_noshadow_100px.png" alt="JBoss BPM Suite" />
+          </h1>
+          <div class="product-versions-pf">
+            <ul class="list-unstyled" id="aboutModalVersions">
+              <li><strong>Version</strong> 0.0</li>
+            </ul>
+          </div>
+          <div class="trademark-pf">
+            jBPM is open source software, released under the <br>
+            <strong>Apache Software License 2.0</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END About Modal -->
+
+  <div class="modal fade" id="preferences">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            <span class="pficon pficon-close"></span>
+          </button>
+          <h4 class="modal-title">Preferences</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="control-label">Language</label>
+            <select class="form-control">
+              <option value="default">English</option>
+              <option value="de">German</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="ja">Japanese</option>
+              <option value="pt_BR">Portuguese</option>
+              <option value="zh_CN">Chinese (Simplified)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">View Mode</label>
+            <div class="radio">
+              <label><input type="radio" name="optradio">Basic</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio">Compact</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio">Advanced</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Layouts</label>
+            <p><a href="#">Reset Perspective Layouts</a></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIST EXPANSION CODE -->
+  <script>
+      $(document).ready(function () {
+        // Row Checkbox Selection
+        $("#pf-list-simple-expansion input[type='checkbox']").change(function (e) {
+          if ($(this).is(":checked")) {
+            $(this).closest('.list-group-item').addClass("active");
+          } else {
+            $(this).closest('.list-group-item').removeClass("active");
+          }
+        });
+        // toggle dropdown menu
+        $("#pf-list-simple-expansion .list-view-pf-actions").on('show.bs.dropdown', function () {
+          var $this = $(this);
+          var $dropdown = $this.find('.dropdown');
+          var space = $(window).height() - $dropdown[0].getBoundingClientRect().top - $this.find('.dropdown-menu').outerHeight(true);
+          $dropdown.toggleClass('dropup', space < 10);
+        });
+
+        // click the list-view heading then expand a row
+        $("#pf-list-simple-expansion .list-group-item-header").click(function (event) {
+          if (!$(event.target).is("button, a, input, .fa-ellipsis-v")) {
+            $(this).find(".fa-angle-right").toggleClass("fa-angle-down")
+              .end().parent().toggleClass("list-view-pf-expand-active")
+              .find(".list-group-item-container").toggleClass("hidden");
+          } else {
+          }
+        })
+
+        // click the close button, hide the expand row and remove the active status
+        $("#pf-list-simple-expansion .list-group-item-container .close").on("click", function () {
+          $(this).parent().addClass("hidden")
+            .parent().removeClass("list-view-pf-expand-active")
+            .find(".fa-angle-right").removeClass("fa-angle-down");
+        })
+
+      });
+    </script>
+
+<script>
+    $(document).ready(function() {
+      $('.list-pf').pfList();
+    });
+  </script>
+<!-- END LIST EXPANSION CODE -->
+</body>
+
+</html>

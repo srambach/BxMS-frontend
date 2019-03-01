@@ -1,0 +1,39 @@
+// Styles for DROOLS section
+
+// .kie-dataTypesList-modal .tab-content {
+//   border-left: 1px solid @color-pf-black-200;
+// }
+
+.kie-object-list {
+  list-style-type: none;
+
+  .list-group {
+    border-top: none;
+    padding-left: @pf-spacer-md;
+  }
+  
+  .list-group-item {
+    border: none;
+  } 
+}
+
+.kie-object-list--mapping {
+  display: inline-table;
+}
+
+.kie-object-list__expander {
+  padding-right: 1em;
+}
+
+// ridiculous specificity
+li.list-group-item.kie-object-list__separator,
+li.list-group-item.kie-object-list__separator:first-child{
+  border-top: 1px solid @color-pf-black-200;
+}
+
+.kie-object-list__field-value {
+  font-weight: bold;
+}
+.kie-object-list__field-label {
+  font-weight: normal;
+}
