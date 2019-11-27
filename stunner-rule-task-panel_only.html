@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>jBPM Suite</title>
+  
+  <link href="css/kie-main.css" rel="stylesheet" media="screen, print">
+  
+  <!-- debugging tool -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/srambach/classbxr/5456df40/css/classbxr.css">
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.3/js/bootstrap-select.min.js"></script>
+  
+  <!-- For the graphs -->
+  <script src="https//:cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+  <script src="https//:cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.23.1/js/patternfly.min.js"></script>
+  
+</head>
+
+<body>
+  
+  <div class="kie-page">
+    
+    <main role="main" id="kie-main-content" tabindex="-1" class="kie-page__content ">
+      
+      <!-- Content - Asset List -->
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Content - filters -->
+          <div class="col-xs-4 tab-content kie-tab-content--filters">
+             
+              <!-- *** JBPM-8906 Rule task settings section *** -->
+              <div class="panel">
+                <div class="panel-heading kie-wb-common-forms-groups-collapse-panel-heading">
+                  <div class="panel-title">
+                    <a data-field="anchor" data-toggle="collapse" aria-expanded="true" class="" data-target="#ruleTaskSettingsPanel">
+                      <span data-field="anchorText" class="kie-wb-common-forms-groups-collapse-panel-anchor">Rule task settings</span>
+                    </a>
+                  </div>
+                  
+                  <div class="panel-collapse collapse in" aria-expanded="true" id="ruleTaskSettingsPanel">
+                    <div class="panel-body kie-wb-common-forms-groups-collapse-panel-body">
+                      <!-- General contents -->
+                      <div class="form-group">
+                        <label for="stunnerPropsRuleLanguage">Rule language</label>
+                        <button class="btn btn-link" type="button"><span class="pficon pficon-info"></span></button>
+                        <!-- *** NOTE: this is not displaying correctly in my prototype, but may be a problem with bootstrap versions. Please verify that the control is working correctly when taken into the stunner panel -->
+                        <select class="selectpicker form-control">
+                          <option>DMN</option>
+                          <option>other</option>
+                          <option>nother</option>
+                          <option disabled>neither</option>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="stunnerPropsDMNModelName">Decision Name (optional)</label>
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <input type="text" class="form-control"  placeholder="Filter by name" id="stunnerPropsFilter">
+                            <ul class="list-group">
+                              <!-- *** NOTE: The SVGs are put here as a placeholder; I'm not sure what images or icons are meant to be used here -->
+                              <li class="list-group-item">
+                                <img style="height: 1em; padding-right: 1em;" src="images/stunner_images/palette_icons/container_palette.svg">
+                                Decision-2
+                              </li>
+                              <li class="list-group-item">
+                                  <img style="height: 1em; padding-right: 1em;" src="images/stunner_images/palette_icons/container_palette.svg">
+                                  Decision_services</li>
+                              <li class="list-group-item">
+                                  <img style="height: 1em; padding-right: 1em;" src="images/stunner_images/palette_icons/task_palette.svg">
+                                  Credit_approval</li>
+                              <li class="list-group-item">
+                                  <img style="height: 1em; padding-right: 1em;" src="images/stunner_images/palette_icons/task_palette.svg">
+                                  Loan_qualified</li>
+                              <li class="list-group-item">
+                                  <img style="height: 1em; padding-right: 1em;" src="images/stunner_images/palette_icons/container_palette.svg">
+                                  Old_enough</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <h4>Data I/O and assignments</h4>
+                      <div class="clearfix">
+                        <button class="btn btn-link pull-right" type="button">Edit</button>
+                        Data Input <span class="badge" data-toggle="popover" data-html="true" title="Data input" data-content="Invoice (Invoice)<br/> maxamount (Float)<br/> Reason (String)" data-placement="top">0</span>
+                      </div>
+                      <div class="clearfix">
+                        <button class="btn btn-link pull-right" type="button">Edit</button>
+                        Data Output <span class="badge" data-toggle="popover" data-html="true" title="Data input" data-content="Invoice (Invoice)<br/> maxamount (Float)<br/> Reason (String)" data-placement="top">0</span>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>     
+        </div>
+      </div>
+    </main>
+    
+  </div><!-- kie-page -->
+  
+  
+  
+  <script>
+    // Initialize Boostrap-select
+    $('.selectpicker').selectpicker();
+  </script>
+  
+  <!-- This script is needed for the tooltips -->
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  
+  <script>
+    // Initialize Popovers
+    $(document).ready(function() {
+      $('[data-toggle=popover]').popovers()
+      .on('hidden.bs.popover', function (e) {
+        $(e.target).data('bs.popover').inState.click = false;
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
